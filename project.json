@@ -6,10 +6,15 @@
       "history": [],
       "best": 0,
       "stall": 0,
-      "acceptance_synth": {},
+      "acceptance_synth": {
+        "agent-project codd-gate 連携対応コードが個別対応ではなく将来別の CLI にも転用できること": "python3 -m unittest discover -s tools/agent-project/tests -p 'test_codd_gate_wiring.py'",
+        "agent-project の設計書とコードの一貫性が保たれていること": "test -n \"${KIRO_BASE_REV:-}\" && python3 tools/codd-gate/codd-gate.py verify --base \"$KIRO_BASE_REV\" && AGENT_FLOW_STUB_SLEEP_MAX=0 python3 -m unittest discover -s tools/agent-project/tests"
+      },
       "human_acceptance": [],
-      "status": "no-acceptance"
+      "status": "no-acceptance",
+      "planned_charter_sig": "502cc5b20d377958c2c2679ab8bcb8f4a85628d47fb5f9bfc10de92571324565",
+      "acceptance_total": 2
     }
   },
-  "updated": "2026-07-23T05:46:57"
+  "updated": "2026-07-23T05:51:00"
 }
