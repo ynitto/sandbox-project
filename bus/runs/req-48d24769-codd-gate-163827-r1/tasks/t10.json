@@ -1,0 +1,8 @@
+{
+  "id": "t10",
+  "goal": "tools/agent-project/README.md の一貫性ゲート節に、agent_project パッケージは codd_gate_* を import、直接結合、依存せず、汎用フックだけを提供する境界を明記する。",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "generate"
+}

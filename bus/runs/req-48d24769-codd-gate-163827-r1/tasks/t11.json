@@ -1,0 +1,8 @@
+{
+  "id": "t11",
+  "goal": "docs/designs/codd-gate-design.md §4.1 に、codd_gate_*.py は任意の sibling 部品であり、agent_project から直接結合せず汎用 hooks レイヤで自動検出する責務境界を明記する。",
+  "deps": [
+    "t9"
+  ],
+  "kind": "generate"
+}

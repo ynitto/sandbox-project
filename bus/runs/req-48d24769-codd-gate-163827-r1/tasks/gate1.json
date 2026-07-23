@@ -1,0 +1,9 @@
+{
+  "id": "gate1",
+  "goal": "t3〜t8 の調査結果を現行コードと突き合わせ、E1–E3、自動検出、任意 sibling、永続化、有効化、負の grep 条件について推測、見落とし、設計書と README の矛盾がないか adversarial に検証する。",
+  "deps": [
+    "t7",
+    "t8"
+  ],
+  "kind": "verify"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "t14",
+  "goal": "tools/agent-project/README.md に、codd-gate 連携の有効化は yaml の regression_cmd・intake_cmd または対応 CLI による明示設定だけで行い、自動検出だけでは有効化しないことを明記する。",
+  "deps": [
+    "t12"
+  ],
+  "kind": "generate"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "対象リポジトリ https://github.com/ynitto/sandbox の成果物 worktree とブランチ ap/codd-gate-163827 を特定し、未コミット変更、追跡先、main との差分を確認して、安全に rebase 可能な状態か判定する。",
+  "deps": [],
+  "kind": "classify"
+}

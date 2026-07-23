@@ -1,0 +1,8 @@
+{
+  "id": "t8",
+  "goal": "tools/agent-project/agent_project を対象に git grep で _apply_codd_gate、_codd_gate、import codd_gate の残存箇所を確認し、設計上の負の完了条件として使用できる対象パスとパターンを確定する。",
+  "deps": [
+    "t6"
+  ],
+  "kind": "work"
+}

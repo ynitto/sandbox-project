@@ -1,0 +1,8 @@
+{
+  "id": "t12",
+  "goal": "tools/agent-project/README.md の一貫性ゲート節で、自動検出方式と regression_cmd・intake_cmd の役割および名称を設計書 §4・§4.1 と一致させる。",
+  "deps": [
+    "t10"
+  ],
+  "kind": "generate"
+}

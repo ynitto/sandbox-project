@@ -1,0 +1,8 @@
+{
+  "id": "t19",
+  "goal": "docs/designs/codd-gate-design.md §4・§4.1・完了条件の変更部分を slop-police スキルで点検し、責務主体と禁止境界が一読で判別できる表現へ修正する。",
+  "deps": [
+    "t17"
+  ],
+  "kind": "work"
+}

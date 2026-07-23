@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "docs/designs/codd-gate-design.md §4 の E1–E3 を、各差し込み点で agent_project の汎用フックと sibling 側の codd-gate 固有処理を区別できる記述へ更新する。",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "generate"
+}

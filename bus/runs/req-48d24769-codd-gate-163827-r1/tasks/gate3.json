@@ -1,0 +1,9 @@
+{
+  "id": "gate3",
+  "goal": "agent-review スキルで最終文書を再レビューし、git diff --name-only と git diff --check を含めて、変更が docs/designs/codd-gate-design.md と tools/agent-project/README.md に限定され、内容と形式に問題がないことを検証する。",
+  "deps": [
+    "t20",
+    "t21"
+  ],
+  "kind": "verify"
+}

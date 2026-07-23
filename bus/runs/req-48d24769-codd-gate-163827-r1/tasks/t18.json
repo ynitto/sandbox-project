@@ -1,0 +1,8 @@
+{
+  "id": "t18",
+  "goal": "tools/agent-project/README.md の変更部分だけを slop-police スキルで点検し、冗長表現、曖昧な主体、設計書と異なる用語を修正する。",
+  "deps": [
+    "t16"
+  ],
+  "kind": "work"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "synth2",
+  "goal": "gate2 の指摘を設計書と README に反映し、両文書で責務境界、コマンド名、検出方式、完了条件の語彙を統一する。agent_project、dashboard、テストの実装変更は行わない。",
+  "deps": [
+    "gate2"
+  ],
+  "kind": "synthesize"
+}

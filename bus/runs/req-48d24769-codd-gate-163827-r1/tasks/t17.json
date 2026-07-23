@@ -1,0 +1,8 @@
+{
+  "id": "t17",
+  "goal": "docs/designs/codd-gate-design.md の設計上の完了条件に、tools/agent-project/agent_project から _apply_codd_gate、_codd_gate、import codd_gate が残存しないことを否定形の git grep で検証する条件を記載する。",
+  "deps": [
+    "t15"
+  ],
+  "kind": "generate"
+}

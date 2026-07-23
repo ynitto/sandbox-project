@@ -1,0 +1,8 @@
+{
+  "id": "t21",
+  "goal": "synth2 後の tools/agent-project/README.md を slop-police スキルで再点検し、レビュー反映による文体の崩れだけを修正する。",
+  "deps": [
+    "synth2"
+  ],
+  "kind": "work"
+}

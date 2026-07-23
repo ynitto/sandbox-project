@@ -1,0 +1,8 @@
+{
+  "id": "t2",
+  "goal": "成果物ブランチ ap/codd-gate-163827 を最新の origin/main に rebaseし、競合を解消したうえで git status と merge-base により rebase 完了を検証する。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "work"
+}

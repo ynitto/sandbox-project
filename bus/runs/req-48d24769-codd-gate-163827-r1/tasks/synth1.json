@@ -1,0 +1,8 @@
+{
+  "id": "synth1",
+  "goal": "gate1 を通過した根拠から、『agent_project パッケージは汎用フックのみ』『codd_gate_* は直接結合しない任意の sibling 部品』『永続化は codd_gate_regression.py』『有効化は yaml または CLI のみ』という統一境界と文書別の変更内容を確定する。",
+  "deps": [
+    "gate1"
+  ],
+  "kind": "synthesize"
+}

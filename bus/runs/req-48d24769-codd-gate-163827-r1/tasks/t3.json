@@ -1,0 +1,8 @@
+{
+  "id": "t3",
+  "goal": "docs/designs/codd-gate-design.md §4 を確認し、差し込み点 E1、E2、E3 ごとに agent_project の汎用フックと codd-gate 固有処理の現行記述を抽出する。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}

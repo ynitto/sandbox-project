@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "tools/agent-project/agent_project 配下の現行コードを調査し、regression_cmd、intake_cmd、hooks、自動検出に関係する実際の差し込み点と呼び出し境界を関数単位で特定する。実装変更は行わない。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}

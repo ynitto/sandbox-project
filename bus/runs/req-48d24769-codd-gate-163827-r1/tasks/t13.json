@@ -1,0 +1,8 @@
+{
+  "id": "t13",
+  "goal": "docs/designs/codd-gate-design.md §4.1 に、codd-gate 固有設定の永続化は codd_gate_regression.py が担い、agent_project 本体は永続化しないことを明記する。",
+  "deps": [
+    "t11"
+  ],
+  "kind": "generate"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "t1",
+  "who": "worker-1",
+  "status": "done",
+  "output": "class=git-rebase-readiness",
+  "finished_at": "2026-07-23T20:28:52Z"
+}

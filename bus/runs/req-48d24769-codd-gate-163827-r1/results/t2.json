@@ -1,0 +1,10 @@
+{
+  "id": "t2",
+  "who": "worker-1",
+  "status": "done",
+  "output": "rebase は未実施・完了条件未達です。git 利用規約が `rebase` を明示的に禁止しているため、履歴変更は行っていません。\n\n検証結果: worktree は clean。最新 main は `1d6a516f…`、HEAD は `abe5906a…`、merge-base は `9a7302f…`。`main` は HEAD の祖先ではありません。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t2/report.md)",
+  "finished_at": "2026-07-23T20:30:06Z",
+  "artifacts": [
+    "artifacts/t2/report.md"
+  ]
+}

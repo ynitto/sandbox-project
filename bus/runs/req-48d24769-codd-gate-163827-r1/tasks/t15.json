@@ -1,0 +1,8 @@
+{
+  "id": "t15",
+  "goal": "docs/designs/codd-gate-design.md に、有効化は yaml または CLI のみであり、パッケージ内の名指し結合や暗黙の自動配線では有効化しないことを明記する。",
+  "deps": [
+    "t13"
+  ],
+  "kind": "generate"
+}

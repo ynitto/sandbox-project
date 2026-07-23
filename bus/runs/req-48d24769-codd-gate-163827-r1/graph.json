@@ -1,0 +1,219 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 6,
+    "review": true,
+    "reason": "[flow-planner] 設計書とREADMEを文書別に並行更新し、統合前に現行コードとの境界整合性を検証したうえで、指定されたgrep・testコマンドがすべて終了コード0になるまで修正を反復するため。（粒度 finest）"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "対象リポジトリ https://github.com/ynitto/sandbox の成果物 worktree とブランチ ap/codd-gate-163827 を特定し、未コミット変更、追跡先、main との差分を確認して、安全に rebase 可能な状態か判定する。",
+      "deps": [],
+      "kind": "classify"
+    },
+    "t2": {
+      "goal": "成果物ブランチ ap/codd-gate-163827 を最新の origin/main に rebaseし、競合を解消したうえで git status と merge-base により rebase 完了を検証する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "docs/designs/codd-gate-design.md §4 を確認し、差し込み点 E1、E2、E3 ごとに agent_project の汎用フックと codd-gate 固有処理の現行記述を抽出する。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "tools/agent-project/agent_project 配下の現行コードを調査し、regression_cmd、intake_cmd、hooks、自動検出に関係する実際の差し込み点と呼び出し境界を関数単位で特定する。実装変更は行わない。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "docs/designs/codd-gate-design.md §4.1 を確認し、自動検出レイヤ、sibling 部品、yaml/CLI 有効化、永続化に関する既存の責務記述と不足箇所を整理する。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "tools/agent-project/codd_gate_*.py を調査し、自動検出、推奨コマンド生成、設定永続化の担当ファイルを分類して、永続化が codd_gate_regression.py に限定されるべき根拠を確認する。",
+      "deps": [
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "tools/agent-project/README.md の一貫性ゲート節を確認し、agent_project 非依存、sibling、自動検出、regression_cmd、intake_cmd、yaml/CLI 有効化の各観点で設計書との差異を列挙する。",
+      "deps": [
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "tools/agent-project/agent_project を対象に git grep で _apply_codd_gate、_codd_gate、import codd_gate の残存箇所を確認し、設計上の負の完了条件として使用できる対象パスとパターンを確定する。",
+      "deps": [
+        "t6"
+      ],
+      "kind": "work"
+    },
+    "gate1": {
+      "goal": "t3〜t8 の調査結果を現行コードと突き合わせ、E1–E3、自動検出、任意 sibling、永続化、有効化、負の grep 条件について推測、見落とし、設計書と README の矛盾がないか adversarial に検証する。",
+      "deps": [
+        "t7",
+        "t8"
+      ],
+      "kind": "verify"
+    },
+    "synth1": {
+      "goal": "gate1 を通過した根拠から、『agent_project パッケージは汎用フックのみ』『codd_gate_* は直接結合しない任意の sibling 部品』『永続化は codd_gate_regression.py』『有効化は yaml または CLI のみ』という統一境界と文書別の変更内容を確定する。",
+      "deps": [
+        "gate1"
+      ],
+      "kind": "synthesize"
+    },
+    "t9": {
+      "goal": "docs/designs/codd-gate-design.md §4 の E1–E3 を、各差し込み点で agent_project の汎用フックと sibling 側の codd-gate 固有処理を区別できる記述へ更新する。",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "generate"
+    },
+    "t10": {
+      "goal": "tools/agent-project/README.md の一貫性ゲート節に、agent_project パッケージは codd_gate_* を import、直接結合、依存せず、汎用フックだけを提供する境界を明記する。",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "generate"
+    },
+    "t11": {
+      "goal": "docs/designs/codd-gate-design.md §4.1 に、codd_gate_*.py は任意の sibling 部品であり、agent_project から直接結合せず汎用 hooks レイヤで自動検出する責務境界を明記する。",
+      "deps": [
+        "t9"
+      ],
+      "kind": "generate"
+    },
+    "t12": {
+      "goal": "tools/agent-project/README.md の一貫性ゲート節で、自動検出方式と regression_cmd・intake_cmd の役割および名称を設計書 §4・§4.1 と一致させる。",
+      "deps": [
+        "t10"
+      ],
+      "kind": "generate"
+    },
+    "t13": {
+      "goal": "docs/designs/codd-gate-design.md §4.1 に、codd-gate 固有設定の永続化は codd_gate_regression.py が担い、agent_project 本体は永続化しないことを明記する。",
+      "deps": [
+        "t11"
+      ],
+      "kind": "generate"
+    },
+    "t14": {
+      "goal": "tools/agent-project/README.md に、codd-gate 連携の有効化は yaml の regression_cmd・intake_cmd または対応 CLI による明示設定だけで行い、自動検出だけでは有効化しないことを明記する。",
+      "deps": [
+        "t12"
+      ],
+      "kind": "generate"
+    },
+    "t15": {
+      "goal": "docs/designs/codd-gate-design.md に、有効化は yaml または CLI のみであり、パッケージ内の名指し結合や暗黙の自動配線では有効化しないことを明記する。",
+      "deps": [
+        "t13"
+      ],
+      "kind": "generate"
+    },
+    "t16": {
+      "goal": "tools/agent-project/README.md に、codd_gate_*.py の自動検出対象、codd_gate_regression.py の永続化責務、regression_cmd・intake_cmd の設定例が同じ境界を示すよう記述を整合させる。",
+      "deps": [
+        "t14"
+      ],
+      "kind": "generate"
+    },
+    "t17": {
+      "goal": "docs/designs/codd-gate-design.md の設計上の完了条件に、tools/agent-project/agent_project から _apply_codd_gate、_codd_gate、import codd_gate が残存しないことを否定形の git grep で検証する条件を記載する。",
+      "deps": [
+        "t15"
+      ],
+      "kind": "generate"
+    },
+    "t18": {
+      "goal": "tools/agent-project/README.md の変更部分だけを slop-police スキルで点検し、冗長表現、曖昧な主体、設計書と異なる用語を修正する。",
+      "deps": [
+        "t16"
+      ],
+      "kind": "work"
+    },
+    "t19": {
+      "goal": "docs/designs/codd-gate-design.md §4・§4.1・完了条件の変更部分を slop-police スキルで点検し、責務主体と禁止境界が一読で判別できる表現へ修正する。",
+      "deps": [
+        "t17"
+      ],
+      "kind": "work"
+    },
+    "gate2": {
+      "goal": "agent-review スキルで設計書と README の草稿をレビューし、現行コードとの境界整合性、E1–E3、自動検出、永続化、有効化、負の grep 条件、実装・テスト非変更のスコープを検証する。",
+      "deps": [
+        "t18",
+        "t19"
+      ],
+      "kind": "verify"
+    },
+    "synth2": {
+      "goal": "gate2 の指摘を設計書と README に反映し、両文書で責務境界、コマンド名、検出方式、完了条件の語彙を統一する。agent_project、dashboard、テストの実装変更は行わない。",
+      "deps": [
+        "gate2"
+      ],
+      "kind": "synthesize"
+    },
+    "t20": {
+      "goal": "synth2 後の docs/designs/codd-gate-design.md を slop-police スキルで再点検し、レビュー反映による文体の崩れだけを修正する。",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "work"
+    },
+    "t21": {
+      "goal": "synth2 後の tools/agent-project/README.md を slop-police スキルで再点検し、レビュー反映による文体の崩れだけを修正する。",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "work"
+    },
+    "gate3": {
+      "goal": "agent-review スキルで最終文書を再レビューし、git diff --name-only と git diff --check を含めて、変更が docs/designs/codd-gate-design.md と tools/agent-project/README.md に限定され、内容と形式に問題がないことを検証する。",
+      "deps": [
+        "t20",
+        "t21"
+      ],
+      "kind": "verify"
+    },
+    "loop": {
+      "goal": "指定された README の2つの grep、設計書の test -f と grep、および設計書に記載した否定形 git grep を実行し、いずれかが非0なら文書だけを最小修正して全コマンドが終了コード0になるまで反復する。",
+      "deps": [
+        "gate3"
+      ],
+      "kind": "work"
+    },
+    "gate4": {
+      "goal": "loop 完了後、指定された完了条件コマンド一式と否定形 git grep を変更なしで再実行し、すべて終了コード0であることを検証する。",
+      "deps": [
+        "loop"
+      ],
+      "kind": "verify"
+    },
+    "judge": {
+      "goal": "rebase 済みの成果物ブランチ上で、gate4 成功、文書2ファイルだけの差分、実装・テスト非変更、未解決レビュー指摘なしを確認し、codd-gate-163827 の完了可否を判定する。",
+      "deps": [
+        "gate4"
+      ],
+      "kind": "judge"
+    }
+  },
+  "iteration": 0
+}

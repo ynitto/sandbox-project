@@ -1,0 +1,8 @@
+{
+  "id": "t7",
+  "goal": "tools/agent-project/README.md の一貫性ゲート節を確認し、agent_project 非依存、sibling、自動検出、regression_cmd、intake_cmd、yaml/CLI 有効化の各観点で設計書との差異を列挙する。",
+  "deps": [
+    "t5"
+  ],
+  "kind": "work"
+}

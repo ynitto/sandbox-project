@@ -1,0 +1,8 @@
+{
+  "id": "t16",
+  "goal": "tools/agent-project/README.md に、codd_gate_*.py の自動検出対象、codd_gate_regression.py の永続化責務、regression_cmd・intake_cmd の設定例が同じ境界を示すよう記述を整合させる。",
+  "deps": [
+    "t14"
+  ],
+  "kind": "generate"
+}
