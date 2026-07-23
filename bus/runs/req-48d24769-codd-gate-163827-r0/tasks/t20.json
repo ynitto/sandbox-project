@@ -1,9 +1,0 @@
-{
-  "id": "t20",
-  "goal": "t18 の workspace rebase 競合を解消して loop の文書変更を統合先へ反映する。その後、tools/agent-project/README.md と docs/designs/codd-gate-design.md §4・§4.1・§4.2 を再検証し、(1) agent_project は汎用フックのみ、codd_gate_*.py は任意 sibling、(2) E1–E3 のコマンド文字列と E1 のタスク verify、(3) 有効化は YAML/CLI 設定のみ、永続化は codd_gate_regression.py のみ、(4) §4.2 の grep が package 内の _apply_codd_gate・_codd_gate・import codd_gate を漏れなく検出することを確認する。元要求の連結シェルコマンド、git diff --check、変更範囲確認を実行し、agent_project/dashboard の実装・テスト変更や要求外差分がない状態で verify=pass を残す。",
-  "deps": [
-    "loop",
-    "t18"
-  ],
-  "kind": "work"
-}

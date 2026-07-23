@@ -1,8 +1,0 @@
-{
-  "id": "t12",
-  "goal": "tools/agent-project/README.md に、永続化は codd_gate_regression.py、有効化は yaml/CLI の設定のみという方針を、正典設計書と同じ用語で記載する。",
-  "deps": [
-    "t11"
-  ],
-  "kind": "work"
-}

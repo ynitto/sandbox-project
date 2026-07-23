@@ -1,8 +1,0 @@
-{
-  "id": "t13",
-  "goal": "slop-police スキルを使って docs/designs/codd-gate-design.md の変更箇所だけを推敲し、曖昧な主語、重複、過剰な断定を除きつつ必須の境界語と完了条件を保持する。",
-  "deps": [
-    "t8"
-  ],
-  "kind": "work"
-}

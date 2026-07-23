@@ -1,7 +1,0 @@
-{
-  "id": "codd-gate-docfix-21",
-  "who": "worker-2",
-  "status": "done",
-  "output": "成果: 変更なし。正典は `docs/designs/codd-gate-design.md` にあり、許可された `tools/agent-project/` の外でした。README は既に要求境界と一致しています。\n\n検証: 現行 §4.2 は `_apply_codd_gate` の2件しか検出せず、要求相当の検査では `_codd_gate` と固有 import を含む14件を検出しました。作業ツリーは clean、`git diff --check` も成功しました。\n\n前提: 「他フォルダは触らない」を優先しました。未解決事項は正典 §4.2 の false green です。\n\n@followup docs/designs/codd-gate-design.md を変更可能な担当で、`agent_project/` 限定の `_apply_codd_gate|_codd_gate|import行内のcodd_gate` 検査へ修正してください。",
-  "finished_at": "2026-07-23T20:16:16Z"
-}

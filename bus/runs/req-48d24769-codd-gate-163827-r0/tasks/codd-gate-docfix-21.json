@@ -1,6 +1,0 @@
-{
-  "id": "codd-gate-docfix-21",
-  "goal": "docs/designs/codd-gate-design.md §4.2 の完了条件が agent_project パッケージ内の `_apply_codd_gate`、`_codd_gate`、`import codd_gate` および同等の codd-gate 固有 import を確実に検出するよう修正し、false green を解消する。§4・§4.1には、パッケージは E1–E3 の汎用フックのみを提供し、`codd_gate_*.py` は任意 sibling、自動検出・有効化は YAML/CLI のみ、永続化は `codd_gate_regression.py` のみという境界を一貫して明記する。tools/agent-project/README.md は現状を照合し、正典との差異が残る場合だけ同じ境界へ修正する。agent_project、dashboard、テストの実装は変更しない。t18 の競合コミットを再利用せず、現在の HEAD に最小差分を適用する。",
-  "deps": [],
-  "kind": "work"
-}

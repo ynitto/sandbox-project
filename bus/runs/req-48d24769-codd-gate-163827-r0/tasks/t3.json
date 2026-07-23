@@ -1,6 +1,0 @@
-{
-  "id": "t3",
-  "goal": "現行コードを参照し、E1–E3 に対応する汎用フック、codd_gate_regression.py、自動検出対象、yaml/CLI 有効化経路、および _apply_codd_gate・_codd_gate・import codd_gate の残存箇所を調査する。変更は行わない。",
-  "deps": [],
-  "kind": "work"
-}

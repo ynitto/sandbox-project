@@ -1,9 +1,0 @@
-{
-  "id": "t16",
-  "goal": "agent-review スキルで差分をレビューし、変更が docs/designs/codd-gate-design.md と tools/agent-project/README.md の文書範囲に限定され、agent_project・dashboard の実装やテストが変更されていないことを検証する。",
-  "deps": [
-    "t13",
-    "t14"
-  ],
-  "kind": "verify"
-}

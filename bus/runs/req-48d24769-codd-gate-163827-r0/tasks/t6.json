@@ -1,8 +1,0 @@
-{
-  "id": "t6",
-  "goal": "docs/designs/codd-gate-design.md に、codd-gate 固有状態の永続化先を codd_gate_regression.py のみに限定する方針を明記する。",
-  "deps": [
-    "t5"
-  ],
-  "kind": "work"
-}

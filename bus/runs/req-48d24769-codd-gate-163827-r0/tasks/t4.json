@@ -1,8 +1,0 @@
-{
-  "id": "t4",
-  "goal": "docs/designs/codd-gate-design.md §4 の E1–E3 を、agent_project パッケージが提供する汎用フックと sibling 部品が担う codd-gate 固有処理の境界が各差し込み点で判別できる記述へ修正する。",
-  "deps": [
-    "synth"
-  ],
-  "kind": "work"
-}

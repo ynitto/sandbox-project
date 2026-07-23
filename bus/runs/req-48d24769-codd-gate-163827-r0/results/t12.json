@@ -1,7 +1,0 @@
-{
-  "id": "t12",
-  "who": "worker-2",
-  "status": "done",
-  "output": "(a) 変更不要。README 283–290行に、有効化は YAML/CLI 設定のみ、永続化は `codd_gate_regression.py` が担う方針を正典 §4・§4.1 と同じ用語で記載済み。\n\n(b) `git diff --check` PASS。作業ツリー変更なし。該当記述を `rg` で確認。\n\n(c) 前提: 重複追記せず既存記述を成果とした。未解決: パッケージ内の固有 import・自動配線の除去は実装変更のため範囲外。\n\n`@followup agent-project パッケージ内の codd-gate 固有 import・自動配線を除去し、関連テストを改修する。`",
-  "finished_at": "2026-07-22T21:05:15Z"
-}

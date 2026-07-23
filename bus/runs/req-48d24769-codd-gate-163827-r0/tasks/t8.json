@@ -1,8 +1,0 @@
-{
-  "id": "t8",
-  "goal": "docs/designs/codd-gate-design.md の設計上の完了条件に、agent_project 対象コードから _apply_codd_gate・_codd_gate・import codd_gate が残らないことと、それを ! git grep で確認する条件を明記する。",
-  "deps": [
-    "t7"
-  ],
-  "kind": "work"
-}

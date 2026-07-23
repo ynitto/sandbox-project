@@ -1,6 +1,0 @@
-{
-  "id": "t2",
-  "goal": "tools/agent-project/README.md の一貫性ゲート節を読み、責務境界、regression_cmd、intake_cmd、codd_gate_*.py、自動検出、有効化方法に関する現行記述を行番号付きで抽出する。",
-  "deps": [],
-  "kind": "work"
-}

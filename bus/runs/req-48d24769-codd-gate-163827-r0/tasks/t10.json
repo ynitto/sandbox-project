@@ -1,8 +1,0 @@
-{
-  "id": "t10",
-  "goal": "tools/agent-project/README.md の一貫性ゲート節に、regression_cmd と intake_cmd の正確なコマンド名と用途を記載する。",
-  "deps": [
-    "t9"
-  ],
-  "kind": "work"
-}
