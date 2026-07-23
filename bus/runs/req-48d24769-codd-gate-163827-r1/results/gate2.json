@@ -1,0 +1,17 @@
+{
+  "id": "gate2",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=fail\n\n重大問題は2件です。\n\n- [README.md:308](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-42967-cjy6asn8/sandbox/tools/agent-project/README.md:308) の負の grep は README 自身に一致するため、実装整理後も PASS しません。また `doctor.py` / `model.py` の名指し・importを検出できません。t19 のパッケージ限定パターンへ統一が必要です。\n- READMEと設計書は、永続化 CLI が version/schema/capability を検査すると記載していますが、現行 `detect_status()` は実体のみ検査します。今回は文書を現状に合わせ、完全検査の実装は `@followup` に分離すべきです。\n\nE1–E3、`regression_cmd` のみの永続化、実装・テスト非変更は整合。関連81テストと diff check はPASS、worktreeはcleanです。\n\n詳細: [gate2/report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/gate2/report.md)\n\n{\"ok\":false,\"issues\":[\"README.md:308 と設計書 §4.2 の負の grep は自己一致し、名指し・import も網羅しないため、t19 のパッケージ限定・統合パターンへ修正すること\",\"README.md:292-301 と設計書 §4.1 の version/schema/capability 検査記述は現行コードと不一致。現状記述へ直し、完全検査実装は @followup に分離すること\"]}",
+  "finished_at": "2026-07-23T20:55:53Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "README.md:308 と設計書 §4.2 の負の grep は自己一致し、名指し・import も網羅しないため、t19 のパッケージ限定・統合パターンへ修正すること",
+      "README.md:292-301 と設計書 §4.1 の version/schema/capability 検査記述は現行コードと不一致。現状記述へ直し、完全検査実装は @followup に分離すること"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate2/report.md"
+  ]
+}

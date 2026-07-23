@@ -1,0 +1,20 @@
+{
+  "id": "synth2",
+  "who": "worker-2",
+  "status": "done",
+  "output": "README に gate2 の指摘を反映しました。`git diff --check` PASS。\n\n- [成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/synth2/report.md)\n- [設計書反映案](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/synth2/design-proposed-edit.md)\n\n設計書は書込許可範囲外のため未変更です。",
+  "finished_at": "2026-07-23T20:58:02Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "916d87c31897e09ad1b1958b21934049803af05f",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/synth2/design-proposed-edit.md",
+    "artifacts/synth2/report.md"
+  ]
+}

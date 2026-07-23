@@ -1,0 +1,11 @@
+{
+  "id": "t20",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- [文体修正版](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t20/design-proposed-edit.md>)\n- [成果報告](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t20/report.md>)\n\n正典は書込許可範囲外のため未変更。`git diff --check` PASS、作業ツリー変更なし。",
+  "finished_at": "2026-07-23T21:00:14Z",
+  "artifacts": [
+    "artifacts/t20/design-proposed-edit.md",
+    "artifacts/t20/report.md"
+  ]
+}

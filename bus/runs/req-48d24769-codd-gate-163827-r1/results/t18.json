@@ -1,0 +1,19 @@
+{
+  "id": "t18",
+  "who": "worker-2",
+  "status": "done",
+  "output": "[tools/agent-project/README.md](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-42967-cjy6asn8/sandbox/tools/agent-project/README.md) を修正。`git diff --check` PASS。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t18/report.md)",
+  "finished_at": "2026-07-23T20:51:51Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "2879550ae6576d27ba31ca777a32df68d7220b7b",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t18/report.md"
+  ]
+}

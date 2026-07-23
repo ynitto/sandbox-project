@@ -23,3 +23,5 @@
 {"ts": "2026-07-23T20:48:16Z", "who": "worker-1", "kind": "claimed", "node": "t17"}
 {"ts": "2026-07-23T20:49:30Z", "who": "worker-1", "kind": "result", "node": "t17", "status": "done"}
 {"ts": "2026-07-23T20:49:30Z", "who": "worker-1", "kind": "claimed", "node": "t19"}
+{"ts": "2026-07-23T20:51:45Z", "who": "worker-1", "kind": "result", "node": "t19", "status": "done"}
+{"ts": "2026-07-23T20:58:03Z", "who": "worker-1", "kind": "claimed", "node": "t21"}

@@ -13,3 +13,10 @@
 {"ts": "2026-07-23T20:46:39Z", "who": "worker-2", "kind": "claimed", "node": "t16"}
 {"ts": "2026-07-23T20:48:13Z", "who": "worker-2", "kind": "result", "node": "t16", "status": "done"}
 {"ts": "2026-07-23T20:48:13Z", "who": "worker-2", "kind": "claimed", "node": "t18"}
+{"ts": "2026-07-23T20:51:51Z", "who": "worker-2", "kind": "result", "node": "t18", "status": "done"}
+{"ts": "2026-07-23T20:51:51Z", "who": "worker-2", "kind": "claimed", "node": "gate2"}
+{"ts": "2026-07-23T20:55:53Z", "who": "worker-2", "kind": "result", "node": "gate2", "status": "done"}
+{"ts": "2026-07-23T20:55:54Z", "who": "worker-2", "kind": "claimed", "node": "synth2"}
+{"ts": "2026-07-23T20:58:02Z", "who": "worker-2", "kind": "result", "node": "synth2", "status": "done"}
+{"ts": "2026-07-23T20:58:02Z", "who": "worker-2", "kind": "claimed", "node": "t20"}
+{"ts": "2026-07-23T21:00:14Z", "who": "worker-2", "kind": "result", "node": "t20", "status": "done"}

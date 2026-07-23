@@ -1,0 +1,11 @@
+{
+  "id": "t19",
+  "who": "worker-1",
+  "status": "done",
+  "output": "- [成果報告](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t19/report.md>)\n- [修正文案](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t19/proposed-edit.md>)\n\n対象文書は書込許可範囲外のため未反映。リポジトリの作業ツリー変更なし。",
+  "finished_at": "2026-07-23T20:51:45Z",
+  "artifacts": [
+    "artifacts/t19/proposed-edit.md",
+    "artifacts/t19/report.md"
+  ]
+}
