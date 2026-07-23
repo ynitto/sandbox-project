@@ -143,3 +143,7 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-24 05:21:46 verify: codd-gate-163827 を https://github.com/ynitto/sandbox@ap/codd-gate-163827（path=tools/agent-project） のクローン内で検証
 - 2026-07-24 05:21:46 cycle 1: codd-gate-163827 → 検収待ち（承認ゲート） — commit 48d24769
 - 2026-07-24 05:21:47 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
+- 2026-07-24 05:21:49 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-24 05:21:49 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-07-24 05:21:56 === update: 更新を適用（1d6a516f）===
+- 2026-07-24 05:21:57 前世代の agent-flow を 2 プロセス停止（クラッシュの残骸）。run のリースを失効させ、続きから再開できる状態に戻した

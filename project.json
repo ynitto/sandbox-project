@@ -11,10 +11,12 @@
         "agent-project の設計書とコードの一貫性が保たれていること": "test -n \"${KIRO_BASE_REV:-}\" && python3 tools/codd-gate/codd-gate.py verify --base \"$KIRO_BASE_REV\" && AGENT_FLOW_STUB_SLEEP_MAX=0 python3 -m unittest discover -s tools/agent-project/tests"
       },
       "human_acceptance": [],
-      "status": "no-acceptance",
+      "status": "blocked",
       "planned_charter_sig": "502cc5b20d377958c2c2679ab8bcb8f4a85628d47fb5f9bfc10de92571324565",
-      "acceptance_total": 2
+      "acceptance_total": 2,
+      "cost": 0.0,
+      "cycles": 1
     }
   },
-  "updated": "2026-07-24T05:14:24"
+  "updated": "2026-07-24T05:21:49"
 }
