@@ -1,5 +1,5 @@
 ## codd-gate-163827: codd-gate 連携の目標境界を設計書に固定する
-- status: review
+- status: done
 - source: charter
 - priority: 0
 - verify: `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md`
@@ -13,7 +13,16 @@
 - assess: c=2 r=1 a=1
 - feedback: 成果物ブランチをrebaseして
 - last_run: req-48d24769-codd-gate-163827-r1
-- gate_ref: commit 48d24769
-- gate_ts: 2026-07-24 06:09:09
-- gate_branch: main
-- gate_vmsg: exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo
+- archived: 2026-07-24 06:09:09
+
+## 納品書
+- 完了 : 2026-07-24 06:09:09
+- verify: `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md` → PASS（exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo）
+- 成果 : commit 48d24769
+
+## 判断材料（成果物の所在・差分・検証）
+- 成果物: commit 48d24769
+- 所在: /Users/nitto/Workspace/sandbox-project / ブランチ main
+
+## run ブリーフ（この試行群で確定した制約・教訓。learn 射影済み）
+- 成果物ブランチをrebaseして

@@ -177,3 +177,8 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-24 06:21:20 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
 - 2026-07-24 06:21:22 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
 - 2026-07-24 06:21:22 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-07-24 06:25:27 run ブリーフ退役: codd-gate-163827（1 件を納品書へ転記）
+- 2026-07-24 06:25:27 commands 取り込み: approve codd-gate-163827（viewer-approve-codd-gate-163827-1784841923233.json）
+- 2026-07-24 06:25:27 === project 開始 v1 acceptance=2 ===
+- 2026-07-24 06:25:28 === agent-project 開始 tasks=4 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-24 06:25:28 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
