@@ -1,0 +1,8 @@
+{
+  "id": "t5",
+  "goal": "docs/designs/codd-gate-design.md §4.1 に、agent_project が codd_gate_* を import・結合・依存せず、sibling ファイルを任意部品として自動検出するレイヤの責務を明記する。",
+  "deps": [
+    "t4"
+  ],
+  "kind": "work"
+}

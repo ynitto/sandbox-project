@@ -133,3 +133,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-23 05:46:45 === project watch: 監視中（charter 更新/フィードバック待ち）===
 - 2026-07-23 05:46:57 === project watch: 監視中（charter 更新/フィードバック待ち）===
 - 2026-07-23 05:51:00 === project 開始 v1 acceptance=2 ===
+- 2026-07-23 05:51:00 === agent-project 開始 tasks=5 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-23 05:51:00 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s

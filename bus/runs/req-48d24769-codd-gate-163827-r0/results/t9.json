@@ -1,0 +1,16 @@
+{
+  "id": "t9",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: `tools/agent-project/README.md` の一貫性ゲート節に、`agent_project` の責務は E1〜E6 の汎用フック提供までであり、codd-gate 固有コードを名指し・import・結合・依存しないと明記。有効化と永続化の主体も整理した。\n- 検証: `git diff --check` PASS。変更は README の3行追加・2行削除のみで、許可範囲内。\n- 前提・未解決: 正典 §4/§4.1 と `synthesis.md` を採用。現行実装には固有 import・自動配線が残るが範囲外。`@followup agent-project 実装から codd-gate 固有 import と起動時自動配線を除去し、関連テストを改修する。`",
+  "finished_at": "2026-07-22T21:02:18Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "7240bf682c23fcf3bf572a76d30bc9ea96aba34c",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

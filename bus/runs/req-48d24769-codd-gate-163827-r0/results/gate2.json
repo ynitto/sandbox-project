@@ -1,0 +1,13 @@
+{
+  "id": "gate2",
+  "who": "worker-2",
+  "status": "done",
+  "output": "判定: **FAIL**\n\n| dep | 評価 |\n|---|---|\n| t15 | README の具体的不整合は正確。ただし正典ゲートとスコープ違反を見落とす |\n| t16 | §4.2 の false green を正しく特定。正典整合の核心を捉えており最良 |\n| t17 | 指定コマンド成功とスコープ違反は正確。ただし正典整合を誤って PASS 扱い |\n\n- 正典整合: **FAIL** — §4.2 が `_apply_codd_gate` だけを必須検査し、`_codd_gate` / `import codd_gate` を任意扱い。\n- スコープ適合: **FAIL** — 許可範囲外の `docs/designs/codd-gate-design.md` を変更。\n- 指定コマンド: **PASS** — 原文どおり再実行して exit 0。\n\n修正対象は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/gate2/result.md) に1ファイル・1観点単位で記録済み。\n\n{\"winner\": \"t16\"}",
+  "finished_at": "2026-07-22T21:14:46Z",
+  "data": {
+    "winner": "t16"
+  },
+  "artifacts": [
+    "artifacts/gate2/result.md"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "t19",
+  "goal": "t18 の反映後、現行 target 上で元要求の連結シェルコマンドと `git diff --check` を実行し、いずれも exit 0 であることを確認する。正典 §4.2 の必須 grep が `_apply_codd_gate`、`_codd_gate`、`import codd_gate` をすべて検査すること、変更が2文書だけで実装・dashboard・テスト差分がないこと、成果コミットが実在して再現可能なことを批判的に検証し、1項目でも欠ければ pass にしない。",
+  "deps": [
+    "t18"
+  ],
+  "kind": "work"
+}

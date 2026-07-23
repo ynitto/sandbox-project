@@ -1,0 +1,10 @@
+{
+  "id": "t3",
+  "who": "worker-1",
+  "status": "done",
+  "output": "調査完了。成果物: [investigation.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/t3/investigation.md)\n\n- 現行コードへの変更なし\n- 関連テスト: 72件すべて PASS\n- E1–E3、自動検出・有効化経路、全残存箇所、正典との差異を記録済み",
+  "finished_at": "2026-07-22T20:55:25Z",
+  "artifacts": [
+    "artifacts/t3/investigation.md"
+  ]
+}

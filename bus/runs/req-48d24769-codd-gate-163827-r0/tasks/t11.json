@@ -1,0 +1,8 @@
+{
+  "id": "t11",
+  "goal": "tools/agent-project/README.md に、codd_gate_*.py が sibling 任意部品として自動検出されることを、正典設計書 §4.1 と同じ責務境界で記載する。",
+  "deps": [
+    "t10"
+  ],
+  "kind": "work"
+}

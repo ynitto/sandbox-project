@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "docs/designs/codd-gate-design.md の §4 と §4.1 を読み、差し込み点 E1–E3、自動検出レイヤ、agent_project と sibling 部品の既存責務記述を行番号付きで抽出する。",
+  "deps": [],
+  "kind": "work"
+}

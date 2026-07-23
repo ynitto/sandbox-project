@@ -1,0 +1,13 @@
+{
+  "id": "t18",
+  "who": "worker-1",
+  "status": "failed",
+  "output": "実行エラー: workspace rebase が競合しました（ap/codd-gate-163827）: Rebasing (1/1)\nerror: could not apply 275d2c58... [agent-flow] t18 (req-48d24769-codd-gate-163827-r0)\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --sk",
+  "finished_at": "2026-07-22T21:24:07Z",
+  "data": {
+    "error_class": "content"
+  },
+  "artifacts": [
+    "artifacts/t18/report.md"
+  ]
+}

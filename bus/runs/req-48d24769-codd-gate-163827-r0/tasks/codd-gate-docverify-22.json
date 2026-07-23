@@ -1,0 +1,8 @@
+{
+  "id": "codd-gate-docverify-22",
+  "goal": "codd-gate-docfix-21 後の2文書を独立検証する。元要求の連結シェルコマンド、git diff --check、設計書 §4.2 の強化した否定 grep を実行し、§4 の E1–E3、§4.1 の自動検出・有効化・永続化境界を目視照合する。差分が docs/designs/codd-gate-design.md と tools/agent-project/README.md だけで、agent_project、agent-dashboard、テストに変更がないことも確認し、全項目 pass/fail と不一致箇所を具体的に報告する。",
+  "deps": [
+    "codd-gate-docfix-21"
+  ],
+  "kind": "work"
+}

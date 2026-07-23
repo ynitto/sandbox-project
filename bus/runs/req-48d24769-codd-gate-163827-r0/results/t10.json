@@ -1,0 +1,16 @@
+{
+  "id": "t10",
+  "who": "worker-2",
+  "status": "done",
+  "output": "(a) 成果: `tools/agent-project/README.md` に以下を明記。\n\n- `regression_cmd`: `codd-gate verify ...`。done 前の差分検査。\n- `intake_cmd`: `codd-gate tasks --debt ...`。負債を修復タスクとして冪等取り込み。\n\n(b) 検証: `git diff --check` PASS。変更は README 1ファイルのみ。\n\n(c) 前提: 正典 `codd-gate-design.md` §4/§4.1を採用。実装・テストは範囲外。\n\n`@followup agent-project パッケージ内に残る codd-gate 固有 import・自動配線を除去し、関連テストを改修する。`",
+  "finished_at": "2026-07-22T21:03:12Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "35453460378e4bb547f8cb6833f0e53f2f92fc36",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

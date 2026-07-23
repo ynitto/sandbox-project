@@ -1,0 +1,20 @@
+{
+  "id": "gate1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=fail\n\n重大な不一致:\n\n- 正典・README の「非依存・非自動配線」と `configfile.py:201-229,376`、`doctor.py:287-320,528`、`model.py:494-557` が矛盾。\n- 正典 §4.2 の必須 grep は doctor/model の import を見逃す。\n- 生成 CLI は、文書に反して version/schema/capability を検査していない。\n- t2 は README と現行コードの不一致を見落としている。\n- (minor) t3 のテスト対象が不明確。全5ファイル・81件は PASS。\n\n詳細: [verification.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/gate1/verification.md)\n\n{\"ok\": false, \"issues\": [\"design/README の非依存・非自動配線宣言と configfile/doctor/model が矛盾\", \"正典 §4.2 の必須 grep が package 内の名指し/import を見逃す\", \"生成 CLI の非互換 no-op 宣言と existence-only detect_status 実装が矛盾\", \"t2 が README と現行コードの不一致を未解決事項として落としている\", \"(minor) t3 のテスト対象と4ファイル/72件の対応が不明\"]}",
+  "finished_at": "2026-07-22T20:59:25Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "design/README の非依存・非自動配線宣言と configfile/doctor/model が矛盾",
+      "正典 §4.2 の必須 grep が package 内の名指し/import を見逃す",
+      "生成 CLI の非互換 no-op 宣言と existence-only detect_status 実装が矛盾",
+      "t2 が README と現行コードの不一致を未解決事項として落としている",
+      "(minor) t3 のテスト対象と4ファイル/72件の対応が不明"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate1/verification.md"
+  ]
+}

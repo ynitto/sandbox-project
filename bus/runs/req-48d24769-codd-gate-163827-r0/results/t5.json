@@ -1,0 +1,10 @@
+{
+  "id": "t5",
+  "who": "worker-1",
+  "status": "done",
+  "output": "## 成果\n\n作業ツリーは未変更です。§4.1 には要求された責務境界がすでに明記されています。報告は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/t5/result.md) に出力しました。\n\n## 検証\n\n`git diff --check` 成功、`git status --short` は空です。\n\n## 前提・未解決事項\n\n対象文書は書込許可範囲外のため重複編集していません。現行実装には設計境界に反する自動配線・import が残っています。\n\n@followup 別タスクで `configfile.py`、`doctor.py`、`model.py` の `codd_gate_*` 依存を除去する。",
+  "finished_at": "2026-07-22T21:04:07Z",
+  "artifacts": [
+    "artifacts/t5/result.md"
+  ]
+}

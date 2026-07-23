@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "tools/agent-project/README.md の一貫性ゲート節を、agent_project が codd_gate 固有コードを import・結合・依存せず、汎用フックだけを提供する責務境界へ修正する。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "work"
+}

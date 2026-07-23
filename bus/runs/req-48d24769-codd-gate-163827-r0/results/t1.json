@@ -1,0 +1,10 @@
+{
+  "id": "t1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果物: [codd-gate-boundary-extract.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/t1/codd-gate-boundary-extract.md)\n\nE1–E3、自動検出レイヤ、責務境界を行番号付きで抽出済み。現物の自動配線・sibling import と正典の不一致も記録しました。指定 worktree は未変更です。",
+  "finished_at": "2026-07-22T20:55:06Z",
+  "artifacts": [
+    "artifacts/t1/codd-gate-boundary-extract.md"
+  ]
+}

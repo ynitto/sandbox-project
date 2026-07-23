@@ -1,0 +1,8 @@
+{
+  "id": "t14",
+  "goal": "slop-police スキルを使って tools/agent-project/README.md の変更箇所だけを推敲し、正典設計書との用語差をなくしつつ受入 grep が要求する語句を保持する。",
+  "deps": [
+    "t12"
+  ],
+  "kind": "work"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "synth",
+  "goal": "検証済みの現物情報を統合し、『agent_project パッケージは汎用フックのみ』『codd_gate_* は sibling 任意部品』『永続化は codd_gate_regression.py』『有効化は yaml/CLI のみ』という正典境界と、文書ごとの最小変更点を確定する。",
+  "deps": [
+    "gate1"
+  ],
+  "kind": "synthesize"
+}

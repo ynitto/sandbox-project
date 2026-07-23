@@ -1,0 +1,19 @@
+{
+  "id": "t15",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=fail\n\n- README:274 の「結合は共通スキーマのみ」は、正典 §4 の「共通スキーマ＋E1–E3 のコマンド文字列」と不一致。\n- README:280–281 に、E1 のタスク verify（`codd-gate check`）が欠落。\n- README:283–285 は永続化対象が曖昧。`codd_gate_regression.py` が書くのは `regression_cmd` のみ。\n- README:284 の実行例は配置と不一致。`python3 tools/agent-project/codd_gate_regression.py ...` が正しい。\n\nE2・E3、sibling、自動検出、有効化、no-op の意味は一致。詳細は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/t15/result.md)。\n\n{\"ok\":false,\"issues\":[\"tools/agent-project/README.md:274 の結合境界を正典 §4 に合わせる。\",\"tools/agent-project/README.md:280-281 に E1 の codd-gate check を追記する。\",\"tools/agent-project/README.md:283-285 で永続化対象を regression_cmd のみに限定して明記する。\",\"tools/agent-project/README.md:284 のスクリプトパスを tools/agent-project/codd_gate_regression.py に修正する。\"]}",
+  "finished_at": "2026-07-22T21:11:07Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "tools/agent-project/README.md:274 の結合境界を正典 §4 に合わせる。",
+      "tools/agent-project/README.md:280-281 に E1 の codd-gate check を追記する。",
+      "tools/agent-project/README.md:283-285 で永続化対象を regression_cmd のみに限定して明記する。",
+      "tools/agent-project/README.md:284 のスクリプトパスを tools/agent-project/codd_gate_regression.py に修正する。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/t15/result.md"
+  ]
+}

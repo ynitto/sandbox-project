@@ -1,0 +1,8 @@
+{
+  "id": "t7",
+  "goal": "docs/designs/codd-gate-design.md に、codd-gate 連携の有効化は yaml または CLI の設定だけで行い、パッケージ内の直接結合では有効化しない方針を明記する。",
+  "deps": [
+    "t6"
+  ],
+  "kind": "work"
+}
