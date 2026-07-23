@@ -1,0 +1,10 @@
+{
+  "id": "t13",
+  "who": "worker-1",
+  "status": "done",
+  "output": "切り口: 永続化の所有者を一文で固定し、`agent_project` 本体が書かない境界まで明示する。\n\n[成果候補 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t13/report.md)\n\n現 HEAD の §4.1 は完了条件を満たしていたため、重複追記せず作業ツリーは変更していない。",
+  "finished_at": "2026-07-23T20:46:52Z",
+  "artifacts": [
+    "artifacts/t13/report.md"
+  ]
+}

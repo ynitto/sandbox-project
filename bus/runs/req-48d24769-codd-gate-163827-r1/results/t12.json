@@ -1,0 +1,19 @@
+{
+  "id": "t12",
+  "who": "worker-2",
+  "status": "done",
+  "output": "切り口: 自動検出手順と、E2/E3 フックの役割を分離して正典へ対応させた。\n\n`tools/agent-project/README.md` のみ更新。`git diff --check` PASS、実装・テストは変更なし。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t12/report.md)",
+  "finished_at": "2026-07-23T20:45:28Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "f3bb0e56b79ff08a4b69428107a7d248812d6668",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t12/report.md"
+  ]
+}

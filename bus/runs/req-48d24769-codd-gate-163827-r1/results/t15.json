@@ -1,0 +1,10 @@
+{
+  "id": "t15",
+  "who": "worker-1",
+  "status": "done",
+  "output": "切り口: 有効化の判定根拠を「保存された設定値」に固定し、起動時検出では状態が変わらないことまで明示する。\n\n[成果候補 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t15/report.md)\n\n§4／§4.1 は完了条件を満たしていたため重複追記せず、作業ツリーは変更していない。範囲外の未解決事項として、`_apply_codd_gate_auto_wiring` が実装に残り、設計上の受入コマンドは現在失敗する。",
+  "finished_at": "2026-07-23T20:48:16Z",
+  "artifacts": [
+    "artifacts/t15/report.md"
+  ]
+}

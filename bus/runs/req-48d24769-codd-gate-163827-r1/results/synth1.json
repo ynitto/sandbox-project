@@ -1,0 +1,10 @@
+{
+  "id": "synth1",
+  "who": "worker-1",
+  "status": "done",
+  "output": "[統合成果物 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/synth1/report.md)\n\n矛盾を解消し、統一境界と文書別変更内容を確定しました。リポジトリ配下の変更はありません。",
+  "finished_at": "2026-07-23T20:42:29Z",
+  "artifacts": [
+    "artifacts/synth1/report.md"
+  ]
+}

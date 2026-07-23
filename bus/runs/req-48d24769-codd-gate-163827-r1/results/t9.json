@@ -1,0 +1,10 @@
+{
+  "id": "t9",
+  "who": "worker-1",
+  "status": "done",
+  "output": "切り口: E1〜E3を「汎用フック」と「sibling 固有処理」の対照表で区別する。\n\n[成果候補 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t9/report.md)\n\n対象文書が書込許可範囲外のため、作業ツリーは変更していない。現物・依存成果との突合済み。",
+  "finished_at": "2026-07-23T20:44:20Z",
+  "artifacts": [
+    "artifacts/t9/report.md"
+  ]
+}

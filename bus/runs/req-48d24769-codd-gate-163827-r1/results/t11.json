@@ -1,0 +1,10 @@
+{
+  "id": "t11",
+  "who": "worker-1",
+  "status": "done",
+  "output": "切り口: 依存方向と欠落時の不変条件を固定し、汎用 hooks レイヤだけを自動検出の主体にする。\n\n[成果候補 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t11/report.md)\n\n対象文書が書込許可範囲外のため、作業ツリーは変更していない。§4.1・関連実装・依存成果 t9 との突合済み。",
+  "finished_at": "2026-07-23T20:45:42Z",
+  "artifacts": [
+    "artifacts/t11/report.md"
+  ]
+}

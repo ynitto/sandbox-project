@@ -1,0 +1,19 @@
+{
+  "id": "t16",
+  "who": "worker-2",
+  "status": "done",
+  "output": "切り口: 設定例を境界の証拠にし、「検出」「永続化」「有効化」の主体を続けて読める形にした。\n\n`tools/agent-project/README.md` を更新。自動検出の4対象、`codd_gate_regression.py` が永続化する1行、両コマンドのYAML・CLI設定例を同じ境界に揃えた。\n\n検証: `git diff --check` PASS。変更はREADMEのみ。\n\n範囲外の既知問題: `agent_project` 内に自動配線・codd-gate importが残り、README記載の境界ゲートは現時点で失敗する。実装変更禁止のため未修正。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t16/report.md)",
+  "finished_at": "2026-07-23T20:48:13Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "6467d80918be42c7cb3ffe79505d3283e2f9edb6",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t16/report.md"
+  ]
+}

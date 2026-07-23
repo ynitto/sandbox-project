@@ -1,0 +1,20 @@
+{
+  "id": "gate1",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=fail\n\n報告書: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/gate1/report.md)\n\n主な問題は、E1 acceptance の保存先、`intake_cmd` の永続化主体、生成時の完全検査、正典とREADMEの負のgrep条件の不一致です。81テストはPASS、grepは3ファイル・14行で未達、作業ツリーはcleanです。\n\n{\"ok\": false, \"issues\": [\"E1 acceptance の保存先を YAML/CLI とする設計書記述が実フックと矛盾\", \"intake_cmd の永続化主体が設計書内で不一致\", \"生成前の version/schema/capability 検査保証が現行 CLI と不一致\", \"正典と README の負の grep 条件が不一致で t8 の一致判定も誤り\", \"任意 sibling・非依存の目標境界は現行パッケージで未達\"]}",
+  "finished_at": "2026-07-23T20:40:35Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "E1 acceptance の保存先を YAML/CLI とする設計書記述が実フックと矛盾",
+      "intake_cmd の永続化主体が設計書内で不一致",
+      "生成前の version/schema/capability 検査保証が現行 CLI と不一致",
+      "正典と README の負の grep 条件が不一致で t8 の一致判定も誤り",
+      "任意 sibling・非依存の目標境界は現行パッケージで未達"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate1/report.md"
+  ]
+}

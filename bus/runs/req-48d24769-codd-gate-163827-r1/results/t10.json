@@ -1,0 +1,19 @@
+{
+  "id": "t10",
+  "who": "worker-2",
+  "status": "done",
+  "output": "切り口: 禁止事項と許可された拡張点を一文で対にし、実装時に判定できる境界へ固定した。\n\n`tools/agent-project/README.md` を最小変更。`agent_project` は汎用フックのみを提供し、`codd_gate_*` を import・直接結合・依存しないと明記した。\n\n検証: `git diff --check` PASS。正典ゲートは既存の専用結合14件を検出して FAIL（実装修正は範囲外）。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t10/report.md)",
+  "finished_at": "2026-07-23T20:44:01Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/codd-gate-163827",
+      "commit": "198431e6d6e1e18f3afeb0b00b410e17817bd2fa",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t10/report.md"
+  ]
+}
