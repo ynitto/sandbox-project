@@ -1,0 +1,12 @@
+{
+  "error": "approve codd-gate-163827 が失敗 (exit 1): codd-gate-163827: 成果ブランチをターゲットへ統合できないため done にできません（main と ap/codd-gate-163827 の自動統合で競合しました。成果ブランチを更新して再検収してください: Auto-merging docs/designs/codd-gate-design.md",
+  "failed_at": "2026-07-24 05:23:26",
+  "command": {
+    "command": "approve",
+    "id": "codd-gate-163827",
+    "reason": "成果を確認して完了を承認",
+    "actor": "agent-dashboard",
+    "ts": "2026-07-23T20:23:25.260Z",
+    "complete": true
+  }
+}
