@@ -11,3 +11,10 @@
 - affects : codd-gate-163827 → ready
 - learn: codd-gate 連携の目標境界を設計書に固定する :: 成果物ブランチをrebaseして
 
+## DR-0003  2026-07-24  actor: nitto
+- context : codd-gate-163827（codd-gate 連携の目標境界を設計書に固定する）を検収承認
+- action  : approve-done
+- reason  : 成果を確認して完了を承認
+- affects : codd-gate-163827 → done
+- learn: codd-gate 連携の目標境界を設計書に固定する :: 成果を確認して完了を承認
+
