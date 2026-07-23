@@ -26,3 +26,6 @@
 {"ts": "2026-07-22T21:17:17Z", "who": "worker-2", "kind": "result", "node": "loop", "status": "done"}
 {"ts": "2026-07-22T21:17:17Z", "who": "worker-2", "kind": "claimed", "node": "final"}
 {"ts": "2026-07-22T21:19:25Z", "who": "worker-2", "kind": "result", "node": "final", "status": "done"}
+{"ts": "2026-07-23T20:14:26Z", "who": "worker-2", "kind": "claimed", "node": "codd-gate-docfix-21"}
+{"ts": "2026-07-23T20:16:16Z", "who": "worker-2", "kind": "result", "node": "codd-gate-docfix-21", "status": "done"}
+{"ts": "2026-07-23T20:16:16Z", "who": "worker-2", "kind": "claimed", "node": "codd-gate-docverify-22"}

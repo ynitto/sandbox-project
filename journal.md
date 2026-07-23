@@ -135,3 +135,8 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-23 05:51:00 === project 開始 v1 acceptance=2 ===
 - 2026-07-23 05:51:00 === agent-project 開始 tasks=5 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-07-23 05:51:00 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-24 05:14:24 === project 開始 v1 acceptance=2 ===
+- 2026-07-24 05:14:25 doing 回復: codd-gate-163827 を ready へ戻す（実行者が失踪＝結果は返らない）
+- 2026-07-24 05:14:25 === agent-project 開始 tasks=5 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-24 05:14:25 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-24 05:14:25 run 再開: codd-gate-163827 は req-48d24769-codd-gate-163827-r0 の失敗ノードだけをやり直します（done は温存）
