@@ -1,5 +1,5 @@
 ## codd-gate-163827: codd-gate 連携の目標境界を設計書に固定する
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md`
@@ -11,10 +11,9 @@
 - hints: ドキュメントは slop-police スキルで整える。正典は docs/designs/codd-gate-design.md §4（差し込み点 E1–E3）と §4.1（自動検出レイヤ）。受入の `! git grep ... _apply_codd_gate|_codd_gate|import codd_gate` を設計上の完了条件として明記し、永続化は `codd_gate_regression.py`・有効化は yaml/CLI のみ、と境界を書く。tools/agent-project/README.md の一貫性ゲート節も同じ境界に揃える。
 - charter: v1
 - assess: c=2 r=1 a=1
-- gate_ref: commit 48d24769
-- gate_ts: 2026-07-24 05:21:46
-- gate_branch: main
-- gate_vmsg: exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo
 - feedback: 成果物ブランチをrebaseして
 - last_run: req-48d24769-codd-gate-163827-r1
-- flow_run: req-48d24769-codd-gate-163827-r1
+- gate_ref: commit 48d24769
+- gate_ts: 2026-07-24 06:09:09
+- gate_branch: main
+- gate_vmsg: exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo

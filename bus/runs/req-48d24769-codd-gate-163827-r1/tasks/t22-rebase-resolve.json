@@ -1,0 +1,9 @@
+{
+  "id": "t22-rebase-resolve",
+  "goal": "成果物ブランチ ap/codd-gate-163827 を最新 main へ rebase し、t21 で発生した競合を解消する。解消時は synth2 と t20 の文書修正を統合し、docs/designs/codd-gate-design.md §4/§4.1 と tools/agent-project/README.md に「agent_project は汎用フックのみ」「codd_gate_*.py は sibling 任意部品で import・直接結合・依存しない」「永続化は codd_gate_regression.py」「有効化は YAML の regression_cmd/intake_cmd または対応 CLI の明示設定のみ」「自動検出」と負の完了条件 `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project` を保持する。agent_project/dashboard の実装・テストは変更しない。rebase 完了後に git status、git diff --check、および元要求記載の完了条件シェルコマンドを実行し、すべて成功した証拠を報告する。",
+  "deps": [
+    "synth2",
+    "t20"
+  ],
+  "kind": "work"
+}

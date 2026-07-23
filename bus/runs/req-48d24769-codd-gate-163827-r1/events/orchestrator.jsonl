@@ -1,1 +1,4 @@
 {"ts": "2026-07-23T20:28:14Z", "who": "orchestrator", "kind": "planned", "patterns": ["fan-out-and-synthesize", "adversarial-verification", "loop-until-done"], "parallelism": 6, "tasks": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "gate1", "synth1", "t9", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19", "gate2", "synth2", "t20", "t21", "gate3", "loop", "gate4", "judge"]}
+{"ts": "2026-07-23T21:01:37Z", "who": "orchestrator", "kind": "replan", "iteration": 1, "added": ["t22-rebase-resolve"]}
+{"ts": "2026-07-23T21:04:04Z", "who": "orchestrator", "kind": "replan", "iteration": 2, "added": ["t23-rebase-integrate", "t24-post-rebase-verify"]}
+{"ts": "2026-07-23T21:07:14Z", "who": "orchestrator", "kind": "replan", "iteration": 3, "added": ["t25-rebase-finalize"]}

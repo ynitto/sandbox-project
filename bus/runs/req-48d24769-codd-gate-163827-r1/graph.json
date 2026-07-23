@@ -213,7 +213,34 @@
         "gate4"
       ],
       "kind": "judge"
+    },
+    "t22-rebase-resolve": {
+      "goal": "成果物ブランチ ap/codd-gate-163827 を最新 main へ rebase し、t21 で発生した競合を解消する。解消時は synth2 と t20 の文書修正を統合し、docs/designs/codd-gate-design.md §4/§4.1 と tools/agent-project/README.md に「agent_project は汎用フックのみ」「codd_gate_*.py は sibling 任意部品で import・直接結合・依存しない」「永続化は codd_gate_regression.py」「有効化は YAML の regression_cmd/intake_cmd または対応 CLI の明示設定のみ」「自動検出」と負の完了条件 `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project` を保持する。agent_project/dashboard の実装・テストは変更しない。rebase 完了後に git status、git diff --check、および元要求記載の完了条件シェルコマンドを実行し、すべて成功した証拠を報告する。",
+      "deps": [
+        "synth2",
+        "t20"
+      ],
+      "kind": "work"
+    },
+    "t23-rebase-integrate": {
+      "goal": "成果物ブランチを最新 main（検証時点の先端）へ rebase する。t21 で発生した競合を解消し、synth2 の tools/agent-project/README.md 修正と t20 の docs/designs/codd-gate-design.md 文体・境界修正を保持する。agent_project は汎用フックのみ、codd_gate_*.py は任意 sibling、永続化は codd_gate_regression.py、有効化は YAML/CLI 設定のみ、E1 acceptance に `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project/agent_project` を設計上の完了条件として明記する。agent-project/dashboard の実装やテストは変更しない。競合解消後に worktree clean、rebase 完了、変更対象が設計書と README のみであることを確認する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t24-post-rebase-verify": {
+      "goal": "t23 の rebase 後成果を批判的に検証する。指定の完了条件コマンドを原文どおり実行して終了コード 0 を確認し、加えて `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project/agent_project`、`git diff --check`、最新 main が祖先であること、実装・テストに変更がないことを確認する。どれか失敗した場合は、該当ファイル・行・不足表現・修正方法を具体的に報告する。",
+      "deps": [
+        "t23-rebase-integrate"
+      ],
+      "kind": "work"
+    },
+    "t25-rebase-finalize": {
+      "goal": "成果物ブランチ ap/codd-gate-163827 を最新 main（確認済み基準 1d6a516f…以降の現行先端）へrebaseする。adf6e7cf 適用時の競合を解消し、synth2で確定した境界記述を保持すること。変更範囲は docs/designs/codd-gate-design.md と tools/agent-project/README.md の文書に限定し、agent_project/dashboardの実装・テストは変更しない。rebase完了後、git status、git log --graph、git diff main...HEAD --checkで履歴と作業ツリーを確認し、指定の完了条件コマンドをそのまま実行して終了コード0を確認する。さらに設計上の負の完了条件 `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project` を実行し、失敗時は一致箇所が要求対象の実装残存なのか文書中の受入条件表記なのかを区別して報告する。競合解消または指定grepが構造的に達成不能なら、無理な文言改変をせず競合ファイル・該当行・終了コードを明記する。",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 0
+  "iteration": 3
 }

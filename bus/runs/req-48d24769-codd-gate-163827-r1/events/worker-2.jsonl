@@ -20,3 +20,5 @@
 {"ts": "2026-07-23T20:58:02Z", "who": "worker-2", "kind": "result", "node": "synth2", "status": "done"}
 {"ts": "2026-07-23T20:58:02Z", "who": "worker-2", "kind": "claimed", "node": "t20"}
 {"ts": "2026-07-23T21:00:14Z", "who": "worker-2", "kind": "result", "node": "t20", "status": "done"}
+{"ts": "2026-07-23T21:01:37Z", "who": "worker-2", "kind": "claimed", "node": "t22-rebase-resolve"}
+{"ts": "2026-07-23T21:03:43Z", "who": "worker-2", "kind": "result", "node": "t22-rebase-resolve", "status": "done"}

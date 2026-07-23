@@ -1,0 +1,6 @@
+{
+  "id": "t23-rebase-integrate",
+  "goal": "成果物ブランチを最新 main（検証時点の先端）へ rebase する。t21 で発生した競合を解消し、synth2 の tools/agent-project/README.md 修正と t20 の docs/designs/codd-gate-design.md 文体・境界修正を保持する。agent_project は汎用フックのみ、codd_gate_*.py は任意 sibling、永続化は codd_gate_regression.py、有効化は YAML/CLI 設定のみ、E1 acceptance に `! git grep -E '_apply_codd_gate|_codd_gate|import codd_gate' -- tools/agent-project/agent_project` を設計上の完了条件として明記する。agent-project/dashboard の実装やテストは変更しない。競合解消後に worktree clean、rebase 完了、変更対象が設計書と README のみであることを確認する。",
+  "deps": [],
+  "kind": "work"
+}

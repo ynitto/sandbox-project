@@ -1,0 +1,13 @@
+{
+  "id": "t23-rebase-integrate",
+  "who": "worker-1",
+  "status": "failed",
+  "output": "実行エラー: workspace rebase が競合しました（ap/codd-gate-163827）: Rebasing (1/2)\nerror: could not apply adf6e7cf... [agent-flow] t21 (req-48d24769-codd-gate-163827-r1)\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --sk",
+  "finished_at": "2026-07-23T21:06:53Z",
+  "data": {
+    "error_class": "content"
+  },
+  "artifacts": [
+    "artifacts/t23-rebase-integrate/report.md"
+  ]
+}

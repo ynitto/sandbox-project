@@ -1,0 +1,10 @@
+{
+  "id": "t25-rebase-finalize",
+  "who": "worker-1",
+  "status": "done",
+  "output": "[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t25-rebase-finalize/report.md)\n\nrebase は明示された git 操作禁止と設計書の書込範囲外により未実施。作業ツリーは clean、`git diff main...HEAD --check` は exit 0。指定 grep の失敗箇所と構造的に達成不能な理由を報告済みです。",
+  "finished_at": "2026-07-23T21:09:06Z",
+  "artifacts": [
+    "artifacts/t25-rebase-finalize/report.md"
+  ]
+}

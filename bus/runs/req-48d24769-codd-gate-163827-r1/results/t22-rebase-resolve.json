@@ -1,0 +1,10 @@
+{
+  "id": "t22-rebase-resolve",
+  "who": "worker-2",
+  "status": "done",
+  "output": "未完了。rebase 禁止・書込範囲制約と、PASS 不可能な grep 条件の矛盾を確認し、作業ツリーは変更していません。\n\n[成果報告](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t22-rebase-resolve/report.md>)",
+  "finished_at": "2026-07-23T21:03:43Z",
+  "artifacts": [
+    "artifacts/t22-rebase-resolve/report.md"
+  ]
+}
