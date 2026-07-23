@@ -1,0 +1,10 @@
+{
+  "id": "t7",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果物: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t7/report.md)\n\nリポジトリ配下の変更はありません。指定6観点と完了ゲートの差異、検証結果、前提・未解決事項を記載しました。",
+  "finished_at": "2026-07-23T20:37:04Z",
+  "artifacts": [
+    "artifacts/t7/report.md"
+  ]
+}

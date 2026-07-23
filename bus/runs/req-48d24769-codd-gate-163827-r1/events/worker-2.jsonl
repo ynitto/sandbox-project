@@ -1,1 +1,6 @@
 {"ts": "2026-07-23T20:30:08Z", "who": "worker-2", "kind": "claimed", "node": "t3"}
+{"ts": "2026-07-23T20:32:21Z", "who": "worker-2", "kind": "result", "node": "t3", "status": "done"}
+{"ts": "2026-07-23T20:32:21Z", "who": "worker-2", "kind": "claimed", "node": "t5"}
+{"ts": "2026-07-23T20:35:17Z", "who": "worker-2", "kind": "result", "node": "t5", "status": "done"}
+{"ts": "2026-07-23T20:35:17Z", "who": "worker-2", "kind": "claimed", "node": "t7"}
+{"ts": "2026-07-23T20:37:04Z", "who": "worker-2", "kind": "result", "node": "t7", "status": "done"}

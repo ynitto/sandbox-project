@@ -1,0 +1,10 @@
+{
+  "id": "t5",
+  "who": "worker-2",
+  "status": "done",
+  "output": "[成果報告 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t5/report.md)\n\n関連テスト71件は全件PASS。リポジトリ配下の変更はありません。",
+  "finished_at": "2026-07-23T20:35:17Z",
+  "artifacts": [
+    "artifacts/t5/report.md"
+  ]
+}

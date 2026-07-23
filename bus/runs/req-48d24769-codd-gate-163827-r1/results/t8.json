@@ -1,0 +1,10 @@
+{
+  "id": "t8",
+  "who": "worker-1",
+  "status": "done",
+  "output": "[調査報告 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t8/report.md)\n\n負の完了条件を確定。現状は3ファイル・14行が一致し未達です。指定 worktree の変更はありません。",
+  "finished_at": "2026-07-23T20:38:04Z",
+  "artifacts": [
+    "artifacts/t8/report.md"
+  ]
+}

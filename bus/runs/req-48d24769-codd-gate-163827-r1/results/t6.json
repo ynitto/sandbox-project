@@ -1,0 +1,10 @@
+{
+  "id": "t6",
+  "who": "worker-1",
+  "status": "done",
+  "output": "調査報告を出力しました。\n\n[report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t6/report.md)\n\n関連81テスト PASS。対象 worktree の変更なし。",
+  "finished_at": "2026-07-23T20:36:31Z",
+  "artifacts": [
+    "artifacts/t6/report.md"
+  ]
+}

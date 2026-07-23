@@ -1,0 +1,10 @@
+{
+  "id": "t4",
+  "who": "worker-1",
+  "status": "done",
+  "output": "調査完了。現行の差し込み点、関数単位の呼び出し境界、設計との差分、検証結果をまとめました。\n\n[report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t4/report.md)\n\n実装変更なし。対象 worktree は clean、関連44テストはすべて PASS。",
+  "finished_at": "2026-07-23T20:34:34Z",
+  "artifacts": [
+    "artifacts/t4/report.md"
+  ]
+}

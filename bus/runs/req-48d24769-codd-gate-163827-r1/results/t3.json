@@ -1,0 +1,10 @@
+{
+  "id": "t3",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r1/artifacts/t3/report.md)\n\nリポジトリ配下の変更はありません。",
+  "finished_at": "2026-07-23T20:32:21Z",
+  "artifacts": [
+    "artifacts/t3/report.md"
+  ]
+}
