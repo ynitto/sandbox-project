@@ -9,10 +9,10 @@
     "branch": "ap/codd-gate-163827"
   },
   "references": [],
-  "status": "running",
+  "status": "done",
   "created_at": "2026-07-22T20:51:01Z",
   "executor": "agent",
-  "orch_lease_until": 1784838066.719852,
-  "heartbeat_at": "2026-07-23T20:19:06Z",
-  "updated_at": "2026-07-23T20:14:25Z"
+  "orch_lease_until": 1784838187.512914,
+  "heartbeat_at": "2026-07-23T20:21:07Z",
+  "updated_at": "2026-07-23T20:21:43Z"
 }

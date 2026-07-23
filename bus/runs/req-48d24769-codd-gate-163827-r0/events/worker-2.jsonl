@@ -29,3 +29,4 @@
 {"ts": "2026-07-23T20:14:26Z", "who": "worker-2", "kind": "claimed", "node": "codd-gate-docfix-21"}
 {"ts": "2026-07-23T20:16:16Z", "who": "worker-2", "kind": "result", "node": "codd-gate-docfix-21", "status": "done"}
 {"ts": "2026-07-23T20:16:16Z", "who": "worker-2", "kind": "claimed", "node": "codd-gate-docverify-22"}
+{"ts": "2026-07-23T20:20:08Z", "who": "worker-2", "kind": "result", "node": "codd-gate-docverify-22", "status": "done"}

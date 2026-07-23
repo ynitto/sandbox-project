@@ -140,3 +140,6 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-24 05:14:25 === agent-project 開始 tasks=5 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-07-24 05:14:25 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-24 05:14:25 run 再開: codd-gate-163827 は req-48d24769-codd-gate-163827-r0 の失敗ノードだけをやり直します（done は温存）
+- 2026-07-24 05:21:46 verify: codd-gate-163827 を https://github.com/ynitto/sandbox@ap/codd-gate-163827（path=tools/agent-project） のクローン内で検証
+- 2026-07-24 05:21:46 cycle 1: codd-gate-163827 → 検収待ち（承認ゲート） — commit 48d24769
+- 2026-07-24 05:21:47 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===

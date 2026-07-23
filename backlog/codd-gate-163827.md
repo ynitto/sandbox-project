@@ -1,5 +1,5 @@
 ## codd-gate-163827: codd-gate 連携の目標境界を設計書に固定する
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md`
@@ -12,4 +12,7 @@
 - charter: v1
 - assess: c=2 r=1 a=1
 - last_run: req-48d24769-codd-gate-163827-r0
-- flow_run: req-48d24769-codd-gate-163827-r0
+- gate_ref: commit 48d24769
+- gate_ts: 2026-07-24 05:21:46
+- gate_branch: main
+- gate_vmsg: exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo

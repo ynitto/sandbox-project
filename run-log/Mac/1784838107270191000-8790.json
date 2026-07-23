@@ -1,0 +1,18 @@
+{
+  "run_id": "1784838107270191000-8790",
+  "node": "Mac",
+  "ts": "2026-07-24T05:21:47",
+  "reason": "drained",
+  "level": "unattended",
+  "cycles": 1,
+  "done": 0,
+  "blocked": 0,
+  "review": 1,
+  "archived": 0,
+  "escalations": 1,
+  "spawned": 0,
+  "inboxed": 0,
+  "tokens": 0,
+  "cost": 0.0,
+  "duration_s": 442.16
+}

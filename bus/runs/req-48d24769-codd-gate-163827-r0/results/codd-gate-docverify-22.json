@@ -1,0 +1,10 @@
+{
+  "id": "codd-gate-docverify-22",
+  "who": "worker-2",
+  "status": "done",
+  "output": "総合判定: **FAIL**\n\n成果物: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/codd-gate-docverify-22/result.md)\n\n- 連結シェルコマンド、`git diff --check`、差分範囲: PASS\n- §4、§4.1 の文書境界: PASS\n- §4.2 の強化版 grep 必須化: FAIL\n- 強化版否定 grep: exit 1、14件検出\n- リポジトリへの変更なし。",
+  "finished_at": "2026-07-23T20:20:08Z",
+  "artifacts": [
+    "artifacts/codd-gate-docverify-22/result.md"
+  ]
+}

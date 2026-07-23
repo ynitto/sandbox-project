@@ -1,0 +1,10 @@
+{
+  "id": "t20",
+  "who": "worker-1",
+  "status": "done",
+  "output": "`verify=fail`\n\n§4.2 の必須 grep が3パターンを網羅していません。設計書は書込許可外のため未変更です。README 統合、連結コマンド、diff check、変更範囲は合格しました。\n\n[成果報告](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-codd-gate-163827-r0/artifacts/t20/result.md>)",
+  "finished_at": "2026-07-23T20:21:41Z",
+  "artifacts": [
+    "artifacts/t20/result.md"
+  ]
+}

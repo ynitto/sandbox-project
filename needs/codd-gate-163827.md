@@ -1,34 +1,40 @@
 ---
 status: proposed
-date: 2026-07-18
+date: 2026-07-24
 decision-makers: [human]
 task-id: codd-gate-163827
-kind: plan-review
+kind: review
+risk: low
+delivery: [{"name":"sandbox","role":"write","url":"https://github.com/ynitto/sandbox","path":"/Users/nitto/Workspace/sandbox","base":"main","target":"main","branch":"ap/codd-gate-163827","ref":"origin/ap/codd-gate-163827","files":["docs/designs/codd-gate-design.md","tools/agent-project/README.md"],"files_total":2,"diff_cmd":"git -C /Users/nitto/Workspace/sandbox diff main...origin/ap/codd-gate-163827","mr_url":""}]
 ---
 
-# 実行前レビュー: codd-gate-163827 — codd-gate 連携の目標境界を設計書に固定する
+# 要対応: codd-gate-163827 — codd-gate 連携の目標境界を設計書に固定する
 
 ## Context and Problem Statement
 
-- なぜ: 新規タスクの実行前レビュー（承認されるまで実行しません）
-- 状態: proposed（実行前レビュー待ち・未実行）
+- なぜ: 検証は通っている（verify=PASS）。人の検収を待っている理由: このタスクが承認ゲートの対象（review / policy.gate）。内容が良ければ approve で done 確定、直したいことがあれば下に書いて差し戻す
+- 状態: review（検収待ち・verify=PASS）
 
-## タスク定義（レビュー対象）
-- title  : codd-gate 連携の目標境界を設計書に固定する
-- verify : `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md`
-- why: 『パッケージは汎用フックのみ・codd_gate_* は sibling 任意部品』を実装前に文書で合意しないと、整理の完了判定と dashboard の見せ方がぶれるため。
-- out_of_scope: agent_project / dashboard の実装変更やテスト改修
-- hints: ドキュメントは slop-police スキルで整える。正典は docs/designs/codd-gate-design.md §4（差し込み点 E1–E3）と §4.1（自動検出レイヤ）。受入の `! git grep ... _apply_codd_gate|_codd_gate|import codd_gate` を設計上の完了条件として明記し、永続化は `codd_gate_regression.py`・有効化は yaml/CLI のみ、と境界を書く。tools/agent-project/README.md の一貫性ゲート節も同じ境界に揃える。
-- workspace: agent-project
-- charter: v1
-- assess: c=2 r=1 a=1
-- source : charter
+## 判断材料（成果物の所在・差分・検証）
+- 成果物: ブランチ `ap/codd-gate-163827`（2 ファイル変更・base `main`）
+- 所在: /Users/nitto/Workspace/sandbox
+- 差分を見る: `git -C /Users/nitto/Workspace/sandbox diff main...origin/ap/codd-gate-163827`
+- 変更ファイル（2 件）:
+    - docs/designs/codd-gate-design.md
+    - tools/agent-project/README.md
+- 実行先: local
+- 到達工程: verify（検証）
+- 検証: `grep -nE 'agent_project.*(import|結合|依存).*(しない|外|禁止)|パッケージ.*(codd_gate|sibling)|有効化は設定' tools/agent-project/README.md && grep -nE 'regression_cmd|intake_cmd|codd_gate_\*\.py|自動検出' tools/agent-project/README.md && test -f docs/designs/codd-gate-design.md && grep -nE 'agent_project パッケージ|_apply_codd_gate|sibling|汎用フック' docs/designs/codd-gate-design.md` → PASS（exit=0 _auto_wiring`）はパッケージ内に 367:しか現れず、sibling の `codd_gate_*.py` や tests には出ない（それらは `resolve_codd_gate` などを正当に持つ）。 377:パスを `tools/agent-project` 全体へ広げると、sibling の `resolve_codd_gate` や tests の `impo）
+
+## リスク
+- 総合: 低（protect/avoid=高、リトライ・大差分・合成 verify=中）
+- 変更ファイル: 2 件（docs/designs/codd-gate-design.md, tools/agent-project/README.md）
+- 投入時採点: c=2 r=1 a=1（c=複雑さ r=リスク a=曖昧さ・各1-3）
 
 ## Decision Outcome
 
-<!-- 人の決定の記入欄。承認は空のまま [x]、差し戻しは修正指示を書いて [x]。 -->
+<!-- 人の決定の記入欄（MADR の Decision Outcome）。方針・指示をここに書く。 -->
 - [ ] 確定（このボックスを [x] にして保存すると取り込みます）
 
-<!-- 承認して実行を許可するなら `agent-project approve codd-gate-163827`（または空のまま [x]）。
-     差し戻す（agent-project にタスクを修正させる）なら下に修正指示を書いて [x]。
-     却下（廃止して関連バックログを再計画）なら `agent-project reject codd-gate-163827 --reason ...`。 -->
+<!-- 承認して done 確定するなら `agent-project approve codd-gate-163827`。
+     差し戻すなら下に修正方針を書いて [x] にする（再実行されます）。 -->
