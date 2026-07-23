@@ -147,3 +147,7 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-24 05:21:49 === project watch: 監視中（charter 更新/フィードバック待ち）===
 - 2026-07-24 05:21:56 === update: 更新を適用（1d6a516f）===
 - 2026-07-24 05:21:57 前世代の agent-flow を 2 プロセス停止（クラッシュの残骸）。run のリースを失効させ、続きから再開できる状態に戻した
+- 2026-07-24 05:21:59 === project 開始 v1 acceptance=2 ===
+- 2026-07-24 05:22:00 === agent-project 開始 tasks=5 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-24 05:22:00 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-24 05:22:00 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
