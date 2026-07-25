@@ -183,3 +183,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-24 06:25:28 === agent-project 開始 tasks=4 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-07-24 06:25:28 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-26 06:47:11 前世代の agent-flow を 1 プロセス停止（クラッシュの残骸）。run のリースを失効させ、続きから再開できる状態に戻した
+- 2026-07-26 06:47:14 === project watch: 監視中（charter 更新/フィードバック待ち）===
