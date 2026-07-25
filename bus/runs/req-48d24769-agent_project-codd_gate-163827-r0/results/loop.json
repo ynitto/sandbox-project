@@ -1,0 +1,19 @@
+{
+  "id": "loop",
+  "who": "worker-1",
+  "status": "done",
+  "output": "互換入口1ファイルを追加。指定3テスト・否定 grep・`git diff --check` はすべて終了コード0。\n\n成果報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/loop/result.md)",
+  "finished_at": "2026-07-25T22:53:50Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "d0aa729316657c7655de8179452a4a184447939e",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/loop/result.md"
+  ]
+}
