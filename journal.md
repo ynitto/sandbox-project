@@ -187,3 +187,6 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 07:08:07 === agent-project 開始 tasks=4 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-07-26 07:08:07 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-26 07:08:07 run 再開: agent_project-codd_gate-163827 は req-48d24769-agent_project-codd_gate-163827-r0 の失敗ノードだけをやり直します（done は温存）
+- 2026-07-26 08:08:08 flow detach: agent_project-codd_gate-163827 の run req-48d24769-agent_project-codd_gate-163827-r0 を failed（agent-flow run タイムアウト（3600s））
+- 2026-07-26 08:08:09 cycle 1: agent_project-codd_gate-163827 NG 積み直し (1/2) — agent-flow run タイムアウト（3600s）
+- 2026-07-26 08:08:10 run 再開: agent_project-codd_gate-163827 は req-48d24769-agent_project-codd_gate-163827-r0 の失敗ノードだけをやり直します（done は温存）
