@@ -1,0 +1,19 @@
+{
+  "id": "t17",
+  "who": "worker-1",
+  "status": "done",
+  "output": "(a) 必須指摘を修正。`test_agent_project.py` の互換 import を直接実行時のみ評価する最小差分に変更しました。\n\n(b) 検証: discovery 969件、指定回帰3件、直接実行18件すべて成功。`git diff --check` 成功。変更は許可範囲内の1ファイルのみ。\n\n(c) 前提・未解決事項・範囲外問題は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t17/result.md) に記録済み。`@followup` なし。",
+  "finished_at": "2026-07-26T00:02:23Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "6985040e77a68bd178da18d25dd842d21550f3f4",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t17/result.md"
+  ]
+}
