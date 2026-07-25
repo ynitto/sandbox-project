@@ -26,3 +26,5 @@
 {"ts": "2026-07-25T22:53:50Z", "who": "worker-1", "kind": "result", "node": "loop", "status": "done"}
 {"ts": "2026-07-25T22:53:50Z", "who": "worker-1", "kind": "claimed", "node": "review"}
 {"ts": "2026-07-25T23:33:50Z", "who": "worker-1", "kind": "claimed", "node": "review"}
+{"ts": "2026-07-25T23:52:52Z", "who": "worker-1", "kind": "result", "node": "review", "status": "done"}
+{"ts": "2026-07-25T23:52:52Z", "who": "worker-1", "kind": "claimed", "node": "t17"}

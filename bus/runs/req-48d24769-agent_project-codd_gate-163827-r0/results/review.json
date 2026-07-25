@@ -1,0 +1,16 @@
+{
+  "id": "review",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=fail\n\n- `tools/agent-project/tests/test_agent_project.py:5-6` の `from tests...` により、README記載の標準 unittest discovery が `ModuleNotFoundError` で失敗します。import を `if __name__ == \"__main__\":` 内へ移し、非package形式で読み込む必要があります。\n- codd_gate 非依存境界、指定3回帰テスト、否定 grep、差分スコープは合格。\n- `tools/codd-gate`、dashboard UI、設計書の変更はありません。\n\n詳細: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/review/result.md)\n\n{\"ok\":false,\"issues\":[\"tools/agent-project/tests/test_agent_project.py:5-6: `from tests...` が標準 unittest discovery を ModuleNotFoundError にする。互換importを直接実行時だけ評価し、標準discoveryと指定3テストの双方を通すこと。\"]}",
+  "finished_at": "2026-07-25T23:52:52Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "tools/agent-project/tests/test_agent_project.py:5-6: `from tests...` が標準 unittest discovery を ModuleNotFoundError にする。互換importを直接実行時だけ評価し、標準discoveryと指定3テストの双方を通すこと。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/review/result.md"
+  ]
+}
