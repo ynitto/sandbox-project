@@ -1,0 +1,14 @@
+{
+  "id": "t11",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=pass\n\n- [model.py:494](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-82487-svha9yt0/sandbox/tools/agent-project/agent_project/model.py:494) は標準JSONの object/array、`title`/`id`、未知キーのみを汎用処理。\n- `import codd_gate`、`_codd_gate`、固有条件分岐は0件。固有名はdocstring例示のみ。\n- object/array、非object、欠落title、数値ID、未知キーを独立検算。関連241テスト成功。\n- worktreeの差分・変更はありません。\n\n@followup (minor) `TestIntake` に非object、未知キー、ID境界値の直接回帰テストを追加すると、今回の動的検算を恒久化できます。  \n@followup 本体全文0件という全体受入では、別タスクで残存する固有名8件の除去が必要です。\n\n{\"ok\":true,\"issues\":[\"(minor) tools/agent-project/tests/test_backlog.py:180 — 非object・未知キー・ID境界値を _parse_intake_records 経由で固定する直接テストがない\",\"(minor) 全体受入の本体全文grepでは固有名8件が残るが、今回対象のJSON解釈に固有import・分岐はない\"]}",
+  "finished_at": "2026-07-25T22:26:53Z",
+  "data": {
+    "ok": true,
+    "issues": [
+      "(minor) tools/agent-project/tests/test_backlog.py:180 — 非object・未知キー・ID境界値を _parse_intake_records 経由で固定する直接テストがない",
+      "(minor) 全体受入の本体全文grepでは固有名8件が残るが、今回対象のJSON解釈に固有import・分岐はない"
+    ]
+  }
+}

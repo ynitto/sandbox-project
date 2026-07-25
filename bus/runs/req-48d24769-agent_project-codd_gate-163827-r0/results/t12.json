@@ -1,0 +1,10 @@
+{
+  "id": "t12",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=pass\n\n- 同一 ID 再投入テスト: 1件成功\n- `TestIntake`: 6件成功\n- `test_backlog.py`: 44件成功\n- 変更は `tools/agent-project` 配下のみ。作業ツリー変更なし。\n\n{\"ok\":true,\"issues\":[]}",
+  "finished_at": "2026-07-25T22:32:11Z",
+  "data": {
+    "ok": true
+  }
+}

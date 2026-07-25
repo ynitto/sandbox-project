@@ -1,0 +1,10 @@
+{
+  "id": "t5",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: 汎用境界 `doctor_wiring_findings` → `_hook_provider` への移行済みを確認。重複するコード変更なし。\n- 検証: 関連241件、provider境界111件、追加59件すべて成功。旧境界名grep 0件、worktree変更なし。\n- 前提・詳細: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t5/result.md)",
+  "finished_at": "2026-07-25T22:29:18Z",
+  "artifacts": [
+    "artifacts/t5/result.md"
+  ]
+}

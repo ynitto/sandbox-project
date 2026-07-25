@@ -8,3 +8,9 @@
 {"ts": "2026-07-25T22:18:28Z", "who": "worker-2", "kind": "claimed", "node": "synth1"}
 {"ts": "2026-07-25T22:21:30Z", "who": "worker-2", "kind": "result", "node": "synth1", "status": "done"}
 {"ts": "2026-07-25T22:21:30Z", "who": "worker-2", "kind": "claimed", "node": "t11"}
+{"ts": "2026-07-25T22:26:53Z", "who": "worker-2", "kind": "result", "node": "t11", "status": "done"}
+{"ts": "2026-07-25T22:26:53Z", "who": "worker-2", "kind": "claimed", "node": "t5"}
+{"ts": "2026-07-25T22:29:18Z", "who": "worker-2", "kind": "result", "node": "t5", "status": "done"}
+{"ts": "2026-07-25T22:29:18Z", "who": "worker-2", "kind": "claimed", "node": "t7"}
+{"ts": "2026-07-25T22:30:29Z", "who": "worker-2", "kind": "result", "node": "t7", "status": "done"}
+{"ts": "2026-07-25T22:30:29Z", "who": "worker-2", "kind": "claimed", "node": "t9"}

@@ -1,0 +1,19 @@
+{
+  "id": "t10",
+  "who": "worker-1",
+  "status": "done",
+  "output": "(a) 成果: 回帰ゲート関連テストを汎用 `run_verify` フック境界へ変更。失敗時の `blocked`、成功時の `done` を検証し、model/intake テストから codd-gate 固有表現を除去しました。\n\n(b) 検証: `tests.test_autonomy tests.test_backlog` 全95件成功、`git diff --check` 成功、対象の固有名 grep 0件。\n\n(c) 前提: `_codd_gate_debt_module` は既に除去済みのため、実装には触れずテストのみ更新。未解決・範囲外問題なし。成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t10/report.md)",
+  "finished_at": "2026-07-25T22:27:43Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "6b6ef5273115e59907e0784e558c1397ffdcdb1d",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t10/report.md"
+  ]
+}

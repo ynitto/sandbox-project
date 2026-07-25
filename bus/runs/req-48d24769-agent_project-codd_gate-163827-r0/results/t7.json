@@ -1,0 +1,10 @@
+{
+  "id": "t7",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: 対象は既に `doctor_wiring_findings` へ改名済み。重複変更なし。\n- 検証: 関連テスト59件成功、旧識別子0件、worktree変更なし。\n- 報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t7/result.md)",
+  "finished_at": "2026-07-25T22:30:29Z",
+  "artifacts": [
+    "artifacts/t7/result.md"
+  ]
+}

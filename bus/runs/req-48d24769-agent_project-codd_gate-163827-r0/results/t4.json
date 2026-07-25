@@ -1,0 +1,19 @@
+{
+  "id": "t4",
+  "who": "worker-1",
+  "status": "done",
+  "output": "実装完了。\n\n- `configfile.py` の provider 固有例示を汎用検出器契約へ変更。\n- `hooks` が設定ファイルから `Config.hooks` へ保持される回帰テストへ置換。\n- 既存の command 読み込み・非自動補完経路を維持。\n- 関連241件、provider境界111件、設定53件すべて成功。\n- 未解決事項なし。commit / push 未実施。\n\n成果報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t4/result.md)",
+  "finished_at": "2026-07-25T22:30:46Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "57edf4eb76cc39694704fb8a795fdad7d17436b2",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t4/result.md"
+  ]
+}

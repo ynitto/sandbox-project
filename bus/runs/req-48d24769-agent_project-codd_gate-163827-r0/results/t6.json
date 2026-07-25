@@ -1,0 +1,16 @@
+{
+  "id": "t6",
+  "who": "worker-1",
+  "status": "done",
+  "output": "- 成果: [model.py](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-82486-p9hw4bv4/sandbox/tools/agent-project/agent_project/model.py:494) の docstring から codd-gate 固有例示を除去し、汎用の外部検出器／intake フック境界へ統一しました。実行コードは変更していません。\n- 検証: 固有名 grep 0件、`git diff --check` 成功。`tests.test_backlog` 44件成功、`tests.test_backlog tests.test_autonomy` 成功。\n- 前提: 現行HEADでは `_codd_gate_debt_module` と固有 import は既に存在しないため、残存していた固有説明のみを除去するのが最小の完了差分と判断しました。未解決事項・範囲外の問題はありません。",
+  "finished_at": "2026-07-25T22:24:10Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "21e0d73d5e9b4164c6c60592ee4ecbe7793dba89",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}
