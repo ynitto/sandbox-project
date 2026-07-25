@@ -1,0 +1,19 @@
+{
+  "id": "t8",
+  "who": "worker-1",
+  "status": "done",
+  "output": "## 成果\n\n- `TestHookResolution` を汎用 `_hook_provider` 境界へ追随。\n- 明示設定は `_hook_import`、未設定は `_hook_scan_siblings` のみ使うことを独立検証。\n- 変更はテスト1ファイルのみ。\n\n## 検証\n\n- Hook Resolution: 10件成功\n- 設定テスト: 53件成功\n- 関連テスト: 242件成功\n- codd-gate 系: 112件成功\n- `git diff --check`: 成功\n- 旧関数名 grep: 0件\n\n前提: 旧 configfile 自動補完の復元ではなく、後継の汎用フック解決経路を検証するタスクと解釈。未解決事項なし。\n\n[成果報告 result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t8/result.md)",
+  "finished_at": "2026-07-25T22:35:30Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "eca4286be89a9153cf0a33900d1adabab60e6486",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t8/result.md"
+  ]
+}

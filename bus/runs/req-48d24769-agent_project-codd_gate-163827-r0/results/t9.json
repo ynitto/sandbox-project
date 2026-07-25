@@ -1,0 +1,19 @@
+{
+  "id": "t9",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: `test_doctor.py` に汎用名を使う回帰テスト2件を追加。provider findings の透過返却と不在時の no-op を検証。\n- 検証: 関連テスト61件成功、旧識別子0件、`git diff --check` 成功。\n- 前提: 実装側は改名済みのため変更せず、テストのみ補完。未解決事項・範囲外問題なし。\n- 報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t9/result.md)",
+  "finished_at": "2026-07-25T22:33:26Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/agent_project-codd_gate-163827",
+      "commit": "869ee5a57f954eca82ae24a2fda5e9a4b3e1d190",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t9/result.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gate2",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=pass\n\n- 汎用フックの名前・契約・mock は一致。\n- 旧識別子は0件、範囲外差分なし。\n- 関連210件、provider群112件、境界抜粋16件すべて成功。\n- 報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/gate2/result.md)\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-07-25T22:39:04Z",
+  "data": {
+    "ok": true,
+    "issues": []
+  },
+  "artifacts": [
+    "artifacts/gate2/result.md"
+  ]
+}
