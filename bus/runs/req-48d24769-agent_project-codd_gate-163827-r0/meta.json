@@ -12,7 +12,7 @@
   "status": "running",
   "created_at": "2026-07-23T21:25:28Z",
   "executor": "agent",
-  "orch_lease_until": 1785017688.7647932,
-  "heartbeat_at": "2026-07-25T22:12:48Z",
+  "orch_lease_until": 1785018290.506621,
+  "heartbeat_at": "2026-07-25T22:22:50Z",
   "updated_at": "2026-07-25T22:08:07Z"
 }

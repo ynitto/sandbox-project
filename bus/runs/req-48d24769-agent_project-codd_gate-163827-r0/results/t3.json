@@ -1,0 +1,10 @@
+{
+  "id": "t3",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果物: [test-impact-map.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t3/test-impact-map.md)\n\n- `tests/test_agent_project.py` は現行HEADで分割済みと判断し、旧ファイルから現行5テストへの対応、維持動作、mock変更先を整理。\n- 関連241テストを実行し全件OK。\n- 指定worktreeへの変更なし。doctorのgeneric provider統合テスト不足を `@followup` として記載。",
+  "finished_at": "2026-07-25T22:13:55Z",
+  "artifacts": [
+    "artifacts/t3/test-impact-map.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "synth1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果物: [generic-hook-design.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/synth1/generic-hook-design.md)\n\n指定 worktree のコード変更なし。汎用名・探索規則・優先順位・ファイル別変更表・受入条件を確定済み。",
+  "finished_at": "2026-07-25T22:21:30Z",
+  "artifacts": [
+    "artifacts/synth1/generic-hook-design.md"
+  ]
+}

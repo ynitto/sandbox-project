@@ -1,0 +1,18 @@
+{
+  "id": "gate1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=pass\n\n全呼び出し元・既存フック・関連テスト・変更禁止境界を再検算済み。241件＋codd-gate関連111件が成功し、worktreeおよび `tools/codd-gate` は無差分です。詳細: [verification.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/gate1/verification.md)\n\n{\"ok\":true,\"issues\":[\"(minor) t2の旧test_agent_project.py実行証跡を現行test_config.pyの4件成功へ更新する\",\"(minor) t3の境界テスト一覧にbase/debt/detect/routingを追記する\",\"(minor) test_doctor.pyにgeneric provider統合テストを追加する\"]}",
+  "finished_at": "2026-07-25T22:18:28Z",
+  "data": {
+    "ok": true,
+    "issues": [
+      "(minor) t2の旧test_agent_project.py実行証跡を現行test_config.pyの4件成功へ更新する",
+      "(minor) t3の境界テスト一覧にbase/debt/detect/routingを追記する",
+      "(minor) test_doctor.pyにgeneric provider統合テストを追加する"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate1/verification.md"
+  ]
+}
