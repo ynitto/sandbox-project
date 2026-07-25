@@ -1,0 +1,8 @@
+{
+  "id": "synth2",
+  "goal": "gate2 を通過したソース変更とテスト変更を統合し、agent_project 内部の自動配線、doctor、model、intake、regression gate が同一の汎用境界で動作する状態にする",
+  "deps": [
+    "gate2"
+  ],
+  "kind": "synthesize"
+}

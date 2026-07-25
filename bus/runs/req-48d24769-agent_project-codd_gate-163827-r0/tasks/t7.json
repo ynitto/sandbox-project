@@ -1,0 +1,8 @@
+{
+  "id": "t7",
+  "goal": "doctor.py の doctor_codd_gate_findings とその呼び出し元を汎用 findings 名へ改名し、表示内容を変えずに codd_gate 固有識別子を除去する",
+  "deps": [
+    "t5"
+  ],
+  "kind": "work"
+}

@@ -1,0 +1,200 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 9,
+    "review": true,
+    "reason": "[flow-planner] 複数コンポーネントの依存分離とテスト追随を並列化し、統合前の境界レビューで正確性を検証したうえで、指定テストと否定 grep が通過するまで反復するため。（粒度 finest）"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "tools/agent-project/agent_project 配下を調査し、codd_gate を含む import、_apply_codd_gate*、_codd_gate* の定義と全呼び出し元をファイル・関数単位で一覧化する",
+      "deps": [],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "configfile.py と sibling モジュールを調査し、codd_gate_wiring / codd_gate_regression または明示設定を利用できる既存の自動配線パターンと差し込み点を特定する",
+      "deps": [],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "tests/test_agent_project.py の intake、自動配線、doctor、model、regression gate に関するテストと mock 対象を調査し、変更対象と維持すべき観測可能な振る舞いを対応付ける",
+      "deps": [],
+      "kind": "work"
+    },
+    "gate1": {
+      "goal": "t1〜t3 の調査結果を突合し、全呼び出し元、既存フック、関連テスト、tools/codd-gate を変更しない境界が漏れなく特定されていることを検証する",
+      "deps": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "kind": "verify"
+    },
+    "synth1": {
+      "goal": "検証済みの調査結果から、agent_project パッケージ内に codd_gate 名を残さない汎用フック名、sibling 探索規則、明示設定の優先順位、ファイル別変更表を確定する",
+      "deps": [
+        "gate1"
+      ],
+      "kind": "synthesize"
+    },
+    "t4": {
+      "goal": "configfile.py の _apply_codd_gate_auto_wiring を、確定した sibling モジュールまたは明示設定に基づく汎用自動配線関数へ置換し、既存設定の読み込み経路を維持する",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "doctor.py の _codd_gate_wiring_module を汎用フック解決関数へ改名し、モジュール探索とエラー処理を新しい境界名だけで完結させる",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "model.py の _codd_gate_debt_module と codd_gate 固有 import を汎用 regression/debt フック境界へ置換し、既存の呼び出し結果を維持する",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "doctor.py の doctor_codd_gate_findings とその呼び出し元を汎用 findings 名へ改名し、表示内容を変えずに codd_gate 固有識別子を除去する",
+      "deps": [
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "configfile 自動配線テストの TestCoddGateAutoWiring 相当ケースと mock 対象を新しい汎用関数・モジュール境界へ追随させ、sibling 配線と明示設定を独立に検証できるようにする",
+      "deps": [
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "doctor 関連テストの _codd_gate_wiring_module および doctor_codd_gate_findings の参照を新しい汎用名へ追随させ、findings の既存挙動を検証する",
+      "deps": [
+        "t7"
+      ],
+      "kind": "work"
+    },
+    "t10": {
+      "goal": "model と regression gate 関連テストの _codd_gate_debt_module および codd_gate 固有 mock を汎用フック境界へ追随させ、失敗時の遮断と成功時の通過を検証する",
+      "deps": [
+        "t6"
+      ],
+      "kind": "work"
+    },
+    "t11": {
+      "goal": "intake の schemas/task 相当 JSON パース経路を確認し、入力 JSON の汎用解釈に codd_gate 固有分岐や import が混入していないことを検証する",
+      "deps": [
+        "synth1"
+      ],
+      "kind": "verify"
+    },
+    "t12": {
+      "goal": "intake の enqueue 処理を確認し、同一 id のタスクを再投入しても重複 enqueue されない冪等性が維持されていることを対象テストで検証する",
+      "deps": [
+        "t11"
+      ],
+      "kind": "verify"
+    },
+    "gate2": {
+      "goal": "configfile、doctor、model、intake、および各追随テストの差分を境界ごとにレビューし、汎用フックへの置換が揃い、統合時に名前・契約・mock の不一致が生じないことを確認する",
+      "deps": [
+        "t8",
+        "t9",
+        "t10",
+        "t12"
+      ],
+      "kind": "verify"
+    },
+    "synth2": {
+      "goal": "gate2 を通過したソース変更とテスト変更を統合し、agent_project 内部の自動配線、doctor、model、intake、regression gate が同一の汎用境界で動作する状態にする",
+      "deps": [
+        "gate2"
+      ],
+      "kind": "synthesize"
+    },
+    "t13": {
+      "goal": "PYTHONPATH=tools/agent-project python3 tools/agent-project/tests/test_agent_project.py TestIntake.test_run_intake_enqueues_and_dedups_by_id を実行し、intake の JSON パースと id 冪等性を検証する",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "verify"
+    },
+    "t14": {
+      "goal": "PYTHONPATH=tools/agent-project python3 tools/agent-project/tests/test_agent_project.py TestLoopEngineering.test_regression_gate_blocks_on_failure を実行し、regression gate が失敗を確実に遮断することを検証する",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "verify"
+    },
+    "t15": {
+      "goal": "PYTHONPATH=tools/agent-project python3 tools/agent-project/tests/test_agent_project.py TestLoopEngineering.test_regression_gate_passes を実行し、regression gate が成功を通過させることを検証する",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "verify"
+    },
+    "t16": {
+      "goal": "git grep -n -E '(^|[[:space:]])(import|from)[[:space:]]+codd_gate|_apply_codd_gate|_codd_gate' -- tools/agent-project/agent_project を否定条件として実行し、agent_project パッケージ内に禁止 import・識別子が残っていないことを検証する",
+      "deps": [
+        "synth2"
+      ],
+      "kind": "filter"
+    },
+    "judge": {
+      "goal": "t13〜t16 の結果を判定し、失敗ごとに原因をソース、テスト、mock、禁止識別子のいずれかへ分類して最小修正対象を確定する",
+      "deps": [
+        "t13",
+        "t14",
+        "t15",
+        "t16"
+      ],
+      "kind": "judge"
+    },
+    "loop": {
+      "goal": "judge で特定した失敗原因だけを修正し、指定3テストと否定 git grep を同じ条件で再実行して、すべて終了コード0になるまで反復する",
+      "deps": [
+        "judge"
+      ],
+      "kind": "work"
+    },
+    "review": {
+      "goal": "agent-reviewer を用いて最終差分をレビューし、codd_gate 非依存の依存境界、intake/regression 回帰、tools/codd-gate 非変更、dashboard UI 非変更、不要な設計書編集がないことを検証する",
+      "deps": [
+        "loop"
+      ],
+      "kind": "verify"
+    },
+    "constraints": {
+      "goal": "agent-reviewer の指摘から他ノードにも恒常的に適用すべき制約だけを抽出し、存在する場合は {\"constraints\":[\"…\"]} 形式の機械可読 JSON にまとめ、存在しない場合は省略と判定する",
+      "deps": [
+        "review"
+      ],
+      "kind": "classify"
+    },
+    "t17": {
+      "goal": "agent-reviewer の必須指摘があればスコープ内の最小差分で修正し、指摘がスコープ外ならコード変更せず @followup 提案として記録する",
+      "deps": [
+        "review"
+      ],
+      "kind": "work"
+    },
+    "final": {
+      "goal": "レビュー修正後に指定3テストと否定 git grep を完全な受入コマンドとして再実行し、終了コード0を得るまで原因修正と再検証を反復して最終成果を確定する",
+      "deps": [
+        "constraints",
+        "t17"
+      ],
+      "kind": "verify"
+    }
+  },
+  "iteration": 0
+}

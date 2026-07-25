@@ -1,0 +1,8 @@
+{
+  "id": "t11",
+  "goal": "intake の schemas/task 相当 JSON パース経路を確認し、入力 JSON の汎用解釈に codd_gate 固有分岐や import が混入していないことを検証する",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "verify"
+}

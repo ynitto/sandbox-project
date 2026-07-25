@@ -1,0 +1,10 @@
+{
+  "id": "t1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "調査完了。成果物: [codd_gate_inventory.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t1/codd_gate_inventory.md)\n\n- 対象 import・定義・呼び出し元: すべて0件\n- 残存する説明・例示文字列: 8件を一覧化\n- `rg` と Python AST 解析で検証済み\n- 指定 worktree のコード変更なし",
+  "finished_at": "2026-07-23T21:29:11Z",
+  "artifacts": [
+    "artifacts/t1/codd_gate_inventory.md"
+  ]
+}

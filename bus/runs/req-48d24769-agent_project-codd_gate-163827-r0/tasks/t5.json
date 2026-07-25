@@ -1,0 +1,8 @@
+{
+  "id": "t5",
+  "goal": "doctor.py の _codd_gate_wiring_module を汎用フック解決関数へ改名し、モジュール探索とエラー処理を新しい境界名だけで完結させる",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "work"
+}

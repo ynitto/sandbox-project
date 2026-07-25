@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "tools/agent-project/agent_project 配下を調査し、codd_gate を含む import、_apply_codd_gate*、_codd_gate* の定義と全呼び出し元をファイル・関数単位で一覧化する",
+  "deps": [],
+  "kind": "work"
+}

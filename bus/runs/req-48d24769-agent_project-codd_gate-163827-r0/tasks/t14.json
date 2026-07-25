@@ -1,0 +1,8 @@
+{
+  "id": "t14",
+  "goal": "PYTHONPATH=tools/agent-project python3 tools/agent-project/tests/test_agent_project.py TestLoopEngineering.test_regression_gate_blocks_on_failure を実行し、regression gate が失敗を確実に遮断することを検証する",
+  "deps": [
+    "synth2"
+  ],
+  "kind": "verify"
+}

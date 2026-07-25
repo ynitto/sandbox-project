@@ -1,0 +1,6 @@
+{
+  "id": "t3",
+  "goal": "tests/test_agent_project.py の intake、自動配線、doctor、model、regression gate に関するテストと mock 対象を調査し、変更対象と維持すべき観測可能な振る舞いを対応付ける",
+  "deps": [],
+  "kind": "work"
+}

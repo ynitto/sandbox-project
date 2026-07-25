@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "goal": "model.py の _codd_gate_debt_module と codd_gate 固有 import を汎用 regression/debt フック境界へ置換し、既存の呼び出し結果を維持する",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "work"
+}

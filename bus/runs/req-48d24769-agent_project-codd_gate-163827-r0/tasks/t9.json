@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "doctor 関連テストの _codd_gate_wiring_module および doctor_codd_gate_findings の参照を新しい汎用名へ追随させ、findings の既存挙動を検証する",
+  "deps": [
+    "t7"
+  ],
+  "kind": "work"
+}

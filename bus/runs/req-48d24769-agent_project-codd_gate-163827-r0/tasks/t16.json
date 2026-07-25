@@ -1,0 +1,8 @@
+{
+  "id": "t16",
+  "goal": "git grep -n -E '(^|[[:space:]])(import|from)[[:space:]]+codd_gate|_apply_codd_gate|_codd_gate' -- tools/agent-project/agent_project を否定条件として実行し、agent_project パッケージ内に禁止 import・識別子が残っていないことを検証する",
+  "deps": [
+    "synth2"
+  ],
+  "kind": "filter"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "t17",
+  "goal": "agent-reviewer の必須指摘があればスコープ内の最小差分で修正し、指摘がスコープ外ならコード変更せず @followup 提案として記録する",
+  "deps": [
+    "review"
+  ],
+  "kind": "work"
+}

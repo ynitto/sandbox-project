@@ -1,0 +1,8 @@
+{
+  "id": "constraints",
+  "goal": "agent-reviewer の指摘から他ノードにも恒常的に適用すべき制約だけを抽出し、存在する場合は {\"constraints\":[\"…\"]} 形式の機械可読 JSON にまとめ、存在しない場合は省略と判定する",
+  "deps": [
+    "review"
+  ],
+  "kind": "classify"
+}

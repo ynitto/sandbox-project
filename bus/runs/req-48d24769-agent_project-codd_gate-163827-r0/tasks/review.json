@@ -1,0 +1,8 @@
+{
+  "id": "review",
+  "goal": "agent-reviewer を用いて最終差分をレビューし、codd_gate 非依存の依存境界、intake/regression 回帰、tools/codd-gate 非変更、dashboard UI 非変更、不要な設計書編集がないことを検証する",
+  "deps": [
+    "loop"
+  ],
+  "kind": "verify"
+}

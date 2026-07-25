@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "configfile.py の _apply_codd_gate_auto_wiring を、確定した sibling モジュールまたは明示設定に基づく汎用自動配線関数へ置換し、既存設定の読み込み経路を維持する",
+  "deps": [
+    "synth1"
+  ],
+  "kind": "work"
+}

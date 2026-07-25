@@ -1,0 +1,8 @@
+{
+  "id": "synth1",
+  "goal": "検証済みの調査結果から、agent_project パッケージ内に codd_gate 名を残さない汎用フック名、sibling 探索規則、明示設定の優先順位、ファイル別変更表を確定する",
+  "deps": [
+    "gate1"
+  ],
+  "kind": "synthesize"
+}

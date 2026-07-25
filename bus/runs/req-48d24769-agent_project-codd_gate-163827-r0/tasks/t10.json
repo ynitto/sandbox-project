@@ -1,0 +1,8 @@
+{
+  "id": "t10",
+  "goal": "model と regression gate 関連テストの _codd_gate_debt_module および codd_gate 固有 mock を汎用フック境界へ追随させ、失敗時の遮断と成功時の通過を検証する",
+  "deps": [
+    "t6"
+  ],
+  "kind": "work"
+}

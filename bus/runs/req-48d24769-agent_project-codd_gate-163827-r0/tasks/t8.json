@@ -1,0 +1,8 @@
+{
+  "id": "t8",
+  "goal": "configfile 自動配線テストの TestCoddGateAutoWiring 相当ケースと mock 対象を新しい汎用関数・モジュール境界へ追随させ、sibling 配線と明示設定を独立に検証できるようにする",
+  "deps": [
+    "t4"
+  ],
+  "kind": "work"
+}

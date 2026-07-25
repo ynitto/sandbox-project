@@ -1,0 +1,6 @@
+{
+  "id": "t2",
+  "goal": "configfile.py と sibling モジュールを調査し、codd_gate_wiring / codd_gate_regression または明示設定を利用できる既存の自動配線パターンと差し込み点を特定する",
+  "deps": [],
+  "kind": "work"
+}
