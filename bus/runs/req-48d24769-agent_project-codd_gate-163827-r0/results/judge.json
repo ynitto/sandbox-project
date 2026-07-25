@@ -1,0 +1,13 @@
+{
+  "id": "judge",
+  "who": "worker-1",
+  "status": "done",
+  "output": "評価軸: 要求適合、実測との一致、原因分類、最小修正の具体性。\n\n| dep | 判定 | 理由 |\n|---|---|---|\n| t13 | 棄却 | 指定コマンドは exit 2 なのに pass 扱い。 |\n| t14 | 棄却 | 同じく exit 2 を pass 扱い。結果データにも不整合あり。 |\n| t15 | 採用 | exit 2 を正しく fail と判定し、分割先テストの成功も確認。 |\n| t16 | 部分合格 | 禁止識別子0件を正しく確認したが、テスト契約失敗は対象外。 |\n\n失敗分類:\n\n- t13〜t15: **テスト** — `tools/agent-project/tests/test_agent_project.py` の欠落。\n- t16: 失敗なし。\n- **ソース・mock・禁止識別子**に修正対象なし。\n\n最小修正対象は `tools/agent-project/tests/test_agent_project.py` の互換入口1ファイル。分割先の `TestIntake` と `TestLoopEngineering` を再公開し、`unittest.main()` から実行可能にする。\n\n{\"winner\":\"t15\"}",
+  "finished_at": "2026-07-25T22:52:07Z",
+  "data": {
+    "winner": "t15"
+  },
+  "artifacts": [
+    "artifacts/judge/result.md"
+  ]
+}

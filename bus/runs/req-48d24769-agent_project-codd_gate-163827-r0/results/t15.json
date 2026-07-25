@@ -1,0 +1,16 @@
+{
+  "id": "t15",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=fail\n\n指定ファイル `tools/agent-project/tests/test_agent_project.py` が存在せず、指定コマンドは exit 2。実在する `tests/test_autonomy.py` の同名テストは成功しました。結果: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t15/result.md)\n\n{\"ok\": false, \"issues\": [\"指定テストパスを tests/test_autonomy.py に更新するか、tests/test_agent_project.py のテスト入口を復元すること。\"]}",
+  "finished_at": "2026-07-25T22:48:24Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "指定テストパスを tests/test_autonomy.py に更新するか、tests/test_agent_project.py のテスト入口を復元すること。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/t15/result.md"
+  ]
+}

@@ -15,3 +15,5 @@
 {"ts": "2026-07-25T22:30:29Z", "who": "worker-2", "kind": "result", "node": "t7", "status": "done"}
 {"ts": "2026-07-25T22:30:29Z", "who": "worker-2", "kind": "claimed", "node": "t9"}
 {"ts": "2026-07-25T22:33:26Z", "who": "worker-2", "kind": "result", "node": "t9", "status": "done"}
+{"ts": "2026-07-25T22:47:31Z", "who": "worker-2", "kind": "claimed", "node": "t13"}
+{"ts": "2026-07-25T22:48:50Z", "who": "worker-2", "kind": "result", "node": "t13", "status": "done"}

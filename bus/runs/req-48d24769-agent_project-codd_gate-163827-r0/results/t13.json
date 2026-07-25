@@ -1,0 +1,16 @@
+{
+  "id": "t13",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=pass\n\n移動先の同名テストを実行し、`Ran 1 test` / `OK`。JSON配列の取り込みと、再実行時のID重複排除を確認しました。\n\n指定元ファイルは存在せず、原コマンドは exit 2。詳細は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/t13/result.md)。\n\n{\"ok\": true, \"issues\": [\"(minor) synth2は変更範囲を7ファイルと報告しているが、現worktreeのmain...HEAD差分はtools/agent-project配下6ファイル。件数表記の確認が必要。\"]}",
+  "finished_at": "2026-07-25T22:48:50Z",
+  "data": {
+    "ok": true,
+    "issues": [
+      "(minor) synth2は変更範囲を7ファイルと報告しているが、現worktreeのmain...HEAD差分はtools/agent-project配下6ファイル。件数表記の確認が必要。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/t13/result.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "t16",
+  "who": "worker-1",
+  "status": "done",
+  "output": "- `synth2`: 採用。指定の `git grep` は出力なし・終了コード1で、禁止 import・識別子が0件との報告を実測確認した。\n\n{\"kept\":[\"synth2\"]}",
+  "finished_at": "2026-07-25T22:48:47Z",
+  "data": [
+    "synth2"
+  ]
+}

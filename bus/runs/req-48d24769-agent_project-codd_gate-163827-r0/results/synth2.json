@@ -1,0 +1,10 @@
+{
+  "id": "synth2",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=pass\n\n- t8/t9/t10 を矛盾・競合なく統合済み。\n- 全テスト 969/969、受入3ケース 3/3 成功。\n- 旧識別子・禁止 import 0件、`git diff --check` 成功。\n- 追加変更不要。\n\n[統合結果 result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-agent_project-codd_gate-163827-r0/artifacts/synth2/result.md)",
+  "finished_at": "2026-07-25T22:47:29Z",
+  "artifacts": [
+    "artifacts/synth2/result.md"
+  ]
+}
