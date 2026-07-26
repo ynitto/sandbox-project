@@ -227,3 +227,10 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 11:04:13 verify: dashboard-163827 を https://github.com/ynitto/sandbox@ap/dashboard-163827（path=tools/agent-dashboard） のクローン内で検証
 - 2026-07-26 11:04:13 cycle 1: dashboard-163827 → 検収待ち（承認ゲート） — commit 48d24769
 - 2026-07-26 11:04:13 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
+- 2026-07-26 11:04:15 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-26 11:04:15 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-07-26 11:04:58 commands 取り込み失敗: viewer-approve-dashboard-163827-1785031495998.json: approve dashboard-163827 が失敗 (exit 1): dashboard-163827: 成果ブランチをターゲットへ統合できないため done にできません（main と ap/dashboard-163827 の自動統合で競合しました。成果ブランチを更新して再検収してください: Auto-merging tools/agent-dashboard/package.json
+- 2026-07-26 11:04:58 === project 開始 v1 acceptance=2 ===
+- 2026-07-26 11:04:59 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-26 11:04:59 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-26 11:04:59 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
