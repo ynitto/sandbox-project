@@ -1,5 +1,5 @@
 ## sibling-163827: sibling 自動検出レイヤと利用手順を新境界へ追随させる
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests -p 'test_codd_gate_*.py' && grep -nE 'codd_gate_regression|regression_cmd|intake_cmd' tools/agent-project/README.md && ! grep -nE 'build_config.*メモリ上で自動|_apply_codd_gate_auto_wiring' tools/agent-project/README.md`
@@ -12,4 +12,7 @@
 - after: agent_project-codd_gate-163827
 - assess: c=2 r=2 a=2
 - last_run: req-48d24769-sibling-163827-r0
-- flow_run: req-48d24769-sibling-163827-r0
+- gate_ref: git: 21f857d agent-project: state sync 2026-07-26T09:41:00
+- gate_ts: 2026-07-26 09:41:48
+- gate_branch: main
+- gate_vmsg: exit=0 gression_cmd` だけを冪等に更新する。`intake_cmd` は設定ファイルへ直接書く。 460:- **取り込みコマンド（intake_cmd）**: 外部の決定的ゲート/検出器を **watch の周期で pull** する汎用フック（push 型の 461:  inbox と対）。設定 `intake_cmd:`（CLI `--intake-cmd`）のコマンドを

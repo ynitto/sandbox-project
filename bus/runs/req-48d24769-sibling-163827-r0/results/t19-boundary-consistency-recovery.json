@@ -1,0 +1,19 @@
+{
+  "id": "t19-boundary-consistency-recovery",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 修復完了。YAML 書込みを `codd_gate_wiring.py` に一意化し、生成 CLI を version・schema・capability 検査へ接続。README に doctor／結線診断の正準手順を追記し、slop-police を適用。\n- 検証結果: codd-gate 関連105テスト、指定完了条件、境界検査、除外範囲検査、`git diff --check` はすべて終了コード0。\n- `agent_project/` と dashboard は未変更。前提と詳細は [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t19-boundary-consistency-recovery/report.md)。",
+  "finished_at": "2026-07-26T00:41:42Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "2b2545b43047b1dcc1505c9b1a1023c1bd8235d1",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t19-boundary-consistency-recovery/report.md"
+  ]
+}
