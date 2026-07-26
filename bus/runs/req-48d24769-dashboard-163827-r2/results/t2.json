@@ -1,11 +1,7 @@
 {
   "id": "t2",
   "who": "worker-2",
-  "status": "failed",
-  "output": "実行エラー: 未知の agent_cli です: 'codex'（agents/codex.json が見つかりません）\n  探索順: /Users/nitto/Workspace/sandbox-project/agents → /Users/nitto/.agents/agents → /Users/nitto/.kiro/agents\n  組み込み CLI もこの定義ファイルで動きます。インストールが壊れている可能性があります（install.sh の再実行を検討してください）。",
-  "finished_at": "2026-07-26T11:59:39Z",
-  "data": {
-    "error_class": "content",
-    "attempts": 1
-  }
+  "status": "done",
+  "output": "(a) 成果: 既存変更で完了条件を満たしていたため追加変更なし。概要に設定有無・3段階ゲート状態・README準拠の有効化導線、needs に codd-gate／回帰失敗要約が実装済み。\n\n(b) 検証: `npm test` 全件成功、`git diff --check` 成功、作業ツリー clean。\n\n(c) 前提: `p.consistencyGate` を公式の読み取り専用スナップショットとして採用。UIによる状態変更や agent-project 本体への変更は行っていない。未解決事項なし。",
+  "finished_at": "2026-07-26T13:04:30Z"
 }

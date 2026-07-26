@@ -1,0 +1,5 @@
+{"ts": "2026-07-26T13:02:36Z", "who": "worker-1", "kind": "claimed", "node": "classify"}
+{"ts": "2026-07-26T13:02:45Z", "who": "worker-1", "kind": "result", "node": "classify", "status": "done"}
+{"ts": "2026-07-26T13:02:45Z", "who": "worker-1", "kind": "claimed", "node": "t1"}
+{"ts": "2026-07-26T13:05:29Z", "who": "worker-1", "kind": "result", "node": "t1", "status": "done"}
+{"ts": "2026-07-26T13:05:30Z", "who": "worker-1", "kind": "claimed", "node": "gate"}

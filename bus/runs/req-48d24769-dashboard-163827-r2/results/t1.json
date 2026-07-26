@@ -1,11 +1,10 @@
 {
   "id": "t1",
-  "who": "worker-2",
-  "status": "failed",
-  "output": "実行エラー: 未知の agent_cli です: 'codex'（agents/codex.json が見つかりません）\n  探索順: /Users/nitto/Workspace/sandbox-project/agents → /Users/nitto/.agents/agents → /Users/nitto/.kiro/agents\n  組み込み CLI もこの定義ファイルで動きます。インストールが壊れている可能性があります（install.sh の再実行を検討してください）。",
-  "finished_at": "2026-07-26T11:59:39Z",
-  "data": {
-    "error_class": "content",
-    "attempts": 1
-  }
+  "who": "worker-1",
+  "status": "done",
+  "output": "成果: 既存実装が要件を満たすことを確認。追加変更なし。`consistencyGate` が公式契約から設定有無・結線状態・コマンド値を読み取り専用で公開済みです。\n\n検証: 対象テスト 7/7 成功、`npm test` 全件成功、作業ツリー clean。\n\n前提: 空白でない設定値を「設定あり」、公式 `codd_gate_wiring.py` と同じ形式を「結線済み」と判定。未解決・範囲外問題なし。\n\n[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r2/artifacts/t1/report.md)",
+  "finished_at": "2026-07-26T13:05:29Z",
+  "artifacts": [
+    "artifacts/t1/report.md"
+  ]
 }

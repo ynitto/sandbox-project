@@ -11,3 +11,9 @@
 - affects : dashboard-163827 → ready
 - learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: コンフリクトを解消して
 
+## DR-0003  2026-07-26  actor: nitto
+- context : dashboard-163827 を run req-48d24769-dashboard-163827-r2 の続きから再開
+- action  : resume-run
+- reason  : 要対応画面から再実行（失敗した工程だけやり直し）
+- affects : dashboard-163827 → ready (last_run=req-48d24769-dashboard-163827-r2)
+
