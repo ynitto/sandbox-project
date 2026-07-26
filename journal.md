@@ -212,3 +212,10 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 10:00:52 verify: sibling-163827 を https://github.com/ynitto/sandbox@ap/sibling-163827（path=tools/agent-project） のクローン内で検証
 - 2026-07-26 10:00:53 cycle 1: sibling-163827 → 検収待ち（承認ゲート） — git: db22e6a agent-project: state sync 2026-07-26T09:57:54
 - 2026-07-26 10:00:55 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
+- 2026-07-26 10:00:57 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-26 10:00:57 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-07-26 10:02:14 run ブリーフ退役: sibling-163827（1 件を納品書へ転記）
+- 2026-07-26 10:02:14 commands 取り込み: approve sibling-163827（viewer-approve-sibling-163827-1785027727540.json）
+- 2026-07-26 10:02:14 === project 開始 v1 acceptance=2 ===
+- 2026-07-26 10:02:14 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-26 10:02:14 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s

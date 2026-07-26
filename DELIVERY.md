@@ -4,3 +4,4 @@
 |---|---|---|---|---|
 | agent_project-codd_gate-163827 | agent_project を codd_gate 非依存の汎用フックへ整理する | PASS | commit 48d24769 | 2026-07-26 09:04:10 |
 | codd-gate-163827 | codd-gate 連携の目標境界を設計書に固定する | PASS | commit 48d24769 | 2026-07-24 06:09:09 |
+| sibling-163827 | sibling 自動検出レイヤと利用手順を新境界へ追随させる | PASS | git: db22e6a agent-project: state sync 2026-07-26T09:57:54 | 2026-07-26 10:00:53 |
