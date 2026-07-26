@@ -1,0 +1,17 @@
+{
+  "id": "gate",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=fail\n\n- [t1] [project.js:1609](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-4245-ks226o8r/sandbox/tools/agent-dashboard/src/features/agent-project/main/project.js:1609): agent-project が採用するグローバル設定を捨て、結線状態を誤表示します。実効 `values/file` を採用するよう差し戻し。\n- [t2] [overview-ui.test.js:284](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-4245-ks226o8r/sandbox/tools/agent-dashboard/test/overview-ui.test.js:284): 概要への結線やボタン配線が消えてもテストが通ります。実 call-site と `api.openPath` のクリック検証を追加するよう差し戻し。\n- コンフリクトなし、スコープ外差分なし、`npm test` と対象テストは成功。リポジトリは変更していません。\n- 詳細: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r2/artifacts/gate/report.md)\n\n{\"ok\":false,\"issues\":[\"[t1] project.js:1609 — グローバル実効設定を無視して結線状態を誤表示する。\",\"[t2] overview-ui.test.js:284 — 概要の実結線と有効化ボタン動作に偽陽性がある。\"]}",
+  "finished_at": "2026-07-26T20:40:23Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "[t1] project.js:1609 — グローバル実効設定を無視して結線状態を誤表示する。",
+      "[t2] overview-ui.test.js:284 — 概要の実結線と有効化ボタン動作に偽陽性がある。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate/report.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "verify",
+  "who": "worker-1",
+  "status": "done",
+  "output": "verify=pass — [検証レポート](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r2/artifacts/verify/report.md)\n\ngrep: exit 0（22件）、needs: exit 0（13 passed）、overview: exit 0（all passed）。失敗原因なし。\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-07-26T20:46:53Z",
+  "data": {
+    "ok": true,
+    "issues": []
+  },
+  "artifacts": [
+    "artifacts/verify/report.md"
+  ]
+}

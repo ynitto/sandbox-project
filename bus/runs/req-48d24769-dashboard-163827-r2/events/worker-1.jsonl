@@ -4,3 +4,8 @@
 {"ts": "2026-07-26T13:05:29Z", "who": "worker-1", "kind": "result", "node": "t1", "status": "done"}
 {"ts": "2026-07-26T13:05:30Z", "who": "worker-1", "kind": "claimed", "node": "gate"}
 {"ts": "2026-07-26T20:32:35Z", "who": "worker-1", "kind": "claimed", "node": "gate"}
+{"ts": "2026-07-26T20:40:23Z", "who": "worker-1", "kind": "result", "node": "gate", "status": "done"}
+{"ts": "2026-07-26T20:40:23Z", "who": "worker-1", "kind": "claimed", "node": "synth"}
+{"ts": "2026-07-26T20:45:07Z", "who": "worker-1", "kind": "result", "node": "synth", "status": "done"}
+{"ts": "2026-07-26T20:45:08Z", "who": "worker-1", "kind": "claimed", "node": "verify"}
+{"ts": "2026-07-26T20:46:53Z", "who": "worker-1", "kind": "result", "node": "verify", "status": "done"}
