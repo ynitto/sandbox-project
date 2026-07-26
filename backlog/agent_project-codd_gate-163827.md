@@ -1,5 +1,5 @@
 ## agent_project-codd_gate-163827: agent_project を codd_gate 非依存の汎用フックへ整理する
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `PYTHONPATH=tools/agent-project python3 tools/agent-project/tests/test_agent_project.py TestIntake.test_run_intake_enqueues_and_dedups_by_id TestLoopEngineering.test_regression_gate_blocks_on_failure TestLoopEngineering.test_regression_gate_passes && ! git grep -n -E '(^|[[:space:]])(import|from)[[:space:]]+codd_gate|_apply_codd_gate|_codd_gate' -- tools/agent-project/agent_project`
@@ -12,4 +12,7 @@
 - after: codd-gate-163827
 - assess: c=2 r=2 a=1
 - last_run: req-48d24769-agent_project-codd_gate-163827-r0
-- flow_run: req-48d24769-agent_project-codd_gate-163827-r0
+- gate_ref: commit 48d24769
+- gate_ts: 2026-07-26 09:04:10
+- gate_branch: main
+- gate_vmsg: exit=0 --- 通知（要対応）--- # 要対応（agent-project）  ## 判断待ち（blocked） - T1: x     なぜ: 回帰検知: グローバル検査 `external-regression-hook` 失敗 — hook failed     対応: needs/T1.md に方針を書く、または `approve T1` / `hold T1`  ... ----

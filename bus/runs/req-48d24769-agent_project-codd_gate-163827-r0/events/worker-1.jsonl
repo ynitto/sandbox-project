@@ -30,3 +30,4 @@
 {"ts": "2026-07-25T23:52:52Z", "who": "worker-1", "kind": "claimed", "node": "t17"}
 {"ts": "2026-07-26T00:02:23Z", "who": "worker-1", "kind": "result", "node": "t17", "status": "done"}
 {"ts": "2026-07-26T00:02:23Z", "who": "worker-1", "kind": "claimed", "node": "final"}
+{"ts": "2026-07-26T00:03:56Z", "who": "worker-1", "kind": "result", "node": "final", "status": "done"}

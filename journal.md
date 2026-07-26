@@ -190,3 +190,6 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 08:08:08 flow detach: agent_project-codd_gate-163827 の run req-48d24769-agent_project-codd_gate-163827-r0 を failed（agent-flow run タイムアウト（3600s））
 - 2026-07-26 08:08:09 cycle 1: agent_project-codd_gate-163827 NG 積み直し (1/2) — agent-flow run タイムアウト（3600s）
 - 2026-07-26 08:08:10 run 再開: agent_project-codd_gate-163827 は req-48d24769-agent_project-codd_gate-163827-r0 の失敗ノードだけをやり直します（done は温存）
+- 2026-07-26 09:04:08 verify: agent_project-codd_gate-163827 を https://github.com/ynitto/sandbox@ap/agent_project-codd_gate-163827（path=tools/agent-project） のクローン内で検証
+- 2026-07-26 09:04:10 cycle 2: agent_project-codd_gate-163827 → 検収待ち（承認ゲート） — commit 48d24769
+- 2026-07-26 09:04:10 === agent-project 停止 reason=drained cycles=2 done=0 blocked=0 notified=True promoted=0 ===
