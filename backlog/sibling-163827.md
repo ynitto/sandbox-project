@@ -1,5 +1,5 @@
 ## sibling-163827: sibling 自動検出レイヤと利用手順を新境界へ追随させる
-- status: ready
+- status: doing
 - source: charter
 - priority: 0
 - verify: `PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests -p 'test_codd_gate_*.py' && grep -nE 'codd_gate_regression|regression_cmd|intake_cmd' tools/agent-project/README.md && ! grep -nE 'build_config.*メモリ上で自動|_apply_codd_gate_auto_wiring' tools/agent-project/README.md`
@@ -11,3 +11,5 @@
 - charter: v1
 - after: agent_project-codd_gate-163827
 - assess: c=2 r=2 a=2
+- last_run: req-48d24769-sibling-163827-r0
+- flow_run: req-48d24769-sibling-163827-r0

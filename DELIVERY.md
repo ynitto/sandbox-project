@@ -2,4 +2,5 @@
 
 | id | タイトル | 検収 | 成果参照 | 完了 |
 |---|---|---|---|---|
+| agent_project-codd_gate-163827 | agent_project を codd_gate 非依存の汎用フックへ整理する | PASS | commit 48d24769 | 2026-07-26 09:04:10 |
 | codd-gate-163827 | codd-gate 連携の目標境界を設計書に固定する | PASS | commit 48d24769 | 2026-07-24 06:09:09 |
