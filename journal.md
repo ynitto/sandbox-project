@@ -267,3 +267,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - judge [None]:
 - 2026-07-26 20:59:47 cycle 2: dashboard-163827 → 人の判断（繰り返し NG）
 - 2026-07-26 20:59:47 === agent-project 停止 reason=drained cycles=2 done=0 blocked=1 notified=True promoted=0 ===
+- 2026-07-26 20:59:49 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-26 20:59:49 === project watch: 監視中（charter 更新/フィードバック待ち）===
