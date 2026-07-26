@@ -1,8 +1,0 @@
-{
-  "id": "t11",
-  "goal": "[scope] 指定された grep、needs-diagnosis.test.js、overview-ui.test.js を実行し、終了コード0になるまで該当 work・verify・synthesize を反復して完了判定する [out_of_scope] テストの無効化、期待値の形骸化、done不変条件を破る回避策",
-  "deps": [
-    "t10"
-  ],
-  "kind": "verify"
-}

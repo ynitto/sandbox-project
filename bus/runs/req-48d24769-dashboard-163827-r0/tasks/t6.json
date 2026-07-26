@@ -1,9 +1,0 @@
-{
-  "id": "t6",
-  "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js の既存テストを最小変更し、codd-gate／回帰失敗要約の可読性が維持されることを検証する [out_of_scope] 新規テスト基盤、実装詳細への過剰な固定、他機能のテスト改変",
-  "deps": [
-    "t4",
-    "t5"
-  ],
-  "kind": "work"
-}

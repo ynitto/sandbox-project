@@ -1,0 +1,8 @@
+{
+  "id": "verify",
+  "goal": "grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js を実行し、各終了コードと失敗原因を記録する。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "verify"
+}

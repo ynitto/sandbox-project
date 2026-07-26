@@ -1,0 +1,11 @@
+{
+  "id": "t1",
+  "who": "worker-2",
+  "status": "failed",
+  "output": "実行エラー: 未知の agent_cli です: 'codex'（agents/codex.json が見つかりません）\n  探索順: /Users/nitto/Workspace/sandbox-project/agents → /Users/nitto/.agents/agents → /Users/nitto/.kiro/agents\n  組み込み CLI もこの定義ファイルで動きます。インストールが壊れている可能性があります（install.sh の再実行を検討してください）。",
+  "finished_at": "2026-07-26T11:59:39Z",
+  "data": {
+    "error_class": "content",
+    "attempts": 1
+  }
+}

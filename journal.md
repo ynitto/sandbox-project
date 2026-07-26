@@ -249,3 +249,21 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 20:57:18 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-26 20:57:18 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-07-26 20:57:18 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
+- 2026-07-26 20:57:20 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-26 20:57:20 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-07-26 20:58:07 === project 開始 v1 acceptance=2 ===
+- 2026-07-26 20:58:08 run ブリーフ: dashboard-163827 に追記（feedback）: コンフリクトを解消して
+- 2026-07-26 20:58:08 feedback 取り込み: dashboard-163827 を再開
+- 2026-07-26 20:58:08 === agent-project 開始 tasks=2 ingested=1 planner=agent executor=agent dry_run=False ===
+- 2026-07-26 20:58:08 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-26 20:58:08 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-07-26 20:59:37 cycle 1: dashboard-163827 NG 積み直し (2/2) — の定義ファイルで動きます。イン
+- t2 [failed]: 実行エラー: 未知の agent_cli です: 'codex'（agents/codex.json が見つかりません）
+  探索順: /Users/nitto/Workspace/sandbox-project/agents → /Users/nitto/.agents/agents → /Users/nitto/.kiro/agents
+  組み込み CLI もこの定義ファイルで動きます。イン
+- gate [None]: 
+- synth [None]: 
+- verify [None]: 
+- judge [None]:
+- 2026-07-26 20:59:47 cycle 2: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-07-26 20:59:47 === agent-project 停止 reason=drained cycles=2 done=0 blocked=1 notified=True promoted=0 ===

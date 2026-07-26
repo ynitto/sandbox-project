@@ -1,6 +1,0 @@
-{
-  "id": "t2",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の regression_cmd・intake_cmd・needs・commands の読取経路を調査し、既存契約を再利用できる供給点を特定する [out_of_scope] agent-project 本体のフック実装、done不変条件の変更、非公式ストレージへの書込み",
-  "deps": [],
-  "kind": "work"
-}

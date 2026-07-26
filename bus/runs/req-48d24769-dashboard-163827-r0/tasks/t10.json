@@ -1,8 +1,0 @@
-{
-  "id": "t10",
-  "goal": "[scope] t9 の指摘を統合し、該当する単一ファイル作業へ修正を差し戻して dashboard-163827 の一貫した最終候補を形成する [out_of_scope] agent-project 本体の変更、未承認の機能拡張、公式契約外への書込み",
-  "deps": [
-    "t9"
-  ],
-  "kind": "synthesize"
-}

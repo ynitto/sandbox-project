@@ -1,0 +1,6 @@
+{
+  "id": "t2",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要・プロジェクト情報および needs-diagnosis 描画箇所\n[out_of_scope] agent-project 本体、公式契約外への書込み、UIからの状態変更、新規設定保存機能\n既存変更とコンフリクトを保全・解消し、regression_cmd/intake_cmd の設定有無と「一貫性ゲート」の状態を可視化する。未結線時は README と同等の設定編集または sibling CLI による有効化導線を示し、codd-gate・回帰失敗要約の可読性を維持する。",
+  "deps": [],
+  "kind": "work"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "classify",
+  "goal": "対象ブランチ、作業ツリー、既存差分、未解決コンフリクトを調査し、ユーザー変更を保全した解消方針を確定する。agent-dashboard と agent-project の現行コード、README、有効化導線、needs-diagnosis 表示、needs/inbox/commands 契約、done 不変条件も確認し、後続ノードが従う機械可読な制約を抽出する。",
+  "deps": [],
+  "kind": "classify"
+}
