@@ -1,0 +1,6 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-project配下の該当GUIDE 1ファイルをslop-policeスキルで更新し、READMEと同じ有効化手順へ統一する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

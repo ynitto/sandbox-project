@@ -1,0 +1,17 @@
+{
+  "id": "t11",
+  "goal": "[scope] t1〜t10の成果をagent-reviewスキルで敵対的レビューし、責務逸脱、呼び出し契約破壊、yaml非冪等、文書間不整合、恒常的制約の有無を指摘する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8",
+    "t9",
+    "t10"
+  ],
+  "kind": "verify"
+}

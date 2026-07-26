@@ -1,0 +1,6 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-project/codd_gate_base.py を確認し、新境界に反する共有処理を除去または限定して既存呼び出し契約を保つ [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

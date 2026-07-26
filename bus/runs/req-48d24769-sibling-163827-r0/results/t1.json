@@ -1,0 +1,19 @@
+{
+  "id": "t1",
+  "who": "worker-2",
+  "status": "done",
+  "output": "## 成果\n\n`tools/agent-project/codd_gate_detect.py` の説明を更新し、責務を以下に限定しました。\n\n- パッケージ外 sibling としての codd-gate 実体解決\n- 推奨設定の可否に必要なバージョン・schema・能力の生検出\n- YAML注入、doctor所見、パッケージ再結合は対象外と明記\n\n既存APIは後段の推奨判定に必要なため維持しています。\n\n## 検証\n\n- 対象テスト: 23件 PASS\n- `test_codd_gate_*.py`: 115件 PASS\n- `git diff --check`: PASS\n- 変更は `tools/agent-project/codd_gate_detect.py` のみ\n\n## 前提・未解決事項\n\n責務限定はAPI削除ではなく、検出レイヤの境界明確化と解釈しました。未解決事項・範囲外変更はありません。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t1/report.md)",
+  "finished_at": "2026-07-26T00:19:49Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "eba24b80b61b4e5213be5d6f698514a50e22ca57",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t1/report.md"
+  ]
+}

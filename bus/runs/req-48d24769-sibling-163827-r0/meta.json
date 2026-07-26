@@ -9,9 +9,10 @@
     "branch": "ap/sibling-163827"
   },
   "references": [],
-  "status": "planning",
+  "status": "running",
   "created_at": "2026-07-26T00:05:56Z",
   "executor": "agent",
-  "orch_lease_until": 1785024476.147917,
-  "heartbeat_at": "2026-07-26T00:05:56Z"
+  "orch_lease_until": 1785025340.425628,
+  "heartbeat_at": "2026-07-26T00:20:20Z",
+  "updated_at": "2026-07-26T00:20:20Z"
 }

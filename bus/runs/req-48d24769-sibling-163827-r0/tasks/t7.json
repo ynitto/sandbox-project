@@ -1,0 +1,6 @@
+{
+  "id": "t7",
+  "goal": "[scope] tools/agent-project/codd_gate_regression.py を確認し、--configによる明示実行とregression_cmd・intake_cmdの案内を一貫させる [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

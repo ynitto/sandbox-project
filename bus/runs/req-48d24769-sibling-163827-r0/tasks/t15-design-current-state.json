@@ -1,0 +1,8 @@
+{
+  "id": "t15-design-current-state",
+  "goal": "docs/designs/codd-gate-design.md §4.1 の「現在地」が未更新であるため、実装済みの新境界（パッケージ外検出、推奨設定文字列、YAML 冪等注入、必要な CLI/doctor 所見、明示設定または codd_gate_regression.py --config による利用）に合わせて更新し、build_config のメモリ自動配線を現在の機能として記述しない。ドキュメント規則に従い slop-police を使用し、agent-dashboard には変更を加えない。",
+  "deps": [
+    "t14-boundary-recovery"
+  ],
+  "kind": "work"
+}

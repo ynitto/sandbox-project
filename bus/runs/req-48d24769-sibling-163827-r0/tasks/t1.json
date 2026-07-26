@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] tools/agent-project/codd_gate_detect.py を確認し、責務をパッケージ外 sibling 検出と必要な推奨情報に限定する最小変更を行う [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

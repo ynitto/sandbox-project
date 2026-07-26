@@ -1,0 +1,16 @@
+{
+  "id": "t3",
+  "who": "worker-1",
+  "status": "done",
+  "output": "(a) `codd_gate_routing.py` を、routing 引数と明示設定用の推奨コマンド生成に限定。既存 API は維持しました。\n\n(b) codd-gate 関連 112 テスト成功。推奨文字列の追加 assert、`git diff --check` も成功。\n\n(c) 前提: YAML 書込み・検出・doctor・パッケージ再結合は対象外。  \n@followup: `codd_gate_wiring.py` の重複する推奨文字列生成を新関数へ委譲してください。",
+  "finished_at": "2026-07-26T00:08:21Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "322b506057845ec7a6bdaf19682ea7d36054f202",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

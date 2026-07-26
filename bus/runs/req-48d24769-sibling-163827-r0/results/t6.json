@@ -1,0 +1,16 @@
+{
+  "id": "t6",
+  "who": "worker-2",
+  "status": "done",
+  "output": "(a) 成果: `codd_gate_wiring.py` に YAML の冪等注入 API を追加。`build_config` へのメモリ配線は追加せず、コメント・未知設定・mtime を保持します。回帰テストも追加しました。\n\n(b) 検証:\n\n- 対象テスト 33件: OK\n- codd-gate 系 115件: OK\n- `py_compile`: OK\n- `git diff --check`: OK\n\n(c) 前提: 「だけ」は永続化の副作用を YAML 注入に限定する意味と解釈し、既存の検出・所見 API は互換性維持のため残しました。変更は `tools/agent-project` 配下のみです。\n\n@followup t7: `codd_gate_regression.py` の注入処理を新しい `upsert_yaml_text` / `apply_yaml_file` に統合してください。",
+  "finished_at": "2026-07-26T00:10:10Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "eab4161e334912cc1d5c80d9bb31d41c2289062b",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

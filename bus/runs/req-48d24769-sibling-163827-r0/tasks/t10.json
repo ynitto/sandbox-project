@@ -1,0 +1,6 @@
+{
+  "id": "t10",
+  "goal": "[scope] docs/designs/codd-gate-design.md §4.1の現在地をslop-policeスキルで実装済み境界へ追随させる [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

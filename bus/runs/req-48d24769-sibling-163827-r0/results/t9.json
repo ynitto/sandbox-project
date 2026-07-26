@@ -1,0 +1,16 @@
+{
+  "id": "t9",
+  "who": "worker-1",
+  "status": "done",
+  "output": "(a) [GUIDE.md](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-20541-07s7nask/sandbox/tools/agent-project/GUIDE.md) のみ更新。README と同じ「YAML/CLIへの明示設定のみ有効」「自動検出では有効化しない」手順へ統一し、古い `hooks` 経路を削除しました。\n\n(b) `git diff --check`、両 sibling CLI の `--help`、旧記述の残存検索に合格。変更は GUIDE 1ファイルだけです。\n\n(c) README を有効化手順の正本と判断しました。未解決事項・範囲外の問題はありません。",
+  "finished_at": "2026-07-26T00:10:00Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "a515dca159cc11dd02c38c281d93e6c3ad4016f2",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

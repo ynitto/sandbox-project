@@ -1,0 +1,8 @@
+{
+  "id": "t12",
+  "goal": "[scope] レビュー指摘を反映してコード・README・GUIDE・設計書の新境界を1つの結合点として整合させ、発見した恒常的制約があればconstraints JSONへ集約する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [
+    "t11"
+  ],
+  "kind": "synthesize"
+}

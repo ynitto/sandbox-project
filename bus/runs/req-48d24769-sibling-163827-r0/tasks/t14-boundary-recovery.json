@@ -1,0 +1,6 @@
+{
+  "id": "t14-boundary-recovery",
+  "goal": "失敗した t2・t7 の担当範囲を回収する。tools/agent-project/codd_gate_status.py と codd_gate_regression.py の現状を確認し、パッケージ外 sibling の検出・推奨文字列・必要な CLI 所見という新境界に責務を限定する。agent_project パッケージ内への再結合や build_config のメモリ自動配線は行わず、既存 API と必要なテストを維持する。既存の t1〜t9 の変更と衝突しない最小差分に統合する。",
+  "deps": [],
+  "kind": "work"
+}

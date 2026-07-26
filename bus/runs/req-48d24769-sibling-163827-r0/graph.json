@@ -1,0 +1,115 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 16,
+    "review": true,
+    "reason": "sibling 境界に関係する7個のPythonモジュールと3個の文書をファイル単位で並列更新し、agent-reviewによる敵対的レビュー後に統合する。最終検証が失敗した場合は該当成果ノードから再実行し、完了条件を満たすまで反復する。"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] tools/agent-project/codd_gate_detect.py を確認し、責務をパッケージ外 sibling 検出と必要な推奨情報に限定する最小変更を行う [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] tools/agent-project/codd_gate_status.py を確認し、新境界に沿ったCLI所見だけを扱うよう必要最小限で修正する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-project/codd_gate_routing.py を確認し、明示設定へ誘導する推奨文字列と routing 情報に責務を限定する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-project/codd_gate_base.py を確認し、新境界に反する共有処理を除去または限定して既存呼び出し契約を保つ [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-project/codd_gate_debt.py を確認し、パッケージ外レイヤとして必要な検出・所見だけを残す [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-project/codd_gate_wiring.py を確認し、build_configのメモリ自動配線を廃してyamlへの冪等注入だけを担うよう修正する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] tools/agent-project/codd_gate_regression.py を確認し、--configによる明示実行とregression_cmd・intake_cmdの案内を一貫させる [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-project/README.md をslop-policeスキルで更新し、メモリ自動配線の説明を削除して明示設定またはcodd_gate_regression.py --configへ誘導する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-project配下の該当GUIDE 1ファイルをslop-policeスキルで更新し、READMEと同じ有効化手順へ統一する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t10": {
+      "goal": "[scope] docs/designs/codd-gate-design.md §4.1の現在地をslop-policeスキルで実装済み境界へ追随させる [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [],
+      "kind": "work"
+    },
+    "t11": {
+      "goal": "[scope] t1〜t10の成果をagent-reviewスキルで敵対的レビューし、責務逸脱、呼び出し契約破壊、yaml非冪等、文書間不整合、恒常的制約の有無を指摘する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9",
+        "t10"
+      ],
+      "kind": "verify"
+    },
+    "t12": {
+      "goal": "[scope] レビュー指摘を反映してコード・README・GUIDE・設計書の新境界を1つの結合点として整合させ、発見した恒常的制約があればconstraints JSONへ集約する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [
+        "t11"
+      ],
+      "kind": "synthesize"
+    },
+    "t13": {
+      "goal": "[scope] 指定されたunittestとREADMEのgrep・否定grepをそのまま実行し、終了コード0まで失敗箇所に対応する成果ノードとt11〜t13を反復する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+      "deps": [
+        "t12"
+      ],
+      "kind": "verify"
+    },
+    "t14-boundary-recovery": {
+      "goal": "失敗した t2・t7 の担当範囲を回収する。tools/agent-project/codd_gate_status.py と codd_gate_regression.py の現状を確認し、パッケージ外 sibling の検出・推奨文字列・必要な CLI 所見という新境界に責務を限定する。agent_project パッケージ内への再結合や build_config のメモリ自動配線は行わず、既存 API と必要なテストを維持する。既存の t1〜t9 の変更と衝突しない最小差分に統合する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t15-design-current-state": {
+      "goal": "docs/designs/codd-gate-design.md §4.1 の「現在地」が未更新であるため、実装済みの新境界（パッケージ外検出、推奨設定文字列、YAML 冪等注入、必要な CLI/doctor 所見、明示設定または codd_gate_regression.py --config による利用）に合わせて更新し、build_config のメモリ自動配線を現在の機能として記述しない。ドキュメント規則に従い slop-police を使用し、agent-dashboard には変更を加えない。",
+      "deps": [
+        "t14-boundary-recovery"
+      ],
+      "kind": "work"
+    },
+    "t16-final-acceptance": {
+      "goal": "統合後の成果を元要求と1項目ずつ照合し、スコープ外の agent_project パッケージ内再結合・dashboard 変更がないことを確認する。次の完了条件コマンドをそのまま実行して終了コード0を証拠付きで報告する: PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests -p 'test_codd_gate_*.py' && grep -nE 'codd_gate_regression|regression_cmd|intake_cmd' tools/agent-project/README.md && ! grep -nE 'build_config.*メモリ上で自動|_apply_codd_gate_auto_wiring' tools/agent-project/README.md。さらに README、GUIDE、docs/designs/codd-gate-design.md §4.1 と実装の整合性を検証し、fail の場合は不足箇所・原因・必要な修正を具体的に列挙する。",
+      "deps": [
+        "t14-boundary-recovery",
+        "t15-design-current-state"
+      ],
+      "kind": "work"
+    }
+  },
+  "iteration": 1
+}

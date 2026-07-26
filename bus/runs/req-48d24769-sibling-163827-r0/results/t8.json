@@ -1,0 +1,16 @@
+{
+  "id": "t8",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: `tools/agent-project/README.md` からメモリ自動配線・内部実装の説明を削除。YAML/CLIの明示設定と `codd_gate_regression.py --config` の手順へ整理した。\n- 検証: `git diff --check`、CLIの `--help`、不要語句の不在、変更範囲がREADMEのみであることを確認。すべて成功。\n- 前提: 「メモリ自動配線」は `build_config` やsibling探索の説明を指すと解釈。未解決事項なし。パッケージとdashboardは未変更。",
+  "finished_at": "2026-07-26T00:16:17Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "a4dd88380e10ab2c37336c6107f943b8e2a72687",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

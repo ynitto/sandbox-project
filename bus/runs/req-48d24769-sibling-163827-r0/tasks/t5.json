@@ -1,0 +1,6 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-project/codd_gate_debt.py を確認し、パッケージ外レイヤとして必要な検出・所見だけを残す [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

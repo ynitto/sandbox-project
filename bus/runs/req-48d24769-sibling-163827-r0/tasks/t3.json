@@ -1,0 +1,6 @@
+{
+  "id": "t3",
+  "goal": "[scope] tools/agent-project/codd_gate_routing.py を確認し、明示設定へ誘導する推奨文字列と routing 情報に責務を限定する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

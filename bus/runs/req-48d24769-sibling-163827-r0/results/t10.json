@@ -1,0 +1,10 @@
+{
+  "id": "t10",
+  "who": "worker-2",
+  "status": "done",
+  "output": "リポジトリ変更なし。対象文書が許可範囲外のため§4.1は未更新です。\n\n成果報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t10/result.md)\n\n検証: 関連テスト67件すべて成功、作業ツリー差分なし。\n\n@followup `docs/designs/codd-gate-design.md` の書込権限を持つタスクで更新する。",
+  "finished_at": "2026-07-26T00:17:47Z",
+  "artifacts": [
+    "artifacts/t10/result.md"
+  ]
+}

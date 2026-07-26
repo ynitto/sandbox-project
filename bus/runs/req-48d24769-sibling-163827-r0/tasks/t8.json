@@ -1,0 +1,6 @@
+{
+  "id": "t8",
+  "goal": "[scope] tools/agent-project/README.md をslop-policeスキルで更新し、メモリ自動配線の説明を削除して明示設定またはcodd_gate_regression.py --configへ誘導する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}

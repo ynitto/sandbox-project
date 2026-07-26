@@ -1,0 +1,6 @@
+{
+  "id": "t6",
+  "goal": "[scope] tools/agent-project/codd_gate_wiring.py を確認し、build_configのメモリ自動配線を廃してyamlへの冪等注入だけを担うよう修正する [out_of_scope] agent_project パッケージ内への再結合・agent-dashboard変更",
+  "deps": [],
+  "kind": "work"
+}
