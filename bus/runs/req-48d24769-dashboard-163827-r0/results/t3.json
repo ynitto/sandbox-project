@@ -1,0 +1,10 @@
+{
+  "id": "t3",
+  "who": "worker-2",
+  "status": "done",
+  "output": "成果物: [setting-guidance.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t3/setting-guidance.md)\n\nREADME・sibling CLI・既存テストを突合済み。関連テスト計48件すべて PASS。対象リポジトリへの変更はありません。",
+  "finished_at": "2026-07-26T01:08:27Z",
+  "artifacts": [
+    "artifacts/t3/setting-guidance.md"
+  ]
+}

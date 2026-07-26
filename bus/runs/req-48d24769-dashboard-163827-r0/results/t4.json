@@ -1,0 +1,19 @@
+{
+  "id": "t4",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: `consistencyGateStatus()` に `regressionConfigured` / `intakeConfigured` を追加。既存の読取専用スナップショット経由で renderer に渡します。\n- 検証: 対象・UI・統合テストおよび `npm test` 全件 PASS。`git diff --check` PASS。\n- 前提・範囲外事項: 空白値は未設定扱い。状態更新、agent-project 本体、done 判定は未変更。詳細は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t4/result.md)。",
+  "finished_at": "2026-07-26T01:11:31Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "18b43b396e9b44cdd13d845b45a274c30b015de3",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t4/result.md"
+  ]
+}

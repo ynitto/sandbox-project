@@ -1,0 +1,9 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の1関数または1結合点を変更し、regression_cmd・intake_cmd の設定有無と一貫性ゲート判断材料を既存の読取契約経由で renderer に渡す [out_of_scope] agent-project 本体のフック実装、状態更新API、done不変条件を破る変更",
+  "deps": [
+    "t2",
+    "t3"
+  ],
+  "kind": "work"
+}

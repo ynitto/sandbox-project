@@ -1,0 +1,9 @@
+{
+  "id": "t8",
+  "goal": "[scope] 既存の設計書1ファイルに dashboard の一貫性ゲート表示、公式契約、読取専用境界、有効化導線を記録し、slop-police で文面を点検する [out_of_scope] agent-project フック仕様の新設、将来機能の設計、複数文書への重複記載",
+  "deps": [
+    "t4",
+    "t5"
+  ],
+  "kind": "work"
+}

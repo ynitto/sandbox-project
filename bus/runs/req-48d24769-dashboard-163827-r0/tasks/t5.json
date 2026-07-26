@@ -1,0 +1,10 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の1表示関数または1結合点を変更し、一貫性ゲートの状態、未結線時の設定編集／sibling CLI 導線、失敗の意味を表示する [out_of_scope] UIからの状態書換、needs の codd-gate／needs-diagnosis 要約の可読性低下、独自契約の追加",
+  "deps": [
+    "t1",
+    "t3",
+    "t4"
+  ],
+  "kind": "work"
+}

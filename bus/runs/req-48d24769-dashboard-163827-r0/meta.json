@@ -9,9 +9,10 @@
     "branch": "ap/dashboard-163827"
   },
   "references": [],
-  "status": "planning",
+  "status": "running",
   "created_at": "2026-07-26T01:02:15Z",
   "executor": "agent",
-  "orch_lease_until": 1785027855.057576,
-  "heartbeat_at": "2026-07-26T01:02:15Z"
+  "orch_lease_until": 1785028737.225936,
+  "heartbeat_at": "2026-07-26T01:16:57Z",
+  "updated_at": "2026-07-26T01:03:07Z"
 }

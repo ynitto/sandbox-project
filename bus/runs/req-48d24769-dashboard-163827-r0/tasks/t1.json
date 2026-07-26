@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要・プロジェクト情報・needs-diagnosis 表示経路を調査し、一貫性ゲート状態と有効化導線を追加する最小の変更点を特定する [out_of_scope] agent-project 本体のフック実装、UIからの状態書換、公式 needs/inbox/commands 契約外への書込み",
+  "deps": [],
+  "kind": "work"
+}

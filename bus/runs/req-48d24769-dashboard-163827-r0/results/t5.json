@@ -1,0 +1,19 @@
+{
+  "id": "t5",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: `consistencyGateHtml()` に設定有無、未結線・別コマンド、回帰失敗の意味を表示。既存の設定編集／sibling CLI 導線を維持。\n- 検証: 対象テスト、needs 関連テスト、`npm test`、`git diff --check` すべて PASS。\n- 報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t5/result.md)",
+  "finished_at": "2026-07-26T01:14:49Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "4532a3d97f8f17e22920fb62068ae00fe143c0e5",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t5/result.md"
+  ]
+}

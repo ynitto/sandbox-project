@@ -1,0 +1,9 @@
+{
+  "id": "t7",
+  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js の既存テストを最小変更し、regression_cmd・intake_cmd の設定状態と未結線時の有効化導線を検証する [out_of_scope] 新規テスト基盤、UI状態変更操作、対象外画面の改修",
+  "deps": [
+    "t4",
+    "t5"
+  ],
+  "kind": "work"
+}

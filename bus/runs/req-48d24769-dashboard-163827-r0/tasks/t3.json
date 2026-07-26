@@ -1,0 +1,6 @@
+{
+  "id": "t3",
+  "goal": "[scope] README、sibling CLI、有効化手順および既存テストから未結線時に示す正式な設定編集導線と文言を確認する [out_of_scope] 新しい設定方式、CLI機能追加、READMEに存在しない操作の創作",
+  "deps": [],
+  "kind": "work"
+}
