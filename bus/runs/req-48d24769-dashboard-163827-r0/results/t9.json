@@ -1,0 +1,17 @@
+{
+  "id": "t9",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=fail\n\n- `tools/agent-dashboard/test/consistency-gate.test.js:61` — 片側設定時の `regressionConfigured` / `intakeConfigured` を assert しておらず、フラグの取り違えを検出できません。\n- (minor) 同ファイル `:105` — 空白値を未設定扱いにする境界テストがありません。\n- `npm test`、`git diff --check` は PASS。スコープ外変更はありません。\n\n詳細: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t9/result.md)\n\n{\"ok\":false,\"issues\":[\"tools/agent-dashboard/test/consistency-gate.test.js:61 — 片側設定時の configured フラグ2種を明示検証する\",\"(minor) tools/agent-dashboard/test/consistency-gate.test.js:105 — 空白値の境界テストを追加する\"]}",
+  "finished_at": "2026-07-26T01:58:02Z",
+  "data": {
+    "ok": false,
+    "issues": [
+      "tools/agent-dashboard/test/consistency-gate.test.js:61 — 片側設定時の configured フラグ2種を明示検証する",
+      "(minor) tools/agent-dashboard/test/consistency-gate.test.js:105 — 空白値の境界テストを追加する"
+    ]
+  },
+  "artifacts": [
+    "artifacts/t9/result.md"
+  ]
+}
