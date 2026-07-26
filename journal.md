@@ -202,3 +202,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 09:41:47 verify: sibling-163827 を https://github.com/ynitto/sandbox@ap/sibling-163827（path=tools/agent-project） のクローン内で検証
 - 2026-07-26 09:41:48 cycle 1: sibling-163827 → 検収待ち（承認ゲート） — git: 21f857d agent-project: state sync 2026-07-26T09:41:00
 - 2026-07-26 09:41:49 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
+- 2026-07-26 09:41:51 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-07-26 09:41:51 === project watch: 監視中（charter 更新/フィードバック待ち）===
