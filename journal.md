@@ -301,3 +301,9 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 22:34:20 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-26 22:34:20 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-07-26 22:34:20 run 再開: dashboard-163827 は req-48d24769-dashboard-163827-r2 の失敗ノードだけをやり直します（done は温存）
+- 2026-07-27 05:32:34 === project 開始 v1 acceptance=2 ===
+- 2026-07-27 05:32:34 doing 回復: dashboard-163827 を ready へ戻す（実行者が失踪＝結果は返らない）
+- 2026-07-27 05:32:34 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-07-27 05:32:34 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-07-27 05:32:34 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-07-27 05:32:34 run 再開: dashboard-163827 は req-48d24769-dashboard-163827-r2 の失敗ノードだけをやり直します（done は温存）
