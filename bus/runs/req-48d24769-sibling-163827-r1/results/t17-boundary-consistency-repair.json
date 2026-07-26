@@ -1,0 +1,19 @@
+{
+  "id": "t17-boundary-consistency-repair",
+  "who": "worker-1",
+  "status": "done",
+  "output": "3指摘を最小差分で解消しました。codd-gate系111テスト、指定完了条件、`git diff --check` はすべて成功。禁止範囲の変更はありません。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r1/artifacts/t17-boundary-consistency-repair/report.md)",
+  "finished_at": "2026-07-26T00:53:50Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "5732cb204010b56babb521e3c80cd855817373be",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t17-boundary-consistency-repair/report.md"
+  ]
+}

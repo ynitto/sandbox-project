@@ -1,1 +1,4 @@
 {"ts": "2026-07-26T00:47:54Z", "who": "worker-1", "kind": "claimed", "node": "t17-boundary-consistency-repair"}
+{"ts": "2026-07-26T00:53:50Z", "who": "worker-1", "kind": "result", "node": "t17-boundary-consistency-repair", "status": "done"}
+{"ts": "2026-07-26T00:53:50Z", "who": "worker-1", "kind": "claimed", "node": "t18-boundary-consistency-verify"}
+{"ts": "2026-07-26T01:00:49Z", "who": "worker-1", "kind": "result", "node": "t18-boundary-consistency-verify", "status": "done"}

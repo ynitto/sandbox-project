@@ -9,11 +9,11 @@
     "branch": "ap/sibling-163827"
   },
   "references": [],
-  "status": "running",
+  "status": "done",
   "created_at": "2026-07-26T00:47:53Z",
   "inherited_from": "req-48d24769-sibling-163827-r0",
   "executor": "agent",
-  "orch_lease_until": 1785027274.324835,
-  "heartbeat_at": "2026-07-26T00:52:34Z",
-  "updated_at": "2026-07-26T00:47:53Z"
+  "orch_lease_until": 1785027755.908531,
+  "heartbeat_at": "2026-07-26T01:00:35Z",
+  "updated_at": "2026-07-26T01:00:49Z"
 }
