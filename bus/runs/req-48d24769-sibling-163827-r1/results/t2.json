@@ -1,0 +1,10 @@
+{
+  "id": "t2",
+  "who": "worker-2",
+  "status": "done",
+  "output": "## 成果\n\n`codd_gate_status.py` は既に新境界へ適合していたため、追加変更なし。CLI 所見・no-op 状態のみを扱い、自動配線・YAML 更新・package doctor 登録は非責務です。\n\n## 検証\n\ncodd-gate 関連テスト105件、`py_compile`、`git diff --check` はすべて成功。作業ツリーに差分なし。\n\n前提・詳細は[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r1/artifacts/t2/report.md)に記録しました。",
+  "finished_at": "2026-07-26T00:49:24Z",
+  "artifacts": [
+    "artifacts/t2/report.md"
+  ]
+}
