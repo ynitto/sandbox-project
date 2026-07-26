@@ -1,0 +1,10 @@
+{
+  "id": "t16-final-acceptance",
+  "who": "worker-1",
+  "status": "done",
+  "output": "判定: **fail**。指定コマンドは終了コード0、codd-gate系115テスト成功。パッケージ内再結合・dashboard変更はありません。\n\n不整合は以下の3件です。\n\n- YAML永続化の書き手が一意でない\n- 生成CLIの適合性検査について設計と実装が不一致\n- READMEにdoctor／結線診断の正準手順が欠落\n\n詳細と必要な修正: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t16-final-acceptance/report.md)",
+  "finished_at": "2026-07-26T00:30:05Z",
+  "artifacts": [
+    "artifacts/t16-final-acceptance/report.md"
+  ]
+}

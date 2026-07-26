@@ -1,0 +1,19 @@
+{
+  "id": "t14-boundary-recovery",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: t2・t7 を最小差分で回収。既存 API を維持し、CLI 所見・推奨文字列・`regression_cmd` の冪等注入に責務を限定。\n- 検証: codd-gate 系115件、全体テスト、py_compile、CLI help、完了条件 grep、diff checkすべて成功。\n- 前提・未解決事項: `intake_cmd` は案内のみ。パッケージ内再結合・メモリ自動配線なし。未解決事項なし。\n- 報告書: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t14-boundary-recovery/report.md)",
+  "finished_at": "2026-07-26T00:23:28Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "1b855dc3606e3669737ebaad6c867887915bdba6",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t14-boundary-recovery/report.md"
+  ]
+}

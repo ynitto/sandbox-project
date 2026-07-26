@@ -11,3 +11,6 @@
 {"ts": "2026-07-26T00:17:47Z", "who": "worker-2", "kind": "claimed", "node": "t1"}
 {"ts": "2026-07-26T00:19:49Z", "who": "worker-2", "kind": "result", "node": "t1", "status": "done"}
 {"ts": "2026-07-26T00:20:22Z", "who": "worker-2", "kind": "claimed", "node": "t14-boundary-recovery"}
+{"ts": "2026-07-26T00:23:28Z", "who": "worker-2", "kind": "result", "node": "t14-boundary-recovery", "status": "done"}
+{"ts": "2026-07-26T00:23:28Z", "who": "worker-2", "kind": "claimed", "node": "t15-design-current-state"}
+{"ts": "2026-07-26T00:26:25Z", "who": "worker-2", "kind": "result", "node": "t15-design-current-state", "status": "done"}

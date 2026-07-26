@@ -1,0 +1,19 @@
+{
+  "id": "t15-design-current-state",
+  "who": "worker-2",
+  "status": "done",
+  "output": "- 成果: §4.1 を新境界へ更新。`build_config` の自動配線は現行機能として記載せず、agent-dashboard は未変更。\n- 検証: codd-gate 系115件、設定境界テスト、`git diff --check` すべて成功。\n- 報告書: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-sibling-163827-r0/artifacts/t15-design-current-state/report.md)",
+  "finished_at": "2026-07-26T00:26:25Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/sibling-163827",
+      "commit": "fdb66cb41bbffc36326807cd996c876afad7592e",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t15-design-current-state/report.md"
+  ]
+}
