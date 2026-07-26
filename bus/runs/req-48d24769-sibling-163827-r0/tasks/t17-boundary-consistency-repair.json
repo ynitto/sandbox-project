@@ -1,0 +1,8 @@
+{
+  "id": "t17-boundary-consistency-repair",
+  "goal": "t16 の3指摘を最小差分で解消する。(1) tools/agent-project/codd_gate_wiring.py の重複 YAML 書込 API（upsert_yaml_text/apply_yaml_file）を削除し、regression_cmd の冪等注入を codd_gate_regression.py に一元化して対応テストと docs/designs/codd-gate-design.md §4.1 のモジュール表を更新する。(2) codd_gate_regression.py は実体検出のみで version/schema/capability を検査しない現状に合わせ、§4.1 の過剰な適合性保証を「実体未検出なら書き込まない」へ修正する。(3) tools/agent-project/README.md に codd_gate_wiring.py --config を正準の読み取り専用診断手順として追記し、GUIDE と §4.1 も direct CLI を唯一の正準入口として統一して package doctor 経路の記述を除く。文書変更には slop-police を使用する。agent_project パッケージ内と dashboard は変更しない。codd-gate テスト、指定完了条件、git diff --check を成功させる。",
+  "deps": [
+    "t16-final-acceptance"
+  ],
+  "kind": "work"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "t19-boundary-consistency-recovery",
+  "goal": "t16 の3指摘を現物で再確認し、tools/agent-project の sibling 境界に限定して修復する。具体的には、(1) YAML 永続化の書き手を codd_gate_wiring.py の冪等注入経路へ一意化し、重複する書込み責務を除く、(2) 生成される CLI の適合性検査について codd_gate_regression.py と docs/designs/codd-gate-design.md §4.1 の記述・実装を一致させる、(3) tools/agent-project/README.md に doctor／結線診断の正準手順を明記する。agent_project パッケージ内への再結合と agent-dashboard 変更は行わない。修復後、指定の完了条件コマンド、codd-gate 関連テスト、git diff --check を実行し、すべて終了コード0であることを報告する。文書変更には slop-police を適用する。",
+  "deps": [],
+  "kind": "work"
+}

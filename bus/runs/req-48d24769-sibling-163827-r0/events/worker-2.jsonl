@@ -14,3 +14,4 @@
 {"ts": "2026-07-26T00:23:28Z", "who": "worker-2", "kind": "result", "node": "t14-boundary-recovery", "status": "done"}
 {"ts": "2026-07-26T00:23:28Z", "who": "worker-2", "kind": "claimed", "node": "t15-design-current-state"}
 {"ts": "2026-07-26T00:26:25Z", "who": "worker-2", "kind": "result", "node": "t15-design-current-state", "status": "done"}
+{"ts": "2026-07-26T00:34:55Z", "who": "worker-2", "kind": "claimed", "node": "t19-boundary-consistency-recovery"}

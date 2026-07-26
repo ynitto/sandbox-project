@@ -109,7 +109,26 @@
         "t15-design-current-state"
       ],
       "kind": "work"
+    },
+    "t17-boundary-consistency-repair": {
+      "goal": "t16 の3指摘を最小差分で解消する。(1) tools/agent-project/codd_gate_wiring.py の重複 YAML 書込 API（upsert_yaml_text/apply_yaml_file）を削除し、regression_cmd の冪等注入を codd_gate_regression.py に一元化して対応テストと docs/designs/codd-gate-design.md §4.1 のモジュール表を更新する。(2) codd_gate_regression.py は実体検出のみで version/schema/capability を検査しない現状に合わせ、§4.1 の過剰な適合性保証を「実体未検出なら書き込まない」へ修正する。(3) tools/agent-project/README.md に codd_gate_wiring.py --config を正準の読み取り専用診断手順として追記し、GUIDE と §4.1 も direct CLI を唯一の正準入口として統一して package doctor 経路の記述を除く。文書変更には slop-police を使用する。agent_project パッケージ内と dashboard は変更しない。codd-gate テスト、指定完了条件、git diff --check を成功させる。",
+      "deps": [
+        "t16-final-acceptance"
+      ],
+      "kind": "work"
+    },
+    "t18-boundary-consistency-verify": {
+      "goal": "t17 の成果を adversarial に再検証する。指定完了条件を終了コード0で実行し、README・GUIDE・docs/designs/codd-gate-design.md §4.1・codd_gate_wiring.py・codd_gate_regression.pyを突き合わせ、YAML書込主体が一意、生成CLIの保証が実装相当、doctor/結線診断の正準入口が一意であることを確認する。agent-reviewer スキルを使用し、agent_project パッケージ内への再結合と dashboard 変更がないこと、要求外変更がないことも検査する。fail の場合はファイル・箇所・修正方法を具体的に報告する。恒常的制約を新たに発見した場合だけ最終成果へ機械可読な {\"constraints\":[\"…\"]} を添える。",
+      "deps": [
+        "t17-boundary-consistency-repair"
+      ],
+      "kind": "work"
+    },
+    "t19-boundary-consistency-recovery": {
+      "goal": "t16 の3指摘を現物で再確認し、tools/agent-project の sibling 境界に限定して修復する。具体的には、(1) YAML 永続化の書き手を codd_gate_wiring.py の冪等注入経路へ一意化し、重複する書込み責務を除く、(2) 生成される CLI の適合性検査について codd_gate_regression.py と docs/designs/codd-gate-design.md §4.1 の記述・実装を一致させる、(3) tools/agent-project/README.md に doctor／結線診断の正準手順を明記する。agent_project パッケージ内への再結合と agent-dashboard 変更は行わない。修復後、指定の完了条件コマンド、codd-gate 関連テスト、git diff --check を実行し、すべて終了コード0であることを報告する。文書変更には slop-police を適用する。",
+      "deps": [],
+      "kind": "work"
     }
   },
-  "iteration": 1
+  "iteration": 3
 }
