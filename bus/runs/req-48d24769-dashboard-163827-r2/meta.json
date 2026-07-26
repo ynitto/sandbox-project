@@ -13,7 +13,7 @@
   "created_at": "2026-07-26T11:59:38Z",
   "inherited_from": "req-48d24769-dashboard-163827-r1",
   "executor": "agent",
-  "orch_lease_until": 1785073261.021325,
-  "heartbeat_at": "2026-07-26T13:39:01Z",
+  "orch_lease_until": 1785073301.12671,
+  "heartbeat_at": "2026-07-26T13:39:41Z",
   "updated_at": "2026-07-26T13:34:20Z"
 }
