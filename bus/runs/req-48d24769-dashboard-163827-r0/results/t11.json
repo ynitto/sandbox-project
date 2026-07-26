@@ -1,0 +1,14 @@
+{
+  "id": "t11",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=pass\n\n指定 grep・2テスト・全体 `npm test` は終了コード0。差分12件はすべて許可範囲内で、禁止された状態書換もありません。成果: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t11/result.md)\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-07-26T02:03:59Z",
+  "data": {
+    "ok": true,
+    "issues": []
+  },
+  "artifacts": [
+    "artifacts/t11/result.md"
+  ]
+}

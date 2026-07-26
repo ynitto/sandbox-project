@@ -1,0 +1,19 @@
+{
+  "id": "t10",
+  "who": "worker-2",
+  "status": "done",
+  "output": "verify=pass\n\n- t9 の blocking / minor 指摘を単一テストファイルへ統合。\n- 対象テスト 7件、`npm test`、`git diff --check` 全て PASS。\n- 変更範囲は `tools/agent-dashboard/test/consistency-gate.test.js` のみ。\n- 成果報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r0/artifacts/t10/result.md)",
+  "finished_at": "2026-07-26T02:00:41Z",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "76e92c5f253b9b98582f00d60874af6707bdbf38",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t10/result.md"
+  ]
+}
