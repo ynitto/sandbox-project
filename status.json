@@ -3,9 +3,9 @@
   "watch": true,
   "level": "unattended",
   "paused": false,
-  "node": "Mac",
+  "node": "mac",
   "availability": "active",
-  "updated_iso": "2026-07-26 22:33:40",
+  "updated_iso": "2026-07-27 05:58:42",
   "fresh_after_sec": 600.0,
   "runtime": "darwin",
   "wsl_distro": null
