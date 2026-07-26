@@ -211,3 +211,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-07-26 09:47:53 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-07-26 10:00:52 verify: sibling-163827 を https://github.com/ynitto/sandbox@ap/sibling-163827（path=tools/agent-project） のクローン内で検証
 - 2026-07-26 10:00:53 cycle 1: sibling-163827 → 検収待ち（承認ゲート） — git: db22e6a agent-project: state sync 2026-07-26T09:57:54
+- 2026-07-26 10:00:55 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
