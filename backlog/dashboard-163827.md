@@ -1,9 +1,9 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: doing
+- status: blocked
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
-- retries: 3
+- retries: 4
 - workspace: agent-dashboard
 - refs: agent-project
 - why: パッケージ内マジック配線を外した後も、人が regression/intake の有無とゲート失敗の意味を画面から判断・対処できるようにするため。
@@ -16,6 +16,5 @@
 - gate_ts: 2026-07-26 11:04:13
 - gate_branch: main
 - gate_vmsg: exit=0 途中で沈黙した工程は「失敗した工程」として名指しされる ok - 旧形式（工程の記録なし）でも「テストの失敗ではない」ことは言う ok - テストの失敗件数を要約する ok - コマンド不在を要約する ok - 解釈できない失敗は終了コードだけ添える ok - 手掛かりが無ければ要約しない（生の情報を隠さない） ok - 差分を成果物と内部の実行記録に分ける ok - 差分が内部の実
-- needs_reason: 繰り返し NG（retries=3）: の定義ファイルで動きます。イン ⏎ - t2 [failed]: 実行エラー: 未知の agent_cli です: 'codex'（agents/codex.json が見つかりません） ⏎   探索順: /Users/nitto/Workspace/sandbox-project/agents → /Users/nitto/.agents/agents → /Users/nitto/.kiro/agents ⏎   組み込み CLI もこの定義ファイルで動きます。イン ⏎ - gate [None]:  ⏎ - synth [None]:  ⏎ - v
 - last_run: req-48d24769-dashboard-163827-r2
-- flow_run: req-48d24769-dashboard-163827-r2
+- needs_reason: 繰り返し NG（retries=4）: agent-flow run タイムアウト（1800.0s）
