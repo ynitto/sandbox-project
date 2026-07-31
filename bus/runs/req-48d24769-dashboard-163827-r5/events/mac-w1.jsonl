@@ -5,3 +5,5 @@
 {"ts": "2026-07-31T22:34:02Z", "who": "mac-w1", "kind": "claimed", "node": "gate1"}
 {"ts": "2026-07-31T22:36:48Z", "who": "mac-w1", "kind": "result", "node": "gate1", "status": "done"}
 {"ts": "2026-07-31T22:36:48Z", "who": "mac-w1", "kind": "claimed", "node": "uxreview"}
+{"ts": "2026-07-31T22:43:45Z", "who": "mac-w1", "kind": "result", "node": "uxreview", "status": "done"}
+{"ts": "2026-07-31T22:43:46Z", "who": "mac-w1", "kind": "claimed", "node": "t10"}

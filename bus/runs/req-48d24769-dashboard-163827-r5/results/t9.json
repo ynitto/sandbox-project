@@ -1,0 +1,11 @@
+{
+  "id": "t9",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "[成果報告](</Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/t9/work-report.md>)\n\n`renderer.js` は変更不要。対象テストおよび全テスト成功、作業ツリーは clean です。範囲外の `toolconfig.js` 2件を `@followup` として記載しました。",
+  "finished_at": "2026-07-31T22:45:47Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t9/work-report.md"
+  ]
+}
