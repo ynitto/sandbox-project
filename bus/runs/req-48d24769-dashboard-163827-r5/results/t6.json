@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 成果: [overview-ui.test.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-18474-d8w185gk/sandbox/tools/agent-dashboard/test/overview-ui.test.js:279) に必要な回帰ケースが既に揃っていたため、重複変更なし。両コマンドの設定済み／未設定、ゲート3状態、有効化用YAML・sibling CLI・設定ファイルを開く導線を検証済み。\n- 検証: `node test/overview-ui.test.js` 成功、`npm test` 全件成功、`git diff --check` 成功、作業ツリー clean。\n- 前提: 現ブランチ上の既存ケースを本タスク成果として採用。未解決事項・範囲外で見つけた問題なし。",
+  "finished_at": "2026-07-31T22:32:37Z",
+  "node": "mac"
+}

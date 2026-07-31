@@ -1,0 +1,11 @@
+{
+  "id": "t3",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 成果物: [research-handoff.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/t3/research-handoff.md)\n- 検証: `npm test` 全件成功、作業ツリー clean。\n- コード変更なし。実 rebase・競合解消は `@followup` に記載。",
+  "finished_at": "2026-07-31T22:28:15Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t3/research-handoff.md"
+  ]
+}

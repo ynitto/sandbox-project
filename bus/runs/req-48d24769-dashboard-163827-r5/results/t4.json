@@ -1,0 +1,11 @@
+{
+  "id": "t4",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "成果報告: [work-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/t4/work-report.md)\n\n対象実装は既に公式契約と一致していたため追加変更なし。対象テスト 10/10、`npm test` 全件成功、作業ツリー clean。範囲外の本体フック・done 状態・renderer UI は未変更です。",
+  "finished_at": "2026-07-31T22:30:56Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t4/work-report.md"
+  ]
+}
