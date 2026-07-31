@@ -1,0 +1,12 @@
+{
+  "error": "approve dashboard-163827 が失敗 (exit 1): dashboard-163827: 成果ブランチをターゲットへ統合できないため done にできません（main と ap/dashboard-163827 の自動統合で競合しました。成果ブランチを更新して再検収してください: Auto-merging tools/agent-dashboard/README.md",
+  "failed_at": "2026-08-01 08:08:02",
+  "command": {
+    "command": "approve",
+    "id": "dashboard-163827",
+    "reason": "成果を確認して完了を承認",
+    "actor": "agent-dashboard",
+    "ts": "2026-07-31T23:08:00.941Z",
+    "complete": true
+  }
+}

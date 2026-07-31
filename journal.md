@@ -352,3 +352,11 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 08:03:10 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-01 08:03:10 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-01 08:03:10 === agent-project 停止 reason=drained cycles=0 done=0 blocked=1 notified=False promoted=0 ===
+- 2026-08-01 08:03:12 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-08-01 08:03:12 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-08-01 08:08:02 commands 取り込み失敗: viewer-approve-dashboard-163827-1785539280941.json: approve dashboard-163827 が失敗 (exit 1): dashboard-163827: 成果ブランチをターゲットへ統合できないため done にできません（main と ap/dashboard-163827 の自動統合で競合しました。成果ブランチを更新して再検収してください: Auto-merging tools/agent-dashboard/README.md
+- 2026-08-01 08:08:02 === project 開始 v1 acceptance=2 ===
+- 2026-08-01 08:08:03 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-08-01 08:08:03 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-08-01 08:08:03 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-08-01 08:08:03 === agent-project 停止 reason=drained cycles=0 done=0 blocked=1 notified=False promoted=0 ===
