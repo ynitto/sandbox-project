@@ -1,0 +1,8 @@
+{
+  "id": "t10",
+  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production コード、テスト基盤、無関係なスナップショット更新\nレビュー修正後の期待値を補強し、設定済み・未結線・既存 needs 表示の退行を捕捉する。失敗が残る間は対象原因の修正と再実行を反復する。",
+  "deps": [
+    "uxreview"
+  ],
+  "kind": "work"
+}

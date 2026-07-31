@@ -1,6 +1,0 @@
-{
-  "id": "t1",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js のプロジェクト概要データ生成箇所\n[out_of_scope] agent-project 本体のフック実装、done 状態の書換、renderer.js の変更\n既存変更とコンフリクトを保全・解消しつつ、regression_cmd と intake_cmd の設定有無を公式契約から読み取り、dashboard が表示できる最小のプロジェクト情報として公開する。",
-  "deps": [],
-  "kind": "work"
-}

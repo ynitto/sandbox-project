@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js\n[out_of_scope] バックエンド契約、状態変更操作、新しい UI フレームワーク\nレビューまたは gate が指摘した理解可能性・有効化導線・needs-diagnosis 可読性の問題だけを最小差分で修正する。指摘がなければ変更不要と確認する。",
+  "deps": [
+    "uxreview"
+  ],
+  "kind": "work"
+}

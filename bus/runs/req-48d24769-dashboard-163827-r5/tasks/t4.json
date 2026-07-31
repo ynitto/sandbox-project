@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js\n[out_of_scope] agent-project 本体のフック、done 状態の変更、renderer UI\n公式 needs/inbox/commands 契約から regression_cmd と intake_cmd の設定有無および一貫性ゲート状態を、既存の dashboard データモデルへ最小差分で載せる。",
+  "deps": [
+    "t3"
+  ],
+  "kind": "work"
+}

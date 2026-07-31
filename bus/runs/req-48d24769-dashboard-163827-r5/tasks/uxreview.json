@@ -1,0 +1,8 @@
+{
+  "id": "uxreview",
+  "goal": "agent-reviewer を使用し、設定状態を画面だけで理解できるか、未結線時の対処が明確か、codd-gate・回帰失敗要約の可読性が維持されるか、公式契約外への書込みがないかを adversarial にレビューする。",
+  "deps": [
+    "gate1"
+  ],
+  "kind": "verify"
+}

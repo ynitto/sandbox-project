@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production コード変更、別テストファイルの再編、テスト基盤追加\n設定済み・未設定の regression_cmd/intake_cmd、一貫性ゲート表示、有効化導線を検証する最小限の回帰ケースを更新または追加する。",
+  "deps": [
+    "t3"
+  ],
+  "kind": "work"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js\n[out_of_scope] バックエンド契約変更、UI からの状態書換、独自設定保存\n概要またはプロジェクト情報に regression_cmd/intake_cmd の設定状態と「一貫性ゲート」を表示し、未結線時は設定編集または sibling CLI を案内する。既存の codd-gate・回帰失敗要約の可読性を維持する。",
+  "deps": [
+    "t3"
+  ],
+  "kind": "work"
+}

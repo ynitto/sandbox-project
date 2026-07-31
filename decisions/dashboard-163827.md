@@ -23,3 +23,10 @@
 - reason  : 要対応画面から再実行（失敗した工程だけやり直し）
 - affects : dashboard-163827 → ready (last_run=req-48d24769-dashboard-163827-r2)
 
+## DR-0005  2026-08-01  actor: nitto
+- context : dashboard-163827（dashboard で一貫性ゲートの状態把握と有効化を支援する）に人のフィードバック
+- action  : feedback-resume
+- reason  : 現状のmainブランチが大幅に変わっているためrebaseして再度作業する。
+- affects : dashboard-163827 → ready
+- learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: 現状のmainブランチが大幅に変わっているためrebaseして再度作業する。
+

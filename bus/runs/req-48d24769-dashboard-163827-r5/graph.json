@@ -1,0 +1,118 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] リベースと競合解消を先行させた後、データ経路・UI・テストを機能別に並列処理し、検証gateとUXレビューを経て、指定されたgrepおよびNode.jsテストがすべて成功するまで反復する必要があるため。対象列挙型ではなく工程間の依存も強いため、map-reduceは使用しない。（粒度 finest）",
+    "granularity": "finest"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] リポジトリの Git メタデータと現在の作業ブランチ\n[out_of_scope] push、機能コード変更、既存変更の破棄\n作業ツリーとブランチを確認して origin/main を取得し、現在ブランチのリベースを開始する。競合時は対象ファイルと rebase 状態を保持して t2 へ引き渡す。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] t1 のリベースで競合したファイル\n[out_of_scope] 競合していない機能の改変、フック追加、push\n現行 main の構造と既存コミットの意図を照合して競合を最小差分で解消し、リベースを完了する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js、tools/agent-dashboard/src/renderer/renderer.js、公式 needs/inbox/commands 契約、既存 README\n[out_of_scope] ファイル変更、非公式な状態ファイルの利用\n概要・プロジェクト情報・needs-diagnosis のデータ経路、regression_cmd/intake_cmd の取得元、既存 UI、README の有効化導線、codd-gate と回帰失敗要約の表示経路を特定し、後続ノードの結合点を確定する。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js\n[out_of_scope] agent-project 本体のフック、done 状態の変更、renderer UI\n公式 needs/inbox/commands 契約から regression_cmd と intake_cmd の設定有無および一貫性ゲート状態を、既存の dashboard データモデルへ最小差分で載せる。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js\n[out_of_scope] バックエンド契約変更、UI からの状態書換、独自設定保存\n概要またはプロジェクト情報に regression_cmd/intake_cmd の設定状態と「一貫性ゲート」を表示し、未結線時は設定編集または sibling CLI を案内する。既存の codd-gate・回帰失敗要約の可読性を維持する。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production コード変更、別テストファイルの再編、テスト基盤追加\n設定済み・未設定の regression_cmd/intake_cmd、一貫性ゲート表示、有効化導線を検証する最小限の回帰ケースを更新または追加する。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] t3 で特定した tools/agent-dashboard 配下の既存設計書1ファイル\n[out_of_scope] 新規ドキュメント体系、agent-project のフック仕様変更、実装と無関係な文章修正\nslop-police を使用し、公式契約から表示までのデータ経路、未結線時の有効化導線、状態を書き換えない境界を簡潔に反映する。",
+      "deps": [
+        "t4",
+        "t5"
+      ],
+      "kind": "generate"
+    },
+    "gate1": {
+      "goal": "実装と設計書の整合を確認し、指定 grep、needs-diagnosis.test.js、overview-ui.test.js を実行する。失敗内容をデータ経路・UI・テストへ分類してレビューに渡す。",
+      "deps": [
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+      ],
+      "kind": "verify"
+    },
+    "uxreview": {
+      "goal": "agent-reviewer を使用し、設定状態を画面だけで理解できるか、未結線時の対処が明確か、codd-gate・回帰失敗要約の可読性が維持されるか、公式契約外への書込みがないかを adversarial にレビューする。",
+      "deps": [
+        "gate1"
+      ],
+      "kind": "verify"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js\n[out_of_scope] renderer、agent-project 本体、公式契約外の読書き\nレビューまたは gate が指摘したデータ経路・設定判定の問題だけを根本原因で修正する。指摘がなければ変更不要と確認する。",
+      "deps": [
+        "uxreview"
+      ],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js\n[out_of_scope] バックエンド契約、状態変更操作、新しい UI フレームワーク\nレビューまたは gate が指摘した理解可能性・有効化導線・needs-diagnosis 可読性の問題だけを最小差分で修正する。指摘がなければ変更不要と確認する。",
+      "deps": [
+        "uxreview"
+      ],
+      "kind": "work"
+    },
+    "t10": {
+      "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production コード、テスト基盤、無関係なスナップショット更新\nレビュー修正後の期待値を補強し、設定済み・未結線・既存 needs 表示の退行を捕捉する。失敗が残る間は対象原因の修正と再実行を反復する。",
+      "deps": [
+        "uxreview"
+      ],
+      "kind": "work"
+    },
+    "gate2": {
+      "goal": "grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js をすべて終了コード0になるまで実行し、差分がスコープ内か確認する。",
+      "deps": [
+        "t8",
+        "t9",
+        "t10"
+      ],
+      "kind": "verify"
+    },
+    "synth": {
+      "goal": "リベース済み差分、データ経路、UI、テスト、UXレビュー結果、機械ゲート証跡を統合する。恒常的な制約を発見した場合は {\"constraints\":[\"…\"]} を添え、スコープ外の提案は @followup 行として分離する。",
+      "deps": [
+        "gate2"
+      ],
+      "kind": "synthesize"
+    }
+  },
+  "iteration": 0
+}
