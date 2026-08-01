@@ -1,0 +1,17 @@
+{
+  "id": "t10",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "(a) 成果: `project.js` の `consistencyGate` に `configSource: dashboard-auto-discovery` と `explicitConfigUnknown: true` を追加。`--config` の解決済みパスは公式 instance/status 契約外であることを明示しました。\n\n(b) 検証: ゲート契約テスト 13/13、dashboard 全テスト、`git diff --check` すべて成功。変更は対象ファイルのみです。\n\n(c) 前提: 本タスクは表示モデルの契約境界までと解釈。needs/inbox/commands、done、agent-project 本体は未変更です。  \n@followup agent-project: instance/status 契約へ解決済み config path を追加後、renderer/README で明示設定を確定表示する。",
+  "finished_at": "2026-08-01T02:39:12Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "0106a2938e031fedf9fc47e83f87c220136fb6ad",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  }
+}

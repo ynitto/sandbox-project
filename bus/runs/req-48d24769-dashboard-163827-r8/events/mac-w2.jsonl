@@ -15,3 +15,9 @@
 {"ts": "2026-08-01T02:01:22Z", "who": "mac-w2", "kind": "claimed", "node": "t11"}
 {"ts": "2026-08-01T02:06:08Z", "who": "mac-w2", "kind": "result", "node": "t11", "status": "done"}
 {"ts": "2026-08-01T02:35:19Z", "who": "mac-w2", "kind": "claimed", "node": "t10"}
+{"ts": "2026-08-01T02:39:12Z", "who": "mac-w2", "kind": "result", "node": "t10", "status": "done"}
+{"ts": "2026-08-01T02:39:12Z", "who": "mac-w2", "kind": "claimed", "node": "synth"}
+{"ts": "2026-08-01T02:45:49Z", "who": "mac-w2", "kind": "result", "node": "synth", "status": "done"}
+{"ts": "2026-08-01T02:45:49Z", "who": "mac-w2", "kind": "claimed", "node": "final_gate"}
+{"ts": "2026-08-01T02:47:28Z", "who": "mac-w2", "kind": "result", "node": "final_gate", "status": "done"}
+{"ts": "2026-08-01T02:47:29Z", "who": "mac-w2", "kind": "claimed", "node": "judge"}

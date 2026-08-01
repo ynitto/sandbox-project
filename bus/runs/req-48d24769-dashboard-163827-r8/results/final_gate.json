@@ -1,0 +1,15 @@
+{
+  "id": "final_gate",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=pass\n\n指定3コマンドはすべて終了コード0。修正不要、作業ツリーは clean です。検証記録: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r8/artifacts/final_gate/report.md)\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-08-01T02:47:28Z",
+  "node": "mac",
+  "data": {
+    "ok": true,
+    "issues": []
+  },
+  "artifacts": [
+    "artifacts/final_gate/report.md"
+  ]
+}
