@@ -1,0 +1,11 @@
+{
+  "id": "t4",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "成果物: [contract-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t4/contract-report.md)\n\nリポジトリ変更なし。対象 UI テストは PASS。全体テストは依存 `yaml` 未導入のため実行途中で停止しました。",
+  "finished_at": "2026-08-01T11:38:19Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t4/contract-report.md"
+  ]
+}

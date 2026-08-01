@@ -1,0 +1,11 @@
+{
+  "id": "t2",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "### 成果\n\n現 HEAD `ea0c808c6` は最新 main `9c196643e` を統合済み。6競合ファイルは解消済みで、ソース変更は不要でした。\n\n対象: `package.json`、`project.js`、`toolconfig.js`、`needs.js`、`detail-tabs-ui.test.js`、`overview-ui.test.js`\n\n### 検証\n\nmainとの差分、未解決競合、競合マーカー、末尾空白差分、作業ツリー変更はいずれもなし。祖先関係も確認済みです。\n\n### 前提・範囲外\n\nbase-sync 済みの `main` / `origin/main` を最新 main としました。再取得、merge、rebase、機能変更、全機能テストは実施していません。\n\n詳細: [integration-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t2/integration-report.md)",
+  "finished_at": "2026-08-01T11:35:34Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t2/integration-report.md"
+  ]
+}

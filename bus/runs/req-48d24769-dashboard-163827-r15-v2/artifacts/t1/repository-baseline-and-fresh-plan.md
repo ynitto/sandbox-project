@@ -34,7 +34,7 @@
 
 ## 新規実行計画
 
-1. **統合状態の再確認**: t2 は再 merge や rebaseを行わず、現 HEAD が最新 main を含むこと、対象差分がないこと、未解決競合と不要な Markdown 末尾空白差分がないことを新しい terminal で確認する。いずれかが崩れていれば失敗とする。
+1. **統合状態の再確認**: t2 は再 merge や rebase を行わず、現 HEAD が最新 main を含むこと、対象差分がないこと、未解決競合と不要な Markdown 末尾空白差分がないことを新しい terminal で確認する。いずれかが崩れていれば失敗とする。
 2. **データ経路と導線の再調査**: t3 と t4 は現 HEAD から `regression_cmd`、`intake_cmd`、codd-gate、needs-diagnosis の読み取り経路と README の設定編集、sibling CLI 導線を調べ直す。公式契約は needs、inbox、commands に限定する。
 3. **現行実装との突合**: t5 で調査結果を短い判断書にまとめ、t6 から t9 は不足が見つかった場合だけ `tools/agent-dashboard` 内へ最小修正とテストを加える。すでに満たす項目も旧結果で済ませず、現 HEAD の根拠と新規検証結果を残して no-op 完了とする。
 4. **独立した再検証**: regress と ux を新規プロセスで実行する。judge は両方の今回結果だけを読み、失敗があれば fix へ戻す。fix 後は gate を最初から再実行する。

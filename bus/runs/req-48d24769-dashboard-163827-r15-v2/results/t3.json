@@ -1,0 +1,11 @@
+{
+  "id": "t3",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 調査成果: [dashboard-data-path-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t3/dashboard-data-path-report.md)\n- 既存実装で要件を満たすため、ソース変更なし。対象テスト全57件と対象ファイルの ESLint は成功。\n- 全体 lint は範囲外の既存エラー `cowork.js:590` で失敗。前提・データ経路・可読性・未解決事項は成果物に記載済み。",
+  "finished_at": "2026-08-01T11:39:45Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t3/dashboard-data-path-report.md"
+  ]
+}

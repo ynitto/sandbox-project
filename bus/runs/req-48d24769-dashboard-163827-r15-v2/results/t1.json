@@ -1,0 +1,11 @@
+{
+  "id": "t1",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "### 成果\n\n[基準点と新規実行計画](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t1/repository-baseline-and-fresh-plan.md) を作成。旧 done ノードは一切継承せず、`ok:false` は終了コードにかかわらず失敗と確定しました。\n\n### 検証\n\n- HEAD `ea0c808c6`、main `9c196643e`\n- `tools/agent-dashboard` は main と差分なし\n- 作業ツリー、未解決競合、競合マーカーなし\n- 現 run に `inherited/` なし\n- ソース変更なし\n\n### 前提・未解決事項\n\n最新 main は base-sync 済みのローカル参照としました。機能の正しさは後続の新規テストとUXレビューで検証し、旧 run の結果では代替しません。",
+  "finished_at": "2026-08-01T11:33:42Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t1/repository-baseline-and-fresh-plan.md"
+  ]
+}
