@@ -1,0 +1,20 @@
+{
+  "id": "lint-fix-r15",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 成果: [cowork.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-884-h2no9csr/sandbox/tools/agent-dashboard/src/features/cowork/main/cowork.js:590) の未使用 `cfg` 宣言を1行削除。契約・挙動は変更なし。\n- 検証: 関連テスト exit 0（41件）、`npm test` exit 0、`npm run lint` exit 0、`git diff --check` exit 0。\n- 前提: 指定パスは現物の `src/features/cowork/main/cowork.js` を指すと解釈。未解決・範囲外問題なし。詳細は[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/lint-fix-r15/report.md)。\n\nterminal ok:true",
+  "finished_at": "2026-08-01T19:41:21Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "016a4bde9bf90b57d6cdc35571fcb17674079ab9",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/lint-fix-r15/report.md"
+  ]
+}

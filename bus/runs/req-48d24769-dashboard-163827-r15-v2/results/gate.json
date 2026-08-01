@@ -1,14 +1,15 @@
 {
   "id": "gate",
-  "who": "mac-w2",
+  "who": "mac-w1",
   "status": "failed",
-  "output": "verify=fail\n\n全テスト・関連25件・UX・done不変条件・競合/空白チェックは成功。ただし全体 ESLint が [cowork.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-9987-4_1zhks_/sandbox/tools/agent-dashboard/src/features/cowork/main/cowork.js:590) の未使用変数 `cfg` で失敗します。今回の差分外ですが、削除後に `npm run lint` の再実行が必要です。\n\n[検証レポート](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/gate/dashboard-consistency-gate-verification.md)\n\n{\"ok\": false, \"issues\": [\"tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未使用変数 cfg により npm run lint が失敗する。未使用宣言を削除して全 lint を再実行すること（今回差分外）。\"]}",
-  "finished_at": "2026-08-01T13:09:01Z",
+  "output": "verify=fail\n\n- 全テスト・関連テスト・対象 ESLint・diff checkは成功。競合マーカー、末尾空白、検証出力の `ok:false`、done 不変条件違反はありません。\n- 全 lint は [cowork.js:590](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-882-11ih457f/sandbox/tools/agent-dashboard/src/features/cowork/main/cowork.js:590) の未使用 `cfg` で失敗しました。\n- (minor) [CONSISTENCY-GATE-DESIGN.md:19](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-882-11ih457f/sandbox/tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md:19) に内部名 `t3` / `t4` が残っています。\n\n[検証レポート](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/gate/dashboard-consistency-gate-verification.md)\n\n{\"ok\": false, \"issues\": [\"tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未使用変数 cfg により npm run lint が exit 1。宣言を削除して全 lint と全テストを再実行すること。\", \"(minor) tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md:19 に run 内部名 t3 / t4 が残っているため、永続設計書から除去すること。\"]}",
+  "finished_at": "2026-08-01T19:41:58Z",
   "node": "mac",
   "data": {
     "ok": false,
     "issues": [
-      "tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未使用変数 cfg により npm run lint が失敗する。未使用宣言を削除して全 lint を再実行すること（今回差分外）。"
+      "tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未使用変数 cfg により npm run lint が exit 1。宣言を削除して全 lint と全テストを再実行すること。",
+      "(minor) tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md:19 に run 内部名 t3 / t4 が残っているため、永続設計書から除去すること。"
     ]
   },
   "artifacts": [
