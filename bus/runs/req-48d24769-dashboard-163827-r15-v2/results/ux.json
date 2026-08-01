@@ -1,0 +1,18 @@
+{
+  "id": "ux",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "verify=pass\n\n重大なUX問題・状態書換経路・スコープ外変更はありません。対象38件、全体 `npm test`、対象 ESLint、`git diff --check` は成功しました。全体 lint は既存の `cowork.js:590` のみ失敗です。\n\n詳細: [dashboard-consistency-gate-ux-verification.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/ux/dashboard-consistency-gate-ux-verification.md)\n\n{\"ok\":true,\"issues\":[\"(minor) tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md:122-133 の検証記録・未解決事項が最終差分に追随していない。t3/t4、解消済み CLI 不一致、完了済み @followup、変更範囲の記述を最終状態へ更新する。\",\"(minor) tools/agent-dashboard/test/consistency-gate-ui.test.js:249-252 は README の --config プレースホルダを実際には比較していない。README の CLI ブロックから引数を抽出して画面表示と比較する。\"]}",
+  "finished_at": "2026-08-01T12:31:03Z",
+  "node": "mac",
+  "data": {
+    "ok": true,
+    "issues": [
+      "(minor) tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md:122-133 の検証記録・未解決事項が最終差分に追随していない。t3/t4、解消済み CLI 不一致、完了済み @followup、変更範囲の記述を最終状態へ更新する。",
+      "(minor) tools/agent-dashboard/test/consistency-gate-ui.test.js:249-252 は README の --config プレースホルダを実際には比較していない。README の CLI ブロックから引数を抽出して画面表示と比較する。"
+    ]
+  },
+  "artifacts": [
+    "artifacts/ux/dashboard-consistency-gate-ux-verification.md"
+  ]
+}

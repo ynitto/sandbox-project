@@ -16,3 +16,7 @@
 {"ts": "2026-08-01T11:55:44Z", "who": "mac-w1", "kind": "result", "node": "t9", "status": "done"}
 {"ts": "2026-08-01T11:55:45Z", "who": "mac-w1", "kind": "claimed", "node": "regress"}
 {"ts": "2026-08-01T12:25:46Z", "who": "mac-w1", "kind": "claimed", "node": "ux"}
+{"ts": "2026-08-01T12:31:03Z", "who": "mac-w1", "kind": "result", "node": "ux", "status": "done"}
+{"ts": "2026-08-01T12:31:03Z", "who": "mac-w1", "kind": "claimed", "node": "judge"}
+{"ts": "2026-08-01T12:33:24Z", "who": "mac-w1", "kind": "result", "node": "judge", "status": "done"}
+{"ts": "2026-08-01T12:33:25Z", "who": "mac-w1", "kind": "claimed", "node": "fix"}

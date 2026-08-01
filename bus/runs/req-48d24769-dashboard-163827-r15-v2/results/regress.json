@@ -1,0 +1,17 @@
+{
+  "id": "regress",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=pass\n\n関連テスト・全テスト・対象 ESLint・diff check は exit 0、terminal ok=true、`ok:false` なし。全 lint のみ既存の未変更箇所 `cowork.js:590` で exit 1（minor）。スコープ外差分なし。\n\n[検証レポート](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/regress/dashboard-consistency-gate-verification-report.md)\n\n{\"ok\": true, \"issues\": [\"(minor) tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未変更の cfg が未使用なため npm run lint は exit 1。利用予定がなければ別タスクで宣言を削除する\"]}",
+  "finished_at": "2026-08-01T12:29:58Z",
+  "node": "mac",
+  "data": {
+    "ok": true,
+    "issues": [
+      "(minor) tools/agent-dashboard/src/features/cowork/main/cowork.js:590 の未変更の cfg が未使用なため npm run lint は exit 1。利用予定がなければ別タスクで宣言を削除する"
+    ]
+  },
+  "artifacts": [
+    "artifacts/regress/dashboard-consistency-gate-verification-report.md"
+  ]
+}

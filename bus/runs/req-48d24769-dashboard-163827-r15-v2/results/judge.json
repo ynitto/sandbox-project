@@ -1,0 +1,14 @@
+{
+  "id": "judge",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "# 判定: 修正して再検証\n\n`regress` は全検証成功・契約逸脱なし・done不変条件違反なし。`ux` は未解決UX指摘を残したまま合格としており、判定規則と矛盾する。よって完了不可。\n\n評価軸では、正確さ・完成度で `regress`、UX問題の発見力で `ux` が優位。総合的には根拠と結論が一貫する `regress` を選定。\n\n成果物: [dashboard-consistency-gate-judge.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/judge/dashboard-consistency-gate-judge.md)\n\n{\"winner\":\"regress\"}",
+  "finished_at": "2026-08-01T12:33:24Z",
+  "node": "mac",
+  "data": {
+    "winner": "regress"
+  },
+  "artifacts": [
+    "artifacts/judge/dashboard-consistency-gate-judge.md"
+  ]
+}
