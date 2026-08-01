@@ -542,3 +542,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-02 04:49:21 verify: dashboard-163827 を https://github.com/ynitto/sandbox@ap/dashboard-163827（path=tools/agent-dashboard） のクローン内で検証
 - 2026-08-02 04:49:21 検証（receipt）: dashboard-163827 — 基準 2 件中 2 件 pass（agent-flow runner の receipt を検算して採用）
 - 2026-08-02 04:49:21 cycle 1: dashboard-163827 → 検収待ち（承認ゲート） — commit 48d24769
+- 2026-08-02 04:49:24 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
