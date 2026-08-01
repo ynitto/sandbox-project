@@ -15,3 +15,4 @@
 {"ts": "2026-08-01T11:51:56Z", "who": "mac-w1", "kind": "claimed", "node": "t9"}
 {"ts": "2026-08-01T11:55:44Z", "who": "mac-w1", "kind": "result", "node": "t9", "status": "done"}
 {"ts": "2026-08-01T11:55:45Z", "who": "mac-w1", "kind": "claimed", "node": "regress"}
+{"ts": "2026-08-01T12:25:46Z", "who": "mac-w1", "kind": "claimed", "node": "ux"}
