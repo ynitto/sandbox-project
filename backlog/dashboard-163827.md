@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: blocked
+- status: doing
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
@@ -17,7 +17,7 @@
 - gate_ts: 2026-08-01 10:29:41
 - gate_branch: main
 - gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
-- feedback: マージ先の main とコンフリクトしているため最新をpullして解消して
-- last_run: req-48d24769-dashboard-163827-r8
 - needs_reason: 繰り返し NG（retries=9）: agent-flow run タイムアウト（1800.0s）
 - needs_dr: DR-0008
+- last_run: req-48d24769-dashboard-163827-r8
+- flow_run: req-48d24769-dashboard-163827-r8

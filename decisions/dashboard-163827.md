@@ -49,3 +49,9 @@
 - affects : dashboard-163827 → ready
 - learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: マージ先の main とコンフリクトしているため最新をpullして解消して
 
+## DR-0009  2026-08-01  actor: nitto
+- context : dashboard-163827 を run req-48d24769-dashboard-163827-r8 の続きから再開
+- action  : resume-run
+- reason  : 要対応画面から再実行（失敗した工程だけやり直し）
+- affects : dashboard-163827 → ready (last_run=req-48d24769-dashboard-163827-r8)
+
