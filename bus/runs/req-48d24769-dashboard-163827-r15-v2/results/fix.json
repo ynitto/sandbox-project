@@ -1,0 +1,20 @@
+{
+  "id": "fix",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "修正完了。変更は `tools/agent-dashboard` 内の2ファイルのみです。\n\n- 設計書の古い検証記録・解消済み指摘を更新\n- README の `--config` 引数とUI表示を直接照合するテストへ強化\n- 対象テスト: 25件成功、UIテスト・ESLint・diff check成功\n- agent-projectや状態書換経路は未変更\n\n成果物: [dashboard-consistency-gate-fix-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/fix/dashboard-consistency-gate-fix-report.md)",
+  "finished_at": "2026-08-01T13:05:58Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "f2042ebfe458674b75b5afcde124e98d8ce40f3a",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/fix/dashboard-consistency-gate-fix-report.md"
+  ]
+}
