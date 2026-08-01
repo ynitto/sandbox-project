@@ -69,3 +69,10 @@
 - affects : feedback 注入; dashboard-163827 → ready
 - learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: 最新 main を統合し、6ファイルの競合を解消して全検証をやり直す。main由来のMarkdown末尾空白は競合として扱わない。
 
+## DR-0012  2026-08-01  actor: nitto
+- context : dashboard-163827（dashboard で一貫性ゲートの状態把握と有効化を支援する）を人が修正（revise）
+- action  : revise
+- reason  : 旧run継承とok:false誤完了の修正を適用した新世代へ切替
+- affects : feedback 注入
+- learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: 競合解決済み commit 59ccf49e を起点に、旧 run の done ノードを継承せず新規計画で全検証する。work の terminal ok:false は失敗として扱う。
+

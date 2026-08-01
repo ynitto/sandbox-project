@@ -1,0 +1,8 @@
+{
+  "id": "t2",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "### (a) 成果／サマリー\n\n- `origin/main` を fetch 済み。最新 SHA は `3756b4f07`。\n- ユーザー変更は clean な作業ツリーで保全されている。\n- rebase は Git 利用規約で明示禁止されているため開始していない。したがってコンフリクト対象一覧は未確定。\n\n### (b) 検証結果\n\n- `HEAD`: `635bc8d17`（detached HEAD）\n- `origin/main...HEAD`: 366 behind / 24 ahead\n- 未コミット・ステージ済み変更: なし\n- 未追跡ファイル: なし\n- 未解決コンフリクト: なし\n- rebase / merge 進行中状態: なし\n- 差分はすべて `tools/agent-dashboard/` 配下\n\n### (c) 前提・未解決事項\n\n- 同一依頼内の「rebase を実行しない」を優先した。\n- 依存成果の `HEAD=59ccf49e7` から、開始時点で `635bc8d17` に変化していた。`origin/ap/dashboard-163827` は引き続き `59ccf49e7` であり、作業ブランチ先端とも一致していない。\n- rebase 実行には agent-flow 側の安全手順が必要。\n\n{\"ok\": false, \"issues\": [\"最新 origin/main の fetch と変更保全確認は完了したが、Git 利用規約が rebase を明示禁止しているため rebase 開始およびコンフリクト対象確定は未完了\", \"開始時点の detached HEAD が依存成果記載の 59ccf49e7 ではなく 635bc8d17 に変化している\"]}",
+  "finished_at": "2026-08-01T06:22:12Z",
+  "node": "mac"
+}

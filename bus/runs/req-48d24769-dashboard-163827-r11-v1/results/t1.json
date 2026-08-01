@@ -1,0 +1,8 @@
+{
+  "id": "t1",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "### (a) 成果／保全対象\n\n- worktree は detached HEAD。`HEAD=59ccf49e7` で `origin/ap/dashboard-163827` と一致。\n- `main` と `origin/main` はともに `3756b4f07`。fetch は未実施。\n- `main...HEAD`: 0 behind / 25 ahead、13ファイル、`+1152/-7`。\n- 未コミット変更・ステージ済み変更・未追跡ファイル・未解決コンフリクト・進行中 Git 操作はなし。\n- 保全対象は以下のコミット済み差分。すべて許可範囲内。\n\n```text\ntools/agent-dashboard/README.md\ntools/agent-dashboard/package.json\ntools/agent-dashboard/src/features/agent-project/main/project.js\ntools/agent-dashboard/src/features/agent-project/main/toolconfig.js\ntools/agent-dashboard/src/renderer/renderer.js\ntools/agent-dashboard/src/renderer/sections/needs.js\ntools/agent-dashboard/src/renderer/sections/overview.js\ntools/agent-dashboard/test/consistency-gate-ui.test.js\ntools/agent-dashboard/test/consistency-gate.test.js\ntools/agent-dashboard/test/needs-command-failure.test.js\ntools/agent-dashboard/test/needs-diagnosis.test.js\ntools/agent-dashboard/test/needs-gate-integration.test.js\ntools/agent-dashboard/test/overview-ui.test.js\n```\n\n### (b) 検証\n\n- `git status --porcelain`: 空\n- `git diff --diff-filter=U`: 空\n- `git merge-base main HEAD`: `3756b4f07`（現在の main）\n- 範囲外差分検査: 0件\n- ファイル変更、fetch、checkout、commit、rebase、stash、push は未実施。\n\n### (c) 前提・未解決事項\n\n- 「最新 main」は、fetch 禁止のためローカルに存在する `main` / `origin/main` の最新値として判定。\n- 指定されたローカルブランチ `ap/dashboard-163827` と分岐元 `af/req-48d24769-dashboard-163827-r10` の ref は存在しない。前者は同一 SHA の `origin/ap/dashboard-163827` で確認できるため、切替せず保全対象とした。\n- 生成すべき大きな中間成果物はないため、artifact ファイルは作成していない。",
+  "finished_at": "2026-08-01T06:20:37Z",
+  "node": "mac"
+}

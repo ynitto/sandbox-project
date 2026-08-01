@@ -1,0 +1,11 @@
+{
+  "id": "t5",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "### 成果\n\n既存導線・確定文言を [consistency-gate-enablement.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v1/artifacts/t5/consistency-gate-enablement.md) に記録した。\n\nリポジトリ変更は不要と判断し、作業ツリーは clean のまま。\n\n### 検証\n\n- 結線状態テスト: 15 passed\n- UI 導線テスト: pass\n- needs 統合テスト: 8 passed\n- 対象 ESLint: 成功\n\n### 前提・未解決事項\n\nsibling CLI は `codd_gate_regression.py` と確定。これは既存 YAML の `regression_cmd` のみ更新し、`intake_cmd` は直接編集が必要。dashboard は設定文字列だけを判定し、codd-gate の実在・実行成功や `--config` の実効設定一致までは確認しない。",
+  "finished_at": "2026-08-01T06:25:37Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t5/consistency-gate-enablement.md"
+  ]
+}

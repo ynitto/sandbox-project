@@ -9,11 +9,12 @@
     "branch": "ap/dashboard-163827"
   },
   "references": [],
-  "status": "running",
+  "status": "cancelled",
   "created_at": "2026-08-01T06:11:39Z",
   "inherited_from": "req-48d24769-dashboard-163827-r10",
   "executor": "agent",
-  "orch_lease_until": 1785565100.217916,
-  "heartbeat_at": "2026-08-01T06:16:20Z",
-  "updated_at": "2026-08-01T06:11:39Z"
+  "orch_lease_until": 1785565702.3040051,
+  "heartbeat_at": "2026-08-01T06:26:22Z",
+  "updated_at": "2026-08-01T06:26:27Z",
+  "cancel_reason": "旧run継承とok:false誤完了の修正を適用した新世代へ切替"
 }

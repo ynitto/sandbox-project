@@ -1,0 +1,28 @@
+{
+  "id": "base-sync",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "(a) 成果\n\n- 指定6ファイルの競合を解消し、main 側の YAML・状態clone・複数PC対応と、一貫性ゲート表示を統合。\n- semantic conflict に伴う関連テスト3件も追従修正。\n- 競合マーカー残存なし。変更は `tools/agent-dashboard` 配下のみ。\n\n(b) 検証\n\n- `npm test`: 全件成功\n- 変更対象 ESLint: 成功\n- `package.json` 構文確認: 成功\n- `package-lock.json` の生成なし\n- Git コマンド未使用\n\n(c) 前提・未解決事項\n\n- 競合の incoming 側 `3756b4f...` を最新 main として統合しました。Git 禁止のためリモート鮮度は再確認していません。\n- 全体 `npm run lint` は今回の変更外にある既存4件で失敗します。\n\n@followup: `actions.js`、`agent.js`、`cowork.js`、`backlog.js` の既存 lint エラーを別タスクで解消する。",
+  "finished_at": "2026-08-01T06:18:56Z",
+  "node": "mac",
+  "data": {
+    "status": "conflict",
+    "target": "main",
+    "target_rev": "3756b4f07cf3d0c9c6225cd1f7f6092ff27dc9f2",
+    "conflict_files": [
+      "tools/agent-dashboard/package.json",
+      "tools/agent-dashboard/src/features/agent-project/main/project.js",
+      "tools/agent-dashboard/src/features/agent-project/main/toolconfig.js",
+      "tools/agent-dashboard/src/renderer/sections/needs.js",
+      "tools/agent-dashboard/test/detail-tabs-ui.test.js",
+      "tools/agent-dashboard/test/overview-ui.test.js"
+    ],
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "59ccf49e71d41fe35533ae718f010649863bd6a3",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  }
+}

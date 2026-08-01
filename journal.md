@@ -441,3 +441,8 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 15:11:38 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-08-01 15:11:38 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-01 15:11:38 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-08-01 15:26:27 run ブリーフ: dashboard-163827 に追記（revise）: 競合解決済み commit 59ccf49e を起点に、旧 run の done ノードを継承せず新規計画で全検証する。work の terminal ok:f
+- 2026-08-01 15:26:27 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r11-v1 を cancelled（旧run継承とok:false誤完了の修正を適用した新世代へ切替）
+- 2026-08-01 15:26:27 revise: dashboard-163827 — feedback 注入（実行中→積み直し予約）
+- 2026-08-01 15:26:27 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r11-v1 を cancelled（revise により同期 run を中断）
+- 2026-08-01 15:26:28 cycle 1: dashboard-163827 → 人の revise により積み直し（この試行の結果は確定しない）

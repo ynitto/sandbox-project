@@ -1,0 +1,8 @@
+{
+  "id": "t3",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "### (a) 成果／サマリー\n\n- 変更なし。rebase は Git 利用規約で禁止されているため実行していない。\n- 現在は detached HEAD、作業ツリー／Git index とも clean。\n- 未解決コンフリクトおよび競合マーカーなし。\n\n### (b) 検証結果\n\n- `HEAD`: `635bc8d17`\n- `origin/main`: `3756b4f07`\n- `origin/main...HEAD`: 366 behind / 24 ahead\n- rebase 進行状態: なし\n- `git diff --check`: 成功\n- 対象テスト6件: 全件成功\n\n### (c) 前提・未解決事項\n\n- 「rebase を実行しない」という明示規約を、タスク本文の rebase 完了要求より優先した。\n- agent-flow 側で rebase を開始し、競合状態の worktree を再割り当てする必要がある。\n- 範囲外の問題は確認していない。\n\n{\"ok\": false, \"issues\": [\"rebase が開始されておらず、明示された Git 利用規約によりこのワーカーから開始・継続できない\"]}",
+  "finished_at": "2026-08-01T06:23:28Z",
+  "node": "mac"
+}
