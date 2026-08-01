@@ -1,0 +1,11 @@
+{
+  "id": "t8",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 成果: 既存の単一結合点 `renderNeedFacts()` が失敗要約・改行・理由・優先順を維持済みのため、コード変更なし。\n- 検証: 対象テスト23件、全テスト、対象 ESLint、`git diff --check` 成功。全体 lint は既存の `cowork.js:590` の未使用変数のみ失敗。\n- 前提・範囲外・`@followup` を含む報告: [dashboard-needs-rendering-regression-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t8/dashboard-needs-rendering-regression-report.md)",
+  "finished_at": "2026-08-01T11:51:56Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t8/dashboard-needs-rendering-regression-report.md"
+  ]
+}

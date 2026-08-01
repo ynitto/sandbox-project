@@ -7,3 +7,9 @@
 {"ts": "2026-08-01T11:35:34Z", "who": "mac-w1", "kind": "claimed", "node": "t3"}
 {"ts": "2026-08-01T11:39:45Z", "who": "mac-w1", "kind": "result", "node": "t3", "status": "done"}
 {"ts": "2026-08-01T11:39:45Z", "who": "mac-w1", "kind": "claimed", "node": "t5"}
+{"ts": "2026-08-01T11:45:50Z", "who": "mac-w1", "kind": "result", "node": "t5", "status": "done"}
+{"ts": "2026-08-01T11:45:50Z", "who": "mac-w1", "kind": "claimed", "node": "t7"}
+{"ts": "2026-08-01T11:49:24Z", "who": "mac-w1", "kind": "result", "node": "t7", "status": "done"}
+{"ts": "2026-08-01T11:49:24Z", "who": "mac-w1", "kind": "claimed", "node": "t8"}
+{"ts": "2026-08-01T11:51:56Z", "who": "mac-w1", "kind": "result", "node": "t8", "status": "done"}
+{"ts": "2026-08-01T11:51:56Z", "who": "mac-w1", "kind": "claimed", "node": "t9"}

@@ -1,0 +1,11 @@
+{
+  "id": "t6",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 成果: 既存の概要「一貫性ゲート」が完了条件を満たすため、重複するコード変更は実施せず。\n- 検証: 対象テスト3本成功（モデル15件含む）、対象6ファイルの ESLint成功、`git diff --check`成功。作業ツリー変更なし。\n- 前提・未解決・範囲外を含む報告: [dashboard-consistency-gate-status-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t6/dashboard-consistency-gate-status-report.md)",
+  "finished_at": "2026-08-01T11:48:19Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t6/dashboard-consistency-gate-status-report.md"
+  ]
+}

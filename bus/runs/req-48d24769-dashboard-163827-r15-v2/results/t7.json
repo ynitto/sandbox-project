@@ -1,0 +1,20 @@
+{
+  "id": "t7",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 成果: 未結線時ガイダンスを README 正典の sibling CLI 表記へ同期。既設定時は非表示、設定書込み・CLI 実行は未追加。\n- 検証: 対象テスト、全テスト、対象 ESLint、`git diff --check` 成功。\n- 既存問題: 全体 lint は `cowork.js:590` の未使用変数で失敗（範囲外）。\n- 成果報告: [dashboard-unwired-guidance-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t7/dashboard-unwired-guidance-report.md)",
+  "finished_at": "2026-08-01T11:49:24Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "6d94eefe03f01ca38c9ab425431a12794d92eb1d",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t7/dashboard-unwired-guidance-report.md"
+  ]
+}

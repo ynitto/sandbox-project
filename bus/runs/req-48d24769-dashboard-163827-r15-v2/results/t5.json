@@ -1,0 +1,20 @@
+{
+  "id": "t5",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "【差別化の切り口】現在の結線状態と失敗時点の記録を分離し、誤断定と done の迂回を防ぐ設計とした。\n\n- 成果: [単一設計書](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-49951-hnrm1efa/sandbox/tools/agent-dashboard/CONSISTENCY-GATE-DESIGN.md)。[t5成果物](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t5/dashboard-consistency-gate-design.md) と同一内容。slop-police に従い結論、却下案、契約境界を簡潔に記載。\n- 検証: 対象テスト7スクリプトと対象7ソースの ESLint は全件成功。成果物間の一致と `git diff --check` も成功。\n- 前提・未解決: 現HEADには表示経路が実装済みのため設計書のみ追加。実効 `--config` は判定不能。README/UIのCLIパス表記差は範囲外として `@followup` に記載。実装、フック追加、状態書換は未実施。",
+  "finished_at": "2026-08-01T11:45:50Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "bb7c7696aba20d91cd511cc0637736fe57d3a3fc",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t5/dashboard-consistency-gate-design.md"
+  ]
+}
