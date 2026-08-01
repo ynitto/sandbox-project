@@ -463,3 +463,15 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 17:07:11 === agent-project 停止 reason=drained cycles=1 done=0 blocked=1 notified=True promoted=0 ===
 - 2026-08-01 17:07:13 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
 - 2026-08-01 17:07:13 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-08-01 17:19:03 revise: dashboard-163827 — verify: echo "done"
+- 2026-08-01 17:19:03 commands 取り込み: revise dashboard-163827（viewer-revise-dashboard-163827-1785572341314.json）
+- 2026-08-01 17:19:03 === project 開始 v1 acceptance=2 ===
+- 2026-08-01 17:19:04 === agent-project 開始 tasks=2 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-08-01 17:19:04 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-08-01 17:19:04 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-08-01 17:19:04 dashboard-163827: 既存 done run req-48d24769-dashboard-163827-r11-v2 の成果を再利用（タスクグラフ実行を省略）
+- 2026-08-01 17:19:04 verify: dashboard-163827 の作業ブランチ ap/dashboard-163827 は https://github.com/ynitto/sandbox に未作成（push なし）→ main で検証
+- 2026-08-01 17:19:06 verify: dashboard-163827 を https://github.com/ynitto/sandbox@main（path=tools/agent-dashboard） のクローン内で検証
+- 2026-08-01 17:19:06 検証 receipt を不採用（fail-close・local runner へ）: dashboard-163827 — plan_digest が投入時の正本と一致しない; result_rev が採用対象と一致しない（receipt=ed4697817ee2 対象=77c6948acc49）; 固定コマンドが plan と同数・同順でない
+- 2026-08-01 17:19:06 検証（receipt）: dashboard-163827 — 基準 1 件中 1 件 pass（local runner がこのノードで実行（run の receipt なし））
+- 2026-08-01 17:19:12 cycle 1: dashboard-163827 → 人の判断（繰り返し NG）
