@@ -1,8 +1,0 @@
-{
-  "id": "judge",
-  "goal": "final_gate の全コマンドが終了コード 0、未解決の rebase 競合がゼロ、公式契約外への書込みと done 不変条件の破壊がゼロである場合のみ dashboard-163827 を完了と判定する。",
-  "deps": [
-    "final_gate"
-  ],
-  "kind": "judge"
-}

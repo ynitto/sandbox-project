@@ -1,9 +1,0 @@
-{
-  "id": "t8",
-  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] 本番コード、別画面のテスト、包括的 UI テスト基盤\nregression_cmd と intake_cmd の設定済み・未設定表示、および未設定時の有効化導線を検証する最小ケースを現行 main に合わせて追加または修正する。",
-  "deps": [
-    "t5",
-    "t6"
-  ],
-  "kind": "work"
-}

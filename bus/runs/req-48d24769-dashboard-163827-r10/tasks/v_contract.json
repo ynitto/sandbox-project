@@ -1,0 +1,10 @@
+{
+  "id": "v_contract",
+  "goal": "project.js から renderer.js までのデータ経路を敵対的に確認し、書込先が公式 needs/inbox/commands 契約内で、agent-project の done 不変条件や状態書換を追加していないことを検証する。",
+  "deps": [
+    "t6",
+    "t8",
+    "t9"
+  ],
+  "kind": "verify"
+}

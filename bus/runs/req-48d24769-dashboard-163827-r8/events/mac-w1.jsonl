@@ -1,9 +1,0 @@
-{"ts": "2026-08-01T01:41:34Z", "who": "mac-w1", "kind": "claimed", "node": "t3"}
-{"ts": "2026-08-01T01:44:22Z", "who": "mac-w1", "kind": "result", "node": "t3", "status": "done"}
-{"ts": "2026-08-01T01:44:22Z", "who": "mac-w1", "kind": "claimed", "node": "t2"}
-{"ts": "2026-08-01T01:47:21Z", "who": "mac-w1", "kind": "result", "node": "t2", "status": "done"}
-{"ts": "2026-08-01T01:47:21Z", "who": "mac-w1", "kind": "claimed", "node": "t6"}
-{"ts": "2026-08-01T01:49:41Z", "who": "mac-w1", "kind": "result", "node": "t6", "status": "done"}
-{"ts": "2026-08-01T02:01:23Z", "who": "mac-w1", "kind": "claimed", "node": "t9"}
-{"ts": "2026-08-01T02:05:19Z", "who": "mac-w1", "kind": "result", "node": "t9", "status": "done"}
-{"ts": "2026-08-01T02:05:19Z", "who": "mac-w1", "kind": "claimed", "node": "t10"}

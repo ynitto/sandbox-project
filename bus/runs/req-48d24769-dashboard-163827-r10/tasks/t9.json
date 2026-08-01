@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] 本番コード、別テストファイル、大規模なテスト基盤変更\n結線済み・未結線の表示、一貫性ゲート文言、有効化導線、状態書換を行わないことを既存テスト形式の最小ケースで固定する。",
+  "deps": [
+    "t8"
+  ],
+  "kind": "work"
+}

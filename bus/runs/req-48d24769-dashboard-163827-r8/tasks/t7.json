@@ -1,8 +1,0 @@
-{
-  "id": "t7",
-  "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js\n[out_of_scope] 本番コード、テスト基盤変更、done 判定仕様の変更\n現行 main のテスト形式に合わせ、codd-gate と回帰失敗要約の可読性および done 不変条件が維持されることを確認する必要最小限の回帰ケースを追加または修正する。",
-  "deps": [
-    "t4"
-  ],
-  "kind": "work"
-}

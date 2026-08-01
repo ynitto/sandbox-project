@@ -1,9 +1,0 @@
-{
-  "id": "t6",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js のプロジェクト情報供給結合点\n[out_of_scope] agent-project 本体、公式 needs/inbox/commands 以外への書込み、done 状態変更\n既存の公式契約から regression_cmd と intake_cmd の設定有無を UI へ供給し、未設定時は README と一致する設定編集または sibling CLI の有効化導線を返す。",
-  "deps": [
-    "t2",
-    "t3"
-  ],
-  "kind": "work"
-}

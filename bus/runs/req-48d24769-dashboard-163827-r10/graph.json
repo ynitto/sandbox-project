@@ -1,0 +1,154 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] 最新 main の取り込みとコンフリクト解消、契約を維持した複数観点の実装・確認、UX レビュー、機械ゲート成功までの反復が必要なため migration-pipeline が最適。依存する Git 統合は直列で行い、その後の実装確認・契約安全性確認・回帰検証を最大3並列で進め、統合前に検証gateを置く。対象ごとに同一処理を動的展開できないため map-reduce は採用しない。（粒度 finest）",
+    "granularity": "finest"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] リポジトリ直下の Git 状態・ブランチ・差分\n[out_of_scope] ファイル変更、fetch、rebase、コンフリクト解消\n作業ブランチ、未コミット変更、未解決コンフリクト、最新 main との差分、対象 run の既存変更を確認し、保全対象を特定する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] Git の remote/main と現在の作業ブランチ\n[out_of_scope] コンフリクト箇所の内容変更、機能実装\n最新 main を fetch し、ユーザー変更を失わないことを確認して rebase を開始する。コンフリクト発生時は対象一覧を確定して停止する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] rebase で競合したファイルと Git index\n[out_of_scope] 一貫性ゲート機能の新規実装、無関係な整形\n既存変更の意図と最新 main の契約を両立する最小差分で全コンフリクトを解消し、rebase を完了して未解決マーカーがない状態にする。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js と needs/inbox/commands の結合点\n[out_of_scope] agent-project 本体のフック、UI からの状態書換、非公式契約の追加\n概要・プロジェクト情報、needs-diagnosis、codd-gate、回帰失敗要約への現行データ経路を追跡し、regression_cmd と intake_cmd の設定有無を既存の公式契約で渡せる最小の変更点を確定する。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-dashboard/README.md と既存 sibling CLI の参照箇所\n[out_of_scope] README の改稿、新しい CLI、設定の自動書換\nREADME に記載された設定編集および sibling CLI の有効化手順を確認し、未結線時に画面へ提示する既存導線と文言を確定する。",
+      "deps": [
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の概要データ生成結合点\n[out_of_scope] renderer.js、agent-project 本体、状態変更コマンド、非公式契約\n既存の概要データに regression_cmd と intake_cmd の設定有無、および一貫性ゲート状態の判断材料を追加し、needs/inbox/commands 契約を維持する。",
+      "deps": [
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要またはプロジェクト情報表示\n[out_of_scope] 設定値の編集・保存、done 状態の変更、needs-diagnosis 表示の再設計\nregression_cmd と intake_cmd の結線有無、および「一貫性ゲート」の状態を、人が画面だけで判別できるよう既存 UI パターンで表示する。",
+      "deps": [
+        "t5",
+        "t6"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の未結線時案内\n[out_of_scope] 自動設定、agent-project フック実装、新規ルートや新規コンポーネント\n未結線時だけ、README と一致する設定編集または sibling CLI の有効化導線を提示し、codd-gate と回帰失敗要約の可読性を維持する。",
+      "deps": [
+        "t7"
+      ],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] 本番コード、別テストファイル、大規模なテスト基盤変更\n結線済み・未結線の表示、一貫性ゲート文言、有効化導線、状態書換を行わないことを既存テスト形式の最小ケースで固定する。",
+      "deps": [
+        "t8"
+      ],
+      "kind": "work"
+    },
+    "v_contract": {
+      "goal": "project.js から renderer.js までのデータ経路を敵対的に確認し、書込先が公式 needs/inbox/commands 契約内で、agent-project の done 不変条件や状態書換を追加していないことを検証する。",
+      "deps": [
+        "t6",
+        "t8",
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "v_ux": {
+      "goal": "agent-reviewer を用いて、結線状態・ゲート失敗の意味・有効化手順が画面だけで理解できるか、既存 UI と一貫しているかを UX 観点でレビューし、具体的な指摘を返す。",
+      "deps": [
+        "t8",
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "v_reg": {
+      "goal": "needs-diagnosis の codd-gate と回帰失敗要約について、表示欠落、誤解を招く文言、既存 UI 回帰がないかを確認し、needs-diagnosis.test.js の既存期待との整合性を検証する。",
+      "deps": [
+        "t8",
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "gate": {
+      "goal": "契約安全性、UX、回帰確認の3結果を照合する検証 gate とし、未解決コンフリクト、重大指摘、契約逸脱、既存表示の回帰が1件でもあれば統合不可と判定する。",
+      "deps": [
+        "v_contract",
+        "v_ux",
+        "v_reg"
+      ],
+      "kind": "verify"
+    },
+    "synth": {
+      "goal": "検証 gate の指摘を既存変更へ反映し、最新 main の意図、公式契約、一貫性ゲート表示、有効化導線、UX レビュー結果が矛盾しない単一パッチへ統合する。",
+      "deps": [
+        "gate"
+      ],
+      "kind": "synthesize"
+    },
+    "machine": {
+      "goal": "指定された grep、needs-diagnosis.test.js、overview-ui.test.js を順に実行し、各終了コードと失敗内容を記録する。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "verify"
+    },
+    "judge": {
+      "goal": "機械 gate の全コマンドが終了コード 0 なら合格、1件でも失敗または未解決コンフリクトがあれば修正対象として、根本原因と最小修正箇所を分類する。",
+      "deps": [
+        "machine"
+      ],
+      "kind": "judge"
+    },
+    "t10": {
+      "goal": "[scope] judge が特定した単一の失敗モジュールまたは結合点\n[out_of_scope] 合格済み領域のリファクタリング、追加機能、テストの無効化\n失敗時のみ根本原因を最小差分で修正し、同じ機械 gate を終了コード 0 になるまで反復する。初回合格時は変更しない。",
+      "deps": [
+        "judge"
+      ],
+      "kind": "work"
+    },
+    "final": {
+      "goal": "未解決コンフリクトがないことを再確認し、指定された grep と2本の Node.js テストをすべて再実行して終了コード 0 を最終確認する。恒常的な制約を発見した場合は成果へ {\"constraints\":[\"…\"]} を付加する。",
+      "deps": [
+        "t10"
+      ],
+      "kind": "verify"
+    },
+    "base-sync": {
+      "goal": "最新 main を ap/dashboard-163827 へ統合し、競合があれば解消する",
+      "deps": [],
+      "kind": "base-sync"
+    }
+  },
+  "iteration": 0
+}

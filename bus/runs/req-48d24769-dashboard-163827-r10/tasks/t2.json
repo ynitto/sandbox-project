@@ -1,0 +1,8 @@
+{
+  "id": "t2",
+  "goal": "[scope] Git の remote/main と現在の作業ブランチ\n[out_of_scope] コンフリクト箇所の内容変更、機能実装\n最新 main を fetch し、ユーザー変更を失わないことを確認して rebase を開始する。コンフリクト発生時は対象一覧を確定して停止する。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "work"
+}

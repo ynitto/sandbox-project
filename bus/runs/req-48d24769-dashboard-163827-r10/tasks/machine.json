@@ -1,0 +1,8 @@
+{
+  "id": "machine",
+  "goal": "指定された grep、needs-diagnosis.test.js、overview-ui.test.js を順に実行し、各終了コードと失敗内容を記録する。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "verify"
+}

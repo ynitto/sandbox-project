@@ -1,9 +1,0 @@
-{
-  "id": "t5",
-  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要 UI 結合点\n[out_of_scope] project.js、needs 診断表示、状態変更操作、新規 UI 基盤\n既存の概要 UI パターンを再利用し、regression_cmd と intake_cmd の設定有無および「一貫性ゲート」としての意味を判別できる最小表示を追加する。",
-  "deps": [
-    "t2",
-    "t3"
-  ],
-  "kind": "work"
-}

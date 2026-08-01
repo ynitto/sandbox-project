@@ -1,8 +1,0 @@
-{
-  "id": "classify",
-  "goal": "agent-reviewer の指摘を renderer UI、project 契約境界、テスト期待値へ分類し、スコープ外の agent-project フック実装や UI からの状態書換要求は @followup 候補として分離する。",
-  "deps": [
-    "gate"
-  ],
-  "kind": "classify"
-}

@@ -1,0 +1,8 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-dashboard/README.md と既存 sibling CLI の参照箇所\n[out_of_scope] README の改稿、新しい CLI、設定の自動書換\nREADME に記載された設定編集および sibling CLI の有効化手順を確認し、未結線時に画面へ提示する既存導線と文言を確定する。",
+  "deps": [
+    "t3"
+  ],
+  "kind": "work"
+}

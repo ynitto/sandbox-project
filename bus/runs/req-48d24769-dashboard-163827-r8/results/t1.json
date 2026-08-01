@@ -1,8 +1,0 @@
-{
-  "id": "t1",
-  "who": "mac-w2",
-  "status": "done",
-  "output": "成果: 未完了。git 規約で fetch/rebase が禁止されているため、変更は行っていません。\n\n検証:\n\n- 作業ツリー clean、未解決競合 0\n- `origin/main...HEAD`: main 側 363 commits、作業側 19 commits\n- 仮想マージで dashboard 内 6 競合を検出\n- `npm test`: 全件成功\n- `git diff --check`: 成功\n\n前提: git 利用規約を rebase 要求より優先しました。`origin/main` は 2026-08-01 10:34:29 +0900 更新のローカル参照です。\n\n@followup agent-flow 側で fetch/rebase を開始し、競合状態の worktree を再提供してください。対象候補は `package.json`、`project.js`、`toolconfig.js`、`needs.js`、`detail-tabs-ui.test.js`、`overview-ui.test.js` です。",
-  "finished_at": "2026-08-01T01:41:33Z",
-  "node": "mac"
-}

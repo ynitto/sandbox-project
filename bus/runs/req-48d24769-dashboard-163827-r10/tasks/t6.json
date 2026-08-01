@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の概要データ生成結合点\n[out_of_scope] renderer.js、agent-project 本体、状態変更コマンド、非公式契約\n既存の概要データに regression_cmd と intake_cmd の設定有無、および一貫性ゲート状態の判断材料を追加し、needs/inbox/commands 契約を維持する。",
+  "deps": [
+    "t4"
+  ],
+  "kind": "work"
+}

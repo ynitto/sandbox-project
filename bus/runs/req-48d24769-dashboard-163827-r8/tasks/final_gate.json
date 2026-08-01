@@ -1,8 +1,0 @@
-{
-  "id": "final_gate",
-  "goal": "grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js を実行する。いずれかが失敗した場合は原因を renderer、project、テストへ分類して該当する最小修正を行い、全コマンドが終了コード 0 になるまで反復する。",
-  "deps": [
-    "synth"
-  ],
-  "kind": "verify"
-}

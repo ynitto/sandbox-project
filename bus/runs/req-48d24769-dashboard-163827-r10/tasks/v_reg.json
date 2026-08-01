@@ -1,0 +1,9 @@
+{
+  "id": "v_reg",
+  "goal": "needs-diagnosis の codd-gate と回帰失敗要約について、表示欠落、誤解を招く文言、既存 UI 回帰がないかを確認し、needs-diagnosis.test.js の既存期待との整合性を検証する。",
+  "deps": [
+    "t8",
+    "t9"
+  ],
+  "kind": "verify"
+}

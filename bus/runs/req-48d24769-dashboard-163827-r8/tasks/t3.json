@@ -1,8 +1,0 @@
-{
-  "id": "t3",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js、関連 README、公式 needs/inbox/commands 契約\n[out_of_scope] 公式契約外への書込み、新規 IPC、agent-project フック実装\n設定値の供給元と公式契約境界を確認し、未設定時に案内可能な設定編集手順または sibling CLI の有効化導線を README と照合して確定する。",
-  "deps": [
-    "t1"
-  ],
-  "kind": "work"
-}

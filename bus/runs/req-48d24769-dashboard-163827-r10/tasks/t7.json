@@ -1,0 +1,9 @@
+{
+  "id": "t7",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要またはプロジェクト情報表示\n[out_of_scope] 設定値の編集・保存、done 状態の変更、needs-diagnosis 表示の再設計\nregression_cmd と intake_cmd の結線有無、および「一貫性ゲート」の状態を、人が画面だけで判別できるよう既存 UI パターンで表示する。",
+  "deps": [
+    "t5",
+    "t6"
+  ],
+  "kind": "work"
+}
