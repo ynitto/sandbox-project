@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: blocked
+- status: doing
 - source: charter
 - priority: 0
 - verify: `echo "done"`
@@ -19,6 +19,7 @@
 - rev: 2
 - edited: human
 - verification: {"pass": 1, "fail": 0, "unverifiable": 0, "report": "verifications/dashboard-163827/77c6948acc498355a8e215e25d725dffb39d3c4c.md", "receipt": true, "plan_digest": "sha256:146cdf038e5db43cfbc5b1b47abe53a3d7b205e1e7093a22b6ee54c96f1304bc"}
-- last_run: req-48d24769-dashboard-163827-r15-v2
 - needs_reason: 繰り返し NG（retries=17）: agent-flow run タイムアウト（1800.0s）
 - needs_dr: DR-0016
+- last_run: req-48d24769-dashboard-163827-r15-v2
+- flow_run: req-48d24769-dashboard-163827-r15-v2
