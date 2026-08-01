@@ -21,3 +21,9 @@
 {"ts": "2026-08-01T00:24:25Z", "who": "mac-w2", "kind": "claimed", "node": "t11-rebase-uxfix"}
 {"ts": "2026-08-01T00:29:05Z", "who": "mac-w2", "kind": "result", "node": "t11-rebase-uxfix", "status": "done"}
 {"ts": "2026-08-01T00:29:06Z", "who": "mac-w2", "kind": "claimed", "node": "gate3-uxverify"}
+{"ts": "2026-08-01T00:34:36Z", "who": "mac-w2", "kind": "result", "node": "gate3-uxverify", "status": "done"}
+{"ts": "2026-08-01T00:34:36Z", "who": "mac-w2", "kind": "claimed", "node": "synth2-dashboard"}
+{"ts": "2026-08-01T00:35:31Z", "who": "mac-w2", "kind": "result", "node": "synth2-dashboard", "status": "done"}
+{"ts": "2026-08-01T00:35:53Z", "who": "mac-w2", "kind": "claimed", "node": "t12-rebase-main-resolve"}
+{"ts": "2026-08-01T00:39:26Z", "who": "mac-w2", "kind": "result", "node": "t12-rebase-main-resolve", "status": "done"}
+{"ts": "2026-08-01T00:39:27Z", "who": "mac-w2", "kind": "claimed", "node": "gate4-rebase-uxverify"}

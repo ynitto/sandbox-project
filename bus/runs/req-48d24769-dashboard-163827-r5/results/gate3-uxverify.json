@@ -1,0 +1,11 @@
+{
+  "id": "gate3-uxverify",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=fail\n\n### (a) サマリー\n\n- 最新 `origin/main` 基点への rebase 未達: `359 behind / 18 ahead`。\n- agent-reviewer 総合判定: `REQUEST_CHANGES`。\n- リポジトリ変更なし。\n\n### (b) 検証結果\n\n- 壊れたローカルJSON／YAML folded scalar: 12 passed\n- 指定 grep: 成功\n- `needs-diagnosis.test.js`: 13 passed\n- `overview-ui.test.js`: 成功\n- dashboard `npm test`: 成功\n- 未解消index・競合マーカー: なし\n\n阻害事項:\n\n- `.json` 設定にもYAML形式の有効化手順を案内する。\n- local JSONが `null` 等の非objectの場合、global設定へ誤フォールバックし「結線済み」と誤表示することを再現。\n\n### (c) 前提・未解決事項\n\n規約により rebase・修正は実施していません。最新mainへのrebaseとJSON経路のUX修正後、全ゲートの再実行が必要です。\n\n詳細: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/gate3-uxverify/report.md)\n\n```json\n{\"ok\":false,\"issues\":[\"最新 origin/main 基点への rebase 未達\",\"JSON設定へYAML有効化手順を案内する\",\"非object local JSONがglobal設定へ誤フォールバックする\"]}\n```",
+  "finished_at": "2026-08-01T00:34:36Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/gate3-uxverify/report.md"
+  ]
+}

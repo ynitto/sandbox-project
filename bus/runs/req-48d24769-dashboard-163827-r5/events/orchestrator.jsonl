@@ -1,2 +1,3 @@
 {"ts": "2026-07-31T22:20:22Z", "who": "orchestrator", "kind": "planned", "patterns": ["fan-out-and-synthesize", "adversarial-verification", "loop-until-done"], "parallelism": 3, "tasks": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "gate1", "uxreview", "t8", "t9", "t10", "gate2", "synth"]}
 {"ts": "2026-08-01T00:24:24Z", "who": "orchestrator", "kind": "replan", "iteration": 1, "added": ["t11-rebase-uxfix", "gate3-uxverify", "synth2-dashboard"]}
+{"ts": "2026-08-01T00:35:52Z", "who": "orchestrator", "kind": "replan", "iteration": 2, "added": ["t12-rebase-main-resolve", "gate4-rebase-uxverify", "synth3-dashboard-final"]}

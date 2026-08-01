@@ -1,0 +1,11 @@
+{
+  "id": "synth2-dashboard",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "gate3-uxverify が `fail` のため、条件に従い統合・修正は実施していません。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/synth2-dashboard/report.md)\n\n確認結果: 作業ツリーは clean、累積差分13ファイルはすべて `tools/agent-dashboard/` 配下です。",
+  "finished_at": "2026-08-01T00:35:31Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/synth2-dashboard/report.md"
+  ]
+}

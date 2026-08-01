@@ -1,0 +1,6 @@
+{
+  "id": "t12-rebase-main-resolve",
+  "goal": "agent-dashboard の作業ブランチを最新 origin/main に rebase し、競合を解消する。既存の一貫性ゲート可視化・有効化導線、needs-diagnosis の可読性、t11 の toolconfig.js 修正（壊れたローカル JSON から global へ誤フォールバックしないこと、YAML folded scalar の段落境界を保持すること）と回帰テストを維持する。変更は tools/agent-dashboard/** に限定し、公式契約 needs/inbox/commands 以外へ書かない。指定3コマンド、npm test、git diff --check を成功させる。",
+  "deps": [],
+  "kind": "work"
+}

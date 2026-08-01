@@ -1,0 +1,8 @@
+{
+  "id": "synth3-dashboard-final",
+  "goal": "gate4 が pass の場合のみ、rebase 後の成果を最終統合し、最新 origin/main 基点のコミット、変更ファイル、機械ゲート結果、agent-reviewer の判定を報告する。gate4 が fail の場合は統合せず、issues をそのまま次の評価へ渡す。",
+  "deps": [
+    "gate4-rebase-uxverify"
+  ],
+  "kind": "work"
+}

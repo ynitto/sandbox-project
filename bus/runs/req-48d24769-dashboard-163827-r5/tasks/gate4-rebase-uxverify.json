@@ -1,0 +1,8 @@
+{
+  "id": "gate4-rebase-uxverify",
+  "goal": "t12 の rebase 後 HEAD が最新 origin/main を基点としていること、競合マーカーが残っていないこと、変更範囲が tools/agent-dashboard/** のみであることを確認する。指定 grep、needs-diagnosis.test.js、overview-ui.test.js、npm test、git diff --check を実行し、agent-reviewer で UX を再レビューする。特に壊れたローカル JSON と YAML folded scalar の誤判定が回帰テストで防止され、一貫性ゲートの状態・失敗の意味・未結線時の有効化導線が画面で判断できることを検証し、pass/fail と具体的 issues を報告する。",
+  "deps": [
+    "t12-rebase-main-resolve"
+  ],
+  "kind": "work"
+}

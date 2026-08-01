@@ -131,7 +131,26 @@
         "gate3-uxverify"
       ],
       "kind": "work"
+    },
+    "t12-rebase-main-resolve": {
+      "goal": "agent-dashboard の作業ブランチを最新 origin/main に rebase し、競合を解消する。既存の一貫性ゲート可視化・有効化導線、needs-diagnosis の可読性、t11 の toolconfig.js 修正（壊れたローカル JSON から global へ誤フォールバックしないこと、YAML folded scalar の段落境界を保持すること）と回帰テストを維持する。変更は tools/agent-dashboard/** に限定し、公式契約 needs/inbox/commands 以外へ書かない。指定3コマンド、npm test、git diff --check を成功させる。",
+      "deps": [],
+      "kind": "work"
+    },
+    "gate4-rebase-uxverify": {
+      "goal": "t12 の rebase 後 HEAD が最新 origin/main を基点としていること、競合マーカーが残っていないこと、変更範囲が tools/agent-dashboard/** のみであることを確認する。指定 grep、needs-diagnosis.test.js、overview-ui.test.js、npm test、git diff --check を実行し、agent-reviewer で UX を再レビューする。特に壊れたローカル JSON と YAML folded scalar の誤判定が回帰テストで防止され、一貫性ゲートの状態・失敗の意味・未結線時の有効化導線が画面で判断できることを検証し、pass/fail と具体的 issues を報告する。",
+      "deps": [
+        "t12-rebase-main-resolve"
+      ],
+      "kind": "work"
+    },
+    "synth3-dashboard-final": {
+      "goal": "gate4 が pass の場合のみ、rebase 後の成果を最終統合し、最新 origin/main 基点のコミット、変更ファイル、機械ゲート結果、agent-reviewer の判定を報告する。gate4 が fail の場合は統合せず、issues をそのまま次の評価へ渡す。",
+      "deps": [
+        "gate4-rebase-uxverify"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 1
+  "iteration": 2
 }
