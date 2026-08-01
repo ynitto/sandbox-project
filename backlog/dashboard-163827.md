@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: blocked
+- status: doing
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
@@ -17,9 +17,9 @@
 - gate_branch: main
 - gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
 - verification: {"pass": 1, "fail": 1, "unverifiable": 0, "report": "verifications/dashboard-163827/635bc8d17c339fa6d29a9f2efd9934bc09ab8d42.md", "receipt": true, "plan_digest": "sha256:9d74bfc8a2334687871261c7a13ae6b9fd6d1ac8eea5bbe126df9b6afa6aa699"}
-- feedback: 競合解決済み commit 59ccf49e を起点に、旧 run の done ノードを継承せず新規計画で全検証する。work の terminal ok:false は失敗として扱う。
 - edited: human
 - rev: 2
-- last_run: req-48d24769-dashboard-163827-r11-v2
 - needs_reason: 繰り返し NG（retries=12）: agent-flow run タイムアウト（1800.0s）
 - needs_dr: DR-0012
+- last_run: req-48d24769-dashboard-163827-r11-v2
+- flow_run: req-48d24769-dashboard-163827-r11-v2

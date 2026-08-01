@@ -8,3 +8,5 @@
 {"ts": "2026-08-01T06:47:49Z", "who": "mac-w1", "kind": "result", "node": "t9", "status": "done"}
 {"ts": "2026-08-01T06:47:49Z", "who": "mac-w1", "kind": "claimed", "node": "uxgate"}
 {"ts": "2026-08-01T06:56:06Z", "who": "mac-w1", "kind": "result", "node": "uxgate", "status": "failed"}
+{"ts": "2026-08-01T07:51:30Z", "who": "mac-w1", "kind": "claimed", "node": "contractgate"}
+{"ts": "2026-08-01T07:55:13Z", "who": "mac-w1", "kind": "result", "node": "contractgate", "status": "failed"}

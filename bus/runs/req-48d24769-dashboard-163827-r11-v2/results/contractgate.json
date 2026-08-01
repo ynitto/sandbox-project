@@ -1,15 +1,14 @@
 {
   "id": "contractgate",
-  "who": "mac-w2",
+  "who": "mac-w1",
   "status": "failed",
-  "output": "verify=fail\n\n- [renderer.js:1232](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-55526-nxliz_zv/sandbox/tools/agent-dashboard/src/renderer/renderer.js:1232): 別コマンド設定済み・codd-gate 未結線時に、要求された有効化導線を隠しています。wired 判定基準へ戻し、既存処理を失う旨を警告すべきです。\n- t9 コミット `98cb4584a` が現 HEAD に未統合です。\n- 公式 needs/inbox/commands 以外の新規経路、done の直接書換えはありません。全 dashboard テストは PASS。\n\n詳細: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/contractgate/report.md)\n\n{\"ok\": false, \"issues\": [\"renderer.js:1232-1252 が設定済み・codd-gate 未結線時の README 準拠有効化導線を隠している。wired フラグ基準で導線を出し、既存コマンド置換の警告を表示すること。\", \"t9 commit 98cb4584aecb52904f5ca956eac5b5e91f7cc939 が現 HEAD に未統合。要求に沿う期待値へ直した overview-ui 回帰テストを統合すること。\"]}",
-  "finished_at": "2026-08-01T06:53:01Z",
+  "output": "verify=fail\n\n`renderer.js:1232-1252` が、設定済みだが codd-gate 未結線の場合に README 準拠の有効化導線を隠します。詳細は [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/contractgate/report.md)。\n\n{\"ok\": false, \"issues\": [\"設定済み・codd-gate未結線時にも、wiredフラグ基準で有効化導線と既存コマンド置換警告を表示し、対応テストを修正すること。\"]}",
+  "finished_at": "2026-08-01T07:55:13Z",
   "node": "mac",
   "data": {
     "ok": false,
     "issues": [
-      "renderer.js:1232-1252 が設定済み・codd-gate 未結線時の README 準拠有効化導線を隠している。wired フラグ基準で導線を出し、既存コマンド置換の警告を表示すること。",
-      "t9 commit 98cb4584aecb52904f5ca956eac5b5e91f7cc939 が現 HEAD に未統合。要求に沿う期待値へ直した overview-ui 回帰テストを統合すること。"
+      "設定済み・codd-gate未結線時にも、wiredフラグ基準で有効化導線と既存コマンド置換警告を表示し、対応テストを修正すること。"
     ]
   },
   "artifacts": [

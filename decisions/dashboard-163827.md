@@ -76,3 +76,9 @@
 - affects : feedback 注入
 - learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: 競合解決済み commit 59ccf49e を起点に、旧 run の done ノードを継承せず新規計画で全検証する。work の terminal ok:false は失敗として扱う。
 
+## DR-0013  2026-08-01  actor: nitto
+- context : dashboard-163827 を run req-48d24769-dashboard-163827-r11-v2 の続きから再開
+- action  : resume-run
+- reason  : 要対応画面から再実行（失敗した工程だけやり直し）
+- affects : dashboard-163827 → ready (last_run=req-48d24769-dashboard-163827-r11-v2)
+

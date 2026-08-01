@@ -4,20 +4,20 @@ verify=fail
 
 ## 独立検証結果
 
-- 現 HEAD `86699a1e5` は t7 (`2a0b2eb05`) と t8 (`86699a1e5`) を含むが、t9 (`98cb4584a`) は祖先ではない（`git merge-base --is-ancestor ... HEAD` = exit 1）。
-- `main...HEAD` の dashboard 差分は 3 ファイル、32 additions / 17 deletions。すべて `tools/agent-dashboard` 配下で、t7 の renderer/UI test と t8 の needs diagnosis test に一致する。t5 は変更なし。
-- t9 の差分は `test/overview-ui.test.js` 1 ファイル、9 additions / 2 deletionsで、現 HEAD へ競合なく適用可能だが未統合。
-- dashboard 全 `npm test` は PASS。対象4ファイルの構文検査・ESLint、`git diff --check` も PASS。worktree の未コミット差分はない。
+- 現 HEAD `98cb4584a` は t7 (`2a0b2eb05`)、t8 (`86699a1e5`)、t9 (`98cb4584a`) をすべて含む。t5 は変更なし。
+- t5 開始点 `59ccf49e7` からの dashboard 差分は4ファイル、41 additions / 19 deletions。production 差分は `src/renderer/renderer.js` のみで、残り3ファイルはテスト。`tools/agent-dashboard` 外の差分はない。
+- 依存導入後の dashboard 全 `npm test` は PASS。変更4ファイルの ESLint・構文検査、`git diff --check` も PASS。worktree の追跡差分はない。
+- 全体 `npm run lint` は今回の差分外に既存4エラーがあり FAIL したが、変更4ファイルだけの ESLint は PASS のため本判定の issue には数えない。
 
 ## 公式契約との照合
 
-- 表示データは既存の `readProject()` 経由で、公式 `needs/*.md`、`commands/*.err`、`commands/processed/*.json`、`regression_cmd` / `intake_cmd` 設定を読む。今回の production 差分は renderer の表示条件だけで、新しい読取元や書込み元は追加していない。
-- UI 操作は既存の `needs` feedback、`inbox/*.json`、`commands/*.json` 投函口を維持している。今回の差分に task/backlog status や `done` を直接書く処理、新しい IPC、外部 CLI 実行はない。
+- ゲート表示は公式設定キー `regression_cmd` / `intake_cmd` を `readToolConfig()` → `consistencyGateStatus()` → `readProject().consistencyGate` で読む。新しい非公式な表示データ源はない。
+- needs の `failure-phase` / `failure-summary` / `failure-command` は本体 `agent_project/needs.py` の `_FAILURE_FM_KEYS` と一致し、`parseNeeds()` 後も `why` / `detail`、blocked・未決着状態を保持する。
+- 今回の production 差分は renderer の表示条件だけ。needs の Decision Outcome、inbox JSON、commands JSON の既存書込み関数・IPC・preload は無変更で、task/backlog status や `done` の直接変更、新しい書込み経路、外部 CLI 実行は追加されていない。設定ファイルのボタンも既存 `openPath` で開くだけである。
 - README の正規設定例と画面のコマンド文字列は一致する。
 
 ## issues
 
-1. `tools/agent-dashboard/src/renderer/renderer.js:1232-1252` は有効化導線を `regressionConfigured` / `intakeConfigured` の欠落で判定している。そのため両キーに別コマンドが設定され、`regressionWired=false` / `intakeWired=false` の未結線状態では、設定値と「未結線」は表示する一方、README 準拠の設定編集・sibling CLI 導線を全て隠す。元要求の「未結線時は README と同じ有効化導線を示す」を満たさない。`regressionWired` / `intakeWired` を基準に未結線キーの導線を出し、既存値を自動変更せず、置換で既存処理が失われる旨を明示すること。`test/consistency-gate-ui.test.js:136-153` と t9 の `overview-ui.test.js` にある「設定済みなら導線を出さない」期待値も要求に合わせて修正すること。
-2. t9 コミット `98cb4584aecb52904f5ca956eac5b5e91f7cc939` が作業ブランチの現 HEAD に統合されていない。`tools/agent-dashboard/test/overview-ui.test.js` の設定例・未結線導線に関する9行の回帰検証が納品差分に存在しない。issue 1 の期待値を正してから、このテスト差分を現ブランチへ統合すること。
+1. `tools/agent-dashboard/src/renderer/renderer.js:1232-1252` は有効化導線を `regressionConfigured` / `intakeConfigured` の欠落で判定する。このため両キーに別コマンドが設定済みで `regressionWired=false` / `intakeWired=false` の場合、画面は「未結線」と表示する一方、README 準拠の設定編集・sibling CLI 導線をすべて隠す。元要求と dashboard README の「未結線なら」有効化手順に反する。`regressionWired` / `intakeWired` を基準に未結線キーの設定例と導線を出し、既存値は自動変更せず、置換すると現在の処理が失われる警告を復元すること。`test/consistency-gate-ui.test.js:136-153` と `test/overview-ui.test.js:345-352` の「設定済みなら導線を出さない」期待値も同時に直すこと。
 
-{"ok": false, "issues": ["renderer.js:1232-1252 が設定済み・codd-gate 未結線時の README 準拠有効化導線を隠している。wired フラグ基準で導線を出し、既存コマンド置換の警告を表示すること。", "t9 commit 98cb4584aecb52904f5ca956eac5b5e91f7cc939 が現 HEAD に未統合。要求に沿う期待値へ直した overview-ui 回帰テストを統合すること。"]}
+{"ok": false, "issues": ["tools/agent-dashboard/src/renderer/renderer.js:1232-1252 が、設定済みだが codd-gate 未結線のとき README 準拠の有効化導線を隠す。wired フラグ基準で導線を出し、既存コマンド置換の警告を表示し、対応テストを修正すること。"]}
