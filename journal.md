@@ -596,3 +596,11 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-02 08:14:11 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-02 08:14:11 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-02 08:14:11 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
+- 2026-08-02 08:14:13 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-08-02 08:14:13 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-08-02 08:14:26 commands 取り込み失敗: viewer-approve-enq-20260718-163827-1785626060310.json: approve enq-20260718-163827 が失敗 (exit 1): >>> 注意: github は未対応のフォージです（MR/PR の自動作成・決着は行いません）。検収は dashboard のボタンで行ってください
+- 2026-08-02 08:14:26 === project 開始 v1 acceptance=2 ===
+- 2026-08-02 08:14:26 === agent-project 開始 tasks=1 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-08-02 08:14:26 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-08-02 08:14:26 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-08-02 08:14:26 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
