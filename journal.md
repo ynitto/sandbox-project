@@ -574,3 +574,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-02 05:21:37 === agent-project 開始 tasks=1 ingested=0 planner=agent executor=agent dry_run=False ===
 - 2026-08-02 05:21:37 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-02 05:21:37 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
+- 2026-08-02 05:50:58 flow detach: enq-20260718-163827 の run req-48d24769-enq-20260718-163827-r0 を failed（agent-flow run 応答なし（orchestrator lease 未記録））
+- 2026-08-02 05:50:58 cycle 1: enq-20260718-163827 NG 積み直し (1/2) — agent-flow run 応答なし（orchestrator lease 未記録）

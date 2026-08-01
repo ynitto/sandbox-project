@@ -3,37 +3,17 @@
   "workspace": {
     "url": "https://github.com/ynitto/sandbox",
     "path": "tools/agent-project",
-    "base": "main",
+    "base": "af/req-48d24769-enq-20260718-163827-r0",
     "target": "main",
     "desc": "agent-project",
     "branch": "ap/enq-20260718-163827"
   },
   "references": [],
   "status": "running",
-  "created_at": "2026-08-01T20:21:37Z",
-  "verification_plan": {
-    "version": 2,
-    "task_id": "enq-20260718-163827",
-    "workspace": "https://github.com/ynitto/sandbox",
-    "commands": [
-      {
-        "command": "test -n \"${KIRO_BASE_REV:-}\" && python3 tools/codd-gate/codd-gate.py verify --base \"$KIRO_BASE_REV\" --strict && PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests && ! git grep -n -E '(^|[[:space:]])(import|from)[[:space:]]+codd_gate|_apply_codd_gate|_codd_gate' -- tools/agent-project/agent_project",
-        "source": "legacy"
-      }
-    ],
-    "criteria": [],
-    "integration": {
-      "target": "main"
-    },
-    "policy": {
-      "confirm": 1,
-      "timeout_sec": 600.0
-    },
-    "digest": "sha256:0edd82080e63354c90f9631de6708c81fd50b0b74cbd578dad36cbc199722ede"
-  },
-  "base_rev": "43d8c2db96e4f75b4db863f861d4b40ff83362e3",
+  "created_at": "2026-08-01T20:50:59Z",
+  "inherited_from": "req-48d24769-enq-20260718-163827-r0",
   "executor": "agent",
-  "orch_lease_until": 1785617282.832191,
-  "heartbeat_at": "2026-08-01T20:46:02Z",
-  "updated_at": "2026-08-01T20:42:42Z"
+  "orch_lease_until": 1785617868.589538,
+  "heartbeat_at": "2026-08-01T20:55:48Z",
+  "updated_at": "2026-08-01T20:51:47Z"
 }

@@ -1,0 +1,1 @@
+{"ts": "2026-08-01T20:51:47Z", "who": "orchestrator", "kind": "replan", "iteration": 3, "reason": "要求された統合コマンドの成功記録はあるが、既存の verify ノード（final_gate）が未実行で pass になっていないため、完了条件 (b) を満たさない。変更は不要で、独立した最終検証だけを実行する。", "added": ["final-gate-verify-20260802"], "changes": {"added": ["final-gate-verify-20260802"], "replaced": [], "updated": [], "removed": []}}

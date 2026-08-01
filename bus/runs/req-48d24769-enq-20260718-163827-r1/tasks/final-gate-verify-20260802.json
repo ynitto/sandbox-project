@@ -1,0 +1,8 @@
+{
+  "id": "final-gate-verify-20260802",
+  "goal": "final-acceptance-rerun-20260802 が確定した KIRO_BASE_REV=2be015472ce8cb6dd6501738167b2d24328bf359 を同一シェルで設定し、元要求記載の統合コマンドを改変せず再実行する。codd-gate strict、agent-project 全テスト、禁止識別子検査のすべてが終了コード0であることを verify 結果として記録する。失敗時はコードを変更せず、失敗した段階・終了コード・該当出力を報告する。",
+  "deps": [
+    "final-acceptance-rerun-20260802"
+  ],
+  "kind": "work"
+}

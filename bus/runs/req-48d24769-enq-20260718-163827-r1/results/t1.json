@@ -1,0 +1,15 @@
+{
+  "id": "t1",
+  "who": "mac-w2",
+  "status": "failed",
+  "output": "(a) サマリー: **受入不可**。指定 worktree で `KIRO_BASE_REV` が空でした。\n\n(b) 検証: 指定の `git rev-parse --verify \"$KIRO_BASE_REV^{commit}\"` は前提未成立のため未実行。検証コマンドは終了コード `1`。作業ツリー変更なし。\n\n(c) 前提: 実行プロセスの環境変数を正と判断。未解決事項は `KIRO_BASE_REV` の設定。範囲外の問題なし。\n\n{\"ok\": false, \"issues\": [\"KIRO_BASE_REV が空のため、比較基準コミットとして解決できず受入不可\"]}",
+  "finished_at": "2026-08-01T20:51:28Z",
+  "node": "mac",
+  "kind": "work",
+  "data": {
+    "ok": false,
+    "issues": [
+      "KIRO_BASE_REV が空のため、比較基準コミットとして解決できず受入不可"
+    ]
+  }
+}
