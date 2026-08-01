@@ -368,3 +368,6 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 09:14:36 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-01 09:14:36 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-01 09:14:36 run 再開: dashboard-163827 は req-48d24769-dashboard-163827-r5 の失敗ノードだけをやり直します（done は温存）
+- 2026-08-01 09:44:36 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r5 を failed（agent-flow run タイムアウト（1800.0s））
+- 2026-08-01 09:44:41 cycle 1: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-08-01 09:44:42 === agent-project 停止 reason=drained cycles=1 done=0 blocked=1 notified=True promoted=0 ===
