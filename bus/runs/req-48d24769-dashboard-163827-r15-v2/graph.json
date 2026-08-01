@@ -130,7 +130,21 @@
       "goal": "最新 main を ap/dashboard-163827 へ統合し、競合があれば解消する",
       "deps": [],
       "kind": "base-sync"
+    },
+    "lint-fix-r15": {
+      "goal": "tools/agent-dashboard/cowork.js:590 の未使用変数によって全体 ESLint が exit 1 になる問題を、挙動や公式契約（needs/inbox/commands）を変えず最小差分で解消する。関連テスト、全体 npm test、全体 ESLint、git diff --check を実行し、各コマンドの終了コードと terminal ok:true を記録する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "final-gate-r15": {
+      "goal": "lint-fix-r15 後の統合状態を検証する。関連テスト、全体 npm test、全体 ESLint、git diff --check、競合マーカー確認、スコープ外差分確認、done不変条件確認、および完了条件の echo \"done\" を実行し、すべて exit 0・terminal ok:true・ok:falseなしの場合だけ verify=pass とする。",
+      "deps": [
+        "lint-fix-r15"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 0
+  "iteration": 1
 }
