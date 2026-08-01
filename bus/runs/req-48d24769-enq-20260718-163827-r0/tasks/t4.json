@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-project/tests と tools/agent-project/agent_project\n[out_of_scope] テスト失敗の修正、他 workspace のテスト追加\nPYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests を実行し、終了コードと失敗テストの詳細を保存する。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}

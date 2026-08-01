@@ -1,0 +1,8 @@
+{
+  "id": "t8",
+  "goal": "[scope] KIRO_BASE_REV、tools/codd-gate、tools/agent-project、Git 作業ツリー\n[out_of_scope] 受入失敗に対する追加修正、新機能追加、agent-dashboard への書込み\n修正後の状態で指定された完了条件のシェルコマンド全体を一続きで再実行し、全区間とコマンド全体の終了コードが0である証跡を保存する。",
+  "deps": [
+    "gate2"
+  ],
+  "kind": "work"
+}

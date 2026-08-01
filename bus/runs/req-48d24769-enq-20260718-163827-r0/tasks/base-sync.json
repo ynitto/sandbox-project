@@ -1,0 +1,6 @@
+{
+  "id": "base-sync",
+  "kind": "base-sync",
+  "deps": [],
+  "goal": "最新 main を ap/enq-20260718-163827 へ統合し、競合があれば解消する"
+}

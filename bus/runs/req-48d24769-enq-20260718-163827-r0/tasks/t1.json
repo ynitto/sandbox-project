@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] 環境変数 KIRO_BASE_REV と Git オブジェクトデータベース\n[out_of_scope] ファイル変更、ブランチ変更、リモート更新\nKIRO_BASE_REV が空でなく、git rev-parse --verify \"$KIRO_BASE_REV^{commit}\" で比較基準コミットとして解決できることを確認する。失敗時は受入不可として記録する。",
+  "deps": [],
+  "kind": "work"
+}

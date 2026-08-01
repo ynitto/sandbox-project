@@ -1,0 +1,8 @@
+{
+  "id": "resolve-base-and-rerun-gate-20260802",
+  "goal": "t1 の不足は KIRO_BASE_REV が空で統合検証を開始できなかった点。承認済みワークフロー設定またはプロジェクト記録から比較基準コミットを取得し、git rev-parse --verify \"$KIRO_BASE_REV^{commit}\" で実在を確認して同一実行環境へ設定する。その後、指定された codd-gate strict verify、agent-project unittest、codd_gate 連携コード禁止 grep を順に実行し、すべて終了コード 0 であることを記録する。基準コミットを特定できない場合は推測せず、その欠落を明示して停止する。コードや dashboard には書き込まない。",
+  "deps": [
+    "base-sync"
+  ],
+  "kind": "work"
+}

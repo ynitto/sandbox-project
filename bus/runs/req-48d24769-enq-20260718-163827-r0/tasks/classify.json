@@ -1,0 +1,8 @@
+{
+  "id": "classify",
+  "goal": "gate1 の失敗を environment、scope-or-ownership、codd-gate、agent-project-test、forbidden-reference に分類する。修正可能な失敗には所有 workspace と最小の原因箇所を割り当て、KIRO_BASE_REV 未設定・無効や所有権外の問題は受入ブロッカーとして扱う。",
+  "deps": [
+    "gate1"
+  ],
+  "kind": "classify"
+}

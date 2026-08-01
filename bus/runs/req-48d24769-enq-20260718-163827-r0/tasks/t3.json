@@ -1,0 +1,8 @@
+{
+  "id": "t3",
+  "goal": "[scope] tools/codd-gate/codd-gate.py と KIRO_BASE_REV..HEAD の検証対象\n[out_of_scope] 検証失敗の修正、新機能追加\npython3 tools/codd-gate/codd-gate.py verify --base \"$KIRO_BASE_REV\" --strict を実行し、終了コード、標準出力、標準エラーを保存する。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}

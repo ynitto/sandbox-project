@@ -1,0 +1,8 @@
+{
+  "id": "t2",
+  "goal": "[scope] git status、KIRO_BASE_REV..HEAD の差分、charter、rules.md、所有権定義\n[out_of_scope] ソースコードや文書の変更、agent-dashboard への書込み\n対象成果物と作業ツリーを調査し、変更が agent-project ソースコードまたは設計書に限定され、憲章・rules.md・各 workspace の owns に適合することを確認する。dashboard 側は参照確認だけに留める。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "work"
+}

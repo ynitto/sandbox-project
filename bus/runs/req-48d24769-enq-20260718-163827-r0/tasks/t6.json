@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "goal": "[scope] classify が特定した所有 workspace 内の単一モジュールまたは単一結合点\n[out_of_scope] 新機能追加、所有権外の変更、agent-dashboard への書込み、無関係な整形\n失敗がある場合だけ根本原因に対応する約30行以内の最小差分を適用する。失敗がなければ変更せず、その旨を証跡化する。先行タスク由来または別 workspace 所有の問題は修正せず @followup 候補として記録する。",
+  "deps": [
+    "classify"
+  ],
+  "kind": "work"
+}

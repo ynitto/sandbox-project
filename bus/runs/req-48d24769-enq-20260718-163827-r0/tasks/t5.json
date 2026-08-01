@@ -1,0 +1,8 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-project/agent_project\n[out_of_scope] ファイル変更、tools/agent-dashboard 配下の調査・修正\n指定された git grep により、禁止された codd_gate import、_apply_codd_gate、_codd_gate 参照が残っていないことを確認し、終了コードと一致箇所を保存する。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}
