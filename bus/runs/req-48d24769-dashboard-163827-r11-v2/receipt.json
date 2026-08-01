@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "task_id": "dashboard-163827",
+  "plan_digest": "sha256:9d74bfc8a2334687871261c7a13ae6b9fd6d1ac8eea5bbe126df9b6afa6aa699",
+  "result_rev": "ed4697817ee2072c0ef3f44c57aff9d6e66910ab",
+  "workspace": "https://github.com/ynitto/sandbox",
+  "commands": [
+    {
+      "command": "grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js",
+      "exit_code": 1,
+      "output_tail": "態。設定 yaml の regression_cmd / intake_cmd を読むだけで、\ntools/agent-dashboard/src/features/agent-project/main/project.js:1796:  const regressionCmd = pick('regression_cmd');\ntools/agent-dashboard/src/features/agent-project/main/project.js:1797:  const intakeCmd = pick('intake_cmd');\ntools/agent-dashboard/src/features/agent-project/main/project.js:2000:    // 一貫性ゲート（codd-gate）が設定 yaml に結線されているか。読み取り専用の事実。\n77r1ay/sandbox/tools/agent-dashboard/src/features/agent-project/main/project.js',\n    '/private/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-98792-o_77r1ay/sandbox/tools/agent-dashboard/src/main/project.js',\n    '/private/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-98792-o_77r1ay/sandbox/tools/agent-dashboard/test/needs-diagnosis.test.js'\n  ]\n}\n\nNode.js v24.13.0"
+    }
+  ],
+  "criteria": [],
+  "integration": {
+    "target": "main",
+    "target_rev": "f443dc907eaa2781f15d0a0d9a02b5073a2adbd3",
+    "verdict": "fail",
+    "conflict_files": []
+  },
+  "verdict": "fail",
+  "started_at": "2026-08-01T08:06:57Z",
+  "finished_at": "2026-08-01T08:06:57Z",
+  "verified_by": "orchestrator"
+}
