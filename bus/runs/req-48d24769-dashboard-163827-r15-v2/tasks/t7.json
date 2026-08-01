@@ -1,0 +1,8 @@
+{
+  "id": "t7",
+  "goal": "[scope] tools/agent-dashboard の未設定時ガイダンスを担う単一コンポーネント\n[out_of_scope] コマンド実行、設定ファイルへの書込み、新規CLI実装\nregression_cmd または intake_cmd が未結線の場合だけ、READMEと一致する設定編集または既存 sibling CLI の有効化導線を表示する。",
+  "deps": [
+    "t5"
+  ],
+  "kind": "work"
+}

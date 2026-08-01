@@ -1,0 +1,8 @@
+{
+  "id": "fix",
+  "goal": "[scope] judge が特定した tools/agent-dashboard 内の単一原因箇所\n[out_of_scope] agent-project のフック実装、UIからの状態書換、指摘外のリファクタリング\njudge が修正を要求した場合のみ根本原因へ最小修正を加え、対応する最小テストを通す。スコープ外の必要事項は変更せず @followup 行として記録する。修正不要なら無変更で完了する。",
+  "deps": [
+    "judge"
+  ],
+  "kind": "work"
+}

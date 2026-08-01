@@ -1,0 +1,8 @@
+{
+  "id": "done",
+  "goal": "統合成果が全gateを通過した後に echo \"done\" を実行し、終了コード0かつterminal ok:trueの場合だけタスクを完了と判定する。それ以外は失敗として修正・再検証対象に戻す。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "verify"
+}

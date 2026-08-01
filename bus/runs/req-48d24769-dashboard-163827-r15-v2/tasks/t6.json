@@ -1,0 +1,8 @@
+{
+  "id": "t6",
+  "goal": "[scope] tools/agent-dashboard の概要またはプロジェクト情報にある単一の状態表示コンポーネント\n[out_of_scope] 設定変更操作、agent-project 本体、needs 表示\n既存の表示パターンを再利用し、regression_cmd と intake_cmd が設定済みか未設定かを人が即座に判別できる最小表示を追加する。",
+  "deps": [
+    "t5"
+  ],
+  "kind": "work"
+}

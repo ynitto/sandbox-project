@@ -1,0 +1,8 @@
+{
+  "id": "gate",
+  "goal": "競合解消後の最終状態で関連テストと全検証を再実行し、競合マーカーなし、Markdown末尾空白の不要差分なし、terminal ok:falseなし、UX指摘解消、done不変条件維持を確認する。",
+  "deps": [
+    "fix"
+  ],
+  "kind": "verify"
+}

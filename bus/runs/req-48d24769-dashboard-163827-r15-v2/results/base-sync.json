@@ -1,0 +1,21 @@
+{
+  "id": "base-sync",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "target main を競合なしで統合",
+  "finished_at": "2026-08-01T11:30:37Z",
+  "node": "mac",
+  "data": {
+    "status": "merged",
+    "target": "main",
+    "target_rev": "9c196643e1a8e7a3efd3e47cc36f535f782d438a",
+    "conflict_files": [],
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "ea0c808c66ba9f512848ffca5f160cda9a31fe77",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  }
+}

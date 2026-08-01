@@ -1,0 +1,136 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 2,
+    "review": true,
+    "reason": "[flow-planner] 最新 main の統合と競合解消を起点とする移行作業であり、実装後の回帰検証、UXレビュー、完了条件達成までの反復が必要なため。工程間の依存が強く列挙駆動ではないため、並列数は独立して実施可能な調査・検証観点に限定して2とする。（粒度 finest）",
+    "granularity": "finest"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] repository state, commit 59ccf49e, main refs, and dashboard-163827 run metadata\n[out_of_scope] ソース変更、旧 run の完了結果の継承\n59ccf49e と最新 main の差分、作業ツリー、旧 run の記録を確認し、旧 done ノードを一切継承しない新規実行計画と検証基準を確定する。terminal の ok:false は終了コードにかかわらず失敗として記録する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] 59ccf49e から最新 main への統合点と競合対象6ファイル\n[out_of_scope] 機能追加、main 由来の Markdown 末尾空白の修正\n最新 main を取得して59ccf49e起点の作業へ統合し、6ファイルの競合を意図を保って解消する。Markdown末尾空白だけの差分は採用せず、競合マーカーが残っていないことを確認する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-dashboard の概要・プロジェクト情報・needs 表示に関係するコンポーネントとデータ経路\n[out_of_scope] UI変更、agent-project のフック実装、公式契約外データへのアクセス\nregression_cmd、intake_cmd、codd-gate、needs-diagnosis が needs/inbox/commands 契約から画面へ届く経路を追跡し、状態表示を置く最小の既存コンポーネントと維持すべき可読性を特定する。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-dashboard/README.md と既存 sibling CLI・設定編集導線\n[out_of_scope] 新規CLI、設定自動更新、README本文の変更\nREADMEに記載されたゲート有効化手順と既存 sibling CLI の正式なコマンドを照合し、未結線時に表示できる設定編集／CLI導線を公式契約内で確定する。",
+      "deps": [
+        "t2"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] dashboard-163827 の単一設計書\n[out_of_scope] 実装、フック追加、UIからの状態書換\nslop-police スキルを使い、t3・t4の現物調査を根拠として、表示項目、未設定時の導線、done不変条件、公式契約境界、テスト観点を簡潔な設計書にまとめる。",
+      "deps": [
+        "t3",
+        "t4"
+      ],
+      "kind": "generate"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-dashboard の概要またはプロジェクト情報にある単一の状態表示コンポーネント\n[out_of_scope] 設定変更操作、agent-project 本体、needs 表示\n既存の表示パターンを再利用し、regression_cmd と intake_cmd が設定済みか未設定かを人が即座に判別できる最小表示を追加する。",
+      "deps": [
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] tools/agent-dashboard の未設定時ガイダンスを担う単一コンポーネント\n[out_of_scope] コマンド実行、設定ファイルへの書込み、新規CLI実装\nregression_cmd または intake_cmd が未結線の場合だけ、READMEと一致する設定編集または既存 sibling CLI の有効化導線を表示する。",
+      "deps": [
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-dashboard の needs 行または詳細表示を担う単一レンダリング結合点\n[out_of_scope] needs内容の更新、done判定の変更、公式契約外フィールドの追加\ncodd-gate と needs-diagnosis の回帰失敗要約が新しい状態表示や導線によって隠れたり読みにくくならないよう、既存の優先度・改行・失敗理由表示を維持する最小調整を行う。",
+      "deps": [
+        "t6",
+        "t7"
+      ],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-dashboard の関連する単一テストモジュール\n[out_of_scope] 無関係なスナップショット更新、テスト基盤追加、本番コード変更\n設定済み／片方未設定／両方未設定、codd-gate失敗、needs-diagnosis回帰要約を覆う最小の回帰テストを追加し、UIから状態を書き換えず公式契約だけを読むことを固定する。",
+      "deps": [
+        "t8"
+      ],
+      "kind": "work"
+    },
+    "regress": {
+      "goal": "t9までの変更に対して関連テストとリポジトリ所定の全検証を新規プロセスで実行する。各結果の終了コードとterminal okを検査し、ok:falseを必ず失敗として扱う。",
+      "deps": [
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "ux": {
+      "goal": "agent-reviewer スキルを使い、概要・プロジェクト情報・needs の情報階層、未設定時導線、codd-gate／needs-diagnosis の可読性、状態書換を誘発しないことをUX観点でレビューする。",
+      "deps": [
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "judge": {
+      "goal": "回帰検証とUXレビューを突き合わせ、完了可能か、修正して再検証すべきかを判定する。テスト失敗、terminal ok:false、公式契約逸脱、done不変条件違反、未解決UX指摘のいずれかがあれば修正側へ分類する。",
+      "deps": [
+        "regress",
+        "ux"
+      ],
+      "kind": "judge"
+    },
+    "fix": {
+      "goal": "[scope] judge が特定した tools/agent-dashboard 内の単一原因箇所\n[out_of_scope] agent-project のフック実装、UIからの状態書換、指摘外のリファクタリング\njudge が修正を要求した場合のみ根本原因へ最小修正を加え、対応する最小テストを通す。スコープ外の必要事項は変更せず @followup 行として記録する。修正不要なら無変更で完了する。",
+      "deps": [
+        "judge"
+      ],
+      "kind": "work"
+    },
+    "gate": {
+      "goal": "競合解消後の最終状態で関連テストと全検証を再実行し、競合マーカーなし、Markdown末尾空白の不要差分なし、terminal ok:falseなし、UX指摘解消、done不変条件維持を確認する。",
+      "deps": [
+        "fix"
+      ],
+      "kind": "verify"
+    },
+    "synth": {
+      "goal": "検証済みの実装、設計書、テスト、UXレビュー結果をdashboard-163827の成果として統合する。実行中に判明した恒常的制約があれば、最終成果へ機械可読な {\"constraints\":[\"…\"]} を添える。",
+      "deps": [
+        "gate"
+      ],
+      "kind": "synthesize"
+    },
+    "done": {
+      "goal": "統合成果が全gateを通過した後に echo \"done\" を実行し、終了コード0かつterminal ok:trueの場合だけタスクを完了と判定する。それ以外は失敗として修正・再検証対象に戻す。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "verify"
+    },
+    "base-sync": {
+      "goal": "最新 main を ap/dashboard-163827 へ統合し、競合があれば解消する",
+      "deps": [],
+      "kind": "base-sync"
+    }
+  },
+  "iteration": 0
+}

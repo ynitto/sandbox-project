@@ -88,3 +88,9 @@
 - reason  : 要対応画面で検証コマンドを変更
 - affects : verify: echo "done"; dashboard-163827 → ready
 
+## DR-0015  2026-08-01  actor: nitto
+- context : dashboard-163827 を新 run でやり直し（req-48d24769-dashboard-163827-r11-v2 は done）
+- action  : resume-run
+- reason  : 要対応画面から再実行（失敗した工程だけやり直し）
+- affects : dashboard-163827 → ready (retries=15)
+

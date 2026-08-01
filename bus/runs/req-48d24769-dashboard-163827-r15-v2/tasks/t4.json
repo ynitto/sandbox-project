@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-dashboard/README.md と既存 sibling CLI・設定編集導線\n[out_of_scope] 新規CLI、設定自動更新、README本文の変更\nREADMEに記載されたゲート有効化手順と既存 sibling CLI の正式なコマンドを照合し、未結線時に表示できる設定編集／CLI導線を公式契約内で確定する。",
+  "deps": [
+    "t2"
+  ],
+  "kind": "work"
+}

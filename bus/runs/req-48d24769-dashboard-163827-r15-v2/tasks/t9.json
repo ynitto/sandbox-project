@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-dashboard の関連する単一テストモジュール\n[out_of_scope] 無関係なスナップショット更新、テスト基盤追加、本番コード変更\n設定済み／片方未設定／両方未設定、codd-gate失敗、needs-diagnosis回帰要約を覆う最小の回帰テストを追加し、UIから状態を書き換えず公式契約だけを読むことを固定する。",
+  "deps": [
+    "t8"
+  ],
+  "kind": "work"
+}

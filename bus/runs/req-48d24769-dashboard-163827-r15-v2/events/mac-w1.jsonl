@@ -1,0 +1,3 @@
+{"ts": "2026-08-01T11:30:34Z", "who": "mac-w1", "kind": "claimed", "node": "base-sync"}
+{"ts": "2026-08-01T11:30:37Z", "who": "mac-w1", "kind": "result", "node": "base-sync", "status": "done"}
+{"ts": "2026-08-01T11:30:37Z", "who": "mac-w1", "kind": "claimed", "node": "t1"}

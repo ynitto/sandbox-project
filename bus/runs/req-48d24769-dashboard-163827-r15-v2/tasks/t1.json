@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] repository state, commit 59ccf49e, main refs, and dashboard-163827 run metadata\n[out_of_scope] ソース変更、旧 run の完了結果の継承\n59ccf49e と最新 main の差分、作業ツリー、旧 run の記録を確認し、旧 done ノードを一切継承しない新規実行計画と検証基準を確定する。terminal の ok:false は終了コードにかかわらず失敗として記録する。",
+  "deps": [],
+  "kind": "work"
+}

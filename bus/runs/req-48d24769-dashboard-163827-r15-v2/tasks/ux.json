@@ -1,0 +1,8 @@
+{
+  "id": "ux",
+  "goal": "agent-reviewer スキルを使い、概要・プロジェクト情報・needs の情報階層、未設定時導線、codd-gate／needs-diagnosis の可読性、状態書換を誘発しないことをUX観点でレビューする。",
+  "deps": [
+    "t9"
+  ],
+  "kind": "verify"
+}

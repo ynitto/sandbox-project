@@ -1,0 +1,9 @@
+{
+  "id": "t5",
+  "goal": "[scope] dashboard-163827 の単一設計書\n[out_of_scope] 実装、フック追加、UIからの状態書換\nslop-police スキルを使い、t3・t4の現物調査を根拠として、表示項目、未設定時の導線、done不変条件、公式契約境界、テスト観点を簡潔な設計書にまとめる。",
+  "deps": [
+    "t3",
+    "t4"
+  ],
+  "kind": "generate"
+}
