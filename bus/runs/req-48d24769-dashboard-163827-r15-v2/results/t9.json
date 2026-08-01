@@ -1,0 +1,20 @@
+{
+  "id": "t9",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 成果: [needs-gate-integration.test.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-49951-hnrm1efa/sandbox/tools/agent-dashboard/test/needs-gate-integration.test.js) に回帰テスト2件を追加。3設定状態、公式 needs 契約、codd-gate 失敗要約、読み取り専用 UI を固定。\n- 検証: 対象10件、隣接テスト、全テスト、対象 ESLint、`git diff --check` 成功。全体 lint は既存の `cowork.js:590` のみ失敗。\n- 前提・範囲外を含む報告: [dashboard-consistency-gate-regression-tests-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/t9/dashboard-consistency-gate-regression-tests-report.md)",
+  "finished_at": "2026-08-01T11:55:44Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "4b5b626399e97f34a987429cce0c761d8d38c8e4",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t9/dashboard-consistency-gate-regression-tests-report.md"
+  ]
+}
