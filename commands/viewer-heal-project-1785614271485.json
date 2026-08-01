@@ -1,0 +1,6 @@
+{
+  "command": "heal",
+  "reason": "agent-dashboard から今すぐ同期",
+  "actor": "agent-dashboard",
+  "ts": "2026-08-01T19:57:51.485Z"
+}
