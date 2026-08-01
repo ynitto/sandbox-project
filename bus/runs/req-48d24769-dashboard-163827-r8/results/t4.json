@@ -1,0 +1,11 @@
+{
+  "id": "t4",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "成果: 調査結果と不変条件を [trace-and-invariants.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r8/artifacts/t4/trace-and-invariants.md) に出力。コード変更なし。\n\n検証: dashboard 全テスト成功。関連テスト計34件＋UIテスト成功、`git diff --check` 成功、worktree clean。\n\n前提: 本タスクは参照・明文化のみ。結線表示は設定上の事実であり、実行成功を保証しない。\n\n未解決: 回帰NG生成経路は構造化 `failure-*` を渡さず、dashboard の散文fallbackに依存している。\n\n@followup agent-project: done 条件を変えず、regression failure の phase・command・診断をproducer側で構造化する。",
+  "finished_at": "2026-08-01T01:46:44Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t4/trace-and-invariants.md"
+  ]
+}

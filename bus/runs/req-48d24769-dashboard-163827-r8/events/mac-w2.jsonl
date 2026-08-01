@@ -1,3 +1,11 @@
 {"ts": "2026-08-01T01:39:25Z", "who": "mac-w2", "kind": "claimed", "node": "t1"}
 {"ts": "2026-08-01T01:41:33Z", "who": "mac-w2", "kind": "result", "node": "t1", "status": "done"}
 {"ts": "2026-08-01T01:41:33Z", "who": "mac-w2", "kind": "claimed", "node": "t4"}
+{"ts": "2026-08-01T01:46:44Z", "who": "mac-w2", "kind": "result", "node": "t4", "status": "done"}
+{"ts": "2026-08-01T01:46:44Z", "who": "mac-w2", "kind": "claimed", "node": "t7"}
+{"ts": "2026-08-01T01:48:41Z", "who": "mac-w2", "kind": "result", "node": "t7", "status": "done"}
+{"ts": "2026-08-01T01:48:41Z", "who": "mac-w2", "kind": "claimed", "node": "t5"}
+{"ts": "2026-08-01T01:50:47Z", "who": "mac-w2", "kind": "result", "node": "t5", "status": "done"}
+{"ts": "2026-08-01T01:50:47Z", "who": "mac-w2", "kind": "claimed", "node": "t8"}
+{"ts": "2026-08-01T01:52:21Z", "who": "mac-w2", "kind": "result", "node": "t8", "status": "done"}
+{"ts": "2026-08-01T01:52:21Z", "who": "mac-w2", "kind": "claimed", "node": "gate"}

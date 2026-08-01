@@ -1,0 +1,11 @@
+{
+  "id": "t8",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "[成果報告 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r8/artifacts/t8/report.md)\n\n既存テストが完了条件を満たしていたため変更なし。対象テスト・全テストとも成功し、worktree は clean です。",
+  "finished_at": "2026-08-01T01:52:21Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t8/report.md"
+  ]
+}
