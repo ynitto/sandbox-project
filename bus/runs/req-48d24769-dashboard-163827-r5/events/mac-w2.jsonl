@@ -12,3 +12,6 @@
 {"ts": "2026-07-31T22:45:47Z", "who": "mac-w2", "kind": "result", "node": "t9", "status": "done"}
 {"ts": "2026-07-31T22:45:47Z", "who": "mac-w2", "kind": "claimed", "node": "t8"}
 {"ts": "2026-07-31T22:47:39Z", "who": "mac-w2", "kind": "result", "node": "t8", "status": "done"}
+{"ts": "2026-08-01T00:14:36Z", "who": "mac-w2", "kind": "claimed", "node": "t10"}
+{"ts": "2026-08-01T00:17:17Z", "who": "mac-w2", "kind": "result", "node": "t10", "status": "done"}
+{"ts": "2026-08-01T00:17:17Z", "who": "mac-w2", "kind": "claimed", "node": "gate2"}

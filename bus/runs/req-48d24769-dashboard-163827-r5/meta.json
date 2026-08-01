@@ -9,7 +9,7 @@
     "branch": "ap/dashboard-163827"
   },
   "references": [],
-  "status": "failed",
+  "status": "running",
   "created_at": "2026-07-31T22:18:04Z",
   "verification_plan": {
     "version": 1,
@@ -30,8 +30,7 @@
   },
   "base_rev": "14b69449219f525599bda57903912041306c2c0c",
   "executor": "agent",
-  "orch_lease_until": 1785538170.592196,
-  "heartbeat_at": "2026-07-31T22:47:30Z",
-  "updated_at": "2026-07-31T22:48:03Z",
-  "failure_reason": "agent-flow run タイムアウト（1800.0s）"
+  "orch_lease_until": 1785543677.3313222,
+  "heartbeat_at": "2026-08-01T00:19:17Z",
+  "updated_at": "2026-08-01T00:14:36Z"
 }

@@ -1,0 +1,20 @@
+{
+  "id": "t10",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "### 成果\n\n[overview-ui.test.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-5226-nqmkxrsm/sandbox/tools/agent-dashboard/test/overview-ui.test.js) に20行追加し、以下を固定しました。\n\n- 別コマンド設定済みでも「設定あり・未結線」と表示\n- 両フック未結線時のバッジと有効化設定2行\n- 既存 needs の件数・action 状態・「対応する」導線\n\n検証: 対象テスト、全 `npm test`、`git diff --check` はすべて成功。変更は指定ファイルのみです。\n\n前提・範囲外: production parser のレビュー指摘2件は本タスク対象外として未変更。報告書は [work-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/t10/work-report.md) に保存しました。",
+  "finished_at": "2026-08-01T00:17:17Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "48a4353e6a3414359d6eae4944a4688d5473fd76",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t10/work-report.md"
+  ]
+}
