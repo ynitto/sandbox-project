@@ -5,7 +5,7 @@
   "paused": false,
   "node": "mac",
   "availability": "active",
-  "updated_iso": "2026-08-02 04:49:24",
+  "updated_iso": "2026-08-02 04:57:16",
   "fresh_after_sec": 600.0,
   "runtime": "darwin",
   "wsl_distro": null
