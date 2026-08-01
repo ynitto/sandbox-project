@@ -460,3 +460,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 17:07:02 verify: dashboard-163827 を https://github.com/ynitto/sandbox@ap/dashboard-163827（path=tools/agent-dashboard） のクローン内で検証
 - 2026-08-01 17:07:03 検証（receipt）: dashboard-163827 — 基準 2 件中 0 件 pass: [fail] 最新 target `main` が成果 revision に統合済み — 最新 target が成果 revision の祖先ではありません ／ [fail] 固定検証コマンド: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools — exit=1（agent-flow runner の receipt を検算して採用）
 - 2026-08-01 17:07:09 cycle 1: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-08-01 17:07:11 === agent-project 停止 reason=drained cycles=1 done=0 blocked=1 notified=True promoted=0 ===
