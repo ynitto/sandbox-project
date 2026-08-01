@@ -1,0 +1,11 @@
+{
+  "id": "gate5-post-rebase-review",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "判定: **fail**\n\n- `origin/main` (`eec68bdc5`) は HEAD (`d6e2c6d20`) の祖先ではない。\n- agent-reviewer: `REQUEST_CHANGES`。YAML folded scalar の追加インデント喪失により、結線状態を誤表示する。\n- 指定完了コマンド、`npm test`、`git diff --check` は成功。\n- 競合・スコープ外差分・production の契約外書込みはなし。\n- リポジトリ変更なし。\n\n成果物: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/gate5-post-rebase-review/result.md)",
+  "finished_at": "2026-08-01T01:29:34Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/gate5-post-rebase-review/result.md"
+  ]
+}

@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
@@ -12,11 +12,11 @@
 - charter: v1
 - after: codd-gate-163827, sibling-163827
 - assess: c=2 r=1 a=1
-- gate_ref: git: 715fcfb agent-project: state sync 2026-07-27T05:57:39
-- gate_ts: 2026-07-27 05:58:42
-- gate_branch: main
-- gate_vmsg: exit=0 途中で沈黙した工程は「失敗した工程」として名指しされる ok - 旧形式（工程の記録なし）でも「テストの失敗ではない」ことは言う ok - テストの失敗件数を要約する ok - コマンド不在を要約する ok - 解釈できない失敗は終了コードだけ添える ok - 手掛かりが無ければ要約しない（生の情報を隠さない） ok - 差分を成果物と内部の実行記録に分ける ok - 差分が内部の実
 - needs_reason: 繰り返し NG（retries=7）: agent-flow run タイムアウト（1800.0s）
-- needs_dr: DR-0006
 - last_run: req-48d24769-dashboard-163827-r5
-- flow_run: req-48d24769-dashboard-163827-r5
+- verification: {"pass": 1, "fail": 0, "unverifiable": 0, "report": "verifications/dashboard-163827/d6e2c6d203ca18ca74b3e9215d33ef2002344e4e.md", "receipt": true, "plan_digest": "sha256:c9a3ad7d676851bf40bdf50f2d2a0f30b266a149113f9d8b343269ad6f0593ee"}
+- gate_ref: commit eec68bdc5
+- gate_ts: 2026-08-01 10:29:41
+- gate_branch: main
+- gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
+- needs_dr: DR-0007
