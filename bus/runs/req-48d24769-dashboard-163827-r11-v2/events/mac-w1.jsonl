@@ -10,3 +10,6 @@
 {"ts": "2026-08-01T06:56:06Z", "who": "mac-w1", "kind": "result", "node": "uxgate", "status": "failed"}
 {"ts": "2026-08-01T07:51:30Z", "who": "mac-w1", "kind": "claimed", "node": "contractgate"}
 {"ts": "2026-08-01T07:55:13Z", "who": "mac-w1", "kind": "result", "node": "contractgate", "status": "failed"}
+{"ts": "2026-08-01T07:58:46Z", "who": "mac-w1", "kind": "claimed", "node": "t12-fix-configured-but-unwired-guidance"}
+{"ts": "2026-08-01T08:01:34Z", "who": "mac-w1", "kind": "result", "node": "t12-fix-configured-but-unwired-guidance", "status": "done"}
+{"ts": "2026-08-01T08:02:05Z", "who": "mac-w1", "kind": "claimed", "node": "t13-postfix-verification"}

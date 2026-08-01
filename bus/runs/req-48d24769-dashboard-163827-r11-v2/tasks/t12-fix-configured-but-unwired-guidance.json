@@ -1,0 +1,6 @@
+{
+  "id": "t12-fix-configured-but-unwired-guidance",
+  "goal": "競合解決済み commit 59ccf49e 起点の現行成果で、contractgate と uxgate の各 report.md を確認する。tools/agent-dashboard/src/renderer/renderer.js:1232-1252 付近を修正し、regression_cmd/intake_cmd が設定済みでも needs に codd-gate がなく未結線と判断される場合は、README と同じ設定編集／sibling CLI の有効化導線を表示する。needs-diagnosis の failureSummary・why・detail・failureContext.command の可読性を維持し、公式契約 needs/inbox/commands 以外へ書き込まず、UI から状態を書き換えない。overview-ui.test.js と必要最小限の関連テストを更新し、指定の grep、needs-diagnosis.test.js、overview-ui.test.js をすべて終了コード0で通す。work の terminal ok:false は失敗として報告する。",
+  "deps": [],
+  "kind": "work"
+}

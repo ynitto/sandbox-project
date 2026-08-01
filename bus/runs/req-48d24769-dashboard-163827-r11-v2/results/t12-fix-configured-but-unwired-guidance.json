@@ -1,0 +1,20 @@
+{
+  "id": "t12-fix-configured-but-unwired-guidance",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "## 成果\n\n`renderer.js` の導線判定を設定有無から結線状態へ変更。設定済み・未結線でも README 準拠例、設定編集、置換警告を表示します。UI・公式契約外への書き込みは追加していません。\n\n## 検証\n\n指定 grep、needs-diagnosis、overview-ui、関連テスト、全 `npm test`、ESLint、diff check：すべて exit 0。\n\n前提・未解決事項を含む報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t12-fix-configured-but-unwired-guidance/report.md)\n\n```json\n{\"ok\": true, \"issues\": []}\n```",
+  "finished_at": "2026-08-01T08:01:34Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "ed4697817ee2072c0ef3f44c57aff9d6e66910ab",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t12-fix-configured-but-unwired-guidance/report.md"
+  ]
+}

@@ -1,67 +1,33 @@
-# UX gate 検証結果
+# UX gate verification
 
 verify=fail
 
-## 判定
+## Blocking issue
 
-`regression_cmd` / `intake_cmd` の両方に codd-gate 以外のコマンドが設定済みで、両方とも未結線のケースでは、画面に「未結線」「一貫性ゲートの検査ではありません」と表示される一方、有効化ブロック、README 準拠の設定例、設定ファイルを開く導線、sibling CLI がすべて消える。needs 側は「概要タブの『一貫性ゲート』で有効化してください」と案内するため、利用者は概要へ移動しても対処できず行き止まりになる。
+- `tools/agent-dashboard/src/renderer/renderer.js:1232-1252`: `regression_cmd` と `intake_cmd` の両方に別用途コマンドが設定済みで、codd-gate は両方未結線のとき、`settings` が空になり有効化手順・設定ファイルを開く導線がすべて消える。画面は「未結線」「一貫性ゲートの検査ではありません」と示すだけで対処不能になり、元要求の「未結線時は README と同じ有効化導線」に反する。`needs.js:1488` の「概要タブで有効化」案内先も行き止まりになる。未結線時は導線を表示し、設定済みキーには既存処理を失う可能性と置換／併合判断、README 準拠の例、設定ファイルを開く操作を示すこと。sibling CLI は安全上 `regression_cmd` 未設定時だけでよい。
+- `tools/agent-dashboard/test/consistency-gate-ui.test.js:136-153`、`tools/agent-dashboard/test/overview-ui.test.js:345-352`: 上記の誤動作を「有効化導線を出さない」正解として重複固定している。未結線なら有効化・設定ファイルを開く導線・README 準拠例・設定済みキーの置換警告が出る期待へ修正すること。
 
-## issues
+## Independent checks
 
-1. `tools/agent-dashboard/src/renderer/renderer.js:1232-1254`
-   - `settings` を `!regressionConfigured` / `!intakeConfigured` で作り、`settings.length === 0` のとき `enable` を非表示にしている。このため「設定あり・未結線」では有効化手順が出ない。
-   - 未結線を基準に README の正準値と設定編集導線を表示し、既存の別コマンドを置換すると現在の処理が失われる旨を明記すること。sibling CLI は意図しない上書きを避けるため、現状どおり `regression_cmd` 未設定時だけ提示してよい。
-   - `tools/agent-dashboard/test/consistency-gate-ui.test.js:139-155` と `tools/agent-dashboard/test/overview-ui.test.js:345-353` の「両キー設定済みなら導線なし」という期待値を、未結線時には安全な手動編集導線が残る期待値へ修正すること。併せて両コマンド値・`設定: あり` 2件・両行の非 codd-gate 理由を固定すること。
+- `main...HEAD`: 4 files, 41 insertions, 19 deletions。差分は `tools/agent-dashboard` 配下のみ。
+- dashboard 全テスト: PASS（依存 `yaml` が未導入だったため `npm install --no-package-lock --ignore-scripts` 後に再実行）。
+- 対象4ファイル ESLint: PASS。
+- `git diff --check`: PASS。
+- needs diagnosis: `failureContext.command`、`failureSummary`、`why`、`detail`、`blocked`、未決着状態の保持を確認。
+- t7〜t9 の3コミットは現ブランチに存在。t6 の個別成果物／コミットは提示範囲になかったため、`main...HEAD` 全差分で取りこぼしを防いだ。
+- スコープ外変更なし。レビューのみでソース変更なし。
 
-2. `tools/agent-dashboard/test/consistency-gate-ui.test.js:139-155`、`tools/agent-dashboard/test/overview-ui.test.js:345-353`
-   - 重点ケースで `intakeCmd` の表示、`設定: あり` が2件あること、非 codd-gate 理由が両行に付くことを検証していない。intake 行だけ消える／未設定表示になる回帰でも通る。
-   - 上記3点を明示的に assert し、両フックの状態表示を固定すること。
+## agent-reviewer aggregate
 
-## 独立検証
+| perspective | verdict | Critical | Warning | Suggestion |
+|---|---|---:|---:|---:|
+| functional | REQUEST_CHANGES | 0 | 1 | 0 |
+| ai-antipattern | LGTM | 0 | 0 | 0 |
+| architecture | LGTM | 0 | 0 | 0 |
+| test | REQUEST_CHANGES | 0 | 1 | 0 |
 
-- main 差分: 4ファイル、41 insertions / 19 deletions。すべて `tools/agent-dashboard` 配下で、範囲外変更なし。
-- dashboard 全テスト: PASS。
-- 変更4ファイルの ESLint・構文検査: PASS。
-- `git diff --check main...HEAD -- tools/agent-dashboard`: PASS。
-- リポジトリ全体 ESLint: FAIL。ただし差分外4ファイルに既存エラー4件で、今回の判定理由には含めない。
-- needs の codd-gate command、`failureSummary`、`why`、`detail`、`blocked`、`decided=false` は保持され、実画面相当テストで検証失敗見出し・要約・context・判断材料の折り畳みも維持される。
-
-## agent-reviewer 集約
-
-| perspective | 判定 | Critical | Warning | Suggestion |
-|---|---:|---:|---:|---:|
-| functional | Request Changes | 0 | 1 | 0 |
-| ai-antipattern | Request Changes | 0 | 1 | 0 |
-| architecture | LGTM | 0 | 0 | 1 |
-| test | Request Changes | 0 | 1 | 0 |
-
-architecture の suggestion（overview 専用関数の配置）は範囲外リファクタであり、合否には含めない。
-
-<!-- verdict-json -->
-```json
-{
-  "skill": "agent-reviewer",
-  "verdict": "REQUEST_CHANGES",
-  "blocking": true,
-  "perspectives_executed": ["functional", "ai-antipattern", "architecture", "test"],
-  "aggregated_blocking_issues": [
-    {
-      "from_perspective": "functional, ai-antipattern, test",
-      "severity": "Warning",
-      "summary": "別コマンドが設定済みの未結線状態で有効化手順と設定編集導線が消える",
-      "location": "tools/agent-dashboard/src/renderer/renderer.js:1232-1254"
-    },
-    {
-      "from_perspective": "test",
-      "severity": "Warning",
-      "summary": "両キー設定済み・両方未結線ケースで intake_cmd と両キーの設定状態を固定していない",
-      "location": "tools/agent-dashboard/test/consistency-gate-ui.test.js:139"
-    }
-  ]
-}
-```
-<!-- verdict-json -->
+同一根因を functional と test が検出したため、issues は1件へ集約した。
 
 ```json
-{"ok": false, "issues": ["tools/agent-dashboard/src/renderer/renderer.js:1232-1254: 両キーに別コマンドが設定済みだと、codd-gate 未結線でも有効化手順と設定編集導線が消える", "tools/agent-dashboard/test/consistency-gate-ui.test.js:139-155 / test/overview-ui.test.js:345-353: intake_cmd と両キーの設定状態を固定していない"]}
+{"ok": false, "issues": ["tools/agent-dashboard/src/renderer/renderer.js:1232-1252 で、両キーが別用途コマンドとして設定済みかつ codd-gate 未結線の場合に有効化導線が消える。未結線時は設定編集・README準拠例・設定ファイルを開く導線を表示し、test/consistency-gate-ui.test.js:136-153 と test/overview-ui.test.js:345-352 の逆向き期待値も修正すること"]}
 ```

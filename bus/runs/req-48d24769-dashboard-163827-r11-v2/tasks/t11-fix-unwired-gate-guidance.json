@@ -1,0 +1,9 @@
+{
+  "id": "t11-fix-unwired-gate-guidance",
+  "goal": "contractgate と uxgate の指摘を修正する。tools/agent-dashboard/src/renderer/renderer.js:1232-1252 周辺の表示条件を見直し、regression_cmd/intake_cmd が設定済みでも codd-gate が未結線なら README と同じ設定編集／sibling CLI の有効化導線を表示する。needs の codd-gate・needs-diagnosis の failureSummary/why/detail/command の可読性を維持し、公式契約 needs/inbox/commands 以外へ書き込まない。uxgate の report.md に記載された全指摘も反映し、agent-reviewer による UX レビューを行う。最後に指定の grep、needs-diagnosis.test.js、overview-ui.test.js をすべて終了コード0で実行する。",
+  "deps": [
+    "contractgate",
+    "uxgate"
+  ],
+  "kind": "work"
+}

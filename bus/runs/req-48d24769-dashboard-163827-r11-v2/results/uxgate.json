@@ -1,0 +1,17 @@
+{
+  "id": "uxgate",
+  "who": "mac-w2",
+  "status": "failed",
+  "output": "verify=fail\n\n- [renderer.js](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-98795-et3xu_am/sandbox/tools/agent-dashboard/src/renderer/renderer.js:1232): 両キーが別用途コマンドとして設定済みかつ codd-gate 未結線の場合、有効化導線が消えます。未結線時は設定編集・README準拠例・設定ファイルを開く導線を表示すべきです。\n- `consistency-gate-ui.test.js:136` と `overview-ui.test.js:345` が、この誤動作を期待値として固定しています。\n- 全テスト、対象 ESLint、diff check は PASS。範囲外差分なし。\n- 詳細: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/uxgate/report.md)\n\n{\"ok\": false, \"issues\": [\"tools/agent-dashboard/src/renderer/renderer.js:1232-1252 で、両キーが別用途コマンドとして設定済みかつ codd-gate 未結線の場合に有効化導線が消える。未結線時は設定編集・README準拠例・設定ファイルを開く導線を表示し、test/consistency-gate-ui.test.js:136-153 と test/overview-ui.test.js:345-352 の逆向き期待値も修正すること\"]}",
+  "finished_at": "2026-08-01T07:57:59Z",
+  "node": "mac",
+  "data": {
+    "ok": false,
+    "issues": [
+      "tools/agent-dashboard/src/renderer/renderer.js:1232-1252 で、両キーが別用途コマンドとして設定済みかつ codd-gate 未結線の場合に有効化導線が消える。未結線時は設定編集・README準拠例・設定ファイルを開く導線を表示し、test/consistency-gate-ui.test.js:136-153 と test/overview-ui.test.js:345-352 の逆向き期待値も修正すること"
+    ]
+  },
+  "artifacts": [
+    "artifacts/uxgate/report.md"
+  ]
+}
