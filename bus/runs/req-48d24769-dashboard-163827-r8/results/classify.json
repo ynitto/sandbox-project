@@ -1,0 +1,8 @@
+{
+  "id": "classify",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "class=renderer-ui — 既存設定を壊し得る有効化案内、`--config` 未確認時の表示限定、`codd-gate` 由来判定の絞り込み  \nclass=project-contract-boundary — 共通 YAML parser 利用、公式結線判定との一致、解決済み config path が現契約外である旨の表示  \nclass=test-expectation — main 統合後の既存＋ゲート系テスト併存、YAML 境界値、設定保持、canonical verify 判定の契約テスト  \nclass=@followup — agent-project の instance/status 契約へ解決済み config path を追加する実装。UI からの状態書換は要求せず対象外  \nclass=integration-blocker — 最新 main との6ファイルの競合解消と統合後テスト再実行",
+  "finished_at": "2026-08-01T02:01:21Z",
+  "node": "mac"
+}
