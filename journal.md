@@ -475,3 +475,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 17:19:06 検証 receipt を不採用（fail-close・local runner へ）: dashboard-163827 — plan_digest が投入時の正本と一致しない; result_rev が採用対象と一致しない（receipt=ed4697817ee2 対象=77c6948acc49）; 固定コマンドが plan と同数・同順でない
 - 2026-08-01 17:19:06 検証（receipt）: dashboard-163827 — 基準 1 件中 1 件 pass（local runner がこのノードで実行（run の receipt なし））
 - 2026-08-01 17:19:12 cycle 1: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-08-01 17:19:15 === agent-project 停止 reason=drained cycles=1 done=0 blocked=1 notified=True promoted=0 ===
