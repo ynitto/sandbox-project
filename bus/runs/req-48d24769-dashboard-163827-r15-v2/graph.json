@@ -144,7 +144,21 @@
         "lint-fix-r15"
       ],
       "kind": "work"
+    },
+    "final-synth-r15": {
+      "goal": "待機中の synth を差し替え、競合解決済みの現行成果を統合する。tools/agent-dashboard 内の実差分、設計書、README 有効化導線、regression_cmd/intake_cmd の可視化、needs の codd-gate／needs-diagnosis 可読性、公式契約外への書込みがないこと、UXレビュー結果、および final-gate-r15 の全検証 pass を一つの最終報告にまとめる。古い run や解消済み gate fail を現状として継承しない。",
+      "deps": [
+        "final-gate-r15"
+      ],
+      "kind": "work"
+    },
+    "completion-gate-r15": {
+      "goal": "待機中の done を差し替え、final-synth-r15 完了後に指定された完了条件 `echo \"done\"` を実行し、終了コード 0、terminal ok:true、出力に ok:false がないことを確認して記録する。失敗した場合は完了扱いにしない。",
+      "deps": [
+        "final-synth-r15"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 1
+  "iteration": 2
 }

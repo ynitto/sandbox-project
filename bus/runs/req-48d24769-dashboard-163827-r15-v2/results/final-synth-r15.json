@@ -1,0 +1,20 @@
+{
+  "id": "final-synth-r15",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "[最終報告 report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/final-synth-r15/report.md)\n\n現行成果を統合し、競合で欠落した未使用変数削除を復元。全体テスト・lint・関連テスト・差分・競合・スコープ・done 不変条件はすべて pass。\n\nterminal ok:true",
+  "finished_at": "2026-08-01T19:48:13Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "016a4bde9bf90b57d6cdc35571fcb17674079ab9",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/final-synth-r15/report.md"
+  ]
+}

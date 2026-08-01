@@ -1,0 +1,8 @@
+{
+  "id": "final-synth-r15",
+  "goal": "待機中の synth を差し替え、競合解決済みの現行成果を統合する。tools/agent-dashboard 内の実差分、設計書、README 有効化導線、regression_cmd/intake_cmd の可視化、needs の codd-gate／needs-diagnosis 可読性、公式契約外への書込みがないこと、UXレビュー結果、および final-gate-r15 の全検証 pass を一つの最終報告にまとめる。古い run や解消済み gate fail を現状として継承しない。",
+  "deps": [
+    "final-gate-r15"
+  ],
+  "kind": "work"
+}

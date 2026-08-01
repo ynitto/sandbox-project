@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: doing
+- status: review
 - source: charter
 - priority: 0
 - verify: `echo "done"`
@@ -12,14 +12,15 @@
 - charter: v1
 - after: codd-gate-163827, sibling-163827
 - assess: c=2 r=1 a=1
-- gate_ref: commit 48d24769
-- gate_ts: 2026-08-01 11:49:35
-- gate_branch: main
-- gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
 - rev: 2
 - edited: human
-- verification: {"pass": 1, "fail": 0, "unverifiable": 0, "report": "verifications/dashboard-163827/77c6948acc498355a8e215e25d725dffb39d3c4c.md", "receipt": true, "plan_digest": "sha256:146cdf038e5db43cfbc5b1b47abe53a3d7b205e1e7093a22b6ee54c96f1304bc"}
 - needs_reason: 繰り返し NG（retries=18）: agent-flow run タイムアウト（1800.0s）
-- needs_dr: DR-0017
 - last_run: req-48d24769-dashboard-163827-r15-v2
-- flow_run: req-48d24769-dashboard-163827-r15-v2
+- verification: {"pass": 2, "fail": 0, "unverifiable": 0, "report": "verifications/dashboard-163827/016a4bde9bf90b57d6cdc35571fcb17674079ab9.md", "receipt": true, "plan_digest": "sha256:146cdf038e5db43cfbc5b1b47abe53a3d7b205e1e7093a22b6ee54c96f1304bc"}
+- gate_ref: commit 48d24769
+- gate_ts: 2026-08-02 04:49:21
+- gate_branch: main
+- gate_vmsg: 基準 2 件中 2 件 pass（agent-flow runner の receipt を検算して採用）
+- gate_target: main
+- gate_target_rev: 9c196643e1a8e7a3efd3e47cc36f535f782d438a
+- needs_dr: DR-0018

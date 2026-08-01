@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "task_id": "dashboard-163827",
+  "plan_digest": "sha256:146cdf038e5db43cfbc5b1b47abe53a3d7b205e1e7093a22b6ee54c96f1304bc",
+  "result_rev": "016a4bde9bf90b57d6cdc35571fcb17674079ab9",
+  "workspace": "https://github.com/ynitto/sandbox",
+  "commands": [
+    {
+      "command": "echo \"done\"",
+      "exit_code": 0,
+      "output_tail": "done"
+    }
+  ],
+  "criteria": [],
+  "integration": {
+    "target": "main",
+    "target_rev": "9c196643e1a8e7a3efd3e47cc36f535f782d438a",
+    "verdict": "pass",
+    "conflict_files": []
+  },
+  "verdict": "pass",
+  "started_at": "2026-08-01T19:49:16Z",
+  "finished_at": "2026-08-01T19:49:16Z",
+  "verified_by": "orchestrator"
+}

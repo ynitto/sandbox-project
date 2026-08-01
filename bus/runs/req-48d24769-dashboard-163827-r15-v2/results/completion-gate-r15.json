@@ -1,0 +1,11 @@
+{
+  "id": "completion-gate-r15",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "完了条件 `echo \"done\"` を実行・記録しました。\n\n- 出力: `done`\n- 終了コード: `0`\n- terminal: `ok:true`\n- `ok:false`: なし\n- リポジトリ変更: なし\n\n成果物: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r15-v2/artifacts/completion-gate-r15/report.md)\n\nterminal ok:true",
+  "finished_at": "2026-08-01T19:49:03Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/completion-gate-r15/report.md"
+  ]
+}

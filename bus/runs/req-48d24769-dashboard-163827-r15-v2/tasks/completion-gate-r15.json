@@ -1,0 +1,8 @@
+{
+  "id": "completion-gate-r15",
+  "goal": "待機中の done を差し替え、final-synth-r15 完了後に指定された完了条件 `echo \"done\"` を実行し、終了コード 0、terminal ok:true、出力に ok:false がないことを確認して記録する。失敗した場合は完了扱いにしない。",
+  "deps": [
+    "final-synth-r15"
+  ],
+  "kind": "work"
+}

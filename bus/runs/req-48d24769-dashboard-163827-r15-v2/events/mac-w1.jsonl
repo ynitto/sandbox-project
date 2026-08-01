@@ -23,3 +23,7 @@
 {"ts": "2026-08-01T13:09:26Z", "who": "mac-w1", "kind": "claimed", "node": "lint-fix-r15"}
 {"ts": "2026-08-01T19:38:24Z", "who": "mac-w1", "kind": "claimed", "node": "gate"}
 {"ts": "2026-08-01T19:41:58Z", "who": "mac-w1", "kind": "result", "node": "gate", "status": "failed"}
+{"ts": "2026-08-01T19:44:23Z", "who": "mac-w1", "kind": "claimed", "node": "final-synth-r15"}
+{"ts": "2026-08-01T19:48:13Z", "who": "mac-w1", "kind": "result", "node": "final-synth-r15", "status": "done"}
+{"ts": "2026-08-01T19:48:13Z", "who": "mac-w1", "kind": "claimed", "node": "completion-gate-r15"}
+{"ts": "2026-08-01T19:49:03Z", "who": "mac-w1", "kind": "result", "node": "completion-gate-r15", "status": "done"}
