@@ -1,5 +1,5 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: blocked
+- status: doing
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
@@ -16,8 +16,11 @@
 - gate_ts: 2026-08-01 11:49:35
 - gate_branch: main
 - gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
-- feedback: コンフリクトを解消する
-- last_run: req-48d24769-dashboard-163827-r10
 - verification: {"pass": 1, "fail": 1, "unverifiable": 0, "report": "verifications/dashboard-163827/635bc8d17c339fa6d29a9f2efd9934bc09ab8d42.md", "receipt": true, "plan_digest": "sha256:9d74bfc8a2334687871261c7a13ae6b9fd6d1ac8eea5bbe126df9b6afa6aa699"}
 - needs_reason: 繰り返し NG（retries=11）: 基準 2 件中 1 件 pass: [fail] 最新 target `main` が成果 revision に統合済み — 最新 target が成果 revision の祖先ではありません（agent-flow runner の receipt を検算して採用）
 - needs_dr: DR-0010
+- feedback: 最新 main を統合し、6ファイルの競合を解消して全検証をやり直す。main由来のMarkdown末尾空白は競合として扱わない。
+- edited: human
+- rev: 1
+- last_run: req-48d24769-dashboard-163827-r11-v1
+- flow_run: req-48d24769-dashboard-163827-r11-v1

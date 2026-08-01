@@ -1,0 +1,11 @@
+{
+  "id": "base-sync-fix-11",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "(a) 成果: 未完了。worktree は clean ですが、規約で禁止された rebase と、許可範囲外の `docs/` 編集は実施していません。main は HEAD に未取り込みで、指定 docs 34行目の trailing whitespace も残存しています。\n\n(b) 検証:\n\n- 指定 grep: 終了コード 0\n- `needs-diagnosis.test.js`: 終了コード 0、12 passed\n- `overview-ui.test.js`: 終了コード 0\n- `git diff --check`: 終了コード 0\n- 未解決 index・競合マーカー: なし\n- `main` 祖先確認: 終了コード 1（未取り込み）\n\n(c) 前提: git 利用規約と `tools/agent-dashboard` 限定の書込範囲を、矛盾する作業指示より優先しました。agent-project 本体や UI 状態書換は変更していません。\n\n[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v1/artifacts/base-sync-fix-11/report.md)\n\n@followup agent-flow 側で rebase を実施し、docs を許可範囲へ追加して trailing whitespace を除去する。\n\n{\"ok\": false, \"issues\": [\"git 利用規約により最新 main への rebase を実行できない\", \"許可範囲外の docs ファイルに trailing whitespace が残っている\"]}",
+  "finished_at": "2026-08-01T06:14:28Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/base-sync-fix-11/report.md"
+  ]
+}

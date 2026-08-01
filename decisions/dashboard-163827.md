@@ -62,3 +62,10 @@
 - affects : dashboard-163827 → ready
 - learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: コンフリクトを解消する
 
+## DR-0011  2026-08-01  actor: nitto
+- context : dashboard-163827（dashboard で一貫性ゲートの状態把握と有効化を支援する）を人が修正（revise）
+- action  : revise
+- reason  : base-syncの末尾空白誤判定を修正済みのため新規試行
+- affects : feedback 注入; dashboard-163827 → ready
+- learn: dashboard で一貫性ゲートの状態把握と有効化を支援する :: 最新 main を統合し、6ファイルの競合を解消して全検証をやり直す。main由来のMarkdown末尾空白は競合として扱わない。
+
