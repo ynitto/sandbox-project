@@ -1,0 +1,8 @@
+{
+  "id": "base-sync-fix-12",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "(a) 成果: 編集なし。指定 worktree は clean だが、`main` は HEAD に未取り込み（HEAD `635bc8d`、main `3756b4f`）。仮想マージでは `tools/agent-dashboard` 内9ファイルに競合が発生。指定 docs 行には末尾空白2文字が残るものの、許可範囲外のため修正不可。\n\n(b) 検証:\n\n- 指定 grep・2テスト: 終了コード0\n- `needs-diagnosis.test.js`: 12 passed\n- `overview-ui.test.js`: all tests passed\n- 現作業ツリー: 競合マーカーなし、`git diff --check` 問題なし、未コミット差分なし\n\n(c) 前提・未解決事項: 「変更してよいのは `tools/agent-dashboard` 配下のみ」と履歴操作禁止を優先した。main 取り込み、docs の末尾空白除去、仮想マージで検出された競合解消は未完了。\n\n@followup main 同期を agent-flow 側で実施し、docs 修正を許可された別タスクで末尾空白を除去する必要がある。\n\n{\"ok\": false, \"issues\": [\"main が HEAD に取り込まれていない\", \"仮想マージで tools/agent-dashboard 内9ファイルに競合が発生する\", \"指定 docs 行の末尾空白は許可フォルダ外のため除去できない\"]}",
+  "finished_at": "2026-08-01T05:18:48Z",
+  "node": "mac"
+}

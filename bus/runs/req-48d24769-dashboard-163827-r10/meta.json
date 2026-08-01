@@ -9,7 +9,7 @@
     "branch": "ap/dashboard-163827"
   },
   "references": [],
-  "status": "running",
+  "status": "done",
   "created_at": "2026-08-01T05:03:40Z",
   "verification_plan": {
     "version": 2,
@@ -33,7 +33,7 @@
   },
   "base_rev": "8b8b4abad5e3dda6cbefb14c5e23ecb358851359",
   "executor": "agent",
-  "orch_lease_until": 1785561628.611596,
-  "heartbeat_at": "2026-08-01T05:18:28Z",
-  "updated_at": "2026-08-01T05:16:28Z"
+  "orch_lease_until": 1785561830.609783,
+  "heartbeat_at": "2026-08-01T05:21:50Z",
+  "updated_at": "2026-08-01T05:22:10Z"
 }

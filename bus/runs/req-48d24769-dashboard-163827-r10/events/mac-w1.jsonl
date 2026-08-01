@@ -1,1 +1,4 @@
 {"ts": "2026-08-01T05:16:28Z", "who": "mac-w1", "kind": "claimed", "node": "base-sync-fix-12"}
+{"ts": "2026-08-01T05:18:48Z", "who": "mac-w1", "kind": "result", "node": "base-sync-fix-12", "status": "done"}
+{"ts": "2026-08-01T05:19:10Z", "who": "mac-w1", "kind": "claimed", "node": "base-sync-fix-13"}
+{"ts": "2026-08-01T05:22:07Z", "who": "mac-w1", "kind": "result", "node": "base-sync-fix-13", "status": "done"}
