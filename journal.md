@@ -580,3 +580,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-02 05:59:23 verify: enq-20260718-163827 を https://github.com/ynitto/sandbox@main（path=tools/agent-project） のクローン内で検証
 - 2026-08-02 06:05:47 検証（receipt）: enq-20260718-163827 — 基準 2 件中 2 件 pass（local runner がこのノードで実行（run の receipt なし））
 - 2026-08-02 06:05:48 cycle 2: enq-20260718-163827 → 検収待ち（承認ゲート） — commit 48d24769
+- 2026-08-02 06:05:51 === agent-project 停止 reason=drained cycles=2 done=0 blocked=0 notified=True promoted=0 ===
