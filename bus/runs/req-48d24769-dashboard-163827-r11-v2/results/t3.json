@@ -1,0 +1,11 @@
+{
+  "id": "t3",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "調査完了。対象表示は main に実装済みのため、コード変更はありません。\n\n- 最小描画箇所: `renderer.js:1190` の `consistencyGateHtml(p)`\n- 概要への挿入: `sections/overview.js:341`\n- 設定ファイルを開く導線: `renderer.js:1307`\n- 対象テスト・構文チェック: 成功\n- 全体テスト: `yaml` 未導入で停止（変更起因ではない）\n- 前提・範囲外事項を含む成果物: [renderer-overview-findings.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t3/renderer-overview-findings.md)",
+  "finished_at": "2026-08-01T06:31:34Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t3/renderer-overview-findings.md"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "t2",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 成果物: [project-info-path.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t2/project-info-path.md)\n- `readProject().consistencyGate` を再利用可能な結合点として特定。欠損・異常時のデータ形と設定探索順を記録。\n- コード変更なし。UI テスト・構文検査は成功。main 側テストは依存 `yaml` 未導入のため未実行。\n- 未解決: agent-project の明示的な `--config` は dashboard から判別不能。別タスク候補として記載。",
+  "finished_at": "2026-08-01T06:34:59Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t2/project-info-path.md"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "basegate",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=pass\n\n- HEAD は `59ccf49e`、第2親は最新リモート `main=3756b4f`。\n- 未解決競合・conflict marker・作業差分はいずれも0件。\n- 6件の content conflict 解決を再確認。\n- ローカル `main=45bb579` は未統合だが、リモート未反映の docs 1ファイルのみ。merge予行も競合なし。\n- ソース変更なし。\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-08-01T06:37:31Z",
+  "node": "mac",
+  "data": {
+    "ok": true
+  }
+}

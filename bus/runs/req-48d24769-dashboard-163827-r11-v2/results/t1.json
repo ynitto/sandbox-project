@@ -1,0 +1,11 @@
+{
+  "id": "t1",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "成果物: [git-baseline-and-run-plan.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t1/git-baseline-and-run-plan.md)\n\n59ccf49e は target main `3756b4f` を第2親に持ち、6ファイルの content conflict は解決済み。作業ツリー・index の未解決競合は0件です。\n\nローカル main は `45bb579` へ1 commit進んでいますが、追加は範囲外の docs 1ファイルのみで、merge予行でも競合なし。ソース変更はありません。",
+  "finished_at": "2026-08-01T06:31:57Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t1/git-baseline-and-run-plan.md"
+  ]
+}

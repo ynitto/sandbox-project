@@ -1,0 +1,11 @@
+{
+  "id": "t4",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 成果: 既存実装が公式契約を満たすため、コード変更なし。読み取り境界と README 準拠手順を[成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t4/report.md)へ出力。\n- 検証: 全テスト・関連 ESLint は PASS。作業ツリー差分なし。\n- 未解決: 全体 lint に対象外の既存エラー4件。`@followup` として報告済み。",
+  "finished_at": "2026-08-01T06:35:17Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/t4/report.md"
+  ]
+}
