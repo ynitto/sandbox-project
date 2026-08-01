@@ -402,3 +402,7 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 11:23:38 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-01 11:23:38 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-01 11:23:38 run 再開: dashboard-163827 は req-48d24769-dashboard-163827-r8 の失敗ノードだけをやり直します（done は温存）
+- 2026-08-01 11:49:35 verify: dashboard-163827 を https://github.com/ynitto/sandbox@ap/dashboard-163827（path=tools/agent-dashboard） のクローン内で検証
+- 2026-08-01 11:49:35 検証（receipt）: dashboard-163827 — 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
+- 2026-08-01 11:49:35 cycle 1: dashboard-163827 → 検収待ち（承認ゲート） — commit 48d24769
+- 2026-08-01 11:49:35 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
