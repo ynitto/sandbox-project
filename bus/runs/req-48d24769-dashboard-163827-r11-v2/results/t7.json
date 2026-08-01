@@ -1,0 +1,20 @@
+{
+  "id": "t7",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "実装完了。未設定キーがある場合だけ README 準拠の設定編集／sibling CLI 導線を表示します。\n\n- 全テスト・ESLint・構文検査・diff check: PASS\n- 範囲外変更なし、commit/push 未実施\n- 成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t7/report.md)\n\n```json\n{\"ok\": true, \"issues\": []}\n```",
+  "finished_at": "2026-08-01T06:44:32Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "2a0b2eb0589fbe0638758d1db556bb453c911d20",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t7/report.md"
+  ]
+}

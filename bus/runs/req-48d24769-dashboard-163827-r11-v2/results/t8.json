@@ -1,0 +1,20 @@
+{
+  "id": "t8",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "## 成果\n\n`tools/agent-dashboard/test/needs-diagnosis.test.js` を更新しました。\n\n- `failureContext.command` の codd-gate 情報を検証\n- 既存の `failureSummary`、`why`、`detail` が欠落しないことを検証\n- `blocked`・未決着状態の維持を確認\n- production code・overview UI テスト・状態変更機能は変更なし\n\n## 検証\n\n- 対象テスト: PASS（12件）\n- ESLint: PASS\n- dashboard 全テスト: PASS\n- `git diff --check`: PASS\n\n前提・範囲外事項を含む成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t8/report.md)\n\n```json\n{\"ok\": true, \"issues\": []}\n```",
+  "finished_at": "2026-08-01T06:47:07Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "86699a1e5072f9dfeb87622ccc4c5f49bd7a53a9",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t8/report.md"
+  ]
+}

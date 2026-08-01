@@ -1,0 +1,20 @@
+{
+  "id": "t9",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "`tools/agent-dashboard/test/overview-ui.test.js` に最小回帰テストを追加しました。\n\n- 設定済み／未設定、ゲート状態、README準拠の設定例と sibling CLI 導線を検証。\n- 構文検査・ESLint・diff check: PASS。\n- 依存 t7 統合相当: PASS。現HEAD単体はt7未統合のため想定どおりFAIL。\n- production code・needs-diagnosis・外部CLI実行は変更なし。\n\n成果報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/t9/report.md)\n\n```json\n{\"ok\": true, \"issues\": []}\n```",
+  "finished_at": "2026-08-01T06:47:49Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "98cb4584aecb52904f5ca956eac5b5e91f7cc939",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  },
+  "artifacts": [
+    "artifacts/t9/report.md"
+  ]
+}
