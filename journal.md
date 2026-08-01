@@ -383,3 +383,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 10:29:41 検証（receipt）: dashboard-163827 — 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
 - 2026-08-01 10:29:41 cycle 1: dashboard-163827 → 検収待ち（承認ゲート） — commit eec68bdc5
 - 2026-08-01 10:29:42 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
+- 2026-08-01 10:29:44 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-08-01 10:29:44 === project watch: 監視中（charter 更新/フィードバック待ち）===
