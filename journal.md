@@ -446,3 +446,6 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 15:26:27 revise: dashboard-163827 — feedback 注入（実行中→積み直し予約）
 - 2026-08-01 15:26:27 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r11-v1 を cancelled（revise により同期 run を中断）
 - 2026-08-01 15:26:28 cycle 1: dashboard-163827 → 人の revise により積み直し（この試行の結果は確定しない）
+- 2026-08-01 15:56:31 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r11-v2 を failed（agent-flow run タイムアウト（1800.0s））
+- 2026-08-01 15:56:37 cycle 2: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-08-01 15:56:38 === agent-project 停止 reason=drained cycles=2 done=0 blocked=1 notified=True promoted=0 ===

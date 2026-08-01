@@ -1,0 +1,18 @@
+{
+  "id": "uxgate",
+  "who": "mac-w1",
+  "status": "failed",
+  "output": "verify=fail\n\n- `renderer.js:1232-1254`: 両キーに別コマンドが設定済みだと、未結線でも有効化手順・設定編集導線が消えます。\n- 関連テストは `intake_cmd` 表示と両キーの設定状態を十分固定していません。\n- 全テスト・対象ESLint・diff checkはPASS。範囲外変更なし。詳細は [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r11-v2/artifacts/uxgate/report.md)。\n\n{\"ok\":false,\"issues\":[\"tools/agent-dashboard/src/renderer/renderer.js:1232-1254: 両キーに別コマンドが設定済みだと、codd-gate未結線でも有効化手順と設定編集導線が消える\",\"tools/agent-dashboard/test/consistency-gate-ui.test.js:139-155 / test/overview-ui.test.js:345-353: intake_cmdと両キーの設定状態を固定していない\"]}",
+  "finished_at": "2026-08-01T06:56:06Z",
+  "node": "mac",
+  "data": {
+    "ok": false,
+    "issues": [
+      "tools/agent-dashboard/src/renderer/renderer.js:1232-1254: 両キーに別コマンドが設定済みだと、codd-gate未結線でも有効化手順と設定編集導線が消える",
+      "tools/agent-dashboard/test/consistency-gate-ui.test.js:139-155 / test/overview-ui.test.js:345-353: intake_cmdと両キーの設定状態を固定していない"
+    ]
+  },
+  "artifacts": [
+    "artifacts/uxgate/report.md"
+  ]
+}

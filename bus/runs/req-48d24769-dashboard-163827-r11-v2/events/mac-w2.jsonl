@@ -13,3 +13,4 @@
 {"ts": "2026-08-01T06:44:32Z", "who": "mac-w2", "kind": "claimed", "node": "t8"}
 {"ts": "2026-08-01T06:47:07Z", "who": "mac-w2", "kind": "result", "node": "t8", "status": "done"}
 {"ts": "2026-08-01T06:47:50Z", "who": "mac-w2", "kind": "claimed", "node": "contractgate"}
+{"ts": "2026-08-01T06:53:01Z", "who": "mac-w2", "kind": "result", "node": "contractgate", "status": "failed"}
