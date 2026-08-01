@@ -1,0 +1,12 @@
+{
+  "error": "approve enq-20260718-163827 が失敗 (exit 1): >>> 注意: github は未対応のフォージです（MR/PR の自動作成・決着は行いません）。検収は dashboard のボタンで行ってください",
+  "failed_at": "2026-08-02 08:47:52",
+  "command": {
+    "command": "approve",
+    "id": "enq-20260718-163827",
+    "reason": "成果を確認して完了を承認",
+    "actor": "agent-dashboard",
+    "ts": "2026-08-01T23:47:49.729Z",
+    "complete": true
+  }
+}
