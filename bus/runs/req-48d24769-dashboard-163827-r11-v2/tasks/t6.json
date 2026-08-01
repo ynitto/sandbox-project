@@ -1,0 +1,9 @@
+{
+  "id": "t6",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の overview/project-info 描画記号\n[out_of_scope] 設定変更ボタン、done 状態の書換え、needs-diagnosis 表示\n既存 UI パターンで regression_cmd、intake_cmd の設定有無と「一貫性ゲート」の状態を簡潔かつ識別可能に表示する。",
+  "deps": [
+    "t3",
+    "t5"
+  ],
+  "kind": "work"
+}

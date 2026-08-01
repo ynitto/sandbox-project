@@ -1,0 +1,8 @@
+{
+  "id": "repair",
+  "goal": "[scope] classify が列挙した各失敗の単一モジュールまたは単一結合点\n[out_of_scope] 失敗と無関係なリファクタリング、1子タスク30行超の変更、done 状態書換え、agent-project フック実装\n失敗項目ごとに最大3並列の修正子タスクを動的展開し、各子タスクを30行以内に保つ。対象 gate を毎回新規実行し、terminal ok:false を含む失敗が残る間は分類・修正・検証を反復し、全項目が ok:true になった時だけ完了する。",
+  "deps": [
+    "classify"
+  ],
+  "kind": "map"
+}

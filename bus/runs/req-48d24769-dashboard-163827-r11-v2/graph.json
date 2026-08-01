@@ -1,0 +1,174 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] 最新 main 統合後の再確認と UI 変更を段階的に進めつつ、契約・UX・機械ゲートの検証を並行化し、terminal ok:false を含む失敗がなくなるまで反復する必要があるため。（粒度 finest）",
+    "granularity": "finest"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] Git 履歴、commit 59ccf49e、現在の main、作業ツリーの競合状態\n[out_of_scope] ソース変更、旧 run の done 結果の継承、Markdown 末尾空白だけを競合とする判定\n59ccf49e が最新 main 統合・6ファイル競合解決済みの起点であることを確認し、差分と未解決競合を記録した新規 run の実行計画を確立する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の概要・プロジェクト情報生成記号\n[out_of_scope] renderer.js、状態変更処理、agent-project 本体のフック実装\nregression_cmd と intake_cmd がプロジェクト情報へ渡る現在の経路、既存 UI 向けデータ形、欠損時の表現を調査し、再利用可能な結合点を特定する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の overview 描画記号\n[out_of_scope] main/project.js、needs-diagnosis、設定を書き換える操作\n概要画面で使われる既存のラベル・状態表示・案内リンクのパターンを調査し、一貫性ゲート表示を追加する最小の描画箇所を特定する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-dashboard の公式 needs/inbox/commands 読み取り境界と README の有効化手順\n[out_of_scope] 非公式ファイルへの書込み、README の改稿、agent-project のフック追加\n公式契約だけからゲート状態を判断できることを確認し、未結線時に示す設定編集および sibling CLI の README 準拠手順を抽出する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "basegate": {
+      "goal": "[scope] t1 の Git 状態確認結果\n[out_of_scope] ソース変更、旧 run 成果の再利用\n59ccf49e 起点・最新 main 統合済み・未解決競合なしを検証し、いずれかが偽なら後続実装を失敗終了する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "verify"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の overview/project-info 応答生成記号\n[out_of_scope] UI 描画、agent-project 本体、done 状態を変更するコマンド\n既存データ経路を再利用し、regression_cmd と intake_cmd の設定有無を読み取り専用の一貫性ゲート情報として UI に供給する最小変更を行う。",
+      "deps": [
+        "basegate",
+        "t2",
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の overview/project-info 描画記号\n[out_of_scope] 設定変更ボタン、done 状態の書換え、needs-diagnosis 表示\n既存 UI パターンで regression_cmd、intake_cmd の設定有無と「一貫性ゲート」の状態を簡潔かつ識別可能に表示する。",
+      "deps": [
+        "t3",
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の未結線時ガイダンス記号\n[out_of_scope] 自動設定、フック実装、公式 needs/inbox/commands 以外への書込み\n未設定のコマンドがある場合だけ、README と一致する設定編集または sibling CLI による有効化導線を表示する。",
+      "deps": [
+        "t4",
+        "t6"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js\n[out_of_scope] production code、overview UI テスト、状態変更機能\ncodd-gate と回帰失敗要約の可読性が維持され、追加したゲート表示によって needs-diagnosis の既存情報が欠落しないことを検証するテストを更新または追加する。",
+      "deps": [
+        "t7"
+      ],
+      "kind": "work"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production code、needs-diagnosis テスト、外部 CLI 実行\nregression_cmd/intake_cmd の設定済み・未設定表示、一貫性ゲート状態、README 準拠の有効化導線を検証する最小テストを追加する。",
+      "deps": [
+        "t7"
+      ],
+      "kind": "work"
+    },
+    "contractgate": {
+      "goal": "[scope] t5〜t9 の dashboard 差分と公式 needs/inbox/commands 契約\n[out_of_scope] 修正実装、非公式契約の容認\n表示データが公式契約だけを読み、UI から done 不変条件を破る状態変更や新しい書込み経路を追加していないことを敵対的に検証する。",
+      "deps": [
+        "t5",
+        "t7",
+        "t8",
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "uxgate": {
+      "goal": "[scope] tools/agent-dashboard の overview と needs-diagnosis に関する t6〜t9 の差分\n[out_of_scope] agent-project 本体の変更、レビュー範囲外のリファクタリング\nagent-reviewer を使用し、設定有無・失敗の意味・有効化手順が画面から判断できるか、codd-gate と回帰失敗要約の可読性が落ちていないかを UX 観点でレビューする。",
+      "deps": [
+        "t7",
+        "t8",
+        "t9"
+      ],
+      "kind": "verify"
+    },
+    "t10": {
+      "goal": "[scope] agent-dashboard の既存設計書にある一貫性ゲート UI 節、または同等の単一設計記号\n[out_of_scope] README の有効化手順変更、複数文書の新設、実装済みでない将来設計\n実装された読み取り専用の状態表示、公式契約、有効化導線、done 不変条件を30行以内で記録し、slop-police で文面を検査する。",
+      "deps": [
+        "contractgate",
+        "uxgate"
+      ],
+      "kind": "generate"
+    },
+    "synth": {
+      "goal": "[scope] t5〜t10 の agent-dashboard 差分\n[out_of_scope] 新機能追加、agent-project 本体、レビュー未確認の変更\n契約検証と UX レビューを通過したソース・テスト・設計記録を統合し、レビュー指摘が各成果へ一貫して反映された候補を作る。",
+      "deps": [
+        "contractgate",
+        "uxgate",
+        "t10"
+      ],
+      "kind": "synthesize"
+    },
+    "machine": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js、tools/agent-dashboard/src/features/agent-project/main/project.js、needs-diagnosis.test.js、overview-ui.test.js\n[out_of_scope] テスト失敗の無視、過去 run の成功結果による代替\n指定された grep、needs-diagnosis.test.js、overview-ui.test.js を新規実行し、終了コード非0または terminal ok:false を明示的な失敗として記録する。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "verify"
+    },
+    "classify": {
+      "goal": "[scope] contractgate、uxgate、machine の新規実行結果\n[out_of_scope] terminal ok:false の成功扱い、旧 run の結果参照\n失敗を base-sync・契約違反・UX・needs テスト・overview テスト・機械ゲートに分類し、修正対象の単一モジュールと再実行すべき gate を列挙する。",
+      "deps": [
+        "machine"
+      ],
+      "kind": "classify"
+    },
+    "repair": {
+      "goal": "[scope] classify が列挙した各失敗の単一モジュールまたは単一結合点\n[out_of_scope] 失敗と無関係なリファクタリング、1子タスク30行超の変更、done 状態書換え、agent-project フック実装\n失敗項目ごとに最大3並列の修正子タスクを動的展開し、各子タスクを30行以内に保つ。対象 gate を毎回新規実行し、terminal ok:false を含む失敗が残る間は分類・修正・検証を反復し、全項目が ok:true になった時だけ完了する。",
+      "deps": [
+        "classify"
+      ],
+      "kind": "map"
+    },
+    "finalreview": {
+      "goal": "[scope] repair 後の agent-dashboard UI・テスト・設計差分\n[out_of_scope] 新規機能、未検証のレビュー提案の採用\nagent-reviewer で最終 UX レビューを新規実行し、契約、可読性、有効化導線、読み取り専用性に未解決指摘がないことを検証する。",
+      "deps": [
+        "repair"
+      ],
+      "kind": "verify"
+    },
+    "finalgate": {
+      "goal": "[scope] repair 後の指定4ファイルと Git 競合状態\n[out_of_scope] キャッシュ済み結果、旧 run の完了結果、terminal ok:false の許容\n未解決競合がないことを確認後、指定の grep と2本の Node テストをすべて新規実行し、終了コード0かつ terminal ok:true の場合だけ合格とする。",
+      "deps": [
+        "repair"
+      ],
+      "kind": "verify"
+    },
+    "done": {
+      "goal": "[scope] finalreview と finalgate の合格成果\n[out_of_scope] gate 不合格成果の完了扱い、追加の状態変更\n最終レビューと全機械ゲートの合格結果を統合し、ソースコード・テスト・設計書および恒常的制約があれば constraints JSON を最終成果として確定する。",
+      "deps": [
+        "finalreview",
+        "finalgate"
+      ],
+      "kind": "synthesize"
+    },
+    "base-sync": {
+      "goal": "最新 main を ap/dashboard-163827 へ統合し、競合があれば解消する",
+      "deps": [],
+      "kind": "base-sync"
+    }
+  },
+  "iteration": 0
+}

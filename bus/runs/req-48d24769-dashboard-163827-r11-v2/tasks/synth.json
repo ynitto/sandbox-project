@@ -1,0 +1,10 @@
+{
+  "id": "synth",
+  "goal": "[scope] t5〜t10 の agent-dashboard 差分\n[out_of_scope] 新機能追加、agent-project 本体、レビュー未確認の変更\n契約検証と UX レビューを通過したソース・テスト・設計記録を統合し、レビュー指摘が各成果へ一貫して反映された候補を作る。",
+  "deps": [
+    "contractgate",
+    "uxgate",
+    "t10"
+  ],
+  "kind": "synthesize"
+}

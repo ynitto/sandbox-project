@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] Git 履歴、commit 59ccf49e、現在の main、作業ツリーの競合状態\n[out_of_scope] ソース変更、旧 run の done 結果の継承、Markdown 末尾空白だけを競合とする判定\n59ccf49e が最新 main 統合・6ファイル競合解決済みの起点であることを確認し、差分と未解決競合を記録した新規 run の実行計画を確立する。",
+  "deps": [],
+  "kind": "work"
+}

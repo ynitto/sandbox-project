@@ -1,0 +1,6 @@
+{
+  "id": "t3",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の overview 描画記号\n[out_of_scope] main/project.js、needs-diagnosis、設定を書き換える操作\n概要画面で使われる既存のラベル・状態表示・案内リンクのパターンを調査し、一貫性ゲート表示を追加する最小の描画箇所を特定する。",
+  "deps": [],
+  "kind": "work"
+}

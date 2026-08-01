@@ -1,0 +1,6 @@
+{
+  "id": "t2",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の概要・プロジェクト情報生成記号\n[out_of_scope] renderer.js、状態変更処理、agent-project 本体のフック実装\nregression_cmd と intake_cmd がプロジェクト情報へ渡る現在の経路、既存 UI 向けデータ形、欠損時の表現を調査し、再利用可能な結合点を特定する。",
+  "deps": [],
+  "kind": "work"
+}

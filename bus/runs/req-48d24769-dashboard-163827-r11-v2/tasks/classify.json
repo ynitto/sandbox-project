@@ -1,0 +1,8 @@
+{
+  "id": "classify",
+  "goal": "[scope] contractgate、uxgate、machine の新規実行結果\n[out_of_scope] terminal ok:false の成功扱い、旧 run の結果参照\n失敗を base-sync・契約違反・UX・needs テスト・overview テスト・機械ゲートに分類し、修正対象の単一モジュールと再実行すべき gate を列挙する。",
+  "deps": [
+    "machine"
+  ],
+  "kind": "classify"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "uxgate",
+  "goal": "[scope] tools/agent-dashboard の overview と needs-diagnosis に関する t6〜t9 の差分\n[out_of_scope] agent-project 本体の変更、レビュー範囲外のリファクタリング\nagent-reviewer を使用し、設定有無・失敗の意味・有効化手順が画面から判断できるか、codd-gate と回帰失敗要約の可読性が落ちていないかを UX 観点でレビューする。",
+  "deps": [
+    "t7",
+    "t8",
+    "t9"
+  ],
+  "kind": "verify"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "done",
+  "goal": "[scope] finalreview と finalgate の合格成果\n[out_of_scope] gate 不合格成果の完了扱い、追加の状態変更\n最終レビューと全機械ゲートの合格結果を統合し、ソースコード・テスト・設計書および恒常的制約があれば constraints JSON を最終成果として確定する。",
+  "deps": [
+    "finalreview",
+    "finalgate"
+  ],
+  "kind": "synthesize"
+}

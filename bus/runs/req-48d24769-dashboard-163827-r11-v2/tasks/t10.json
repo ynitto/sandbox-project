@@ -1,0 +1,9 @@
+{
+  "id": "t10",
+  "goal": "[scope] agent-dashboard の既存設計書にある一貫性ゲート UI 節、または同等の単一設計記号\n[out_of_scope] README の有効化手順変更、複数文書の新設、実装済みでない将来設計\n実装された読み取り専用の状態表示、公式契約、有効化導線、done 不変条件を30行以内で記録し、slop-police で文面を検査する。",
+  "deps": [
+    "contractgate",
+    "uxgate"
+  ],
+  "kind": "generate"
+}

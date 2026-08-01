@@ -1,0 +1,6 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-dashboard の公式 needs/inbox/commands 読み取り境界と README の有効化手順\n[out_of_scope] 非公式ファイルへの書込み、README の改稿、agent-project のフック追加\n公式契約だけからゲート状態を判断できることを確認し、未結線時に示す設定編集および sibling CLI の README 準拠手順を抽出する。",
+  "deps": [],
+  "kind": "work"
+}

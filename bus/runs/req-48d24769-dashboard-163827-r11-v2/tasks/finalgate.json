@@ -1,0 +1,8 @@
+{
+  "id": "finalgate",
+  "goal": "[scope] repair 後の指定4ファイルと Git 競合状態\n[out_of_scope] キャッシュ済み結果、旧 run の完了結果、terminal ok:false の許容\n未解決競合がないことを確認後、指定の grep と2本の Node テストをすべて新規実行し、終了コード0かつ terminal ok:true の場合だけ合格とする。",
+  "deps": [
+    "repair"
+  ],
+  "kind": "verify"
+}

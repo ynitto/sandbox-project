@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] production code、needs-diagnosis テスト、外部 CLI 実行\nregression_cmd/intake_cmd の設定済み・未設定表示、一貫性ゲート状態、README 準拠の有効化導線を検証する最小テストを追加する。",
+  "deps": [
+    "t7"
+  ],
+  "kind": "work"
+}

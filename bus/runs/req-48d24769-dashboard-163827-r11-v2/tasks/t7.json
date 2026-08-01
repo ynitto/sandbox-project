@@ -1,0 +1,9 @@
+{
+  "id": "t7",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の未結線時ガイダンス記号\n[out_of_scope] 自動設定、フック実装、公式 needs/inbox/commands 以外への書込み\n未設定のコマンドがある場合だけ、README と一致する設定編集または sibling CLI による有効化導線を表示する。",
+  "deps": [
+    "t4",
+    "t6"
+  ],
+  "kind": "work"
+}

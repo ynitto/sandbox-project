@@ -1,0 +1,10 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の overview/project-info 応答生成記号\n[out_of_scope] UI 描画、agent-project 本体、done 状態を変更するコマンド\n既存データ経路を再利用し、regression_cmd と intake_cmd の設定有無を読み取り専用の一貫性ゲート情報として UI に供給する最小変更を行う。",
+  "deps": [
+    "basegate",
+    "t2",
+    "t4"
+  ],
+  "kind": "work"
+}

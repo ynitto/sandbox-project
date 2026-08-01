@@ -1,0 +1,8 @@
+{
+  "id": "basegate",
+  "goal": "[scope] t1 の Git 状態確認結果\n[out_of_scope] ソース変更、旧 run 成果の再利用\n59ccf49e 起点・最新 main 統合済み・未解決競合なしを検証し、いずれかが偽なら後続実装を失敗終了する。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "verify"
+}

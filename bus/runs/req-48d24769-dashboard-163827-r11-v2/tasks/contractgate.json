@@ -1,0 +1,11 @@
+{
+  "id": "contractgate",
+  "goal": "[scope] t5〜t9 の dashboard 差分と公式 needs/inbox/commands 契約\n[out_of_scope] 修正実装、非公式契約の容認\n表示データが公式契約だけを読み、UI から done 不変条件を破る状態変更や新しい書込み経路を追加していないことを敵対的に検証する。",
+  "deps": [
+    "t5",
+    "t7",
+    "t8",
+    "t9"
+  ],
+  "kind": "verify"
+}

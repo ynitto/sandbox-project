@@ -1,0 +1,8 @@
+{
+  "id": "finalreview",
+  "goal": "[scope] repair 後の agent-dashboard UI・テスト・設計差分\n[out_of_scope] 新規機能、未検証のレビュー提案の採用\nagent-reviewer で最終 UX レビューを新規実行し、契約、可読性、有効化導線、読み取り専用性に未解決指摘がないことを検証する。",
+  "deps": [
+    "repair"
+  ],
+  "kind": "verify"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "machine",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js、tools/agent-dashboard/src/features/agent-project/main/project.js、needs-diagnosis.test.js、overview-ui.test.js\n[out_of_scope] テスト失敗の無視、過去 run の成功結果による代替\n指定された grep、needs-diagnosis.test.js、overview-ui.test.js を新規実行し、終了コード非0または terminal ok:false を明示的な失敗として記録する。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "verify"
+}
