@@ -11,8 +11,9 @@
 
 - `git rev-parse --verify "$KIRO_BASE_REV^{commit}"`: exit 0、上記完全 SHA を返却。
 - `python3 tools/codd-gate/codd-gate.py verify --base "$KIRO_BASE_REV" --strict`: exit 0（差分 0 ファイル、一貫性ゲート通過）。
-- `PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests`: exit 0。
+- `PYTHONPATH=tools/agent-project python3 -m unittest discover -s tools/agent-project/tests`: 1,255 tests、exit 0（`OK`）。
 - `! git grep -n -E '(^|[[:space:]])(import|from)[[:space:]]+codd_gate|_apply_codd_gate|_codd_gate' -- tools/agent-project/agent_project`: exit 0（禁止参照なし）。
+- 上記 4 検証を同一シェルで順次実行したシェル全体: exit 0。
 - `git status --porcelain=v1`: 出力なし、exit 0。
 
 ## 前提・未解決事項・範囲外

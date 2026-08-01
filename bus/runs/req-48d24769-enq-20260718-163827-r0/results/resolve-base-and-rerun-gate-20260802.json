@@ -1,0 +1,12 @@
+{
+  "id": "resolve-base-and-rerun-gate-20260802",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "(a) 成果: `KIRO_BASE_REV=2be015472ce8cb6dd6501738167b2d24328bf359` を依存成果 `base-sync.data.target_rev` から確定・実在確認し、同一シェルへ設定。\n\n(b) 検証: codd-gate strict、agent-project 1,255 tests、禁止 grep はすべて exit 0。作業ツリー変更なし。\n\n(c) 前提・未解決事項: `meta.base_rev` は対象リポジトリに存在しないため不採用。未解決事項なし。記録: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-enq-20260718-163827-r0/artifacts/resolve-base-and-rerun-gate-20260802/report.md)",
+  "finished_at": "2026-08-01T20:42:24Z",
+  "node": "mac",
+  "kind": "work",
+  "artifacts": [
+    "artifacts/resolve-base-and-rerun-gate-20260802/report.md"
+  ]
+}

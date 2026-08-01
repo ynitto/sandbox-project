@@ -117,7 +117,14 @@
         "base-sync"
       ],
       "kind": "work"
+    },
+    "final-acceptance-rerun-20260802": {
+      "goal": "依存成果で確定した KIRO_BASE_REV=2be015472ce8cb6dd6501738167b2d24328bf359 を同一シェルに設定し、リポジトリルートで要求記載のコマンドを改変せず実行する。codd-gate strict、agent-project 全 unittest、禁止された codd-gate 連携識別子の git grep 否定確認がすべて成功し、コマンド全体の終了コードが 0 であることを記録する。失敗した場合はコードを修正せず、失敗した節・出力・終了コードを具体的に報告して先行タスクへ戻せるようにする。",
+      "deps": [
+        "resolve-base-and-rerun-gate-20260802"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 1
+  "iteration": 2
 }

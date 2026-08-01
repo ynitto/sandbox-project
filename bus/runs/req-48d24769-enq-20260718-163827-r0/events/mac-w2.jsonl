@@ -1,1 +1,3 @@
 {"ts": "2026-08-01T20:23:54Z", "who": "mac-w2", "kind": "claimed", "node": "resolve-base-and-rerun-gate-20260802"}
+{"ts": "2026-08-01T20:42:24Z", "who": "mac-w2", "kind": "result", "node": "resolve-base-and-rerun-gate-20260802", "status": "done"}
+{"ts": "2026-08-01T20:42:42Z", "who": "mac-w2", "kind": "claimed", "node": "final-acceptance-rerun-20260802"}
