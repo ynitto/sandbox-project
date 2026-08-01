@@ -1,9 +1,9 @@
 ## dashboard-163827: dashboard で一貫性ゲートの状態把握と有効化を支援する
-- status: doing
+- status: blocked
 - source: charter
 - priority: 0
 - verify: `grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js`
-- retries: 8
+- retries: 9
 - workspace: agent-dashboard
 - refs: agent-project
 - why: パッケージ内マジック配線を外した後も、人が regression/intake の有無とゲート失敗の意味を画面から判断・対処できるようにするため。
@@ -12,13 +12,12 @@
 - charter: v1
 - after: codd-gate-163827, sibling-163827
 - assess: c=2 r=1 a=1
-- needs_reason: 繰り返し NG（retries=7）: agent-flow run タイムアウト（1800.0s）
 - verification: {"pass": 1, "fail": 0, "unverifiable": 0, "report": "verifications/dashboard-163827/d6e2c6d203ca18ca74b3e9215d33ef2002344e4e.md", "receipt": true, "plan_digest": "sha256:c9a3ad7d676851bf40bdf50f2d2a0f30b266a149113f9d8b343269ad6f0593ee"}
 - gate_ref: commit eec68bdc5
 - gate_ts: 2026-08-01 10:29:41
 - gate_branch: main
 - gate_vmsg: 基準 1 件中 1 件 pass（agent-flow runner の receipt を検算して採用）
-- needs_dr: DR-0007
 - feedback: マージ先の main とコンフリクトしているため最新をpullして解消して
 - last_run: req-48d24769-dashboard-163827-r8
-- flow_run: req-48d24769-dashboard-163827-r8
+- needs_reason: 繰り返し NG（retries=9）: agent-flow run タイムアウト（1800.0s）
+- needs_dr: DR-0008
