@@ -522,3 +522,4 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 21:41:00 run 再開: dashboard-163827 は req-48d24769-dashboard-163827-r15-v2 の失敗ノードだけをやり直します（done は温存）
 - 2026-08-01 22:11:01 flow detach: dashboard-163827 の run req-48d24769-dashboard-163827-r15-v2 を failed（agent-flow run タイムアウト（1800.0s））
 - 2026-08-01 22:11:07 cycle 1: dashboard-163827 → 人の判断（繰り返し NG）
+- 2026-08-01 22:11:09 === agent-project 停止 reason=drained cycles=1 done=0 blocked=1 notified=True promoted=0 ===
