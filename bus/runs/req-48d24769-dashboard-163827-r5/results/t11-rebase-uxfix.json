@@ -1,0 +1,17 @@
+{
+  "id": "t11-rebase-uxfix",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "(a) サマリー\n\n- `toolconfig.js` を修正。\n  - 壊れたローカル JSON を優先ソースとして扱い、global 設定へ誤フォールバックしないよう変更。\n  - YAML folded scalar の段落境界を保持し、PyYAML と同じ結線判定に修正。\n- 両ケースの最小回帰テストを追加。\n- 変更は `tools/agent-dashboard` 配下の2ファイルのみ。\n\n(b) 検証\n\n- 回帰テスト: 12件成功\n- 関連テスト: cowork / discover / amigos / agent-assist / flow bus 全件成功\n- `npm test`: 成功（exit 0）\n- `git diff --check`: 成功\n- 許可範囲外・状態ディレクトリへの書き込みなし\n\n(c) 前提・未解決事項\n\n- worktree 規約が `rebase` を明示禁止しているため、rebase は agent-flow 側が実施する前提です。\n- 現在の参照では `origin/main...HEAD` は `359 behind / 17 ahead`。commit、push、checkout、rebase は実行していません。\n- agent-project 本体および公式契約への変更はありません。",
+  "finished_at": "2026-08-01T00:29:05Z",
+  "node": "mac",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/dashboard-163827",
+      "commit": "867307c8829179513061d8a044bd495a565ea7d9",
+      "target": "main",
+      "path": "tools/agent-dashboard"
+    }
+  }
+}

@@ -112,7 +112,26 @@
         "gate2"
       ],
       "kind": "synthesize"
+    },
+    "t11-rebase-uxfix": {
+      "goal": "最新 origin/main へ作業ブランチを rebase し、競合を解消した上で、tools/agent-dashboard の toolconfig.js を修正する。具体的には、壊れたローカル JSON を無視して global 設定を結線済みと誤表示しないよう設定ソースの優先順位とエラー処理を正し、YAML folded scalar の段落境界を保持して公式 PyYAML と同じ regression_cmd/intake_cmd 結線判定になるよう直す。両ケースを再現する最小テストを追加し、公式契約 needs/inbox/commands 以外への書き込みや agent-project 本体の変更は行わない。",
+      "deps": [],
+      "kind": "work"
+    },
+    "gate3-uxverify": {
+      "goal": "t11-rebase-uxfix の成果を批判的に検証する。最新 origin/main を基点とする rebase 状態と競合解消を確認し、壊れたローカル JSON および YAML folded scalar の再現テスト、指定の grep、needs-diagnosis.test.js、overview-ui.test.js、dashboard 全テストを実行する。さらに agent-reviewer を用いて、一貫性ゲートの状態把握・有効化導線・needs-diagnosis の可読性と誤表示防止を UX レビューし、全項目が通った場合のみ pass とする。",
+      "deps": [
+        "t11-rebase-uxfix"
+      ],
+      "kind": "work"
+    },
+    "synth2-dashboard": {
+      "goal": "gate3-uxverify が pass の場合に限り、rebase 後の実装、競合解消、UX 修正、テスト結果を統合して最終成果をまとめる。変更が tools/agent-dashboard 配下に限定され、要求範囲外の成果が混入していないことを確認する。",
+      "deps": [
+        "gate3-uxverify"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 0
+  "iteration": 1
 }

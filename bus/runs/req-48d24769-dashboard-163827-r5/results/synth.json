@@ -1,0 +1,11 @@
+{
+  "id": "synth",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "# synth 統合結果\n\ndashboard の一貫性ゲート可視化・有効化支援は HEAD `48a4353e6` に統合済みです。全テスト、`git diff --check`、gate2 は成功。差分は許可範囲内の13ファイル、1113 additions / 10 deletionsです。\n\nただし UXレビューの parser 欠陥2件が未解決で、HEAD は現在の main の子孫でもありません。よって「機能・機械ゲートは成立、UX受入れと最新mainへのrebaseは未達」と統合判定しました。\n\n成果物: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/synth/result.md)\n\n{\"constraints\":[\"dashboard は設定・失敗記録を読み取って案内するだけとし、設定・タスク状態・done を書き換えず、codd-gate も実行しない\",\"regression_cmd / intake_cmd は汎用フックであり、設定有無と公式 codd-gate への結線を分離して表示する\",\"結線表示は設定文字列上の状態であり、codd-gate の実在・互換性・実行成功を保証しない\"]}\n\n@followup malformed local JSON の global fallback を止め、解析失敗を表示できるよう回帰修正する。\n\n@followup YAML folded scalar の空行段落を保持する回帰修正を行う。\n\n@followup 最新 main へ rebaseし、全テストとUXレビューを再実行する。",
+  "finished_at": "2026-08-01T00:23:55Z",
+  "node": "mac",
+  "artifacts": [
+    "artifacts/synth/result.md"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "synth2-dashboard",
+  "goal": "gate3-uxverify が pass の場合に限り、rebase 後の実装、競合解消、UX 修正、テスト結果を統合して最終成果をまとめる。変更が tools/agent-dashboard 配下に限定され、要求範囲外の成果が混入していないことを確認する。",
+  "deps": [
+    "gate3-uxverify"
+  ],
+  "kind": "work"
+}

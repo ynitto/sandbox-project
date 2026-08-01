@@ -1,0 +1,15 @@
+{
+  "id": "gate2",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=pass\n\n- 指定 grep、`needs-diagnosis.test.js`（13件）、`overview-ui.test.js` は全て終了コード0。\n- 差分13ファイルは全て `tools/agent-dashboard` 配下。作業ツリー clean、`git diff --check` 成功。\n- 結果: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-dashboard-163827-r5/artifacts/gate2/result.md)\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-08-01T00:21:12Z",
+  "node": "mac",
+  "data": {
+    "ok": true,
+    "issues": []
+  },
+  "artifacts": [
+    "artifacts/gate2/result.md"
+  ]
+}
