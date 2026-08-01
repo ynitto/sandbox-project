@@ -150,7 +150,19 @@
         "gate4-rebase-uxverify"
       ],
       "kind": "work"
+    },
+    "t13-rebase-origin-main": {
+      "goal": "現在の成果ブランチを最新 origin/main へ実際に rebase し、発生する競合を解消する。tools/agent-dashboard/** の一貫性ゲート表示・有効化導線、needs-diagnosis の可読性、t11 の toolconfig.js 修正と回帰テストを保持し、スコープ外の変更を混入させない。完了時に origin/main が HEAD の祖先であること、競合マーカーがないこと、指定 grep・needs-diagnosis.test.js・overview-ui.test.js・npm test・git diff --check がすべて成功することを確認する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "gate5-post-rebase-review": {
+      "goal": "t13 の rebase 後成果を独立検証する。origin/main が HEAD の祖先であること、競合解消が完了していること、変更が tools/agent-dashboard/** に限定されていること、公式 needs/inbox/commands 契約以外へ書かないことを確認する。指定完了コマンドを実行し、agent-reviewer で UX を再レビューして、regression_cmd/intake_cmd の状態把握、有効化導線、codd-gate・回帰失敗要約の可読性を判定する。すべて満たす場合のみ pass とする。",
+      "deps": [
+        "t13-rebase-origin-main"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 2
+  "iteration": 3
 }

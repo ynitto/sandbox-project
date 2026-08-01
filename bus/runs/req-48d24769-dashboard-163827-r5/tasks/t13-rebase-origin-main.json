@@ -1,0 +1,6 @@
+{
+  "id": "t13-rebase-origin-main",
+  "goal": "現在の成果ブランチを最新 origin/main へ実際に rebase し、発生する競合を解消する。tools/agent-dashboard/** の一貫性ゲート表示・有効化導線、needs-diagnosis の可読性、t11 の toolconfig.js 修正と回帰テストを保持し、スコープ外の変更を混入させない。完了時に origin/main が HEAD の祖先であること、競合マーカーがないこと、指定 grep・needs-diagnosis.test.js・overview-ui.test.js・npm test・git diff --check がすべて成功することを確認する。",
+  "deps": [],
+  "kind": "work"
+}
