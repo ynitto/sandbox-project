@@ -1,0 +1,8 @@
+{
+  "id": "t2",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要・プロジェクト情報表示経路\n[out_of_scope] コード変更、needs 診断ロジック、バックエンド契約の変更\n現行 main で概要・プロジェクト情報が取得、整形、描画される経路を追跡し、regression_cmd と intake_cmd の設定有無を最小変更で表示できる既存の結合点を特定する。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "work"
+}

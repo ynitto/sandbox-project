@@ -1,0 +1,8 @@
+{
+  "id": "t9",
+  "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の一貫性ゲート表示結合点\n[out_of_scope] project.js、テスト、画面構造の全面変更\n分類された UX 指摘だけを最小差分で反映し、設定状態、失敗の意味、次の操作が画面から一読で判断できる状態にする。該当指摘がなければ変更しない。",
+  "deps": [
+    "classify"
+  ],
+  "kind": "work"
+}

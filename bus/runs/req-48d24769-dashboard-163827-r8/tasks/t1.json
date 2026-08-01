@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] 作業ブランチの履歴、tools/agent-dashboard/** の競合箇所\n[out_of_scope] agent-project 本体のフック実装、無関係な競合の機能変更\norigin/main の最新状態を取得して作業ブランチを rebase し、dashboard 関連の競合を現行 main の構造に合わせて解消する。未解決競合がないことを確認する。",
+  "deps": [],
+  "kind": "work"
+}

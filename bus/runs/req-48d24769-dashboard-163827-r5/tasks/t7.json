@@ -1,9 +1,0 @@
-{
-  "id": "t7",
-  "goal": "[scope] t3 で特定した tools/agent-dashboard 配下の既存設計書1ファイル\n[out_of_scope] 新規ドキュメント体系、agent-project のフック仕様変更、実装と無関係な文章修正\nslop-police を使用し、公式契約から表示までのデータ経路、未結線時の有効化導線、状態を書き換えない境界を簡潔に反映する。",
-  "deps": [
-    "t4",
-    "t5"
-  ],
-  "kind": "generate"
-}

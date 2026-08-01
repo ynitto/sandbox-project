@@ -1,0 +1,8 @@
+{
+  "id": "t10",
+  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の公式契約結合点\n[out_of_scope] agent-project 本体のフック、非公式ファイルへの書込み、done 状態変更\n分類された契約境界または有効化導線の指摘だけを反映し、needs/inbox/commands 契約と README の内容に整合させる。該当指摘がなければ変更しない。",
+  "deps": [
+    "classify"
+  ],
+  "kind": "work"
+}

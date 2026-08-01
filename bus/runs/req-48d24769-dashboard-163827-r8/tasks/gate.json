@@ -1,0 +1,11 @@
+{
+  "id": "gate",
+  "goal": "agent-reviewer を用いて、t5〜t8 の統合差分を adversarial に UX レビューする。設定有無の判別性、有効化導線の具体性、README との整合、needs-diagnosis の可読性、公式契約境界、done 不変条件を検証し、ファイル別の修正可能な指摘を出す。",
+  "deps": [
+    "t5",
+    "t6",
+    "t7",
+    "t8"
+  ],
+  "kind": "verify"
+}

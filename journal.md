@@ -385,3 +385,9 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-01 10:29:42 === agent-project 停止 reason=drained cycles=1 done=0 blocked=0 notified=True promoted=0 ===
 - 2026-08-01 10:29:44 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
 - 2026-08-01 10:29:44 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-08-01 10:37:31 === project 開始 v1 acceptance=2 ===
+- 2026-08-01 10:37:31 run ブリーフ: dashboard-163827 に追記（feedback）: マージ先の main とコンフリクトしているため最新をpullして解消して
+- 2026-08-01 10:37:31 feedback 取り込み: dashboard-163827 を再開
+- 2026-08-01 10:37:31 === agent-project 開始 tasks=2 ingested=1 planner=agent executor=agent dry_run=False ===
+- 2026-08-01 10:37:31 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-08-01 10:37:31 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること

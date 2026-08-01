@@ -1,0 +1,134 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] リベース後の調査・UI実装・契約境界確認を観点別に進め、agent-reviewerによる検証gateを通し、指定grepとNode.jsテストがすべて終了コード0になるまで反復する必要があるため。対象ごとの処理が独立・同一ではないためmap-reduceは採用しない。（粒度 finest）",
+    "granularity": "finest"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] 作業ブランチの履歴、tools/agent-dashboard/** の競合箇所\n[out_of_scope] agent-project 本体のフック実装、無関係な競合の機能変更\norigin/main の最新状態を取得して作業ブランチを rebase し、dashboard 関連の競合を現行 main の構造に合わせて解消する。未解決競合がないことを確認する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要・プロジェクト情報表示経路\n[out_of_scope] コード変更、needs 診断ロジック、バックエンド契約の変更\n現行 main で概要・プロジェクト情報が取得、整形、描画される経路を追跡し、regression_cmd と intake_cmd の設定有無を最小変更で表示できる既存の結合点を特定する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js、関連 README、公式 needs/inbox/commands 契約\n[out_of_scope] 公式契約外への書込み、新規 IPC、agent-project フック実装\n設定値の供給元と公式契約境界を確認し、未設定時に案内可能な設定編集手順または sibling CLI の有効化導線を README と照合して確定する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-dashboard の needs-diagnosis 表示経路と関連する agent-project の done 判定コード（参照のみ）\n[out_of_scope] done 状態の書換え、判定条件の緩和、フック追加\ncodd-gate と回帰失敗要約の生成・表示経路を追跡し、今回の UI 変更後も維持すべき可読性および done 不変条件を明文化する。",
+      "deps": [
+        "t1"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の概要 UI 結合点\n[out_of_scope] project.js、needs 診断表示、状態変更操作、新規 UI 基盤\n既存の概要 UI パターンを再利用し、regression_cmd と intake_cmd の設定有無および「一貫性ゲート」としての意味を判別できる最小表示を追加する。",
+      "deps": [
+        "t2",
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js のプロジェクト情報供給結合点\n[out_of_scope] agent-project 本体、公式 needs/inbox/commands 以外への書込み、done 状態変更\n既存の公式契約から regression_cmd と intake_cmd の設定有無を UI へ供給し、未設定時は README と一致する設定編集または sibling CLI の有効化導線を返す。",
+      "deps": [
+        "t2",
+        "t3"
+      ],
+      "kind": "work"
+    },
+    "t7": {
+      "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js\n[out_of_scope] 本番コード、テスト基盤変更、done 判定仕様の変更\n現行 main のテスト形式に合わせ、codd-gate と回帰失敗要約の可読性および done 不変条件が維持されることを確認する必要最小限の回帰ケースを追加または修正する。",
+      "deps": [
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t8": {
+      "goal": "[scope] tools/agent-dashboard/test/overview-ui.test.js\n[out_of_scope] 本番コード、別画面のテスト、包括的 UI テスト基盤\nregression_cmd と intake_cmd の設定済み・未設定表示、および未設定時の有効化導線を検証する最小ケースを現行 main に合わせて追加または修正する。",
+      "deps": [
+        "t5",
+        "t6"
+      ],
+      "kind": "work"
+    },
+    "gate": {
+      "goal": "agent-reviewer を用いて、t5〜t8 の統合差分を adversarial に UX レビューする。設定有無の判別性、有効化導線の具体性、README との整合、needs-diagnosis の可読性、公式契約境界、done 不変条件を検証し、ファイル別の修正可能な指摘を出す。",
+      "deps": [
+        "t5",
+        "t6",
+        "t7",
+        "t8"
+      ],
+      "kind": "verify"
+    },
+    "classify": {
+      "goal": "agent-reviewer の指摘を renderer UI、project 契約境界、テスト期待値へ分類し、スコープ外の agent-project フック実装や UI からの状態書換要求は @followup 候補として分離する。",
+      "deps": [
+        "gate"
+      ],
+      "kind": "classify"
+    },
+    "t9": {
+      "goal": "[scope] tools/agent-dashboard/src/renderer/renderer.js の一貫性ゲート表示結合点\n[out_of_scope] project.js、テスト、画面構造の全面変更\n分類された UX 指摘だけを最小差分で反映し、設定状態、失敗の意味、次の操作が画面から一読で判断できる状態にする。該当指摘がなければ変更しない。",
+      "deps": [
+        "classify"
+      ],
+      "kind": "work"
+    },
+    "t10": {
+      "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js の公式契約結合点\n[out_of_scope] agent-project 本体のフック、非公式ファイルへの書込み、done 状態変更\n分類された契約境界または有効化導線の指摘だけを反映し、needs/inbox/commands 契約と README の内容に整合させる。該当指摘がなければ変更しない。",
+      "deps": [
+        "classify"
+      ],
+      "kind": "work"
+    },
+    "t11": {
+      "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js、tools/agent-dashboard/test/overview-ui.test.js の今回追加したケース\n[out_of_scope] テスト基盤、無関係な既存ケース、本番コード\n分類されたテスト指摘を反映し、実装詳細ではなく設定状態、導線、診断可読性、done 不変条件を検証する最小の期待値へ整える。",
+      "deps": [
+        "classify"
+      ],
+      "kind": "work"
+    },
+    "synth": {
+      "goal": "rebase 後の t5〜t11 の成果を統合し、重複表示や契約外アクセスがない一貫した差分にする。作業中に発見した恒常的制約があれば最終成果へ機械可読な {\"constraints\":[\"…\"]} を添え、スコープ外の提案は @followup 行へ分離する。",
+      "deps": [
+        "t9",
+        "t10",
+        "t11"
+      ],
+      "kind": "synthesize"
+    },
+    "final_gate": {
+      "goal": "grep -nE 'regression_cmd|intake_cmd|一貫性ゲート' tools/agent-dashboard/src/renderer/renderer.js tools/agent-dashboard/src/features/agent-project/main/project.js && node tools/agent-dashboard/test/needs-diagnosis.test.js && node tools/agent-dashboard/test/overview-ui.test.js を実行する。いずれかが失敗した場合は原因を renderer、project、テストへ分類して該当する最小修正を行い、全コマンドが終了コード 0 になるまで反復する。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "verify"
+    },
+    "judge": {
+      "goal": "final_gate の全コマンドが終了コード 0、未解決の rebase 競合がゼロ、公式契約外への書込みと done 不変条件の破壊がゼロである場合のみ dashboard-163827 を完了と判定する。",
+      "deps": [
+        "final_gate"
+      ],
+      "kind": "judge"
+    }
+  },
+  "iteration": 0
+}

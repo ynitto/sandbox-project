@@ -1,8 +1,0 @@
-{
-  "id": "t8",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js\n[out_of_scope] renderer、agent-project 本体、公式契約外の読書き\nレビューまたは gate が指摘したデータ経路・設定判定の問題だけを根本原因で修正する。指摘がなければ変更不要と確認する。",
-  "deps": [
-    "uxreview"
-  ],
-  "kind": "work"
-}

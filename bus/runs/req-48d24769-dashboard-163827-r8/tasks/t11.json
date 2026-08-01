@@ -1,0 +1,8 @@
+{
+  "id": "t11",
+  "goal": "[scope] tools/agent-dashboard/test/needs-diagnosis.test.js、tools/agent-dashboard/test/overview-ui.test.js の今回追加したケース\n[out_of_scope] テスト基盤、無関係な既存ケース、本番コード\n分類されたテスト指摘を反映し、実装詳細ではなく設定状態、導線、診断可読性、done 不変条件を検証する最小の期待値へ整える。",
+  "deps": [
+    "classify"
+  ],
+  "kind": "work"
+}

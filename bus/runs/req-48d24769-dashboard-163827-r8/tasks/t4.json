@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-dashboard の needs-diagnosis 表示経路と関連する agent-project の done 判定コード（参照のみ）\n[out_of_scope] done 状態の書換え、判定条件の緩和、フック追加\ncodd-gate と回帰失敗要約の生成・表示経路を追跡し、今回の UI 変更後も維持すべき可読性および done 不変条件を明文化する。",
+  "deps": [
+    "t1"
+  ],
+  "kind": "work"
+}

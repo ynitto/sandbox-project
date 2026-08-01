@@ -1,8 +1,0 @@
-{
-  "id": "gate3-uxverify",
-  "goal": "t11-rebase-uxfix の成果を批判的に検証する。最新 origin/main を基点とする rebase 状態と競合解消を確認し、壊れたローカル JSON および YAML folded scalar の再現テスト、指定の grep、needs-diagnosis.test.js、overview-ui.test.js、dashboard 全テストを実行する。さらに agent-reviewer を用いて、一貫性ゲートの状態把握・有効化導線・needs-diagnosis の可読性と誤表示防止を UX レビューし、全項目が通った場合のみ pass とする。",
-  "deps": [
-    "t11-rebase-uxfix"
-  ],
-  "kind": "work"
-}

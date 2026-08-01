@@ -1,8 +1,0 @@
-{
-  "id": "t3",
-  "goal": "[scope] tools/agent-dashboard/src/features/agent-project/main/project.js、tools/agent-dashboard/src/renderer/renderer.js、公式 needs/inbox/commands 契約、既存 README\n[out_of_scope] ファイル変更、非公式な状態ファイルの利用\n概要・プロジェクト情報・needs-diagnosis のデータ経路、regression_cmd/intake_cmd の取得元、既存 UI、README の有効化導線、codd-gate と回帰失敗要約の表示経路を特定し、後続ノードの結合点を確定する。",
-  "deps": [
-    "t2"
-  ],
-  "kind": "work"
-}

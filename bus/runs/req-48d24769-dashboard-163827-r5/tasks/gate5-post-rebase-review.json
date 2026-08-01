@@ -1,8 +1,0 @@
-{
-  "id": "gate5-post-rebase-review",
-  "goal": "t13 の rebase 後成果を独立検証する。origin/main が HEAD の祖先であること、競合解消が完了していること、変更が tools/agent-dashboard/** に限定されていること、公式 needs/inbox/commands 契約以外へ書かないことを確認する。指定完了コマンドを実行し、agent-reviewer で UX を再レビューして、regression_cmd/intake_cmd の状態把握、有効化導線、codd-gate・回帰失敗要約の可読性を判定する。すべて満たす場合のみ pass とする。",
-  "deps": [
-    "t13-rebase-origin-main"
-  ],
-  "kind": "work"
-}
