@@ -1,0 +1,12 @@
+{
+  "id": "t6",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "成果物: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t6/result.md)\n\n既存 CI で契約テストが実行され、違反時は終了コード 1 になることを確認済み。リポジトリ変更は不要でした。",
+  "finished_at": "2026-08-02T12:57:51Z",
+  "node": "mac",
+  "kind": "work",
+  "artifacts": [
+    "artifacts/t6/result.md"
+  ]
+}
