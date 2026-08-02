@@ -1,0 +1,20 @@
+{
+  "id": "gate",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "verify=fail\n\n統合を拒否します。詳細は [review.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/gate/review.md) に保存しました。\n\n- `brief.py:64`、`decisions.py:35`、`stategit.py:177,316,388,926` に redaction 実装がなく、契約テストも0件。既存1158テストは成功しますが漏出を検出できません。\n- t2 fixture は検証 HEAD に未統合で、README が要求する Windows home sentinel もありません。\n- README の境界は state-git の全4経路と、push-only の未push commit range を支配できる仕様になっていません。\n- fail-closed 条件と CI discovery 経路の記述自体は確認できました。\n\n{\"ok\": false, \"issues\": [\"redaction実装と契約テストがなく、CIは漏出を検出せず成功できる\", \"t2 fixtureが検証HEADに未統合で、設計契約上のWindows home sentinelも欠く\", \"state-gitの全4 egressとpush対象commit rangeを支配する検査境界が未確定\"]}",
+  "finished_at": "2026-08-02T12:17:55Z",
+  "node": "mac",
+  "kind": "verify",
+  "data": {
+    "ok": false,
+    "issues": [
+      "redaction実装と契約テストがなく、CIは漏出を検出せず成功できる",
+      "t2 fixtureが検証HEADに未統合で、設計契約上のWindows home sentinelも欠く",
+      "state-gitの全4 egressとpush対象commit rangeを支配する検査境界が未確定"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate/review.md"
+  ]
+}

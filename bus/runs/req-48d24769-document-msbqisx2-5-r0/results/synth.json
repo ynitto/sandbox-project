@@ -1,0 +1,12 @@
+{
+  "id": "synth",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "統合成果物: [integration-decision.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/synth/integration-decision.md)\n\n共有前検査境界、契約テスト対象、CI コマンド対応、依存成果間の矛盾解消を確定。リポジトリ変更なし。",
+  "finished_at": "2026-08-02T12:20:41Z",
+  "node": "mac",
+  "kind": "synthesize",
+  "artifacts": [
+    "artifacts/synth/integration-decision.md"
+  ]
+}
