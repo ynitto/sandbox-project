@@ -1,0 +1,13 @@
+{
+  "id": "t1",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "調査報告を出力しました。\n\n[investigation-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t1/investigation-report.md)\n\n- redaction 実装は未存在、README の契約のみ。\n- 共有検出器を単一正本とする境界、brief/decisions/state-git の全経路を特定。\n- agent-project 全テスト PASS。\n- `tools/agent-project` 配下の変更なし。",
+  "finished_at": "2026-08-02T12:07:59Z",
+  "node": "mac",
+  "kind": "work",
+  "artifacts": [
+    "artifacts/t1/agent-project-redaction-boundary.md",
+    "artifacts/t1/investigation-report.md"
+  ]
+}

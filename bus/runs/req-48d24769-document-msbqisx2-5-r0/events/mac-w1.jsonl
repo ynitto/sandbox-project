@@ -1,3 +1,5 @@
 {"ts": "2026-08-02T11:50:03Z", "who": "mac-w1", "kind": "claimed", "node": "t3"}
 {"ts": "2026-08-02T11:53:02Z", "who": "mac-w1", "kind": "result", "node": "t3", "status": "done"}
 {"ts": "2026-08-02T11:53:02Z", "who": "mac-w1", "kind": "claimed", "node": "t1"}
+{"ts": "2026-08-02T12:07:59Z", "who": "mac-w1", "kind": "result", "node": "t1", "status": "done"}
+{"ts": "2026-08-02T12:07:59Z", "who": "mac-w1", "kind": "claimed", "node": "gate"}
