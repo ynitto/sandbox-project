@@ -1,0 +1,21 @@
+{
+  "id": "t4",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "## 成果\n\n共有前 redaction の単一正本を実装し、brief・decisions・状態 Git の commit/push 全経路へ適用しました。検査失敗時は書込・commit・push を拒否し、秘密値を例外へ含めません。\n\n## 検証\n\n- Python compile: 成功\n- `test_delivery.py`: 成功\n- `test_state_git.py`: 成功\n- agent-project 全テスト: 成功\n- 4カテゴリの redaction スモーク検証: 成功\n- `git diff --check`: 成功\n\n変更は `tools/agent-project/agent_project` 配下の4ファイルのみです。fixture・契約テスト・CI変更は担当範囲外として未変更です。\n\n詳細報告: [work-report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t4/work-report.md)",
+  "finished_at": "2026-08-02T12:45:55Z",
+  "node": "mac",
+  "kind": "work",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/document-msbqisx2-5",
+      "commit": "2bd24fce11974c2fdefa46db023e9900acca35e4",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t4/work-report.md"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "t5",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "- 追加: [test_privacy.py](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-91437-b61y7_b6/sandbox/tools/agent-project/tests/test_privacy.py)\n- 検証: 契約テスト3件・全テスト・構文検査・diff検査すべて成功\n- 報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t5/result.md)",
+  "finished_at": "2026-08-02T12:49:25Z",
+  "node": "mac",
+  "kind": "work",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/document-msbqisx2-5",
+      "commit": "424543ad23fd609eb83eaf4c25ec14c11ea51a41",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t5/result.md"
+  ]
+}
