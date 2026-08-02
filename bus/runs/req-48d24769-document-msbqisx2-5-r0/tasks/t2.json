@@ -1,0 +1,6 @@
+{
+  "id": "t2",
+  "goal": "[scope] tools/agent-project の既存テスト fixture 用単一ファイルまたは fixture 記号\n[out_of_scope] 本体 redaction 実装、CI 設定、設計書\ntoken、ホームディレクトリ絶対パス、生プロンプト、生資格情報と、保持されるべき安全な値を含む再利用可能なプライバシー fixture を既存テスト規約に合わせて追加する。",
+  "deps": [],
+  "kind": "generate"
+}

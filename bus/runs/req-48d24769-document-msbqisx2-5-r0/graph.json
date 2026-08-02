@@ -1,0 +1,95 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification",
+      "loop-until-done"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] 共有経路・契約テスト・設計書を観点別に並列処理し、統合前にプライバシー漏出と fail-closed 動作を検証し、テストと CI が通るまで修正を反復する必要があるため。（粒度 fine）",
+    "granularity": "fine"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] tools/agent-project の共有処理結合点、redaction 記号、状態リポジトリおよび brief/decisions 生成経路\n[out_of_scope] コード変更、テスト追加、他ツール配下の調査\nCodeGraph が利用可能なら最初に使用し、共有ファイル生成までの呼出経路、既存 redaction、関連テスト、CI 実行コマンドを特定して、変更対象となる単一の共有前検査境界を確定する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] tools/agent-project の既存テスト fixture 用単一ファイルまたは fixture 記号\n[out_of_scope] 本体 redaction 実装、CI 設定、設計書\ntoken、ホームディレクトリ絶対パス、生プロンプト、生資格情報と、保持されるべき安全な値を含む再利用可能なプライバシー fixture を既存テスト規約に合わせて追加する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "generate"
+    },
+    "t3": {
+      "goal": "[scope] agent-project の redaction 設計を記載する既存設計書1ファイル\n[out_of_scope] ソースコード、テスト、CI 設定、他プロジェクトの文書\nslop-police スキルを使用し、共有禁止項目、状態リポジトリと brief/decisions の検査境界、fail-closed 条件、契約テストと CI の保証範囲を簡潔に反映する。",
+      "deps": [
+        "base-sync"
+      ],
+      "kind": "generate"
+    },
+    "gate": {
+      "goal": "agent-review スキルを使用して t1〜t3 をレビューし、fixture が全禁止カテゴリを識別可能な値で含むこと、確定した検査境界が全共有経路を支配すること、設計書が fail-closed と CI 保証を明記することを検証する。不備があれば統合を拒否する。",
+      "deps": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "kind": "verify"
+    },
+    "synth": {
+      "goal": "調査結果、fixture、設計判断を統合し、既存 helper を再利用する最小変更として、共有前検査境界、契約テスト対象、CI コマンドの対応関係を確定する。",
+      "deps": [
+        "gate"
+      ],
+      "kind": "synthesize"
+    },
+    "t4": {
+      "goal": "[scope] synth で確定した tools/agent-project の共有前 redaction 関数または単一結合点\n[out_of_scope] 個別呼出元ごとの重複ガード、fixture、CI、設計書\n既存 redaction を状態リポジトリ、brief、decisions の全共有経路へ一度だけ適用し、処理後にも token、ホームパス、生プロンプト、生資格情報が検出された場合は共有ファイルを書き出さず明示的に失敗させる。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "work"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-project の redaction 契約テスト用単一テストモジュール\n[out_of_scope] 本体実装、CI 設定、設計書、他機能のテスト拡張\nt2 の fixture を状態リポジトリ、brief、decisions の実生成経路へ通し、禁止値の非出現、必要な redaction 結果、安全な値の保持、redaction 残存時の fail-closed を自動検証する契約テストを追加する。",
+      "deps": [
+        "t2",
+        "t4"
+      ],
+      "kind": "work"
+    },
+    "t6": {
+      "goal": "[scope] agent-project の既存 CI ワークフローまたは既存テストコマンドの単一結合点\n[out_of_scope] 新規 CI 基盤、他プロジェクトの workflow、無関係なテスト構成\n既存 CI が t5 の契約テストを実行することを確認し、対象外なら既存テストジョブへ最小限追加して、契約違反時にジョブが非ゼロ終了するようにする。",
+      "deps": [
+        "t5"
+      ],
+      "kind": "work"
+    },
+    "adv": {
+      "goal": "プライバシー漏出を狙う敵対的観点で、token の部分一致、ホームパス、生プロンプト、生資格情報が状態リポジトリ、brief、decisions のいずれにも残らないこと、redaction 失敗時に出力が作成されずテストと CI が失敗すること、設計書と実装が一致することを検証する。",
+      "deps": [
+        "t3",
+        "t6"
+      ],
+      "kind": "verify"
+    },
+    "judge": {
+      "goal": "adv、契約テスト、既存テスト、CI 相当コマンドを判定する。すべて成功した場合のみ完了とし、失敗時は原因に対応する t3〜t6 の最小ノードを再実行して adv へ戻し、全条件が通るまで反復する。実行中に恒常的な制約を発見した場合は最終成果へ {\"constraints\":[\"…\"]} を添付する。",
+      "deps": [
+        "adv"
+      ],
+      "kind": "judge"
+    },
+    "base-sync": {
+      "goal": "最新 main を ap/document-msbqisx2-5 へ統合し、競合があれば解消する",
+      "deps": [],
+      "kind": "base-sync"
+    }
+  },
+  "iteration": 0
+}

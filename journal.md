@@ -687,3 +687,21 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-02 20:47:07 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-02 20:47:07 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-02 20:47:07 === agent-project 停止 reason=drained cycles=0 done=0 blocked=0 notified=False promoted=0 ===
+- 2026-08-02 20:47:09 === project 停止 reason=blocked cycles=1 cost=0.0000 ===
+- 2026-08-02 20:47:09 === project watch: 監視中（charter 更新/フィードバック待ち）===
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqiswv-1 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqiswv-1（viewer-approve-document-msbqiswv-1-1785671233174.json）
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqiswx-2 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqiswx-2（viewer-approve-document-msbqiswx-2-1785671233175.json）
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqiswy-3 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqiswy-3（viewer-approve-document-msbqiswy-3-1785671233166.json）
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqiswz-4 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqiswz-4（viewer-approve-document-msbqiswz-4-1785671233176.json）
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqisx2-5 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqisx2-5（viewer-approve-document-msbqisx2-5-1785671233177.json）
+- 2026-08-02 20:47:15 plan-review 承認: document-msbqisx3-6 → ready
+- 2026-08-02 20:47:15 commands 取り込み: approve document-msbqisx3-6（viewer-approve-document-msbqisx3-6-1785671233172.json）
+- 2026-08-02 20:47:15 === project 開始 v1 acceptance=2 ===
+- 2026-08-02 20:47:16 === agent-project 開始 tasks=6 ingested=0 planner=agent executor=agent dry_run=False ===
+- 2026-08-02 20:47:16 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
+- 2026-08-02 20:47:16 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること

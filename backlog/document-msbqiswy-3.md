@@ -1,5 +1,5 @@
 ## document-msbqiswy-3: 割当・claim 判定に budget_summary.can_accept と鮮度判定を追加し reason_codes を出力する
-- status: proposed
+- status: ready
 - source: enqueue
 - priority: 3
 - verify: 

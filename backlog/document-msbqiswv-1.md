@@ -1,5 +1,5 @@
 ## document-msbqiswv-1: node-budget-summary スキーマを追加し status/<node>.json へ埋め込む
-- status: proposed
+- status: ready
 - source: enqueue
 - priority: 2
 - verify: 

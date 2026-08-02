@@ -1,5 +1,5 @@
 ## document-msbqisx3-6: dashboard に fleet/knowledge ビュー列を追加し状態リポジトリと突合可能にする
-- status: proposed
+- status: ready
 - source: enqueue
 - priority: 6
 - verify: 

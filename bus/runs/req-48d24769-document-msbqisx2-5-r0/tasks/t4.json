@@ -1,0 +1,8 @@
+{
+  "id": "t4",
+  "goal": "[scope] synth で確定した tools/agent-project の共有前 redaction 関数または単一結合点\n[out_of_scope] 個別呼出元ごとの重複ガード、fixture、CI、設計書\n既存 redaction を状態リポジトリ、brief、decisions の全共有経路へ一度だけ適用し、処理後にも token、ホームパス、生プロンプト、生資格情報が検出された場合は共有ファイルを書き出さず明示的に失敗させる。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "work"
+}

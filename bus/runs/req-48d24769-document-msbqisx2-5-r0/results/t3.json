@@ -1,0 +1,18 @@
+{
+  "id": "t3",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "切り口: `brief/decisions` の保存前検査と、状態リポジトリの共有前検査を分けた二段ゲートとして整理した。\n\n- 成果: [README.md](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-91437-b61y7_b6/sandbox/tools/agent-project/README.md:343) に共有禁止項目、検査境界、fail-closed 条件、fixture 契約、CI の保証範囲と却下案を追記。\n- 検証: `git diff --check` 成功、利用者向け文書検査は「違反なし」。変更は許可範囲内の1ファイルのみ。\n- 前提: 本担当は設計書のみ。ソース、テスト、CI は変更せず、実装と契約テストの追加は後続担当の範囲とした。未解決事項なし。",
+  "finished_at": "2026-08-02T11:53:02Z",
+  "node": "mac",
+  "kind": "generate",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/document-msbqisx2-5",
+      "commit": "cc99db651569c66f79654aa022a3974bae300040",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ## document-msbqisx2-5: 共有禁止項目（redaction）を契約テスト化する
-- status: proposed
+- status: doing
 - source: enqueue
 - priority: 5
 - verify: 
@@ -11,3 +11,7 @@
 - desc: token / ホームディレクトリ / 生プロンプト / 生の資格情報が状態リポジトリや brief/decisions へ出ないことを fixture で固定する redaction テストを追加する。
 - charter: v1
 - assess: c=2 r=3 a=2
+- workspace: agent-project
+- routed_by: agent
+- last_run: req-48d24769-document-msbqisx2-5-r0
+- flow_run: req-48d24769-document-msbqisx2-5-r0

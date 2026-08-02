@@ -1,0 +1,15 @@
+{
+  "id": "base-sync",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "target main は統合済み",
+  "finished_at": "2026-08-02T11:50:02Z",
+  "node": "mac",
+  "kind": "base-sync",
+  "data": {
+    "status": "noop",
+    "target": "main",
+    "target_rev": "fce77fc73989312f518099bdcdf1ddc3216266cc",
+    "conflict_files": []
+  }
+}

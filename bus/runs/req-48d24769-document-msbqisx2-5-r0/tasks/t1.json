@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] tools/agent-project の共有処理結合点、redaction 記号、状態リポジトリおよび brief/decisions 生成経路\n[out_of_scope] コード変更、テスト追加、他ツール配下の調査\nCodeGraph が利用可能なら最初に使用し、共有ファイル生成までの呼出経路、既存 redaction、関連テスト、CI 実行コマンドを特定して、変更対象となる単一の共有前検査境界を確定する。",
+  "deps": [],
+  "kind": "work"
+}

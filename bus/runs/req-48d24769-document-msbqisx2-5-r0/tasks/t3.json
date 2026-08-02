@@ -1,0 +1,6 @@
+{
+  "id": "t3",
+  "goal": "[scope] agent-project の redaction 設計を記載する既存設計書1ファイル\n[out_of_scope] ソースコード、テスト、CI 設定、他プロジェクトの文書\nslop-police スキルを使用し、共有禁止項目、状態リポジトリと brief/decisions の検査境界、fail-closed 条件、契約テストと CI の保証範囲を簡潔に反映する。",
+  "deps": [],
+  "kind": "generate"
+}

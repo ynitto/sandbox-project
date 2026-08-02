@@ -1,5 +1,5 @@
 ## document-msbqiswx-2: node-budget 集約実装を agentcore に一本化する
-- status: proposed
+- status: ready
 - source: enqueue
 - priority: 1
 - verify: 

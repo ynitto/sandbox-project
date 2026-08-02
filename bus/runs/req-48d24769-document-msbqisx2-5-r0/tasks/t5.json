@@ -1,0 +1,9 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-project の redaction 契約テスト用単一テストモジュール\n[out_of_scope] 本体実装、CI 設定、設計書、他機能のテスト拡張\nt2 の fixture を状態リポジトリ、brief、decisions の実生成経路へ通し、禁止値の非出現、必要な redaction 結果、安全な値の保持、redaction 残存時の fail-closed を自動検証する契約テストを追加する。",
+  "deps": [
+    "t2",
+    "t4"
+  ],
+  "kind": "work"
+}

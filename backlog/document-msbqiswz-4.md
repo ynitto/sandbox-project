@@ -1,5 +1,5 @@
 ## document-msbqiswz-4: observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する
-- status: proposed
+- status: ready
 - source: enqueue
 - priority: 4
 - verify: 

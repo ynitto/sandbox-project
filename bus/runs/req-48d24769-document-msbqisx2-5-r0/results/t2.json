@@ -1,0 +1,21 @@
+{
+  "id": "t2",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "切り口: 機密値の除去と、安全値の保持（過剰 redaction 防止）を同じ fixture で検証可能にした。\n\n- [fixture](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-91438-ymlsyymq/sandbox/tools/agent-project/tests/_privacy_fixture.py) に `PRIVACY_FIXTURE` を追加。\n- 架空の token、絶対ホームパス、生プロンプト、生資格情報と保持対象値を収録。\n- 構文検査・import・fixture 構造の assert は成功。変更は対象ファイルのみ。\n- 前提: redaction テストと CI 接続は後続担当。本体実装・CI・設計書は未変更。\n- 自己完結した報告: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t2/result.md)",
+  "finished_at": "2026-08-02T11:53:05Z",
+  "node": "mac",
+  "kind": "generate",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/document-msbqisx2-5",
+      "commit": "74f991c76d3b1855a5bfc8feb47b3aee74375867",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t2/result.md"
+  ]
+}

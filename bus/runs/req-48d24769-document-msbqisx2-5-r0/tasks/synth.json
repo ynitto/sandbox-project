@@ -1,0 +1,8 @@
+{
+  "id": "synth",
+  "goal": "調査結果、fixture、設計判断を統合し、既存 helper を再利用する最小変更として、共有前検査境界、契約テスト対象、CI コマンドの対応関係を確定する。",
+  "deps": [
+    "gate"
+  ],
+  "kind": "synthesize"
+}
