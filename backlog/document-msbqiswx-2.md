@@ -1,0 +1,13 @@
+## document-msbqiswx-2: node-budget 集約実装を agentcore に一本化する
+- status: proposed
+- source: enqueue
+- priority: 1
+- verify: 
+- retries: 0
+- task_acceptance_criteria: 単一の agentcore API が存在し5つの呼び出し元がそれを利用するようになっている
+- task_acceptance_criteria: 同一 fixture に対して旧実装と同等の出力を返す突合テストが追加され、合格している
+- task_acceptance_criteria: 重複実装のコードブロックが削除または呼び出しに置換されている
+- why: C7 回復の核心。判断ロジックを一箇所に置けば将来の維持コストと不整合を無くせる。
+- desc: node-budget の読取・推定・state 計算を agentcore へ移し、agent-amigos/agent-flow/agent-project/agent-loop/ダッシュボードに対し共通 API を提供して既存の 5 箇所の重複実装を置換する。
+- charter: v1
+- assess: c=3 r=2 a=2

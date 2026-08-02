@@ -1,0 +1,14 @@
+## document-msbqisx3-6: dashboard に fleet/knowledge ビュー列を追加し状態リポジトリと突合可能にする
+- status: proposed
+- source: enqueue
+- priority: 6
+- verify: 
+- retries: 0
+- task_acceptance_criteria: fleet 画面に新列が追加され、status/<node>.json の値と一致する
+- task_acceptance_criteria: knowledge 画面で観測 provenance と適用統計が確認できる
+- task_acceptance_criteria: dashboard-163827 の範囲外の二次書き込みは行わない（dashboard は書き手にならない）
+- after: dashboard-163827
+- why: Phase5 のユーザビリティ要件。UI で一度に判断できることが運用の前提になる。
+- desc: fleet 画面に capacity bucket・鮮度(updated_iso+fresh_after_sec)・reservation・reason_code を追加、knowledge 画面に provenance・適用数・PASS/FAIL/rollback 集計・状態遷移を表示する。データ源は status/<node>.json（board はオプション）に限定する。
+- charter: v1
+- assess: c=3 r=2 a=2

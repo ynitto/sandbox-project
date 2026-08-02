@@ -1,0 +1,13 @@
+## document-msbqisx2-5: 共有禁止項目（redaction）を契約テスト化する
+- status: proposed
+- source: enqueue
+- priority: 5
+- verify: 
+- retries: 0
+- task_acceptance_criteria: プライバシー用 fixture を用いた redaction テストが追加されている
+- task_acceptance_criteria: テストにより token/ホームパス/生プロンプトが共有ファイルに現れないことが自動検出される
+- task_acceptance_criteria: redaction 失敗時に CI が失敗するようになっている
+- why: Phase0 の必須安全網。共有前検査を自動化し漏出リスクを阻止する。
+- desc: token / ホームディレクトリ / 生プロンプト / 生の資格情報が状態リポジトリや brief/decisions へ出ないことを fixture で固定する redaction テストを追加する。
+- charter: v1
+- assess: c=2 r=3 a=2

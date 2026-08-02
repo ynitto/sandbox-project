@@ -1,0 +1,13 @@
+{
+  "title": "割当・claim 判定に budget_summary.can_accept と鮮度判定を追加し reason_codes を出力する",
+  "charter": "v1",
+  "task_acceptance_criteria": [
+    "割当処理が can_accept=false あるいは期限切れのノードへ割当を行わない fixture がある",
+    "journal/ダッシュボードに reason_codes が記録される",
+    "既定で enforce=false にして差分監査が可能になっている"
+  ],
+  "id": "document-msbqiswy-3",
+  "why": "Phase1 の割当安全化。可読な reason_codes があると監査と UI 表示が容易になる。",
+  "desc": "allocate_distributed_tasks と claim_distributed_task の適格性ロジックに node-budget-summary の can_accept と updated_iso/freshness チェックを加える。決定理由を reason_codes として journal/dashboard に出力する。",
+  "priority": 3
+}

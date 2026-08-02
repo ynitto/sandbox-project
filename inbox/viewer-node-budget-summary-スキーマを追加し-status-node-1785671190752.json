@@ -1,0 +1,13 @@
+{
+  "title": "node-budget-summary スキーマを追加し status/<node>.json へ埋め込む",
+  "charter": "v1",
+  "task_acceptance_criteria": [
+    "schemas/node-budget-summary.schema.json がリポジトリに追加されている",
+    "status/<node>.json の budget キーが schema に準拠して出力される fixture がある",
+    "旧ビューが optional な新フィールドで壊れない契約テストが通る"
+  ],
+  "id": "document-msbqiswv-1",
+  "why": "Phase1 の前提である射影 schema を先に固定し、互換性テストで安全に出すため。",
+  "desc": "schemas/node-budget-summary.schema.json を追加し、status/<node>.json の budget block に additive に埋める仕様を定義。reader が optional で壊れない互換性を担保する契約テストを追加する。",
+  "priority": 2
+}

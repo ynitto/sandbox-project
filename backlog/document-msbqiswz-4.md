@@ -1,0 +1,13 @@
+## document-msbqiswz-4: observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する
+- status: proposed
+- source: enqueue
+- priority: 4
+- verify: 
+- retries: 0
+- task_acceptance_criteria: observation sidecar フォーマットが schema として追加されている
+- task_acceptance_criteria: 同一 observation ID を複数回取り込んでも候補集合と hit 集計が変わらない E2E fixture がある
+- task_acceptance_criteria: provenance（発生 node→run→receipt）を辿れるサンプルが確認できる
+- why: Phase3 の基盤。観測の追跡性と重複耐性が無いと rule ライフサイクルが破綻する。
+- desc: run brief/archive/decisions に共通の observation sidecar（identity, input, outcome, candidate, privacy）を定義・保存し、観測は observation ID で冪等に取り込めるようにする。git マージ順に依存しない集計結果を保証する。
+- charter: v1
+- assess: c=3 r=3 a=2
