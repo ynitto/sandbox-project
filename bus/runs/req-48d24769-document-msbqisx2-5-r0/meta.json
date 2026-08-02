@@ -45,7 +45,10 @@
   },
   "base_rev": "d2b2fae5fa8264b126494b885ddc14faf2dc5319",
   "executor": "agent",
-  "orch_lease_until": 1785678483.4267352,
-  "heartbeat_at": "2026-08-02T13:46:03Z",
-  "updated_at": "2026-08-02T13:21:17Z"
+  "orch_lease_until": 1785679648.0688052,
+  "heartbeat_at": "2026-08-02T14:05:28Z",
+  "updated_at": "2026-08-02T14:05:28Z",
+  "heal_count": 1,
+  "heal_progress": 12,
+  "healed_at": "2026-08-02T14:05:27Z"
 }
