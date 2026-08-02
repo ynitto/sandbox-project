@@ -1,0 +1,19 @@
+{
+  "id": "adv",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "verify=fail\n\n- [`_head.py:143`](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-91437-b61y7_b6/sandbox/tools/agent-project/agent_project/_head.py:143): 複数語の未引用 `raw_prompt=` は先頭語しか置換されず、後半が共有ファイルへ漏出して再検査も通過します。設計書と不一致です。\n- [`test_privacy.py:12`](/var/folders/8c/s6jh85ls4tq3fmzkl0jk5jcc0000gn/T/agent-flow-ws-91437-b61y7_b6/sandbox/tools/agent-project/tests/test_privacy.py:12): 完全一致だけを検査しており、生プロンプトの部分漏出と token の部分一致・単体埋め込みを検出できません。\n\nCI 収集、redactor 無効化時のテスト失敗、state commit/push 阻止、全1161テスト成功、許可範囲外差分なしは確認済みです。詳細は [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/adv/result.md)。\n\n{\"ok\": false, \"issues\": [\"_head.py:143-146 の PROMPT 正規表現が複数語の生プロンプト後半を漏出させる\", \"test_privacy.py:12-19 が token の部分一致と部分的なプロンプト漏出を検出しない\"]}",
+  "finished_at": "2026-08-02T13:11:44Z",
+  "node": "mac",
+  "kind": "verify",
+  "data": {
+    "ok": false,
+    "issues": [
+      "_head.py:143-146 の PROMPT 正規表現が複数語の生プロンプト後半を漏出させる",
+      "test_privacy.py:12-19 が token の部分一致と部分的なプロンプト漏出を検出しない"
+    ]
+  },
+  "artifacts": [
+    "artifacts/adv/result.md"
+  ]
+}
