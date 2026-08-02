@@ -1,0 +1,18 @@
+{
+  "id": "judge",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "# judge=fail\n\n評価軸は要求適合・正確さ・完成度。\n\n- `t3`: 設計は妥当だが、実装・テスト検証がなく未完。\n- `t6`: 契約テスト3件、CI相当の全1161テストは成功。ただし漏出の検出漏れを見逃している。\n- `adv`: 生プロンプトの部分漏出と単体・埋め込み token の未検出を正確に再現しており最良。\n\n最小再実行経路: `t4 → t5 → adv`。`t3`、`t6` の再実行は不要。\n\n成果物: [result.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/judge/result.md)\n\n{\"winner\":\"adv\",\"constraints\":[\"変更可能範囲は tools/agent-project 配下のみ。CI定義は読取確認のみ可能だが、既存unittest discoveryで収集済みのため変更不要\"]}",
+  "finished_at": "2026-08-02T13:20:46Z",
+  "node": "mac",
+  "kind": "judge",
+  "data": {
+    "winner": "adv",
+    "constraints": [
+      "変更可能範囲は tools/agent-project 配下のみ。CI定義は読取確認のみ可能だが、既存unittest discoveryで収集済みのため変更不要"
+    ]
+  },
+  "artifacts": [
+    "artifacts/judge/result.md"
+  ]
+}

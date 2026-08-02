@@ -1,0 +1,8 @@
+{
+  "id": "t8-redaction-adversarial-verify",
+  "goal": "t7 の成果を独立に検証する。プライバシー fixture の禁止値を共有ファイルへ意図的に混入した場合に token、ホームパス、生プロンプト、生資格情報の各ケースで CI が終了コード非0になること、混入がない状態では全テストが pass すること、状態リポジトリと brief/decisions の双方が検査対象であることを確認する。検出漏れ、部分漏出、要求範囲外の変更があれば具体的なファイル・ケースを示して fail とする。",
+  "deps": [
+    "t7-redaction-contract-fix"
+  ],
+  "kind": "work"
+}

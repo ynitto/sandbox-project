@@ -15,3 +15,4 @@
 {"ts": "2026-08-02T12:57:51Z", "who": "mac-w1", "kind": "claimed", "node": "adv"}
 {"ts": "2026-08-02T13:11:44Z", "who": "mac-w1", "kind": "result", "node": "adv", "status": "done"}
 {"ts": "2026-08-02T13:11:44Z", "who": "mac-w1", "kind": "claimed", "node": "judge"}
+{"ts": "2026-08-02T13:20:46Z", "who": "mac-w1", "kind": "result", "node": "judge", "status": "done"}

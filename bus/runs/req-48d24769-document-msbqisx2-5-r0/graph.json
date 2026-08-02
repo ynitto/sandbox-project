@@ -89,7 +89,19 @@
       "goal": "最新 main を ap/document-msbqisx2-5 へ統合し、競合があれば解消する",
       "deps": [],
       "kind": "base-sync"
+    },
+    "t7-redaction-contract-fix": {
+      "goal": "tools/agent-project の共有前 redaction 実装（adv が指摘した _head.py:143 周辺を含む）を修正する。プライバシー fixture に token の単体値・文字列内埋め込み、生プロンプトの全文・部分文字列、ホームディレクトリ、生の資格情報を追加し、状態リポジトリおよび brief/decisions の全共有経路で一切出力されないことを契約テストで検証する。安全な値が保持される既存検証も維持する。各漏出ケースでテストが実際に失敗することを確認し、通常の CI コマンドを実行して全件 pass にする。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t8-redaction-adversarial-verify": {
+      "goal": "t7 の成果を独立に検証する。プライバシー fixture の禁止値を共有ファイルへ意図的に混入した場合に token、ホームパス、生プロンプト、生資格情報の各ケースで CI が終了コード非0になること、混入がない状態では全テストが pass すること、状態リポジトリと brief/decisions の双方が検査対象であることを確認する。検出漏れ、部分漏出、要求範囲外の変更があれば具体的なファイル・ケースを示して fail とする。",
+      "deps": [
+        "t7-redaction-contract-fix"
+      ],
+      "kind": "work"
     }
   },
-  "iteration": 0
+  "iteration": 1
 }
