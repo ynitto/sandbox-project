@@ -43,7 +43,7 @@
   },
   "base_rev": "20e000ed997e85b8b479fbebc55ea3df22ca30a0",
   "executor": "agent",
-  "orch_lease_until": 1785784903.8158112,
-  "heartbeat_at": "2026-08-03T19:19:43Z",
+  "orch_lease_until": 1785785553.5053928,
+  "heartbeat_at": "2026-08-03T19:30:33Z",
   "updated_at": "2026-08-03T17:23:57Z"
 }
