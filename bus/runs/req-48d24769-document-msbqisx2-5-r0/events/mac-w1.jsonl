@@ -17,3 +17,4 @@
 {"ts": "2026-08-02T13:11:44Z", "who": "mac-w1", "kind": "claimed", "node": "judge"}
 {"ts": "2026-08-02T13:20:46Z", "who": "mac-w1", "kind": "result", "node": "judge", "status": "done"}
 {"ts": "2026-08-03T12:54:15Z", "who": "mac-w1", "kind": "claimed", "node": "t7-redaction-contract-fix"}
+{"ts": "2026-08-03T13:24:32Z", "who": "mac-w1", "kind": "result", "node": "t7-redaction-contract-fix", "status": "failed"}
