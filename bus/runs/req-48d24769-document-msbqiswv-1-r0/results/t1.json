@@ -1,0 +1,12 @@
+{
+  "id": "t1",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "成果物: [status-budget-reader-survey.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t1/status-budget-reader-survey.md)\n\n- `status/<node>.json` の唯一の生成経路、現行 budget 契約、内部 reader・旧ビューの結合点を特定。\n- agent-project 関連テスト: 130件成功。\n- dashboard テスト: `yaml` 依存未導入のため起動不可。静的突合で代替。\n- schema・fixture・reader・テストは変更していない。\n- 参照用 worktree は変更なしで解放済み。",
+  "finished_at": "2026-08-03T18:39:19Z",
+  "node": "mac",
+  "kind": "work",
+  "artifacts": [
+    "artifacts/t1/status-budget-reader-survey.md"
+  ]
+}
