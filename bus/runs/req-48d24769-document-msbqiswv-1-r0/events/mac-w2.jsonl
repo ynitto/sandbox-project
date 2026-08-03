@@ -9,3 +9,5 @@
 {"ts": "2026-08-03T20:47:06Z", "who": "mac-w2", "kind": "claimed", "node": "classify"}
 {"ts": "2026-08-03T20:48:56Z", "who": "mac-w2", "kind": "result", "node": "classify", "status": "done"}
 {"ts": "2026-08-03T20:48:56Z", "who": "mac-w2", "kind": "claimed", "node": "synth"}
+{"ts": "2026-08-03T20:54:13Z", "who": "mac-w2", "kind": "result", "node": "synth", "status": "done"}
+{"ts": "2026-08-03T20:54:13Z", "who": "mac-w2", "kind": "claimed", "node": "final"}

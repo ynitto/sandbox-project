@@ -1,0 +1,146 @@
+diff --git a/schemas/node-budget-summary.schema.json b/schemas/node-budget-summary.schema.json
+new file mode 100644
+index 00000000..8a6d3882
+--- /dev/null
++++ b/schemas/node-budget-summary.schema.json
+@@ -0,0 +1,19 @@
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "node-budget-summary.schema.json",
++  "title": "ノード予算サマリー",
++  "description": "status/<node>.json の optional budget block に埋め込む agent-project 予算射影。未知キーは無害に無視する。",
++  "type": "object",
++  "properties": {
++    "can_accept": {"type": "boolean", "description": "このノードが新規 project work を受け入れられるか"},
++    "exceeded": {"type": "boolean", "description": "時間またはトークンの実効上限に到達したか"},
++    "soft": {"type": "boolean", "description": "soft_ratio に到達し縮退中か"},
++    "on_exhausted": {"enum": ["pause", "stop", "degrade"]},
++    "spent_min": {"type": "number", "minimum": 0},
++    "limit_min": {"type": "number", "minimum": 0, "description": "0 = 無制限"},
++    "spent_tokens": {"type": "number", "minimum": 0},
++    "token_limit": {"type": "number", "minimum": 0, "description": "0 = 無制限"},
++    "period": {"enum": ["day", "month", "total"]}
++  },
++  "additionalProperties": true
++}
+diff --git a/tools/agent-dashboard/test/liveness-host.test.js b/tools/agent-dashboard/test/liveness-host.test.js
+index 330c4b46..9c37cd3e 100644
+--- a/tools/agent-dashboard/test/liveness-host.test.js
++++ b/tools/agent-dashboard/test/liveness-host.test.js
+@@ -142,6 +142,29 @@ test('readNodeStatuses は status/<node>.json を新しさ付きで並べる', (
+   }
+ });
+ 
++test('readNodeStatuses は optional budget の有無で旧ビュー射影を変えない', () => {
++  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'kpv-nodes-budget-'));
++  try {
++    const sdir = path.join(tmp, 'status');
++    fs.mkdirSync(sdir, { recursive: true });
++    const file = path.join(sdir, 'pc-a.json');
++    const status = {
++      node: 'pc-a', host: 'h1', updated_iso: new Date(Date.now() - 10000).toISOString(),
++      fresh_after_sec: 120, paused: false, watch: true, level: 'unattended',
++    };
++    fs.writeFileSync(file, JSON.stringify(status));
++    const withoutBudget = project.readNodeStatuses(tmp);
++    fs.writeFileSync(file, JSON.stringify({ ...status, budget: {
++      can_accept: false, exceeded: true, soft: false, on_exhausted: 'pause',
++      spent_min: 120, limit_min: 120, spent_tokens: 500000,
++      token_limit: 500000, period: 'day',
++    } }));
++    assert.deepStrictEqual(project.readNodeStatuses(tmp), withoutBudget);
++  } finally {
++    fs.rmSync(tmp, { recursive: true, force: true });
++  }
++});
++
+ test('readNodeStatuses は status/ が無ければ空配列', () => {
+   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'kpv-nodes-'));
+   try {
+diff --git a/tools/agent-project/agent_project/loop.py b/tools/agent-project/agent_project/loop.py
+index 6a8d831d..63e5bcc4 100644
+--- a/tools/agent-project/agent_project/loop.py
++++ b/tools/agent-project/agent_project/loop.py
+@@ -68,6 +68,12 @@ def write_status(cfg: "Config") -> None:
+         # Windows ビュアーが同一マシンの WSL 本体を「別マシン」と誤認しないための信号
+         **detect_runtime(),
+     }
++    budget = _node_budget_state()
++    if budget is not None:
++        rec["budget"] = {
++            **budget,
++            "can_accept": not budget["exceeded"] or budget["on_exhausted"] == "degrade",
++        }
+     body = json.dumps(rec, ensure_ascii=False, indent=2)
+     try:
+         p = status_path(cfg)                       # 従来の単一 status.json（後方互換）
+diff --git a/tools/agent-project/tests/fixtures/status-node-with-budget.json b/tools/agent-project/tests/fixtures/status-node-with-budget.json
+new file mode 100644
+index 00000000..86809b20
+--- /dev/null
++++ b/tools/agent-project/tests/fixtures/status-node-with-budget.json
+@@ -0,0 +1,17 @@
++{
++  "node": "pc-peer",
++  "availability": "active",
++  "updated_iso": "2026-08-04T00:00:00+00:00",
++  "fresh_after_sec": 120,
++  "budget": {
++    "can_accept": true,
++    "exceeded": false,
++    "soft": false,
++    "on_exhausted": "pause",
++    "spent_min": 42.5,
++    "limit_min": 120,
++    "spent_tokens": 125000,
++    "token_limit": 500000,
++    "period": "day"
++  }
++}
+diff --git a/tools/agent-project/tests/test_commands.py b/tools/agent-project/tests/test_commands.py
+index c7628071..ba19d158 100644
+--- a/tools/agent-project/tests/test_commands.py
++++ b/tools/agent-project/tests/test_commands.py
+@@ -289,7 +289,8 @@ class TestCommandsIngest(unittest.TestCase):
+             d = Path(d)
+             c = cfg_for(d, node="pc-A")
+             km.ensure_dirs(c)
+-            km.write_status(c)
++            with mock.patch.object(km, "_node_budget_state", return_value=None):
++                km.write_status(c)
+             shared = json.loads((d / "status.json").read_text(encoding="utf-8"))
+             self.assertEqual(shared["node"], "pc-A")               # 単一 status にもノード名
+             # ファイル名は板と同じ正規形（小文字・`normalize_node_id`）。ここに独自の
+@@ -298,6 +299,32 @@ class TestCommandsIngest(unittest.TestCase):
+             # 倒すので、内容とファイル名の綴りは一致する。
+             per = json.loads((d / "status" / "pc-a.json").read_text(encoding="utf-8"))
+             self.assertEqual(per["node"], "pc-A")
++            self.assertNotIn("budget", per)
++
++    def test_node_status_budget_matches_fixture_and_schema(self):
++        with tempfile.TemporaryDirectory() as d:
++            d = Path(d)
++            fixture = json.loads((Path(__file__).parent / "fixtures" /
++                                  "status-node-with-budget.json").read_text(encoding="utf-8"))
++            schema = json.loads((Path(__file__).parents[3] / "schemas" /
++                                 "node-budget-summary.schema.json").read_text(encoding="utf-8"))
++            source = {k: v for k, v in fixture["budget"].items() if k != "can_accept"}
++            c = cfg_for(d, node=fixture["node"])
++            km.ensure_dirs(c)
++            with mock.patch.object(km, "_node_budget_state", return_value=source):
++                km.write_status(c)
++            actual = json.loads((d / "status" / f'{fixture["node"]}.json')
++                                .read_text(encoding="utf-8"))["budget"]
++            self.assertEqual(actual, fixture["budget"])
++            self.assertEqual(set(actual), set(schema["properties"]))
++            for key, spec in schema["properties"].items():
++                if "enum" in spec:
++                    self.assertIn(actual[key], spec["enum"])
++                elif spec["type"] == "boolean":
++                    self.assertIsInstance(actual[key], bool)
++                else:
++                    self.assertIsInstance(actual[key], (int, float))
++                    self.assertGreaterEqual(actual[key], spec.get("minimum", 0))
+ 
+     def test_node_status_no_per_node_file_when_unnamed(self):
+         # 無名エンジンは従来どおり status.json のみ（status/ を作らない）。

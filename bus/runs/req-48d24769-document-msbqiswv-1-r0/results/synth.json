@@ -1,0 +1,13 @@
+{
+  "id": "synth",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "- 統合差分: [node-budget-summary-integration.patch](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/synth/node-budget-summary-integration.patch)\n- 検証報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/synth/report.md)\n- JSON、契約テスト、全 agent-project 回帰、`git apply --check`: PASS。参照リポジトリは未変更。\n\n{\"constraints\":[\"node-budget-summary の正準スキーマはリポジトリ直下 schemas/node-budget-summary.schema.json に置き、tools/agent-project/schemas 配下を正準にしない\",\"project root の status/<node>.json に加える budget は optional かつ additive とし、出力時は node-budget-summary schema に準拠させる\",\"旧ビュー readNodeStatuses() は budget の有無で既存の射影結果を変えず、両入力を同じ契約テストで固定する\",\"node budget の値は既存 _node_budget_state() を再利用して生成し、project root status と AGENT_CONTROL_DIR の process heartbeat を別契約として扱う\"]}",
+  "finished_at": "2026-08-03T20:54:13Z",
+  "node": "mac",
+  "kind": "synthesize",
+  "artifacts": [
+    "artifacts/synth/node-budget-summary-integration.patch",
+    "artifacts/synth/report.md"
+  ]
+}
