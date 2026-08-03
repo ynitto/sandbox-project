@@ -1,0 +1,48 @@
+{
+  "request": "node-budget-summary スキーマを追加し status/<node>.json へ埋め込む\n\n作業内容の詳細:\n  schemas/node-budget-summary.schema.json を追加し、status/<node>.json の budget block に additive に埋める仕様を定義。reader が optional で壊れない互換性を担保する契約テストを追加する。\n背景・目的（実装の判断に迷ったらこの意図に沿うこと）:\n  Phase1 の前提である射影 schema を先に固定し、互換性テストで安全に出すため。\n\n完了条件（満たすまで作業を続け、満たしたら終了する。成果はこの内容の機械ゲートを通過して初めて完了になる）:\n  - schemas/node-budget-summary.schema.json がリポジトリに追加されている\n  - status/<node>.json の budget キーが schema に準拠して出力される fixture がある\n  - 旧ビューが optional な新フィールドで壊れない契約テストが通る\n\nタスクID: document-msbqiswv-1\n\n実行中に、分散した他ノードも従うべき恒常的な制約・規約を発見したら、最終成果に 機械可読な JSON `{\"constraints\": [\"…\"]}` を添えること（無ければ省略可）。これは以後の全ノードへ伝播され一貫性の基準になる。\n\nプロジェクト定義（charter・常に踏まえること。成果物が目標/制約に反しないこと）:\n目標: * agent-project の codd-gate 連携コードを整理する\n* agent-dashboard でのユーザビリティを考慮する\n対象リポジトリ（タスクは説明を見て関係するものを選び、その base/target ブランチで作業。path 指定があればそのフォルダ配下のみ変更）:\n- agent-amigos = https://github.com/ynitto/sandbox（path=tools/agent-amigos, base=main, target=main, 書込先候補（owns: tools/agent-amigos/**））\n    説明: agent-amigos\n- agent-dashboard = https://github.com/ynitto/sandbox（path=tools/agent-dashboard, base=main, target=main, 書込先候補（owns: tools/agent-dashboard/**））\n    説明: agent-dashboard\n- agent-flow = https://github.com/ynitto/sandbox（path=tools/agent-flow, base=main, target=main, 書込先候補（owns: tools/agent-flow/**））\n    説明: agent-flow\n- agent-loop = https://github.com/ynitto/sandbox（path=tools/agent-loop, base=main, target=main, 書込先候補（owns: tools/agent-loop/**））\n    説明: agent-loop\n- agent-project = https://github.com/ynitto/sandbox（path=tools/agent-project, base=main, target=main, 書込先候補（owns: tools/agent-project/**））\n    説明: agent-project\n- skills = https://github.com/ynitto/sandbox（path=.github/skills, base=main, target=main, 参照のみ・push しない）\n    説明: skills\n成果物:\n- agent-project ソースコード\n- 設計書\n\nプロジェクトルール（rules.md・全タスク共通。必ず従うこと）:\n* ドキュメントタスクには slop-police スキルを使うこと\n* レビューには agent-review スキルを使うこと\n\nこのタスクに関する過去の判断記録（needs の判断結果・必ず踏まえること）:\n## DR-0001  2026-08-02  actor: nitto\n- context : document-msbqiswv-1（node-budget-summary スキーマを追加し status/<node>.json へ埋め込む）の実行を承認\n- action  : plan-approve\n- reason  : 計画レビューで内容を確認し、一括承認\n- affects : document-msbqiswv-1 → ready",
+  "workspace": null,
+  "references": [
+    {
+      "url": "https://github.com/ynitto/sandbox",
+      "path": ".github/skills",
+      "base": "main",
+      "target": "",
+      "desc": "skills"
+    }
+  ],
+  "status": "planning",
+  "created_at": "2026-08-03T17:22:36Z",
+  "verification_plan": {
+    "version": 1,
+    "task_id": "document-msbqiswv-1",
+    "workspace": "",
+    "commands": [],
+    "criteria": [
+      {
+        "id": "C1",
+        "text": "schemas/node-budget-summary.schema.json がリポジトリに追加されている"
+      },
+      {
+        "id": "C2",
+        "text": "status/<node>.json の budget キーが schema に準拠して出力される fixture がある"
+      },
+      {
+        "id": "C3",
+        "text": "旧ビューが optional な新フィールドで壊れない契約テストが通る"
+      },
+      {
+        "id": "C4",
+        "text": "このタスクの差分が、上の基準の対象範囲に実在すること（変更が無い・無関係な場所にしか無いなら fail）"
+      }
+    ],
+    "policy": {
+      "confirm": 1,
+      "timeout_sec": 600.0
+    },
+    "digest": "sha256:b9367cc0d21e7281701ded9eab28c4ff899583fa53f2406e4d7d0d7845eec205"
+  },
+  "base_rev": "20e000ed997e85b8b479fbebc55ea3df22ca30a0",
+  "executor": "agent",
+  "orch_lease_until": 1785777876.350372,
+  "heartbeat_at": "2026-08-03T17:22:36Z"
+}

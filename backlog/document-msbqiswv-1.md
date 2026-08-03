@@ -1,5 +1,5 @@
 ## document-msbqiswv-1: node-budget-summary スキーマを追加し status/<node>.json へ埋め込む
-- status: ready
+- status: doing
 - source: enqueue
 - priority: 2
 - verify: 
@@ -11,3 +11,5 @@
 - desc: schemas/node-budget-summary.schema.json を追加し、status/<node>.json の budget block に additive に埋める仕様を定義。reader が optional で壊れない互換性を担保する契約テストを追加する。
 - charter: v1
 - assess: c=2 r=2 a=2
+- last_run: req-48d24769-document-msbqiswv-1-r0
+- flow_run: req-48d24769-document-msbqiswv-1-r0

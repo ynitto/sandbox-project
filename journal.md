@@ -714,3 +714,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-03 21:54:13 run 再開: document-msbqisx2-5 は req-48d24769-document-msbqisx2-5-r0 の失敗ノードだけをやり直します（done は温存）
 - 2026-08-03 23:16:59 flow detach: document-msbqisx2-5 の run req-48d24769-document-msbqisx2-5-r0 を failed（agent-flow run 応答なし（orchestrator lease 失効））
 - 2026-08-03 23:17:05 cycle 1: document-msbqisx2-5 → 人の判断（verify 未定義）
+- 2026-08-04 01:10:36 flow detach: document-msbqiswz-4 の run req-48d24769-document-msbqiswz-4-r0 を failed（agent-flow run 応答なし（orchestrator lease 失効））
+- 2026-08-04 01:10:44 cycle 2: document-msbqiswz-4 → 人の判断（verify 未定義）

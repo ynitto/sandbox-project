@@ -1,9 +1,9 @@
 ## document-msbqiswz-4: observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する
-- status: doing
+- status: blocked
 - source: enqueue
 - priority: 4
 - verify: 
-- retries: 0
+- retries: 1
 - task_acceptance_criteria: observation sidecar フォーマットが schema として追加されている
 - task_acceptance_criteria: 同一 observation ID を複数回取り込んでも候補集合と hit 集計が変わらない E2E fixture がある
 - task_acceptance_criteria: provenance（発生 node→run→receipt）を辿れるサンプルが確認できる
@@ -12,4 +12,5 @@
 - charter: v1
 - assess: c=3 r=3 a=2
 - last_run: req-48d24769-document-msbqiswz-4-r0
-- flow_run: req-48d24769-document-msbqiswz-4-r0
+- needs_reason: verify 未定義（工程は完了しています。完了条件が無いため自動では done にできません。成果を確認し、問題なければ approve してください）
+- needs_dr: DR-0001
