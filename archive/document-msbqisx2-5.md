@@ -1,5 +1,5 @@
 ## document-msbqisx2-5: 共有禁止項目（redaction）を契約テスト化する
-- status: blocked
+- status: done
 - source: enqueue
 - priority: 5
 - verify: 
@@ -16,3 +16,9 @@
 - last_run: req-48d24769-document-msbqisx2-5-r0
 - needs_reason: verify 未定義（工程は完了しています。完了条件が無いため自動では done にできません。成果を確認し、問題なければ approve してください）
 - needs_dr: DR-0001
+- archived: 2026-08-04 06:00:18
+
+## 納品書
+- 完了 : 2026-08-04 06:00:18
+- verify: `` → PASS（承認: 成果を確認して完了を承認）
+- 成果 : 
