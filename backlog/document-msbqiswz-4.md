@@ -1,5 +1,5 @@
 ## document-msbqiswz-4: observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する
-- status: ready
+- status: doing
 - source: enqueue
 - priority: 4
 - verify: 
@@ -11,3 +11,5 @@
 - desc: run brief/archive/decisions に共通の observation sidecar（identity, input, outcome, candidate, privacy）を定義・保存し、観測は observation ID で冪等に取り込めるようにする。git マージ順に依存しない集計結果を保証する。
 - charter: v1
 - assess: c=3 r=3 a=2
+- last_run: req-48d24769-document-msbqiswz-4-r0
+- flow_run: req-48d24769-document-msbqiswz-4-r0

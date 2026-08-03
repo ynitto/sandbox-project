@@ -712,3 +712,5 @@ There's an issue with the selected model (auto). It may not exist or you may not
 - 2026-08-03 21:53:55 state-git: direct モード → /Users/nitto/Workspace/sandbox-project 自体の git リポジトリへ直接コミット/push interval=300.0s
 - 2026-08-03 21:53:55 警告: origin へ未 push のコミットが 1 件ある（main）。worker と verify は origin から clone するため、これらの成果は彼らから 見えない（ローカルでは通るのに verify が落ち続ける）。`git -C /Users/nitto/Workspace/sandbox-project push origin main` を検討すること
 - 2026-08-03 21:54:13 run 再開: document-msbqisx2-5 は req-48d24769-document-msbqisx2-5-r0 の失敗ノードだけをやり直します（done は温存）
+- 2026-08-03 23:16:59 flow detach: document-msbqisx2-5 の run req-48d24769-document-msbqisx2-5-r0 を failed（agent-flow run 応答なし（orchestrator lease 失効））
+- 2026-08-03 23:17:05 cycle 1: document-msbqisx2-5 → 人の判断（verify 未定義）

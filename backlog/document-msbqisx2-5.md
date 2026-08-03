@@ -1,9 +1,9 @@
 ## document-msbqisx2-5: 共有禁止項目（redaction）を契約テスト化する
-- status: doing
+- status: blocked
 - source: enqueue
 - priority: 5
 - verify: 
-- retries: 0
+- retries: 1
 - task_acceptance_criteria: プライバシー用 fixture を用いた redaction テストが追加されている
 - task_acceptance_criteria: テストにより token/ホームパス/生プロンプトが共有ファイルに現れないことが自動検出される
 - task_acceptance_criteria: redaction 失敗時に CI が失敗するようになっている
@@ -14,4 +14,5 @@
 - workspace: agent-project
 - routed_by: agent
 - last_run: req-48d24769-document-msbqisx2-5-r0
-- flow_run: req-48d24769-document-msbqisx2-5-r0
+- needs_reason: verify 未定義（工程は完了しています。完了条件が無いため自動では done にできません。成果を確認し、問題なければ approve してください）
+- needs_dr: DR-0001

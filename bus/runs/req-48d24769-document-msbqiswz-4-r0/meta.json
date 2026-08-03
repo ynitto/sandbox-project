@@ -1,0 +1,48 @@
+{
+  "request": "observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する\n\n作業内容の詳細:\n  run brief/archive/decisions に共通の observation sidecar（identity, input, outcome, candidate, privacy）を定義・保存し、観測は observation ID で冪等に取り込めるようにする。git マージ順に依存しない集計結果を保証する。\n背景・目的（実装の判断に迷ったらこの意図に沿うこと）:\n  Phase3 の基盤。観測の追跡性と重複耐性が無いと rule ライフサイクルが破綻する。\n\n完了条件（満たすまで作業を続け、満たしたら終了する。成果はこの内容の機械ゲートを通過して初めて完了になる）:\n  - observation sidecar フォーマットが schema として追加されている\n  - 同一 observation ID を複数回取り込んでも候補集合と hit 集計が変わらない E2E fixture がある\n  - provenance（発生 node→run→receipt）を辿れるサンプルが確認できる\n\nタスクID: document-msbqiswz-4\n\n実行中に、分散した他ノードも従うべき恒常的な制約・規約を発見したら、最終成果に 機械可読な JSON `{\"constraints\": [\"…\"]}` を添えること（無ければ省略可）。これは以後の全ノードへ伝播され一貫性の基準になる。\n\nプロジェクト定義（charter・常に踏まえること。成果物が目標/制約に反しないこと）:\n目標: * agent-project の codd-gate 連携コードを整理する\n* agent-dashboard でのユーザビリティを考慮する\n対象リポジトリ（タスクは説明を見て関係するものを選び、その base/target ブランチで作業。path 指定があればそのフォルダ配下のみ変更）:\n- agent-amigos = https://github.com/ynitto/sandbox（path=tools/agent-amigos, base=main, target=main, 書込先候補（owns: tools/agent-amigos/**））\n    説明: agent-amigos\n- agent-dashboard = https://github.com/ynitto/sandbox（path=tools/agent-dashboard, base=main, target=main, 書込先候補（owns: tools/agent-dashboard/**））\n    説明: agent-dashboard\n- agent-flow = https://github.com/ynitto/sandbox（path=tools/agent-flow, base=main, target=main, 書込先候補（owns: tools/agent-flow/**））\n    説明: agent-flow\n- agent-loop = https://github.com/ynitto/sandbox（path=tools/agent-loop, base=main, target=main, 書込先候補（owns: tools/agent-loop/**））\n    説明: agent-loop\n- agent-project = https://github.com/ynitto/sandbox（path=tools/agent-project, base=main, target=main, 書込先候補（owns: tools/agent-project/**））\n    説明: agent-project\n- skills = https://github.com/ynitto/sandbox（path=.github/skills, base=main, target=main, 参照のみ・push しない）\n    説明: skills\n成果物:\n- agent-project ソースコード\n- 設計書\n\nプロジェクトルール（rules.md・全タスク共通。必ず従うこと）:\n* ドキュメントタスクには slop-police スキルを使うこと\n* レビューには agent-review スキルを使うこと\n\nこのタスクに関する過去の判断記録（needs の判断結果・必ず踏まえること）:\n## DR-0001  2026-08-02  actor: nitto\n- context : document-msbqiswz-4（observation envelope（観測 sidecar）を導入し観測の idempotent 取込を実装する）の実行を承認\n- action  : plan-approve\n- reason  : 計画レビューで内容を確認し、一括承認\n- affects : document-msbqiswz-4 → ready",
+  "workspace": null,
+  "references": [
+    {
+      "url": "https://github.com/ynitto/sandbox",
+      "path": ".github/skills",
+      "base": "main",
+      "target": "",
+      "desc": "skills"
+    }
+  ],
+  "status": "planning",
+  "created_at": "2026-08-03T15:53:31Z",
+  "verification_plan": {
+    "version": 1,
+    "task_id": "document-msbqiswz-4",
+    "workspace": "",
+    "commands": [],
+    "criteria": [
+      {
+        "id": "C1",
+        "text": "observation sidecar フォーマットが schema として追加されている"
+      },
+      {
+        "id": "C2",
+        "text": "同一 observation ID を複数回取り込んでも候補集合と hit 集計が変わらない E2E fixture がある"
+      },
+      {
+        "id": "C3",
+        "text": "provenance（発生 node→run→receipt）を辿れるサンプルが確認できる"
+      },
+      {
+        "id": "C4",
+        "text": "このタスクの差分が、上の基準の対象範囲に実在すること（変更が無い・無関係な場所にしか無いなら fail）"
+      }
+    ],
+    "policy": {
+      "confirm": 1,
+      "timeout_sec": 600.0
+    },
+    "digest": "sha256:7f4d0125801a8e47ca40b0b40e2b78497658f32600c0d6ee79bf368f7bffdd0b"
+  },
+  "base_rev": "d1039b811b3d49b586aa617634d752150db511ab",
+  "executor": "agent",
+  "orch_lease_until": 1785772531.2844648,
+  "heartbeat_at": "2026-08-03T15:53:31Z"
+}
