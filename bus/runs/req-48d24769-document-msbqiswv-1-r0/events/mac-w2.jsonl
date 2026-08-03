@@ -5,3 +5,7 @@
 {"ts": "2026-08-03T20:38:19Z", "who": "mac-w2", "kind": "claimed", "node": "t5"}
 {"ts": "2026-08-03T20:41:37Z", "who": "mac-w2", "kind": "result", "node": "t5", "status": "done"}
 {"ts": "2026-08-03T20:41:37Z", "who": "mac-w2", "kind": "claimed", "node": "gate"}
+{"ts": "2026-08-03T20:47:06Z", "who": "mac-w2", "kind": "result", "node": "gate", "status": "done"}
+{"ts": "2026-08-03T20:47:06Z", "who": "mac-w2", "kind": "claimed", "node": "classify"}
+{"ts": "2026-08-03T20:48:56Z", "who": "mac-w2", "kind": "result", "node": "classify", "status": "done"}
+{"ts": "2026-08-03T20:48:56Z", "who": "mac-w2", "kind": "claimed", "node": "synth"}

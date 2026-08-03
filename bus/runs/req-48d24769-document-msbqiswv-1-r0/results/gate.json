@@ -1,0 +1,20 @@
+{
+  "id": "gate",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "verify=fail\n\n統合を許可しません。重大な不一致は以下の3点です。\n\n- schema の統合先が要求されたルート `schemas/` ではない。\n- production `write_status()` が `budget` を出力せず、fixture と実出力が未接続。\n- t5 は内部 reader のみを検証し、旧ビュー `readNodeStatuses()` の互換契約がない。\n\nschema validation、9/9キー照合、敵対値4件、t5の35テストはPASS。詳細は[検証レポート](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/gate/report.md)。\n\n{\"ok\": false, \"issues\": [\"t3 の schema 統合先が正準のルート schemas/ と不一致\", \"production write_status が budget block を出力せず fixture と実出力が未接続\", \"t5 が旧ビュー readNodeStatuses の budget 無し・有り契約を検証していない\"]}",
+  "finished_at": "2026-08-03T20:47:06Z",
+  "node": "mac",
+  "kind": "verify",
+  "data": {
+    "ok": false,
+    "issues": [
+      "t3 の schema 統合先が正準のルート schemas/ と不一致",
+      "production write_status が budget block を出力せず fixture と実出力が未接続",
+      "t5 が旧ビュー readNodeStatuses の budget 無し・有り契約を検証していない"
+    ]
+  },
+  "artifacts": [
+    "artifacts/gate/report.md"
+  ]
+}
