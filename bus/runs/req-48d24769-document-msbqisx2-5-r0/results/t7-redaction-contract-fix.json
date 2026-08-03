@@ -1,0 +1,21 @@
+{
+  "id": "t7-redaction-contract-fix",
+  "who": "mac-h1w1",
+  "status": "done",
+  "output": "修正完了。\n\n- redaction 実装と privacy fixture・契約テストを更新。変更は `tools/agent-project` 配下4ファイルのみ。\n- privacy 契約: 4/4 PASS。漏出変異: 12/12 で期待どおり失敗を検出。\n- 通常 CI: 1,162 tests PASS。`git diff --check` PASS。\n- 前提・検証結果・未解決事項は [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqisx2-5-r0/artifacts/t7-redaction-contract-fix/report.md) に記録済み。\n- commit / push / branch 操作なし。未解決事項なし。",
+  "finished_at": "2026-08-03T13:48:32Z",
+  "node": "mac",
+  "kind": "work",
+  "data": {
+    "delivery": {
+      "url": "https://github.com/ynitto/sandbox",
+      "branch": "ap/document-msbqisx2-5",
+      "commit": "031b4d2158e89bd09bbadb74ac14077ab458233e",
+      "target": "main",
+      "path": "tools/agent-project"
+    }
+  },
+  "artifacts": [
+    "artifacts/t7-redaction-contract-fix/report.md"
+  ]
+}
