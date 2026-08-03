@@ -1,0 +1,9 @@
+{
+  "id": "t3",
+  "goal": "[scope] tools/agent-project/schemas/node-budget-summary.schema.json\n[out_of_scope] status 生成処理、fixture、reader、テストの変更\n既存 status/budget 契約と命名規約に合わせ、budget block へ additive に埋め込める node-budget-summary 射影スキーマを約30行以内で定義する。",
+  "deps": [
+    "t1",
+    "t2"
+  ],
+  "kind": "generate"
+}

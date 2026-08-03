@@ -1,0 +1,6 @@
+{
+  "id": "t2",
+  "goal": "[scope] tools/agent-project の既存 fixture、契約テスト、codd-gate・機械ゲート定義\n[out_of_scope] 本番コード変更、テスト実行、他ツール配下の調査\n追加 fixture と後方互換性テストを置く既存パターン、および完了判定に使う最小のテスト・ゲートコマンドを特定する。",
+  "deps": [],
+  "kind": "work"
+}

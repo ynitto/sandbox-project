@@ -1,0 +1,9 @@
+{
+  "id": "t4",
+  "goal": "[scope] tools/agent-project 内の status/<node>.json 用 fixture 1件\n[out_of_scope] スキーマ、reader 本体、他の fixture、テスト基盤の変更\nbudget キーに node-budget-summary の新フィールドを含み、追加スキーマへ準拠する代表 fixture を追加または最小更新する。",
+  "deps": [
+    "t1",
+    "t2"
+  ],
+  "kind": "generate"
+}

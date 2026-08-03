@@ -1,0 +1,9 @@
+{
+  "id": "synth",
+  "goal": "検証済みのスキーマ、fixture、reader 契約テストを agent-project の既存構成へ統合し、必要な差分修正だけを反映する。classify が恒常的制約を検出した場合は最終成果へ機械可読な {\"constraints\":[\"…\"]} を添える。",
+  "deps": [
+    "gate",
+    "classify"
+  ],
+  "kind": "synthesize"
+}

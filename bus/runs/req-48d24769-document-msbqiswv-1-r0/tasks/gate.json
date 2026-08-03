@@ -1,0 +1,10 @@
+{
+  "id": "gate",
+  "goal": "t3 のスキーマ、t4 の fixture、t5 の後方互換契約を相互照合し、fixture の schema validation、旧形式・新形式双方の reader 契約テスト、変更範囲と additive 性を敵対的に検証する。不一致があれば統合を許可しない。",
+  "deps": [
+    "t3",
+    "t4",
+    "t5"
+  ],
+  "kind": "verify"
+}

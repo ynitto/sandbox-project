@@ -1,0 +1,6 @@
+{
+  "id": "t1",
+  "goal": "[scope] tools/agent-project の既存 status スキーマ、budget block、reader 実装\n[out_of_scope] ファイル変更、スキーマ追加、fixture・テスト作成\nstatus/<node>.json の生成経路、budget の現行契約、新フィールドを無視または受容する reader の結合点を特定する。",
+  "deps": [],
+  "kind": "work"
+}

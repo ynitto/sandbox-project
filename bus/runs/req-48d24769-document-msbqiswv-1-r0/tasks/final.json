@@ -1,0 +1,8 @@
+{
+  "id": "final",
+  "goal": "統合後の対象契約テスト、fixture の schema validation、t2 で特定した既存 codd-gate・機械ゲートを実行し、スキーマ追加、準拠 fixture、旧ビュー互換性の3完了条件をすべて満たすことを確認する。",
+  "deps": [
+    "synth"
+  ],
+  "kind": "verify"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "t5",
+  "goal": "[scope] tools/agent-project の status reader 結合点と対応する契約テスト1件\n[out_of_scope] 表示仕様の刷新、必須フィールド化、無関係な reader・ビューの変更\n新しい budget フィールドが存在しても欠落していても旧ビューの読み取り結果が壊れないことを固定する契約テストを追加し、必要な場合だけ reader を optional 受容へ最小修正する。",
+  "deps": [
+    "t1",
+    "t2"
+  ],
+  "kind": "generate"
+}

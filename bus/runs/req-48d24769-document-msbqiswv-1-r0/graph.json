@@ -1,0 +1,80 @@
+{
+  "strategy": {
+    "patterns": [
+      "fan-out-and-synthesize",
+      "adversarial-verification"
+    ],
+    "parallelism": 3,
+    "review": true,
+    "reason": "[flow-planner] スキーマ・fixture・契約テストは成果物別に分担できる一方、既存構成の確認と最終ゲートには依存関係があるため、限定的な並列実行後に検証して統合する。後方互換性と機械ゲート通過を重視し、統合前の検証gateを必須とする。（粒度 fine）",
+    "granularity": "fine"
+  },
+  "nodes": {
+    "t1": {
+      "goal": "[scope] tools/agent-project の既存 status スキーマ、budget block、reader 実装\n[out_of_scope] ファイル変更、スキーマ追加、fixture・テスト作成\nstatus/<node>.json の生成経路、budget の現行契約、新フィールドを無視または受容する reader の結合点を特定する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t2": {
+      "goal": "[scope] tools/agent-project の既存 fixture、契約テスト、codd-gate・機械ゲート定義\n[out_of_scope] 本番コード変更、テスト実行、他ツール配下の調査\n追加 fixture と後方互換性テストを置く既存パターン、および完了判定に使う最小のテスト・ゲートコマンドを特定する。",
+      "deps": [],
+      "kind": "work"
+    },
+    "t3": {
+      "goal": "[scope] tools/agent-project/schemas/node-budget-summary.schema.json\n[out_of_scope] status 生成処理、fixture、reader、テストの変更\n既存 status/budget 契約と命名規約に合わせ、budget block へ additive に埋め込める node-budget-summary 射影スキーマを約30行以内で定義する。",
+      "deps": [
+        "t1",
+        "t2"
+      ],
+      "kind": "generate"
+    },
+    "t4": {
+      "goal": "[scope] tools/agent-project 内の status/<node>.json 用 fixture 1件\n[out_of_scope] スキーマ、reader 本体、他の fixture、テスト基盤の変更\nbudget キーに node-budget-summary の新フィールドを含み、追加スキーマへ準拠する代表 fixture を追加または最小更新する。",
+      "deps": [
+        "t1",
+        "t2"
+      ],
+      "kind": "generate"
+    },
+    "t5": {
+      "goal": "[scope] tools/agent-project の status reader 結合点と対応する契約テスト1件\n[out_of_scope] 表示仕様の刷新、必須フィールド化、無関係な reader・ビューの変更\n新しい budget フィールドが存在しても欠落していても旧ビューの読み取り結果が壊れないことを固定する契約テストを追加し、必要な場合だけ reader を optional 受容へ最小修正する。",
+      "deps": [
+        "t1",
+        "t2"
+      ],
+      "kind": "generate"
+    },
+    "gate": {
+      "goal": "t3 のスキーマ、t4 の fixture、t5 の後方互換契約を相互照合し、fixture の schema validation、旧形式・新形式双方の reader 契約テスト、変更範囲と additive 性を敵対的に検証する。不一致があれば統合を許可しない。",
+      "deps": [
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "kind": "verify"
+    },
+    "classify": {
+      "goal": "調査と検証で判明した事項を、分散ノードにも恒常的に適用すべき制約か、この変更だけの判断かに分類する。恒常的制約がある場合は重複のない constraints 配列を作る。",
+      "deps": [
+        "gate"
+      ],
+      "kind": "classify"
+    },
+    "synth": {
+      "goal": "検証済みのスキーマ、fixture、reader 契約テストを agent-project の既存構成へ統合し、必要な差分修正だけを反映する。classify が恒常的制約を検出した場合は最終成果へ機械可読な {\"constraints\":[\"…\"]} を添える。",
+      "deps": [
+        "gate",
+        "classify"
+      ],
+      "kind": "synthesize"
+    },
+    "final": {
+      "goal": "統合後の対象契約テスト、fixture の schema validation、t2 で特定した既存 codd-gate・機械ゲートを実行し、スキーマ追加、準拠 fixture、旧ビュー互換性の3完了条件をすべて満たすことを確認する。",
+      "deps": [
+        "synth"
+      ],
+      "kind": "verify"
+    }
+  },
+  "iteration": 0
+}
