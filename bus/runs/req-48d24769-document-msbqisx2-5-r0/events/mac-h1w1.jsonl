@@ -1,3 +1,4 @@
 {"ts": "2026-08-03T13:29:36Z", "who": "mac-h1w1", "kind": "claimed", "node": "t7-redaction-contract-fix"}
 {"ts": "2026-08-03T13:48:32Z", "who": "mac-h1w1", "kind": "result", "node": "t7-redaction-contract-fix", "status": "done"}
 {"ts": "2026-08-03T13:48:33Z", "who": "mac-h1w1", "kind": "claimed", "node": "t8-redaction-adversarial-verify"}
+{"ts": "2026-08-03T13:58:29Z", "who": "mac-h1w1", "kind": "result", "node": "t8-redaction-adversarial-verify", "status": "done"}
