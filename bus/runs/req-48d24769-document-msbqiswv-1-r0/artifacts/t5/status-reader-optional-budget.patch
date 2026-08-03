@@ -1,0 +1,28 @@
+diff --git a/tools/agent-project/tests/test_coordination.py b/tools/agent-project/tests/test_coordination.py
+index a20b41f..77b8ff1 100644
+--- a/tools/agent-project/tests/test_coordination.py
++++ b/tools/agent-project/tests/test_coordination.py
+@@ -85,6 +85,23 @@ class TestAtomicClaim(unittest.TestCase):
+             mk_peer(d, "pc-a")                      # 自分自身はピアに数えない
+             self.assertNotIn("pc-a", km._peer_nodes(cfg))
+ 
++    def test_peer_reader_ignores_optional_budget(self):
++        # budget は additive。旧 reader の射影は有無に左右されない。
++        with tempfile.TemporaryDirectory() as d:
++            d = Path(d)
++            cfg = cfg_for(d, node="pc-a")
++            mk_peer(d, "pc-budget", availability="active")
++            expected = km._peer_nodes(cfg)
++
++            path = d / "status" / "pc-budget.json"
++            record = json.loads(path.read_text(encoding="utf-8"))
++            record["budget"] = {"can_accept": True}
++            path.write_text(
++                json.dumps(record, ensure_ascii=False), encoding="utf-8")
++
++            self.assertEqual(expected, {"pc-budget"})
++            self.assertEqual(km._peer_nodes(cfg), expected)
++
+     def test_stale_claim_is_stolen(self):
+         with tempfile.TemporaryDirectory() as d:
+             d = Path(d)

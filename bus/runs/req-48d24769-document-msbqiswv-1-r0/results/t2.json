@@ -1,0 +1,13 @@
+{
+  "id": "t2",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "成果物: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t2/report.md)\n\nfixture・後方互換契約テストの配置と最小ゲートコマンドを特定済み。指示どおり本番変更・テスト実行はしていません。",
+  "finished_at": "2026-08-03T20:38:19Z",
+  "node": "mac",
+  "kind": "work",
+  "artifacts": [
+    "artifacts/t2/agent-project-fixture-contract-gates.md",
+    "artifacts/t2/report.md"
+  ]
+}

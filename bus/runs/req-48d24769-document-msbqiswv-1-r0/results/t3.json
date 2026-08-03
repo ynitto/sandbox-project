@@ -1,0 +1,13 @@
+{
+  "id": "t3",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "切り口: 既存 `_node_budget_state()` の8項目を改名せず保持し、受付判断 `can_accept` だけを加える最小の additive 契約。\n\n## 成果／サマリー\n\n- [node-budget-summary.schema.json](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t3/node-budget-summary.schema.json) を作成。\n- Draft 2020-12、snake_case、非負制約、既存 enum に準拠。\n- 全フィールド optional、`additionalProperties: true`。19行。\n- [自己完結した成果報告](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t3/report.md) も出力済み。\n\n## 検証\n\n- JSON 構文: PASS\n- キー・型・enum・非負制約: PASS\n- 行数上限: PASS（19行）\n- status生成、fixture、reader、テスト: 変更なし\n\n## 前提・未解決事項\n\n- 統合先は明示 scope の `tools/agent-project/schemas/` とした。\n- 元要求のルート `schemas/` との配置差は統合時に解決が必要。\n- `can_accept` の算出処理は範囲外。既存挙動上は `!exceeded || on_exhausted == \"degrade\"` が妥当。\n\n{\"ok\": true, \"issues\": []}",
+  "finished_at": "2026-08-03T20:37:24Z",
+  "node": "mac",
+  "kind": "generate",
+  "artifacts": [
+    "artifacts/t3/node-budget-summary.schema.json",
+    "artifacts/t3/report.md"
+  ]
+}

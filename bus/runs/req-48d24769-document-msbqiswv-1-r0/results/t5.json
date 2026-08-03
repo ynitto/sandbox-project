@@ -1,0 +1,13 @@
+{
+  "id": "t5",
+  "who": "mac-w2",
+  "status": "done",
+  "output": "切り口: 同一 status を budget 無し→有りへ変換し、旧 reader の射影結果が完全不変であることを1件で固定。\n\n- 成果: [契約テストパッチ](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t5/status-reader-optional-budget.patch)\n- 報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t5/report.md)\n- 検証: `git apply --check` PASS、対象35テスト PASS、agent-project全体回帰 PASS。\n- 前提: 結合点は `_peer_nodes()`。未知キーを既に無視するため reader 修正は不要。参照リポジトリは無変更で返却済み。",
+  "finished_at": "2026-08-03T20:41:37Z",
+  "node": "mac",
+  "kind": "generate",
+  "artifacts": [
+    "artifacts/t5/report.md",
+    "artifacts/t5/status-reader-optional-budget.patch"
+  ]
+}

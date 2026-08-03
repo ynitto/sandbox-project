@@ -1,1 +1,6 @@
 {"ts": "2026-08-03T17:23:58Z", "who": "mac-w1", "kind": "claimed", "node": "t2"}
+{"ts": "2026-08-03T20:35:36Z", "who": "mac-w1", "kind": "result", "node": "t2", "status": "done"}
+{"ts": "2026-08-03T20:35:36Z", "who": "mac-w1", "kind": "claimed", "node": "t3"}
+{"ts": "2026-08-03T20:37:24Z", "who": "mac-w1", "kind": "result", "node": "t3", "status": "done"}
+{"ts": "2026-08-03T20:37:24Z", "who": "mac-w1", "kind": "claimed", "node": "t4"}
+{"ts": "2026-08-03T20:39:11Z", "who": "mac-w1", "kind": "result", "node": "t4", "status": "done"}

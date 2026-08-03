@@ -1,0 +1,13 @@
+{
+  "id": "t4",
+  "who": "mac-w1",
+  "status": "done",
+  "output": "切り口: 新契約の全9フィールドを、未超過かつ受付可能な正常系1件で網羅。\n\n- 成果: [status-node-with-budget.json](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t4/status-node-with-budget.json)\n- 報告: [report.md](/Users/nitto/Workspace/sandbox-project/bus/runs/req-48d24769-document-msbqiswv-1-r0/artifacts/t4/report.md)\n- 検証: JSON構文、schemaの型・非負制約・enum、全budgetキー網羅がPASS。\n- 前提・未解決事項・範囲外事項は報告内に記載済み。参照リポジトリは変更していません。",
+  "finished_at": "2026-08-03T20:39:11Z",
+  "node": "mac",
+  "kind": "generate",
+  "artifacts": [
+    "artifacts/t4/report.md",
+    "artifacts/t4/status-node-with-budget.json"
+  ]
+}

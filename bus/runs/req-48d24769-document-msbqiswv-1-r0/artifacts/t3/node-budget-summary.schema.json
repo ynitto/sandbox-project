@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "node-budget-summary.schema.json",
+  "title": "ノード予算サマリー",
+  "description": "status/<node>.json の optional budget block に埋め込む agent-project 予算射影。未知キーは無害に無視する。",
+  "type": "object",
+  "properties": {
+    "can_accept": {"type": "boolean", "description": "このノードが新規 project work を受け入れられるか"},
+    "exceeded": {"type": "boolean", "description": "時間またはトークンの実効上限に到達したか"},
+    "soft": {"type": "boolean", "description": "soft_ratio に到達し縮退中か"},
+    "on_exhausted": {"enum": ["pause", "stop", "degrade"]},
+    "spent_min": {"type": "number", "minimum": 0},
+    "limit_min": {"type": "number", "minimum": 0, "description": "0 = 無制限"},
+    "spent_tokens": {"type": "number", "minimum": 0},
+    "token_limit": {"type": "number", "minimum": 0, "description": "0 = 無制限"},
+    "period": {"enum": ["day", "month", "total"]}
+  },
+  "additionalProperties": true
+}

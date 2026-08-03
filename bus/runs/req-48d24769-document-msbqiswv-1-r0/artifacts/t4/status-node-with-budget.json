@@ -1,0 +1,17 @@
+{
+  "node": "pc-peer",
+  "availability": "active",
+  "updated_iso": "2026-08-04T00:00:00+00:00",
+  "fresh_after_sec": 120,
+  "budget": {
+    "can_accept": true,
+    "exceeded": false,
+    "soft": false,
+    "on_exhausted": "pause",
+    "spent_min": 42.5,
+    "limit_min": 120,
+    "spent_tokens": 125000,
+    "token_limit": 500000,
+    "period": "day"
+  }
+}
